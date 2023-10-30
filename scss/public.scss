@@ -1,0 +1,69 @@
+@import "Ginkgo";
+@import "bootstrap/bootstrap";
+
+
+* {
+  &, &:after, &:before {
+    vertical-align: middle;
+    @include box-sizing(border-box);
+    @include font-smoothing(subpixel-antialiased);
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  position: relative;
+
+  display: inline-block;
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+  color: #000;
+  
+  font-family: 'Roboto', 'Noto Sans TC', "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+
+  text-size-adjust: none;
+  -webkit-text-size-adjust:none;
+
+  // background-color: black;
+}
+
+a {
+  text-decoration: none !important;
+  // line-height: 36px !important;
+
+  &:after, &:before {
+    vertical-align: middle !important;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  outline: 0;
+  border-width: 0;
+}
+
+
+p {
+  margin-bottom: 0;
+}
+
+
+header {
+  display: inline-block;
+  width: 100%;
+  height: 65px;
+  background-color: #272727;
+}
+
+
+
+

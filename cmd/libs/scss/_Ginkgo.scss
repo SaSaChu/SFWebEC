@@ -1,0 +1,22 @@
+
+
+@import "GinkgoMixin";
+
+$_InitGinkgo: false !global;
+
+@mixin init-ginkgo() {
+  @if ($_InitGinkgo == false) {
+    $_InitGinkgo: true !global;
+    * {
+      &, &:after, &:before {
+        vertical-align: middle;
+        @include box-sizing(border-box);
+        @include font-smoothing(subpixel-antialiased);
+      }
+    }
+  }
+}
+
+@include init-ginkgo;
+
+@import "GinkgoUi";

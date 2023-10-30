@@ -1,0 +1,38 @@
+{
+  "name": "Ginkgo",
+  "version": "5.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "watch": "node watch"
+  },
+  "keywords": [
+    "html",
+    "scss",
+    "css",
+    "JavaScript",
+    "compass",
+    "node"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "OA Wu",
+  "license": "MIT",
+  "dependencies": {
+    "adm-zip": "^0.4.13",
+    "aws-sdk": "^2.515.0",
+    "bootstrap-icons": "^1.10.5",
+    "cheerio": "^1.0.0-rc.3",
+    "chokidar": "^3.0.2",
+    "command-exists": "^1.2.8",
+    "html-minifier": "^4.0.0",
+    "js-yaml": "^3.13.1",
+    "md5-file": "^4.0.0",
+    "mime": "^2.4.4",
+    "node-notifier": "^5.4.3",
+    "socket.io": "^2.2.0",
+    "uglify-js": "^3.6.0"
+  }
+}
