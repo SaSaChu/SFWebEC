@@ -16,9 +16,10 @@
 	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"> -->
 	<!-- <link rel="stylesheet" type="text/css" href="css/public_2.css"> -->
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 	<link rel="stylesheet" type="text/css" href="css/layout/header.css">	
-	<link rel="stylesheet" type="text/css" href="css/layout/footer.css">
+	<link rel="stylesheet" type="text/css" href="css/layout/footer.css">	
 
 	<link rel="stylesheet" href="css/swiper/swiper-bundle.min.css">
 
@@ -31,671 +32,873 @@
 
 <body>
 	<header class="header">
-		<section class="marquee-wrapper">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-11 mx-auto position-relative">
-						<div class="swiper marquee">
-							<ul class="swiper-wrapper">
-								<li class="swiper-slide">
-									官網獨家優惠, 全館滿千免運費
-								</li>
-								<li class="swiper-slide">
-									官網獨家優惠, 全館滿千免運費2
-								</li>
-								<li class="swiper-slide">
-									官網獨家優惠, 全館滿千免運費3
-								</li>
-								<li class="swiper-slide">
-									官網獨家優惠, 全館滿千免運費4
-								</li>
-							</ul>
-						</div>
-						<span class="marquee-btn-close">
-							<i class="fa-solid fa-circle-xmark"></i>
-						</span>
+		<div class="container-fluid p-0">
+			<section class="marquee-wrapper">
+				<div class="col-11 mx-auto position-relative">
+					<div class="swiper marquee">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide">
+								官網獨家優惠, 全館滿千免運費
+							</li>
+							<li class="swiper-slide">
+								官網獨家優惠, 全館滿千免運費2
+							</li>
+							<li class="swiper-slide">
+								官網獨家優惠, 全館滿千免運費3
+							</li>
+							<li class="swiper-slide">
+								官網獨家優惠, 全館滿千免運費4
+							</li>
+						</ul>
 					</div>
+					<span class="marquee-btn-close">
+						<i class="fa-solid fa-circle-xmark"></i>
+					</span>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<nav class="navbar navbar-expand-lg">
-			<div class="container-fluid">
-				<!-- <div class="row"> -->
+			<section class="nav-wrapper">
+				<nav class="navbar navbar-expand-lg">
 					<div class="col-11 mx-auto">
-						<!-- Toggler mobile bar-->
-						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-							aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
+						<div class="container-fluid p-0">
+							<!-- Toggler mobile bar-->
+							<div class="mobile-bar d-flex d-lg-none justify-content-between">
+								<div class="col"> 
+									<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+										aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+										<span class="navbar-toggler-icon"></span>
+									</button>
 
-						<!-- Collapse -->
-						<div class="collapse navbar-collapse" id="navbarCollapse">
+									<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+										aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+										<span class="fa-solid fa-magnifying-glass"></span>
+									</button>
+								</div>
 
-							<!-- Nav Menu-->
-							<div class="col">
-								<ul class="navbar-nav navbar-menu">
-									<!-- 選單 -->
-									<li class="nav-item dropdown">
+								<!-- Nav Brand -->
+								<div class="col">
+									<a class="navbar-brand" href="#">
+										<img src="https://fakeimg.pl/360x40/ffffff/">
+									</a>
+								</div>
 
-										<!-- Toggle -->
-										<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false"><i class="fa-solid fa-bars"></i><span>選單</span></a>
-
-										<!-- Menu -->
-										<ul class="dropdown-menu">
-											<li>
-												<a class="dropdown-item" href="#">線上購物</a>
-											</li>
-											<li>
-												<a class="dropdown-item" href="#">男館</a>
-											</li>
-											<li>
-												<a class="dropdown-item" href="#">女館</a>
-											</li>
-										</ul>
-
-									</li>
-									<!-- 線上購物 樣式1. 圖右字左-->
-									<li class="nav-item dropdown position-static">
-
-										<!-- Toggle -->
-										<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false"><span>線上購物</span></a>
-
-										<!-- Menu -->
-										<div class="dropdown-menu w-100 py-4">
-											<!-- content -->
-											<div class="container-fluid">
-												<div class="col-11 mx-auto">
-													<div class="row m-0">
-														<div class="col-1 px-3 level-styled first-level">
-															<!-- Heading -->
-															<div class="mb-3 fw-bold heading">優惠區</div>
-															<!-- Links -->
-															<ul class="list-styled mb-5 px-2 mb-md-0">
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">內褲</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">襪子</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">內衣/T恤</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">大尺碼專區</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">毛巾</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">雨傘</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">保暖衣</a>
-																</li>
-															</ul>
-														</div>
-														<div class="col-1 px-3 level-styled second-level">
-															<!-- Heading -->
-															<div class="mb-3 fw-bold heading">內衣褲</div>
-															<!-- Links -->
-															<ul class="list-styled mb-5 px-2 mb-md-0">
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">襪子</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">冬季商品</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">毛巾/雨傘</a>
-																</li>
-															</ul>
-														</div>
-														<div class="col-2 col-md level-styled third-level">
-															<!-- Links -->
-															<ul class="list-styled mb-5 px-2 mb-md-0">
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">男內褲 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
-																</li>
-															</ul>
-														</div>
-														<div class="col-2 col-md level-styled third-level">
-															<!-- Links -->
-															<ul class="list-styled mb-0 fs-base">
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
-																</li>
-															</ul>
-														</div>
-														<div class="col-3 d-none d-lg-block">
-															<!-- Card -->
-															<div class="card">
-																<!-- Image -->
-																<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
-															</div>
-														</div>
-														<div class="col-3 d-none d-lg-block">
-															<!-- Card -->
-															<div class="card">
-																<!-- Image -->
-																<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
-															</div>
-														</div>
+								<div class="col">
+									<ul class="navbar-nav navbar-action flex-row justify-content-end">
+										<li class="nav-item dropdown action-user">
+											<!-- Toggle -->
+											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+												<i class="fa-solid fa-circle-user"></i>
+											</a>
+											<ul class="dropdown-menu p-0">
+												<li>
+													<a class="dropdown-item" href="#">
+														<img src="https://fakeimg.pl/35x20">
+														創新銀卡會員
+													</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">前往會員中心</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">訂單查詢</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">瀏覽紀錄</a>
+												</li>
+												<li>
+													<div class="dropdown-item">
+														<span class="d-flex justify-content-between pb-0">可用點數 <span class="unit-style unit-point" data-unit="點">400</span></span>
+														<span class="d-flex justify-content-between">可用折價卷 <span class="unit-style unit-coupon" data-unit="張">20</span></span>
 													</div>
-												</div>
-												
-											</div>
-										</div>
-									</li>
-									<!-- 男館 樣式2. 圖左字右-->
-									<li class="nav-item dropdown position-static">
-
-										<!-- Toggle -->
-										<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false"><span>男館</a>
-
-										<!-- Menu -->
-										<div class="dropdown-menu w-100 py-4">
-											<!-- content -->
-											<div class="container-fluid">
-												<div class="col-11 mx-auto">
-													<div class="row m-0">
-														<div class="col-3 d-none d-lg-block">
-															<!-- Card -->
-															<div class="card">
-																<!-- Image -->
-																<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
-															</div>
-														</div>
-														<div class="col-3 d-none d-lg-block">
-															<!-- Card -->
-															<div class="card">
-																<!-- Image -->
-																<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
-															</div>
-														</div>
-														<div class="col-1 px-3 level-styled first-level">
-															<!-- Heading -->
-															<div class="mb-3 fw-bold heading">優惠區</div>
-															<!-- Links -->
-															<ul class="list-styled mb-5 px-2 mb-md-0">
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">內褲</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">襪子</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">內衣/T恤</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">大尺碼專區</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">毛巾</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">雨傘</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">保暖衣</a>
-																</li>
-															</ul>
-														</div>
-														<div class="col-1 px-3 level-styled second-level">
-															<!-- Heading -->
-															<div class="mb-3 fw-bold heading">內衣褲</div>
-															<!-- Links -->
-															<ul class="list-styled mb-5 px-2 mb-md-0">
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">襪子</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">冬季商品</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">毛巾/雨傘</a>
-																</li>
-															</ul>
-														</div>
-														<div class="col-2 col-md level-styled third-level">
-															<!-- Links -->
-															<ul class="list-styled mb-5 px-2 mb-md-0">
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">男內褲 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
-																</li>
-															</ul>
-														</div>
-														<div class="col-2 col-md level-styled third-level">
-															<!-- Links -->
-															<ul class="list-styled mb-0 fs-base">
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
-																</li>
-															</ul>
-														</div>	
-													</div>
-												</div>
-												
-											</div>
-										</div>
-										
-									</li>
-									<!-- 女館 樣式2. 圖左右各一字中間-->
-									<li class="nav-item dropdown position-static">
-
-										<!-- Toggle -->
-										<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false"><span>女館</span></a>
-
-										<!-- Menu -->
-										<div class="dropdown-menu w-100 py-4">
-											<!-- content -->
-											<div class="container-fluid">
-												<div class="col-11 mx-auto">
-													<div class="row m-0">
-														<div class="col-3 d-none d-lg-block">
-															<!-- Card -->
-															<div class="card">
-																<!-- Image -->
-																<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
-															</div>
-														</div>
-														<div class="col-1 px-3 level-styled first-level">
-															<!-- Heading -->
-															<div class="mb-3 fw-bold heading">優惠區</div>
-															<!-- Links -->
-															<ul class="list-styled mb-5 px-2 mb-md-0">
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">內褲</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">襪子</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">內衣/T恤</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">大尺碼專區</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">毛巾</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">雨傘</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">保暖衣</a>
-																</li>
-															</ul>
-														</div>
-														<div class="col-1 px-3 level-styled second-level">
-															<!-- Heading -->
-															<div class="mb-3 fw-bold heading">內衣褲</div>
-															<!-- Links -->
-															<ul class="list-styled mb-5 px-2 mb-md-0">
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">襪子</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">冬季商品</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">毛巾/雨傘</a>
-																</li>
-															</ul>
-														</div>
-														<div class="col-2 col-md level-styled third-level">
-															<!-- Links -->
-															<ul class="list-styled mb-5 px-2 mb-md-0">
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">男內褲 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
-																</li>
-															</ul>
-														</div>
-														<div class="col-2 col-md level-styled third-level">
-															<!-- Links -->
-															<ul class="list-styled mb-0 fs-base">
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
-																</li>
-																<li class="list-styled-item">
-																	<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
-																</li>
-															</ul>
-														</div>	
-														<div class="col-3 d-none d-lg-block">
-															<!-- Card -->
-															<div class="card">
-																<!-- Image -->
-																<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
-															</div>
-														</div>
-													</div>
-												</div>
-												
-											</div>
-										</div>	
-									</li>
-								</ul>
+												</li>
+												<li>
+													<a class="dropdown-item logout text-center" href="#">登出</a>
+												</li>
+											</ul>
+										</li>
+										<li class="nav-item action-cart">
+											<a class="nav-link" data-bs-toggle="offcanvas" href="#modalShoppingCart">
+												<span data-cart-items="2">
+													<i class="fa-solid fa-cart-shopping"></i>
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
 							</div>
-							<!-- Nav Brand -->
-							<div class="col">
-								<a class="navbar-brand" href="#">
-									<img src="https://fakeimg.pl/360x40/ffffff/">
-								</a>
-							</div>
-							<!-- Nav Actions -->
-							<div class="col">
-								<ul class="navbar-nav navbar-action">
-									<li class="nav-item action-search">
-										<a class="nav-link" data-bs-toggle="offcanvas" href="#modalSearch">
-											<i class="fa-solid fa-magnifying-glass"></i>
-										</a>
-									</li>
-									<li class="nav-item dropdown action-user">
-										<!-- Toggle -->
-										<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false">
-											<i class="fa-solid fa-circle-user"></i>
-										</a>
-										<ul class="dropdown-menu p-0">
-											<li>
-												<a class="dropdown-item" href="#">
-													<img src="https://fakeimg.pl/35x20">
-													創新銀卡會員
-												</a>
-											</li>
-											<li>
-												<a class="dropdown-item" href="#">前往會員中心</a>
-											</li>
-											<li>
-												<a class="dropdown-item" href="#">訂單查詢</a>
-											</li>
-											<li>
-												<a class="dropdown-item" href="#">瀏覽紀錄</a>
-											</li>
-											<li>
-												<div class="dropdown-item">
-													<span class="d-flex justify-content-between pb-0">可用點數 <span class="unit-style unit-point" data-unit="點">400</span></span>
-													<span class="d-flex justify-content-between">可用折價卷 <span class="unit-style unit-coupon" data-unit="張">20</span></span>
+
+							<!-- Collapse -->
+							<div class="collapse navbar-collapse" id="navbarCollapse">
+
+								<!-- Nav Menu-->
+								<div class="col">
+									<ul class="navbar-nav navbar-menu">
+										<!-- 選單 -->
+										<li class="nav-item dropdown">
+
+											<!-- Toggle -->
+											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false"><i class="fa-solid fa-bars"></i><span>選單</span></a>
+
+											<!-- Menu -->
+											<ul class="dropdown-menu">
+												<li>
+													<a class="dropdown-item" href="#">線上購物</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">男館</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">女館</a>
+												</li>
+											</ul>
+
+										</li>
+										<!-- 線上購物 樣式1. 圖右字左-->
+										<li class="nav-item dropdown position-static">
+
+											<!-- Toggle -->
+											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false"><span>線上購物</span></a>
+
+											<!-- Menu -->
+											<div class="dropdown-menu w-100 py-4">
+												<!-- content -->
+												<div class="container-fluid">
+													<div class="col-11 mx-auto">
+														<div class="row m-0">
+															<div class="col-1 px-3 level-styled first-level">
+																<!-- Heading -->
+																<div class="mb-3 fw-bold heading">優惠區</div>
+																<!-- Links -->
+																<ul class="list-styled mb-5 px-2 mb-md-0">
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">內褲</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">襪子</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">內衣/T恤</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">大尺碼專區</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">毛巾</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">雨傘</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">保暖衣</a>
+																	</li>
+																</ul>
+															</div>
+															<div class="col-1 px-3 level-styled second-level">
+																<!-- Heading -->
+																<div class="mb-3 fw-bold heading">內衣褲</div>
+																<!-- Links -->
+																<ul class="list-styled mb-5 px-2 mb-md-0">
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">襪子</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">冬季商品</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">毛巾/雨傘</a>
+																	</li>
+																</ul>
+															</div>
+															<div class="col-2 col-md level-styled third-level">
+																<!-- Links -->
+																<ul class="list-styled mb-5 px-2 mb-md-0">
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">男內褲 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																	</li>
+																</ul>
+															</div>
+															<div class="col-2 col-md level-styled third-level">
+																<!-- Links -->
+																<ul class="list-styled mb-0 fs-base">
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																	</li>
+																</ul>
+															</div>
+															<div class="col-3 d-none d-lg-block">
+																<!-- Card -->
+																<div class="card">
+																	<!-- Image -->
+																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
+																</div>
+															</div>
+															<div class="col-3 d-none d-lg-block">
+																<!-- Card -->
+																<div class="card">
+																	<!-- Image -->
+																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
+																</div>
+															</div>
+														</div>
+													</div>
+													
 												</div>
-											</li>
-											<li>
-												<a class="dropdown-item logout text-center" href="#">登出</a>
-											</li>
-										</ul>
-									</li>
-									<li class="nav-item action-love">
-										<a class="nav-link" href="#">
-											<i class="fa-regular fa-heart"></i>
-										</a>
-									</li>
-									<li class="nav-item action-cart">
-										<a class="nav-link" data-bs-toggle="offcanvas" href="#modalShoppingCart">
-											<span data-cart-items="2">
-												<i class="fa-solid fa-cart-shopping"></i>
-											</span>
-										</a>
-									</li>
-									<li class="nav-item dropdown action-language">
-										<!-- Toggle -->
-										<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false">
-											<i class="fa-solid fa-globe"></i>
-										</a>
-										
-										<!-- Menu -->
-										<ul class="dropdown-menu p-0">
-											<li>
-												<a class="dropdown-item" href="#">中文(繁體)</a>
-											</li>
-											<li>
-												<a class="dropdown-item" href="#">中文(簡體)</a>
-											</li>
-											<li>
-												<a class="dropdown-item" href="#">English (US)</a>
-											</li>
-											<li>
-												<a class="dropdown-item" href="#">日本語</a>
-											</li>
-										</ul>
-									</li>
-								</ul>
+											</div>
+										</li>
+										<!-- 男館 樣式2. 圖左字右-->
+										<li class="nav-item dropdown position-static">
+
+											<!-- Toggle -->
+											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false"><span>男館</a>
+
+											<!-- Menu -->
+											<div class="dropdown-menu w-100 py-4">
+												<!-- content -->
+												<div class="container-fluid">
+													<div class="col-11 mx-auto">
+														<div class="row m-0">
+															<div class="col-3 d-none d-lg-block">
+																<!-- Card -->
+																<div class="card">
+																	<!-- Image -->
+																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
+																</div>
+															</div>
+															<div class="col-3 d-none d-lg-block">
+																<!-- Card -->
+																<div class="card">
+																	<!-- Image -->
+																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
+																</div>
+															</div>
+															<div class="col-1 px-3 level-styled first-level">
+																<!-- Heading -->
+																<div class="mb-3 fw-bold heading">優惠區</div>
+																<!-- Links -->
+																<ul class="list-styled mb-5 px-2 mb-md-0">
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">內褲</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">襪子</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">內衣/T恤</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">大尺碼專區</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">毛巾</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">雨傘</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">保暖衣</a>
+																	</li>
+																</ul>
+															</div>
+															<div class="col-1 px-3 level-styled second-level">
+																<!-- Heading -->
+																<div class="mb-3 fw-bold heading">內衣褲</div>
+																<!-- Links -->
+																<ul class="list-styled mb-5 px-2 mb-md-0">
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">襪子</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">冬季商品</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">毛巾/雨傘</a>
+																	</li>
+																</ul>
+															</div>
+															<div class="col-2 col-md level-styled third-level">
+																<!-- Links -->
+																<ul class="list-styled mb-5 px-2 mb-md-0">
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">男內褲 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																	</li>
+																</ul>
+															</div>
+															<div class="col-2 col-md level-styled third-level">
+																<!-- Links -->
+																<ul class="list-styled mb-0 fs-base">
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																	</li>
+																</ul>
+															</div>	
+														</div>
+													</div>
+													
+												</div>
+											</div>
+											
+										</li>
+										<!-- 女館 樣式2. 圖左右各一字中間-->
+										<li class="nav-item dropdown position-static">
+
+											<!-- Toggle -->
+											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false"><span>女館</span></a>
+
+											<!-- Menu -->
+											<div class="dropdown-menu w-100 py-4">
+												<!-- content -->
+												<div class="container-fluid">
+													<div class="col-11 mx-auto">
+														<div class="row m-0">
+															<div class="col-3 d-none d-lg-block">
+																<!-- Card -->
+																<div class="card">
+																	<!-- Image -->
+																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
+																</div>
+															</div>
+															<div class="col-1 px-3 level-styled first-level">
+																<!-- Heading -->
+																<div class="mb-3 fw-bold heading">優惠區</div>
+																<!-- Links -->
+																<ul class="list-styled mb-5 px-2 mb-md-0">
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">內褲</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">襪子</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">內衣/T恤</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">大尺碼專區</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">毛巾</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">雨傘</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">保暖衣</a>
+																	</li>
+																</ul>
+															</div>
+															<div class="col-1 px-3 level-styled second-level">
+																<!-- Heading -->
+																<div class="mb-3 fw-bold heading">內衣褲</div>
+																<!-- Links -->
+																<ul class="list-styled mb-5 px-2 mb-md-0">
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">襪子</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">冬季商品</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">毛巾/雨傘</a>
+																	</li>
+																</ul>
+															</div>
+															<div class="col-2 col-md level-styled third-level">
+																<!-- Links -->
+																<ul class="list-styled mb-5 px-2 mb-md-0">
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">男內褲 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																	</li>
+																</ul>
+															</div>
+															<div class="col-2 col-md level-styled third-level">
+																<!-- Links -->
+																<ul class="list-styled mb-0 fs-base">
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																	</li>
+																</ul>
+															</div>	
+															<div class="col-3 d-none d-lg-block">
+																<!-- Card -->
+																<div class="card">
+																	<!-- Image -->
+																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
+																</div>
+															</div>
+														</div>
+													</div>
+													
+												</div>
+											</div>	
+										</li>
+									</ul>
+								</div>
+								<!-- Nav Brand -->
+								<div class="col">
+									<a class="navbar-brand" href="#">
+										<img src="https://fakeimg.pl/360x40/ffffff/">
+									</a>
+								</div>
+								<!-- Nav Actions -->
+								<div class="col">
+									<ul class="navbar-nav navbar-action">
+										<li class="nav-item action-search">
+											<a class="nav-link" data-bs-toggle="offcanvas" href="#modalSearch">
+												<i class="fa-solid fa-magnifying-glass"></i>
+											</a>
+										</li>
+										<li class="nav-item dropdown action-user">
+											<!-- Toggle -->
+											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+												<i class="fa-solid fa-circle-user"></i>
+											</a>
+											<ul class="dropdown-menu p-0">
+												<li>
+													<a class="dropdown-item" href="#">
+														<img src="https://fakeimg.pl/35x20">
+														創新銀卡會員
+													</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">前往會員中心</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">訂單查詢</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">瀏覽紀錄</a>
+												</li>
+												<li>
+													<div class="dropdown-item">
+														<span class="d-flex justify-content-between pb-0">可用點數 <span class="unit-style unit-point" data-unit="點">400</span></span>
+														<span class="d-flex justify-content-between">可用折價卷 <span class="unit-style unit-coupon" data-unit="張">20</span></span>
+													</div>
+												</li>
+												<li>
+													<a class="dropdown-item logout text-center" href="#">登出</a>
+												</li>
+											</ul>
+										</li>
+										<li class="nav-item action-love">
+											<a class="nav-link" href="#">
+												<i class="fa-regular fa-heart"></i>
+											</a>
+										</li>
+										<li class="nav-item dropdown action-cart">
+											<!-- <a class="nav-link" data-bs-toggle="offcanvas" href="#modalShoppingCart">
+												<span data-cart-items="2">
+													<i class="fa-solid fa-cart-shopping"></i>
+												</span>
+											</a> -->
+
+											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+												<span class="apple" data-cart-items="2">
+													<i class="fa-solid fa-cart-shopping"></i>
+												</span>
+											</a>
+											<div class="dropdown-menu p-0">
+												<div class="cart-items">
+													<div class="cart-item">
+														<div class="card border-0">
+															<div class="row g-0">
+															<div class="col-4 border d-flex align-items-center justify-content-center">
+																<picture class="p-1">
+																	<img src="https://fakeimg.pl/85x65" class="img-fluid" alt="...">
+																</picture>
+															</div>
+															<div class="col-8">
+																<div class="card-body py-0">
+																<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+																<p class="card-text color-size">深灰藍, S</p>
+																<p class="card-text quantity-price d-flex align-items-end justify-content-between"><span>1 x NT$252</span><span><i class="fa-solid fa-trash-can"></i></span></p>
+																</div>
+															</div>
+															</div>
+														</div>
+													</div>
+													<div class="cart-item">
+														<div class="card border-0">
+															<div class="row g-0">
+															<div class="col-4 border d-flex align-items-center justify-content-center">
+																<picture class="p-1">
+																	<img src="https://fakeimg.pl/85x65" class="img-fluid" alt="...">
+																</picture>
+															</div>
+															<div class="col-8">
+																<div class="card-body py-0">
+																<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+																<p class="card-text color-size">深灰藍, S</p>
+																<p class="card-text quantity-price d-flex align-items-end justify-content-between"><span>1 x NT$252</span><span><i class="fa-solid fa-trash-can"></i></span></p>
+																</div>
+															</div>
+															</div>
+														</div>
+													</div>
+													<div class="cart-item">
+														<div class="card border-0">
+															<div class="row g-0">
+															<div class="col-4 border d-flex align-items-center justify-content-center">
+																<picture class="p-1">
+																	<img src="https://fakeimg.pl/85x65" class="img-fluid" alt="...">
+																</picture>
+															</div>
+															<div class="col-8">
+																<div class="card-body py-0">
+																<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+																<p class="card-text color-size">深灰藍, S</p>
+																<p class="card-text quantity-price d-flex align-items-end justify-content-between"><span>1 x NT$252</span><span><i class="fa-solid fa-trash-can"></i></span></p>
+																</div>
+															</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col px-3 mb-3">
+													<button class="btn btn-lg cart-checkout-btn" type="button">結帳去</button>
+												</div>
+												
+											</div>
+											<!-- <ul class="dropdown-menu p-0">
+												<li>
+													<div class="dropdown-item">
+														<div class="card border-0">
+															<div class="row g-0">
+															  <div class="col-4 border d-flex align-items-center justify-content-center">
+																<picture class="p-1">
+																	<img src="https://fakeimg.pl/85x65" class="img-fluid" alt="...">
+																</picture>
+															  </div>
+															  <div class="col-8">
+																<div class="card-body py-0">
+																  <h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+																  <p class="card-text color-size">深灰藍, S</p>
+																  <p class="card-text quantity-price d-flex align-items-end justify-content-between"><span>1 x NT$252</span><span><i class="fa-solid fa-trash-can"></i></span></p>
+																</div>
+															  </div>
+															</div>
+														  </div>
+													</div>
+												</li>
+												<li>
+													<div class="dropdown-item">
+														<div class="card border-0">
+															<div class="row g-0">
+															  <div class="col-4 border d-flex align-items-center justify-content-center">
+																<picture class="p-1">
+																	<img src="https://fakeimg.pl/85x65" class="img-fluid" alt="...">
+																</picture>
+															  </div>
+															  <div class="col-8">
+																<div class="card-body py-0">
+																  <h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+																  <p class="card-text color-size">深灰藍, S</p>
+																  <p class="card-text quantity-price d-flex align-items-end justify-content-between"><span>1 x NT$252</span><span><i class="fa-solid fa-trash-can"></i></span></p>
+																</div>
+															  </div>
+															</div>
+														  </div>
+													</div>
+												</li>
+												<li>
+													<div class="dropdown-item">
+														<div class="card border-0">
+															<div class="row g-0">
+															  <div class="col-4 border d-flex align-items-center justify-content-center">
+																<picture class="p-1">
+																	<img src="https://fakeimg.pl/85x65" class="img-fluid" alt="...">
+																</picture>
+															  </div>
+															  <div class="col-8">
+																<div class="card-body py-0">
+																  <h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+																  <p class="card-text color-size">深灰藍, S</p>
+																  <p class="card-text quantity-price d-flex align-items-end justify-content-between"><span>1 x NT$252</span><span><i class="fa-solid fa-trash-can"></i></span></p>
+																</div>
+															  </div>
+															</div>
+														  </div>
+													</div>
+												</li>
+												<li>
+													<div class="dropdown-item">
+														結帳去
+													</div>
+												</li>
+											</ul> -->
+										</li>
+										<li class="nav-item dropdown action-language">
+											<!-- Toggle -->
+											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+												<i class="fa-solid fa-globe"></i>
+											</a>
+											
+											<!-- Menu -->
+											<ul class="dropdown-menu p-0">
+												<li>
+													<a class="dropdown-item" href="#">中文(繁體)</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">中文(簡體)</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">English (US)</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">日本語</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
-				<!-- </div> -->
-
-			</div>
-		</nav>
+				</nav>
+			</section>
+		</div>
 	</header>
 	<main>
 		<section class="banner-section">
-			<div class="swiper banner-swiper">
-				<div class="container-fluid swiper-wrapper p-0">
-					<!-- banner 樣式一 -->
-					<div class="swiper-slide banner-item banner-style-one">
-						<div class="row">
-							<div class="banner-bg">
-								<div class="col-12">
+			<div class="container-fluid p-0">
+				<div class="swiper banner-swiper">
+					<div class="swiper-wrapper">
+						<!-- banner 樣式一 -->
+						<div class="swiper-slide banner-item banner-style-one">
+							<div class="row">
+								<div class="banner-bg">
+									<div class="col-12">
+										<picture>
+											<source media="(max-width: 451px)" srcset="https://fakeimg.pl/451x1080">
+											<source media="(max-width: 769px)" srcset="https://fakeimg.pl/768x1080">
+											<img class="w-100" src="https://fakeimg.pl/1920x1080" alt="">
+										</picture>
+										
+									</div>
+								</div>
+								<div class="banner-content">
+									<div class="col-9 mx-auto">
+										<div class="card bg-transparent bg-hover text-white text-left border-0">
+											<div class="card-body p-0 px-3">
+												<h2 class="mb-7 fw-bolder">自信就能自帶帥氣</h2>
+												<h3 class="fw-normal">立體剪裁三角褲</h3>
+												<h3 class="fw-normal">5件 / $1,000</h3>
+								
+											</div>
+											<div class="card-body mt-7 p-0 px-3">
+												<a class="btn border-white text-white rounded fs-lg" href="#">
+													立即搶購
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- banner 樣式二  -->
+						<div class="swiper-slide banner-item banner-style-two">	
+							<div class="col-12 col-lg-6 position-relative img-hover">
+								<div class="col-12 banner-bg">
 									<picture>
-										<source media="(max-width: 451px)" srcset="https://fakeimg.pl/451x1080">
-										<source media="(max-width: 769px)" srcset="https://fakeimg.pl/768x1080">
-										<img class="w-100" src="https://fakeimg.pl/1920x1080" alt="">
+										<source media="(max-width: 451px)" srcset="https://fakeimg.pl/451x540">	
+										<source media="(max-width: 769px)" srcset="https://fakeimg.pl/768x540">
+										<img class="w-100 img-hover" src="https://www.jthemes.net/themes/html/neoncart/assets/images/banner/fashion_minimal/img_01.jpg" alt="">
+									</picture>
+								</div>
+								<div class="col-12 banner-content">
+									<div class="container">
+										<div class="card bg-transparent border-0 text-center">
+											<div class="card-body p-0">
+												<h2 class="fw-bolder">
+													女士館
+												</h2>
+											</div>
+											<div class="card-body mt-auto py-4">
+												<a class="btn bg-white fs-lg rounded text-uppercase" href="">
+													Shop this look
+												</a>
+								
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-lg-6 position-relative img-hover">
+								<div class="col-12 banner-bg">
+									<picture>
+										<source media="(max-width: 451px)" srcset="https://fakeimg.pl/451x540">	
+										<source media="(max-width: 769px)" srcset="https://fakeimg.pl/768x540">
+										<img class="w-100 img-hover" src="https://www.jthemes.net/themes/html/neoncart/assets/images/banner/fashion_minimal/img_02.jpg" alt="">
 									</picture>
 									
 								</div>
-							</div>
-							<div class="banner-content">
-								<div class="col-9 mx-auto">
-									<div class="card bg-transparent bg-hover text-white text-left border-0">
-										<div class="card-body p-0 px-3">
-											<h2 class="mb-7 fw-bolder">自信就能自帶帥氣</h2>
-											<h3 class="fw-normal">立體剪裁三角褲</h3>
-											<h3 class="fw-normal">5件 / $1,000</h3>
-							
-										</div>
-										<div class="card-body mt-7 p-0 px-3">
-											<a class="btn border-white text-white rounded fs-lg" href="#">
-												立即搶購
-											</a>
+								<div class="col-12 banner-content">
+									<div class="container">
+										<div class="card bg-transparent border-0 text-center">
+											<div class="card-body p-0">
+												<h2 class="fw-bolder text-white">
+													男士館
+												</h2>
+											</div>
+											<div class="card-body mt-auto py-4">
+												<a class="btn bg-white fs-lg rounded text-uppercase" href="">
+													Shop this look
+												</a>
+								
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+						
 					</div>
-					<div class="swiper-slide banner-item banner-style-two">	
-						<div class="col-12 col-lg-6 position-relative img-hover">
-							<div class="col-12 banner-bg">
-								<!-- <img class="w-100" src="https://fakeimg.pl/960x1080" alt=""> -->
-								<img class="w-100" src="https://www.jthemes.net/themes/html/neoncart/assets/images/banner/fashion_minimal/img_01.jpg" alt="">
-							</div>
-							<div class="col-12 banner-content">
-								<div class="container">
-									<div class="card bg-transparent border-0 text-center">
-										<div class="card-body p-0">
-											<h2 class="fw-bolder">
-												女士館
-											</h2>
-										</div>
-										<div class="card-body mt-auto py-4">
-											<a class="btn bg-white fs-lg rounded text-uppercase" href="">
-												Shop this look
-											</a>
-							
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-12 col-lg-6 position-relative img-hover">
-							<div class="col-12 banner-bg">
-								<!-- <img class="w-100" src="https://fakeimg.pl/960x1080" alt=""> -->
-								<img class="w-100" src="https://www.jthemes.net/themes/html/neoncart/assets/images/banner/fashion_minimal/img_02.jpg" alt="">
-							</div>
-							<div class="col-12 banner-content">
-								<div class="container">
-									<div class="card bg-transparent border-0 text-center">
-										<div class="card-body p-0">
-											<h2 class="fw-bolder text-white">
-												男士館
-											</h2>
-										</div>
-										<div class="card-body mt-auto py-4">
-											<a class="btn bg-white fs-lg rounded text-uppercase" href="">
-												Shop this look
-											</a>
-							
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-pagination"></div>
 				</div>
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
-				<div class="swiper-pagination"></div>
 			</div>
 			
 		</section>
@@ -730,7 +933,135 @@
 					<div class="d-flex">
 						<div class="col-12 mx-auto">
 							<div class="tab-content" id="myTabContent">
-								<div class="tab-pane fade" id="tab-category-contnet-1" role="tabpanel" aria-labelledby="nav-category-tab-1">
+								<div class="tab-pane fade  show active" id="tab-category-contnet-1" role="tabpanel" aria-labelledby="nav-category-tab-1">
+									<!-- <div class="d-grid">
+										<div class="g-col g-col-4">
+											<div class="category-img">
+												<picture class="d-inline-block">
+													<img src="https://fakeimg.pl/1114x668">
+												</picture>
+												<div class="img-content">
+													<div class="col-11 mx-auto">
+														<div class="card bg-transparent bg-hover text-white text-left border-0">
+															<div class="card-body">
+																<h3>內衣・SOCKS</h3>
+																<p>穿上我們最喜歡的秋季圖案襪子<br/>展現您最好的一面</p>
+																<button>更多商品</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="g-col g-col-4">
+											<div class="col-12 px-3 text-center">
+												<div class="card d-block border-0">
+													<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+													<div class="card-body px-0">
+														<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+														<div class="card-content">
+															<div class="col-6">
+																<span class="card-price">NT$252</span>
+															</div>
+															<div class="col-6">
+																<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
+																<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
+															</div>
+														</div>
+														<div class="color-items d-flex">
+															<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
+															<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
+															<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
+														</div>
+														<div class="color-name">
+															<p class="text-start">灰色</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="g-col g-col-4">
+											<div class="col-12 px-3 text-center">
+												<div class="card d-block border-0">
+													<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+													<div class="card-body px-0">
+														<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+														<div class="card-content">
+															<div class="col-6">
+																<span class="card-price">NT$252</span>
+															</div>
+															<div class="col-6">
+																<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
+																<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
+															</div>
+														</div>
+														<div class="color-items d-flex">
+															<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
+															<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
+															<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
+														</div>
+														<div class="color-name">
+															<p class="text-start">灰色</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="g-col g-col-4">
+											<div class="col-12 px-3 text-center">
+												<div class="card d-block border-0">
+													<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+													<div class="card-body px-0">
+														<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+														<div class="card-content">
+															<div class="col-6">
+																<span class="card-price">NT$252</span>
+															</div>
+															<div class="col-6">
+																<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
+																<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
+															</div>
+														</div>
+														<div class="color-items d-flex">
+															<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
+															<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
+															<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
+														</div>
+														<div class="color-name">
+															<p class="text-start">灰色</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="g-col g-col-4">
+											<div class="col-12 px-3 text-center">
+												<div class="card d-block border-0">
+													<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+													<div class="card-body px-0">
+														<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+														<div class="card-content">
+															<div class="col-6">
+																<span class="card-price">NT$252</span>
+															</div>
+															<div class="col-6">
+																<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
+																<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
+															</div>
+														</div>
+														<div class="color-items d-flex">
+															<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
+															<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
+															<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
+														</div>
+														<div class="color-name">
+															<p class="text-start">灰色</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> -->
 									<div class="row justify-content-between">
 										<div class="col-12 col-lg-8">
 											<div class="category-img">
@@ -754,8 +1085,8 @@
 											<div class="row h-100 category-products">
 												<div class="col-6 px-3 text-center">
 													<div class="card d-block border-0">
-														<img src="https://fakeimg.pl/160x175"/>
-														<div class="card-body p-0 pt-3">
+														<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+														<div class="card-body px-0">
 															<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
 															<div class="card-content">
 																<div class="col-6">
@@ -766,17 +1097,21 @@
 																	<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
 																</div>
 															</div>
-															<div class="card-color">
-																<p class="color-code" style="background-color: #ec580b;"></p>
-																<p class="color-name text-start">橘色</p>
+															<div class="color-items d-flex">
+																<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
+																<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
+																<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
+															</div>
+															<div class="color-name">
+																<p class="text-start">灰色</p>
 															</div>
 														</div>
 													</div>
 												</div>
 												<div class="col-6 px-3 text-center">
 													<div class="card d-block border-0">
-														<img src="https://fakeimg.pl/160x175"/>
-														<div class="card-body p-0 pt-3">
+														<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+														<div class="card-body px-0">
 															<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
 															<div class="card-content">
 																<div class="col-6">
@@ -787,17 +1122,21 @@
 																	<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
 																</div>
 															</div>
-															<div class="card-color">
-																<p class="color-code" style="background-color: #ec580b;"></p>
-																<p class="color-name text-start">橘色</p>
+															<div class="color-items d-flex">
+																<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
+																<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
+																<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
+															</div>
+															<div class="color-name">
+																<p class="text-start">灰色</p>
 															</div>
 														</div>
 													</div>
 												</div>
 												<div class="col-6 px-3 text-center">
 													<div class="card d-block border-0">
-														<img src="https://fakeimg.pl/160x175"/>
-														<div class="card-body p-0 pt-3">
+														<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+														<div class="card-body px-0">
 															<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
 															<div class="card-content">
 																<div class="col-6">
@@ -808,17 +1147,21 @@
 																	<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
 																</div>
 															</div>
-															<div class="card-color">
-																<p class="color-code" style="background-color: #ec580b;"></p>
-																<p class="color-name text-start">橘色</p>
+															<div class="color-items d-flex">
+																<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
+																<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
+																<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
+															</div>
+															<div class="color-name">
+																<p class="text-start">灰色</p>
 															</div>
 														</div>
 													</div>
 												</div>
 												<div class="col-6 px-3 text-center">
 													<div class="card d-block border-0">
-														<img src="https://fakeimg.pl/160x175"/>
-														<div class="card-body p-0 pt-3">
+														<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+														<div class="card-body px-0">
 															<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
 															<div class="card-content">
 																<div class="col-6">
@@ -829,13 +1172,17 @@
 																	<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
 																</div>
 															</div>
-															<div class="card-color">
-																<p class="color-code" style="background-color: #ec580b;"></p>
-																<p class="color-name text-start">橘色</p>
+															<div class="color-items d-flex">
+																<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
+																<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
+																<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
+															</div>
+															<div class="color-name">
+																<p class="text-start">灰色</p>
 															</div>
 														</div>
 													</div>
-												</div>	
+												</div>
 											</div>
 										</div>
 									</div>
@@ -950,7 +1297,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="tab-pane fade show active" id="tab-category-contnet-3" role="tabpanel" aria-labelledby="nav-category-tab-3">
+								<div class="tab-pane fade" id="tab-category-contnet-3" role="tabpanel" aria-labelledby="nav-category-tab-3">
 									<div class="row justify-content-between">
 										<div class="col-12 col-lg-8">
 											<div class="category-img">
@@ -1288,52 +1635,52 @@
 		</section>
 
 		<section class="introduction-section">
-			<div class="swiper introduction-swiper">
-				<div class="swiper-wrapper container-fluid p-0">
-					<div class="swiper-slide introduction-item">
-						<div class="col-11 mx-auto">
-							<div class="row">
-								<div class="col-12 col-lg-6">
-									<div class="introduction-bg px-lg-5">
-										<h3 class="">在別人眼中最微不足道的地方，我卻花了大半輩子去研究<span>― 創辦人 施純鎰</span></h3>
-										<p>三花-其實是董事長希望公司憑著自己的苦心經營，可以像養花一樣，透過慢慢灌溉，讓繁花盛開、迎風燦爛而取的。他用了人生2/3的時間養成，專注細節，這三朵花才能一直盛開。為好而堅持，是我們能夠傳承50年的信念。</p>
-										<h4 class="text-end"><span>品牌創辦人</span><img src="https://fakeimg.pl/170x60" alt=""></h4>
+			<div class="container-fluid p-0">
+				<div class="swiper introduction-swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide introduction-item">
+							<div class="col-11 mx-auto">
+								<div class="row">
+									<div class="col-12 col-lg-6">
+										<div class="introduction-bg px-lg-5">
+											<h3 class="">在別人眼中最微不足道的地方，我卻花了大半輩子去研究<span>― 創辦人 施純鎰</span></h3>
+											<p>三花-其實是董事長希望公司憑著自己的苦心經營，可以像養花一樣，透過慢慢灌溉，讓繁花盛開、迎風燦爛而取的。他用了人生2/3的時間養成，專注細節，這三朵花才能一直盛開。為好而堅持，是我們能夠傳承50年的信念。</p>
+											<h4 class="text-end"><span>品牌創辦人</span><img src="https://fakeimg.pl/170x60" alt=""></h4>
+										</div>
+									</div>
+									<div class="col-12 col-lg-6 position-relative">
+										<div class="introduction-content">
+											<img class="w-100" src="https://fakeimg.pl/865x635" alt="">
+										</div>
 									</div>
 								</div>
-								<div class="col-12 col-lg-6 position-relative">
-									<div class="introduction-content">
-										<img class="w-100" src="https://fakeimg.pl/865x635" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide introduction-item">
+							<div class="col-11 mx-auto">
+								<div class="row">
+									<div class="col-12 col-lg-6">
+										<div class="introduction-bg px-5">
+											<h3 class="">在別人眼中最微不足道的地方，我卻花了大半輩子去研究<span>― 創辦人 施純鎰</span></h3>
+											<p>三花-其實是董事長希望公司憑著自己的苦心經營，可以像養花一樣，透過慢慢灌溉，讓繁花盛開、迎風燦爛而取的。他用了人生2/3的時間養成，專注細節，這三朵花才能一直盛開。為好而堅持，是我們能夠傳承50年的信念。</p>
+											<h4 class="text-end"><span>品牌創辦人</span><img src="https://fakeimg.pl/170x60" alt=""></h4>
+										</div>
+									</div>
+									<div class="col-12 col-lg-6 position-relative">
+										<div class="introduction-content">
+											<img class="w-100" src="https://fakeimg.pl/865x635" alt="">
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide introduction-item">
-						<div class="col-11 mx-auto">
-							<div class="row">
-								<div class="col-12 col-lg-6">
-									<div class="introduction-bg px-5">
-										<h3 class="">在別人眼中最微不足道的地方，我卻花了大半輩子去研究<span>― 創辦人 施純鎰</span></h3>
-										<p>三花-其實是董事長希望公司憑著自己的苦心經營，可以像養花一樣，透過慢慢灌溉，讓繁花盛開、迎風燦爛而取的。他用了人生2/3的時間養成，專注細節，這三朵花才能一直盛開。為好而堅持，是我們能夠傳承50年的信念。</p>
-										<h4 class="text-end"><span>品牌創辦人</span><img src="https://fakeimg.pl/170x60" alt=""></h4>
-									</div>
-								</div>
-								<div class="col-12 col-lg-6 position-relative">
-									<div class="introduction-content">
-										<img class="w-100" src="https://fakeimg.pl/865x635" alt="">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item-controller">
-					<div class="container-fluid">
-						<div class="col-11 mx-auto">
-							<div class="row justify-content-end">
-								<div class="col-12 col-lg-6">
-									<div class="row  justify-content-center">
-										<!-- <div class="col-4"> -->
+					<div class="item-controller">
+						<div class="container-fluid">
+							<div class="col-11 mx-auto">
+								<div class="row justify-content-end">
+									<div class="col-12 col-lg-6">
+										<div class="row  justify-content-center">
 											<div class="row row-cols-3">
 												<div class="col">
 													<div class="intorduction-button-prev"><i class="fa-solid fa-chevron-left"></i>上一頁</div>
@@ -1345,7 +1692,7 @@
 													<div class="intorduction-button-next">下一頁<i class="fa-solid fa-chevron-right"></i></div>
 												</div>
 											</div>
-										<!-- </div> -->
+										</div>
 									</div>
 								</div>
 							</div>

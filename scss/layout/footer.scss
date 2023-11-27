@@ -1,0 +1,201 @@
+// @import "Ginkgo";
+@import "GinkgoMixin";
+@import "GinkgoUi";
+
+footer {
+	padding: 6rem 0;
+	background-color: var(--main-blue);
+
+	@include range-width(0, 769px) {
+		padding: 1rem 0;
+	}
+
+	.footer_widget {
+		&.socilas_widget {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100%;
+
+			@include range-width(0, 769px) {
+				padding: 1rem 0;
+				text-align: center;
+			}
+
+			.ul_li_socials {
+				display: flex;
+				padding: 0;
+				list-style: none;
+
+				@include range-width(0, 769px) {
+					justify-content: center;
+				}
+
+				li {
+					padding: 1rem 1.5rem 1rem 0;
+					a {
+	
+						i {
+							font-size: 30px;
+							color: #fff;
+							opacity: .6;
+						}
+					}
+				}
+				
+
+
+				
+			}
+
+			.fm_footer_newsletter {
+
+				.footer_widget_title {
+					@include range-width(0, 769px) {
+						text-align: left;
+					}
+				}
+
+				.footer_widget_text {
+					@include range-width(0, 769px) {
+						text-align: left;
+					}
+				}
+				.placeholder-icon {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					pointer-events: none;
+					font-size: 24px;
+					padding: 0 1rem;
+				}
+
+				.btn {
+					background-color: var(--main-red);
+					color: var(--main-white);
+
+					&:hover {
+						i {
+							transform: scale(1.05);
+						}
+					}
+				}
+			}
+		}
+		
+		.footer_widget_title {
+			font-size: 18px;
+			font-weight: 600;
+			color: #eee;
+		}
+
+		.footer_widget_text {
+			font-size: 15px;
+			font-weight: 300;
+			line-height: 2;
+			color: #fff;
+			opacity: .6;
+		}
+
+		.ul_li_links {
+			padding: 0;
+			list-style: none;
+
+			a {
+				font-size: 15px;
+				font-size: 300;
+				line-height: 2;
+				color: #c9d1f5;
+
+				&:hover {
+					text-decoration: underline !important;
+				}
+			}
+		}
+
+		.web-links {
+			
+		}
+		
+		
+		.mobile-links {
+			.accordion {
+				.accordion-item {
+					border: 0;
+					background-color: transparent;
+					border-bottom: 1px solid rgba(255, 255, 255, .35);
+
+					.accordion-header {
+						background-color: transparent;
+
+						.accordion-button {
+							background-color: transparent;
+							color: var(--main-white);
+							padding: 1rem 0;
+
+							&:focus {
+								box-shadow: none;
+							}
+
+							&[aria-expanded] {
+								&:after {
+									background-image: unset;
+									transform: unset;
+								}
+							}	
+							&[aria-expanded="true"] {
+								&:after {
+									content: '\f068';
+									font-family: "Font Awesome 6 Pro";	
+								}
+							}
+							
+
+							&[aria-expanded="false"] {
+								&:after {
+									content: '\2b';
+									font-family: "Font Awesome 6 Pro";
+								}
+								
+							}
+							
+						}
+
+						.footer_widget_title {
+							font-size: 16px;
+							font-weight: 600;
+							color: #eee;
+						}
+			
+						.ul_li_links {
+							padding: 0;
+							list-style: none;
+			
+							
+						}
+					}
+
+					.accordion-body {
+						padding: 0;
+
+						.ul_li_links {
+							padding: 0 0 0 1.5rem;
+							&:first-child {
+								margin-bottom: 0;
+							}
+
+							a {
+								font-size: 16px;
+								font-size: 300;
+								line-height: 2;
+								color: #c9d1f5;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		
+	}
+}
