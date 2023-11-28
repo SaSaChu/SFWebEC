@@ -3,11 +3,26 @@
 @import "GinkgoUi";
 
 footer {
-	padding: 6rem 0;
-	background-color: var(--main-blue);
+	padding: 7rem 0 0 0;
 
 	@include range-width(0, 769px) {
 		padding: 1rem 0;
+	}
+
+	.footer-first {
+		padding: 6rem 0;
+		background-color: var(--main-blue);
+	}
+
+	.footer-second {
+		padding: 3rem 0;
+		background-color: rgba(17, 28, 71, 0.5);
+	}
+
+	.footer-third {
+		padding: 2rem 0;
+		font-size: 13px;
+		color: #111c47;
 	}
 
 	.footer_widget {
