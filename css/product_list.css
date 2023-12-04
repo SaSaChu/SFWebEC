@@ -41,10 +41,18 @@ main .nav-breadcrumb .breadcrumb .breadcrumb-item:first-child { position: relati
 main .nav-breadcrumb .breadcrumb .breadcrumb-item:first-child:before { content: ''; position: absolute; display: inline-block; left: 0; width: 3px; height: 100%; background-color: var(--main-blue); }
 main .nav-breadcrumb .breadcrumb .breadcrumb-item a { color: var(--main-blue); }
 main .nav-breadcrumb .breadcrumb .breadcrumb-item.active { color: var(--main-red); }
-main .action-wrapper { border-bottom: 1px solid #efefef; }
+main .action-wrapper .border-line { border-bottom: 1px solid #efefef; }
 main .action-wrapper .filter-area .filter-tag { display: flex; padding-left: 0; list-style: none; }
 main .action-wrapper .filter-area .filter-tag li { padding: .5rem 1rem; margin-right: .5rem; font-size: 16px; color: #6b6b6b; border: 1px solid #6b6b6b; border-radius: 5px; cursor: pointer; }
 main .action-wrapper .filter-area .filter-tag li.active { border-color: #36558b; color: #36558b; }
+main .package-wrapper .package_header { position: relative; }
+main .package-wrapper .package_header p { display: flex; align-items: center; color: #3d6dc1; }
+main .package-wrapper .package_header p span { color: #6b6b6b; }
+main .package-wrapper .package_header p span > span:first-of-type { color: #cd0000; }
+main .package-wrapper .package_header p span > span:last-of-type { color: #b10e0e; }
+main .package-wrapper .package_header a { background-color: #b10e0e; border-radius: 5px; color: var(--main-white); }
+main .package-wrapper .package_body .trash-btn { position: absolute; right: .5rem; display: flex; align-items: center; justify-content: center; width: 35px; height: 35px; background-color: #b3b7c6; border-radius: 50%; color: white; }
+main .package-wrapper .package_body .card-body .form-select { background-color: #efefef; }
 main .tab-content { padding: 1.5rem 0; }
 main .tab-content .tab-pane .product-item img:hover { transform: scale(1.05); }
 main .tab-content .tab-pane .product-item .card .card-body .card-title { font-size: 1rem; color: var(--main-blue); text-align: left; }

@@ -242,7 +242,10 @@ main {
 	}
 
 	.action-wrapper {
-		border-bottom: 1px solid #efefef;
+		// border-bottom: 1px solid #efefef;
+		.border-line	{
+			border-bottom: 1px solid #efefef;
+		}
 		.filter-area {
 			.filter-tag {
 				display: flex;
@@ -266,6 +269,60 @@ main {
 				}
 			}
 		}
+	}
+
+	.package-wrapper {
+		.package_header {
+			position: relative;
+
+			p {
+				display: flex;
+				align-items: center;
+				color: #3d6dc1;
+
+				span {
+					color: #6b6b6b;
+
+					> span {
+						&:first-of-type {
+							color: #cd0000;
+						}
+						
+						&:last-of-type {
+							color: #b10e0e;
+						}
+					}
+				}
+			}
+
+			a {
+				background-color: #b10e0e;
+				border-radius: 5px;
+				color: var(--main-white);
+			}
+		}
+
+		.package_body {
+			.trash-btn {
+				position: absolute;
+				right: .5rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 35px;
+				height: 35px;
+				background-color: #b3b7c6;
+				border-radius: 50%;
+				color: white;
+			}
+	
+			.card-body {
+				.form-select {
+					background-color: #efefef;
+				}
+			}
+		}
+		
 	}
 
 	.tab-content {
