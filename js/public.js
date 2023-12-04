@@ -110,8 +110,7 @@ $(function () {
     });
 
     $('.color-item').on('mouseenter', function() {
-        $('.color-item').removeClass('active');
-        $(this).addClass('active');
+        $(this).addClass('active').siblings().removeClass('active');
         $(this).parents('.card-body').prev().attr("src", $(this).attr('data-img'));
         $(this).parent().next().find('p').text($(this).find('span').attr('data-colorName'));
         
