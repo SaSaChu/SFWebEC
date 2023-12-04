@@ -519,13 +519,17 @@
 
 .fs-2 { font-size: calc(1.325rem + 0.9vw) !important; }
 
-.fs-3 { font-size: calc(1.3rem + 0.6vw) !important; }
+.fs-3 { font-size: calc(1.3125rem + 0.75vw) !important; }
 
 .fs-4 { font-size: calc(1.275rem + 0.3vw) !important; }
 
 .fs-5 { font-size: 1.25rem !important; }
 
-.fs-6 { font-size: 1rem !important; }
+.fs-6 { font-size: 1.125rem !important; }
+
+.fs-7 { font-size: 1rem !important; }
+
+.fs-8 { font-size: 0.875rem !important; }
 
 .fst-italic { font-style: italic !important; }
 
@@ -536,6 +540,10 @@
 .fw-lighter { font-weight: lighter !important; }
 
 .fw-normal { font-weight: 400 !important; }
+
+.fw-medium { font-weight: 500 !important; }
+
+.fw-semi { font-weight: 600 !important; }
 
 .fw-bold { font-weight: 700 !important; }
 
@@ -1445,7 +1453,7 @@
   .text-xxl-center { text-align: center !important; } }
 @media (min-width: 1200px) { .fs-1 { font-size: 2.5rem !important; }
   .fs-2 { font-size: 2rem !important; }
-  .fs-3 { font-size: 1.75rem !important; }
+  .fs-3 { font-size: 1.875rem !important; }
   .fs-4 { font-size: 1.5rem !important; } }
 @media print { .d-print-inline { display: inline !important; }
   .d-print-inline-block { display: inline-block !important; }
