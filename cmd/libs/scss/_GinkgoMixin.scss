@@ -96,3 +96,21 @@
   cursor: -ms-grabbing;
   cursor: grabbing;
 }
+
+
+%img-hover {
+  overflow: hidden;
+
+  picture {
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  img {
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  
+  
+}

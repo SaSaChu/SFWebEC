@@ -1,6 +1,7 @@
 footer { padding: 7rem 0 0 0; }
 @media screen and (max-width: 768px) and (min-width: 0) { footer { padding: 1rem 0; } }
 footer .footer-first { padding: 6rem 0; background-color: var(--main-blue); }
+@media screen and (max-width: 768px) and (min-width: 0) { footer .footer-first { padding: 1rem 0; } }
 footer .footer-second { padding: 3rem 0; background-color: rgba(17, 28, 71, 0.5); }
 footer .footer-third { padding: 2rem 0; font-size: 13px; color: #111c47; }
 footer .footer_widget.socilas_widget { display: flex; flex-direction: column; justify-content: space-between; height: 100%; }

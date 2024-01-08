@@ -54,40 +54,88 @@ main {
 		top: 20px;
 
 		&.openBtn {
-			top: 50%;
+			// top: 50%;
 		}
 	}
 
 	.closeSideBtn{
-		position: relative;
-		top: 30%;
+		position: absolute;
+		right: 0;
+		display: flex;
+		flex-direction: column;
 		margin-right: -.75rem;
-		padding: .5rem;
-		display:inline-block;
-		width: 30%;
+		width: 30px;
 		font-size: 13px;
 		line-height: 1.23;
-		background-color: #6B6B6B;
 		color: #fff;
-		border-radius: 6px 0 0 6px;
-		transform: translateY(150%);
+		transform: translateY(20vh);
+		cursor: pointer;
+
+		i {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			padding: .5rem .25rem;
+			background-color: #004b8d;
+			font-size: 13px;
+			border-radius: 6px 0 0 0;
+		}
+
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			padding: .5rem 0;
+			font-size: 16px;
+			font-weight: 500;
+			border-radius: 0 0 0 6px;
+			background-color: orange;
+			writing-mode: vertical-rl;
+			text-orientation: upright;
+		}
 
 	}
 
-	.openSideBtn {
+	.openSideBtn{
+		position: absolute;
+		right: 0;
 		display: none;
-		position: relative;
-		top: 50%;
+		flex-direction: column;
 		margin-right: -.75rem;
-		padding: .5rem;
-		// display:inline-block;
-		width: 30%;
+		width: 30px;
 		font-size: 13px;
 		line-height: 1.23;
-		background-color: #6B6B6B;
 		color: #fff;
-		border-radius: 6px;
-		transform: translateY(-50%);
+		transform: translateY(20vh);
+		cursor: pointer;
+
+		i {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			padding: .5rem .25rem;
+			background-color: #004b8d;
+			font-size: 13px;
+			border-radius: 6px 6px 0 0;
+		}
+
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			padding: .5rem 0;
+			font-size: 16px;
+			font-weight: 500;
+			border-radius: 0 0 6px 6px;
+			background-color: orange;
+			writing-mode: vertical-rl;
+			text-orientation: upright;
+		}
+
 	}
 
 	aside {
@@ -325,183 +373,186 @@ main {
 		
 	}
 
-	.tab-content {
-		padding: 1.5rem 0;
-
-		.tab-pane {
-			.product-item {
-				img {
-					&:hover {
-						transform: scale(1.05);
+	.products-wrapper {
+		.tab-content {
+			padding: 1.5rem 0;
+	
+			.tab-pane {
+				.product-item {
+					img {
+						&:hover {
+							transform: scale(1.05);
+						}
 					}
-				}
-	
-				.card {
-					.card-body {
-						.card-title {
-							font-size: 1rem;
-							color: var(--main-blue);
-							text-align: left;
-						}
-	
-						.card-content {
-							position: relative;
-							display: flex;
-							padding-bottom: .5rem;
-							border-bottom: 1px solid #efefef;;
-							.col-6 {
-								&:first-child {
-									text-align: left;
-									.card-price {
-										font-weight: bold;
-										color: var(--main-red);
-									}
-								}
-								&:last-child {
-									text-align: right;
-									.item-action {
-										color: #8093a8;
-										cursor: pointer;
-	
-										&:hover {
-											color: var(--main-blue);
-										}
-									}
-								}
+		
+					.card {
+						.card-body {
+							.card-title {
+								font-size: 1rem;
+								color: var(--main-blue);
+								text-align: left;
 							}
-						}
-						
-						.color-items {
-							padding-top: .5rem;
-	
-							.color-item {
+		
+							.card-content {
+								position: relative;
 								display: flex;
-								justify-content: center;
-								align-items: center;
-								padding: 1px;
-								width: 22px;
-								height: 22px;
-								border-radius: 50%;
-								cursor: pointer;
-								
-	
-								&:not(:first-child) {
-									margin-left: .5rem;
-								}
-	
-								&.active {
-									border: solid 1px #979797;
-								}
-	
-								span {
-									display: inline-block;
-									width: 18px;
-									height: 18px;
-									border-radius: 50%;
-								}
-							}
-						}
-	
-						.color-name {
-							padding-top: .5rem;
-							font-size: 14px;
-							color: #6b6b6b;
-						}
-
-						.sub-card {
-							position: absolute;
-							left: 0;
-							margin-top: .5rem;
-							width: 100%;
-							z-index: 1;
-
-							.card-body {
-								.color-wrapper {
-									margin-bottom: .5rem;
-
-									.color-name {
-										display: flex;
-										font-size: 14px;
-										color: var(--main-blue);
-										
-										span {
-											color: #6b6b6b;
+								padding-bottom: .5rem;
+								border-bottom: 1px solid #efefef;;
+								.col-6 {
+									&:first-child {
+										text-align: left;
+										.card-price {
+											font-weight: bold;
+											color: var(--main-red);
 										}
 									}
-
-									.color-items {
-										.color-item {
-											&.active {
-												border: solid 1px #979797;
+									&:last-child {
+										text-align: right;
+										.item-action {
+											color: #8093a8;
+											cursor: pointer;
+		
+											&:hover {
+												color: var(--main-blue);
 											}
 										}
 									}
 								}
-
-								.size-wrapper {
-									.size-items {
-										display: flex;
-										padding-top: .5rem;
-										padding-left: 0;
-										list-style: none;
-
-										.size {
+							}
+							
+							.color-items {
+								padding-top: .5rem;
+		
+								.color-item {
+									display: flex;
+									justify-content: center;
+									align-items: center;
+									padding: 1px;
+									width: 22px;
+									height: 22px;
+									border-radius: 50%;
+									cursor: pointer;
+									
+		
+									&:not(:first-child) {
+										margin-left: .5rem;
+									}
+		
+									&.active {
+										border: solid 1px #979797;
+									}
+		
+									span {
+										display: inline-block;
+										width: 18px;
+										height: 18px;
+										border-radius: 50%;
+									}
+								}
+							}
+		
+							.color-name {
+								padding-top: .5rem;
+								font-size: 14px;
+								color: #6b6b6b;
+							}
+	
+							.sub-card {
+								position: absolute;
+								left: 0;
+								margin-top: .5rem;
+								width: 100%;
+								z-index: 1;
+	
+								.card-body {
+									.color-wrapper {
+										margin-bottom: .5rem;
+	
+										.color-name {
 											display: flex;
 											font-size: 14px;
 											color: var(--main-blue);
+											
+											span {
+												color: #6b6b6b;
+											}
 										}
-		
-										.size-item {
+	
+										.color-items {
+											.color-item {
+												&.active {
+													border: solid 1px #979797;
+												}
+											}
+										}
+									}
+	
+									.size-wrapper {
+										.size-items {
 											display: flex;
-											align-items: center;
-											justify-content: center;
-											margin-right: .5rem;
-											width: 35px;
-											height: 35px;
-											font-size: 16px;
-											color: #fff;
-											background-color: #9d9d9d;
-											border-radius: 50%;
-											text-transform: uppercase;
-
-											&.active {
-												background-color: #00a2d9;
+											padding-top: .5rem;
+											padding-left: 0;
+											list-style: none;
+	
+											.size {
+												display: flex;
+												font-size: 14px;
+												color: var(--main-blue);
+											}
+			
+											.size-item {
+												display: flex;
+												align-items: center;
+												justify-content: center;
+												margin-right: .5rem;
+												width: 35px;
+												height: 35px;
+												font-size: 16px;
+												color: #fff;
+												background-color: #9d9d9d;
+												border-radius: 50%;
+												text-transform: uppercase;
+	
+												&.active {
+													background-color: #00a2d9;
+												}
 											}
 										}
 									}
 								}
-							}
-
-							.action-wrapper {
-								.btn {
-									width: 100%;
-									font-size: 14px;
-									font-weight: 500;
-									color: #fff;
-									border: 0;
-									border-radius: 0;
-
-									&:focus {
-										box-shadow: none;
-									}
-
-									&.add-checkout {
-										background-color: #36558b;
-										border-radius: 0 0 0 .25rem;
-									}
-
-									&.add-cart {
-										background-color: #b10e0e;
-										border-radius: 0 0 .25rem 0;
+	
+								.action-wrapper {
+									.btn {
+										width: 100%;
+										font-size: 14px;
+										font-weight: 500;
+										color: #fff;
+										border: 0;
+										border-radius: 0;
+	
+										&:focus {
+											box-shadow: none;
+										}
+	
+										&.add-checkout {
+											background-color: #36558b;
+											border-radius: 0 0 0 .25rem;
+										}
+	
+										&.add-cart {
+											background-color: #b10e0e;
+											border-radius: 0 0 .25rem 0;
+										}
 									}
 								}
 							}
 						}
-					}
-				}	
+					}	
+				}
 			}
 		}
 	}
+
 }
 
 

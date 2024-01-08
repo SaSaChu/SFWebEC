@@ -5,6 +5,8 @@ $(function() {
 		$('.sideLeftMenu').hide();
 		$('.openSideBtn').show();
 		$(this).parent().addClass('openBtn');
+		// $('#product-lists').addClass('flex-grow-1');
+		$('#product-lists').addClass('col-lg-10');
 	});
 
 	$('.openSideBtn').click(function() {
@@ -12,6 +14,8 @@ $(function() {
 		$('.sideLeftMenu').show();
 		$('.closeSideBtn').show();
 		$(this).parent().removeClass('openBtn');
+		// $('#product-lists').removeClass('flex-grow-1');
+		$('#product-lists').removeClass('col-lg-10');
 	});
 	
 	// Ad

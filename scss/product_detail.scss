@@ -1,3 +1,5 @@
+@import "GinkgoMixin";
+@import "GinkgoUi";
 :root {
 	--main-blue: #111c47;
     --main-red: #b10e0e;
@@ -121,7 +123,8 @@ main {
 
 		.content_package {
 			position: relative;
-			padding-left: 1rem;
+			padding-left: 1rem;	
+
 			&:before {
 				content: '';
 				position: absolute;
@@ -153,9 +156,22 @@ main {
 			}
 
 			a {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
 				background-color: #b10e0e;
 				border-radius: 22.5px;
+				width: 60%;
+				text-align: left;
 				color: var(--main-white);
+
+				&:after {
+
+				}
+
+				@include range-width(0, 451px) {
+					width: 100%;
+				}
 			}
 		}
 
@@ -310,6 +326,11 @@ main {
 		}
 
 		.content_socials {
+			@include range-width(0, 769px) {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
 			span {
 				color: #111c47;
 			}
@@ -317,6 +338,11 @@ main {
 			.socials-btn {
 				font-size: 26px;
 				color: #b3b7c6;
+
+				&.bg-3 {
+					background-color: #b3b7c6;
+					color: var(--main-white);
+				}
 			}
 		}
 
@@ -358,6 +384,10 @@ main {
 				justify-content: space-between;
 				grid-gap: 1rem;
 				grid-template-columns: repeat(3, 1fr);
+
+				@include range-width(0, 451px) {
+					grid-template-columns: repeat(2, 1fr);
+				}
 
 				.box {
 					img {

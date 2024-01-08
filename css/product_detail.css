@@ -31,7 +31,8 @@ main .product_content .content_package p { color: #3d6dc1; }
 main .product_content .content_package p span { color: #6b6b6b; }
 main .product_content .content_package p span > span:first-of-type { color: #cd0000; }
 main .product_content .content_package p span > span:last-of-type { color: #b10e0e; }
-main .product_content .content_package a { background-color: #b10e0e; border-radius: 22.5px; color: var(--main-white); }
+main .product_content .content_package a { display: flex; justify-content: space-between; align-items: center; background-color: #b10e0e; border-radius: 22.5px; width: 60%; text-align: left; color: var(--main-white); }
+@media screen and (max-width: 450px) and (min-width: 0) { main .product_content .content_package a { width: 100%; } }
 main .product_content .content_colors p { color: #111c47; }
 main .product_content .content_colors .color-items { position: relative; display: inline-block; cursor: pointer; }
 main .product_content .content_colors .color-items:hover .tooltipBox { visibility: visible; opacity: 1; }
@@ -51,14 +52,17 @@ main .product_content .content_action button:focus { outline: none; box-shadow: 
 main .product_content .content_action button.bg-1 { background-color: #36558b; }
 main .product_content .content_action button.bg-2 { background-color: #e40000; }
 main .product_content .content_action button.bg-3 { background-color: #b3b7c6; }
+@media screen and (max-width: 768px) and (min-width: 0) { main .product_content .content_socials { display: flex; align-items: center; justify-content: space-between; } }
 main .product_content .content_socials span { color: #111c47; }
 main .product_content .content_socials .socials-btn { font-size: 26px; color: #b3b7c6; }
+main .product_content .content_socials .socials-btn.bg-3 { background-color: #b3b7c6; color: var(--main-white); }
 main .product_content .content_info { border-top: 1px solid #36558b; border-bottom: 1px solid #d8d8d8; }
 main .product_content .content_info:focus { outline: none; box-shadow: none; }
 main .product_content .content_info .accordion-item .accordion-header .accordion-button { box-shadow: none; color: #111c47; background-color: transparent; }
 main .product_content .content_info .accordion-item .accordion-header .accordion-button:focus { outline: none; box-shadow: none; }
 main .product_content .content_recommend h4 { padding: .5rem; color: #111c47; background-color: rgba(238, 238, 238, 0.5); }
 main .product_content .content_recommend .recommend_wrapper { display: grid; justify-content: space-between; grid-gap: 1rem; grid-template-columns: repeat(3, 1fr); }
+@media screen and (max-width: 450px) and (min-width: 0) { main .product_content .content_recommend .recommend_wrapper { grid-template-columns: repeat(2, 1fr); } }
 main .product_content .content_recommend .recommend_wrapper .box img { width: 100%; }
 main .product_content .content_recommend .recommend_wrapper .box p { color: #6b6b6b; margin-top: .5rem; padding-top: .5rem; border-top: 1px solid #efefef; }
 main .product_like .wrapper { background-color: #8093a8; }
