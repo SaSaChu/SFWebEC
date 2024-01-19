@@ -111,3 +111,28 @@ main .product_recent .recentMobile-button-prev { left: calc(100% -  70px); width
 main .product_recent .recentMobile-button-prev:after { display: flex; align-items: center; justify-content: center; width: 33px; height: 33px; background-color: rgba(17, 28, 71, 0.5); color: #fff; border-radius: 5px; font-size: 16px; font-weight: bold; }
 main .product_recent .recentMobile-button-next { right: 0; width: inherit; }
 main .product_recent .recentMobile-button-next:after { display: flex; align-items: center; justify-content: center; width: 33px; height: 33px; background-color: rgba(17, 28, 71, 0.5); color: #fff; border-radius: 5px; font-size: 16px; font-weight: bold; }
+
+.cart-offcanvas.offcanvas-bottom { height: auto; }
+.cart-offcanvas .offcanvas-header .offcanvas_picture img { border: 1px solid #ebeae6; }
+.cart-offcanvas .offcanvas-header .offcanvas_price p:first-of-type { color: #7d7d7d; }
+.cart-offcanvas .offcanvas-header .offcanvas_price p:last-of-type { color: #e40000; }
+.cart-offcanvas .offcanvas-header .offcanvas_price span:before { content: "NT$ "; }
+.cart-offcanvas .offcanvas-header .offcanvas_package span { display: flex; justify-content: space-between; align-items: center; background-color: #b10e0e; border-radius: 22.5px; width: 60%; text-align: left; color: var(--main-white); }
+@media screen and (max-width: 450px) and (min-width: 0) { .cart-offcanvas .offcanvas-header .offcanvas_package span { width: 100%; } }
+.cart-offcanvas .offcanvas-body > div { border-top: 1px solid #dfdfdf; }
+.cart-offcanvas .offcanvas-body .offcanvas_colors .color-items { position: relative; display: inline-block; cursor: pointer; }
+.cart-offcanvas .offcanvas-body .offcanvas_colors .color-items .color-btn { display: flex; align-items: center; justify-content: center; background-color: #f5f5f5; }
+.cart-offcanvas .offcanvas-body .offcanvas_colors .color-items .color-btn span { display: inline-block; width: 20px; height: 20px; border-radius: 50%; }
+.cart-offcanvas .offcanvas-body .offcanvas_sizes .size-items { position: relative; display: inline-block; cursor: pointer; }
+.cart-offcanvas .offcanvas-body .offcanvas_sizes .size-items.active .size-btn span { color: #c4c4c4; background-color: #eaeaea; }
+.cart-offcanvas .offcanvas-body .offcanvas_sizes .size-items .size-btn { display: flex; align-items: center; justify-content: center; padding: 2px; width: 40px; height: 40px; border-radius: 50%; }
+.cart-offcanvas .offcanvas-body .offcanvas_sizes .size-items .size-btn span { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background-color: #b3b7c6; color: var(--main-white); }
+.cart-offcanvas .offcanvas-body .offcanvas_quantity input[type="number"] { -webkit-appearance: textfield; -moz-appearance: textfield; appearance: textfield; }
+.cart-offcanvas .offcanvas-body .offcanvas_quantity input[type=number]::-webkit-inner-spin-button, .cart-offcanvas .offcanvas-body .offcanvas_quantity input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
+.cart-offcanvas .offcanvas-body .offcanvas_quantity .number-input { border: 2px solid #ddd; display: inline-flex; }
+.cart-offcanvas .offcanvas-body .offcanvas_quantity .number-input, .cart-offcanvas .offcanvas-body .offcanvas_quantity .number-input * { box-sizing: border-box; }
+.cart-offcanvas .offcanvas-body .offcanvas_quantity .number-input button { outline: none; -webkit-appearance: none; background-color: transparent; border: none; align-items: center; justify-content: center; width: 1.5rem; height: 1.5rem; cursor: pointer; margin: 0; position: relative; }
+.cart-offcanvas .offcanvas-body .offcanvas_quantity .number-input button:before, .cart-offcanvas .offcanvas-body .offcanvas_quantity .number-input button:after { display: inline-block; position: absolute; content: ''; width: .5rem; height: 2px; background-color: #212121; transform: translate(-50%, -50%); }
+.cart-offcanvas .offcanvas-body .offcanvas_quantity .number-input button.plus:after { transform: translate(-50%, -50%) rotate(90deg); }
+.cart-offcanvas .offcanvas-body .offcanvas_quantity .number-input input[type=number] { font-family: sans-serif; max-width: 2rem; padding: .5rem; border: solid #ddd; border-width: 0 2px; font-size: 13px; height: 1.5rem; font-weight: bold; text-align: center; }
+.cart-offcanvas .offcanvas-body .offcanvas_button button { background-color: var(--main-red); color: white; width: 100%; }

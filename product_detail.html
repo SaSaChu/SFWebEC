@@ -1091,7 +1091,7 @@
 									</p>
 								</div>
 							</div>
-							<div class="content_quantity">
+							<div class="content_quantity d-none d-lg-block">
 								<p class="mb-2">數量</p>
 								<div class="col-12 col-xl-4">
 									<select name="product_quantity" class="form-select form-select-lg mb-3 fs-7" aria-label=".form-select-lg example">
@@ -1101,7 +1101,7 @@
 									</select>
 								</div>
 							</div>
-							<div class="content_action">
+							<div class="content_action d-none d-lg-block">
 								<div class="row g-0 align-items-center justify-content-between">
 									<div class="col-6 col-xl-4 pe-1 pe-xl-0">
 										<button class="btn btn-lg fs-6 bg-1">立即購買</button>
@@ -1109,9 +1109,22 @@
 									<div class="col-6 col-xl-4 ps-1 ps-xl-0">
 										<button class="btn btn-lg fs-6 bg-2">加入購物車</button>
 									</div>
-									<div class="d-none d-xl-blcok col-xl-3">
+									<div class="col-xl-3">
 										<button class="btn btn-lg fs-6 bg-3"><i class="fa-regular fa-heart me-2"></i>追蹤</button>
 									</div>
+								</div>
+							</div>
+							<div class="content_action d-block d-lg-none">
+								<div class="row g-0 align-items-center justify-content-between">
+									<div class="col-6 col-xl-4 pe-1 pe-xl-0">
+										<button class="btn btn-lg fs-6 bg-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">立即購買</button>
+									</div>
+									<div class="col-6 col-xl-4 ps-1 ps-xl-0">
+										<button class="btn btn-lg fs-6 bg-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">加入購物車</button>
+										<!-- <button class="btn btn-lg fs-6 bg-2">加入購物車</button> -->
+									</div>
+
+									
 								</div>
 							</div>
 							<div class="content_socials my-4">
@@ -1231,7 +1244,6 @@
 									</div>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</div>
@@ -1918,6 +1930,107 @@
 			</div>
 		</div>
 	</footer>
+
+	<div class="offcanvas offcanvas-bottom show cart-offcanvas" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+		<div class="offcanvas-header">
+			<div class="row g-0 justify-content-between align-items-stretch">
+				<div class="col-5">
+					<div class="offcanvas_picture">
+						<img class="" src="https://swiperjs.com/demos/images/nature-1.jpg" alt="fake img"/>
+					</div>
+				</div>
+				<div class="col-5">
+					<div class="d-flex h-100 flex-column justify-content-between">
+						<div class="offcanvas_price mt-4">
+							<p class="fs-8 fw-medium">原價：<span class="original text-decoration-line-through">960</span></p>
+							<p class="fs-6 fw-bold">優惠價：<span class="special">630</span></p>
+						</div>
+
+						<!-- 有優惠的話顯示 -->
+						<div class="offcanvas_package">
+							<span class="btn btn-lg fs-7">優惠兩組 1200</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-1">
+					<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+			</div>
+			
+		</div>
+		<div class="offcanvas-body px-0">
+			<div class="offcanvas_colors px-3 py-2">
+				<p class="fs-8 fw-medium">顏色</p>
+				<div class="color-items mt-2 me-2 active">
+					<p class="color-btn fs-8 p-2 rounded">
+						<span class="me-2" style="background-color: #818a9f;"></span>
+						深藍色
+					</p>
+				</div>
+				<div class="color-items mt-2 me-2">
+					<p class="color-btn fs-8 p-2">
+						<span class="me-2" style="background-color: #818a9f;"></span>
+						深灰色
+					</p>
+				</div>
+				<div class="color-items mt-2 me-2">
+					<p class="color-btn fs-8 p-2">
+						<span class="me-2" style="background-color: #818a9f;"></span>
+						淺藍色
+					</p>
+				</div>
+				<div class="color-items mt-2 me-2">
+					<p class="color-btn fs-8 p-2">
+						<span class="me-2" style="background-color: #818a9f;"></span>
+						淺灰色
+					</p>
+				</div>
+			</div>
+
+			<div class="offcanvas_sizes px-3 py-2">
+				<p class="fs-8 fw-medium">尺寸</p>
+				<div class="size-items mt-2 me-2 ">
+					<p class="size-btn">
+						<span>M</span>
+					</p>
+				</div>
+				<div class="size-items mt-2 me-2 ">
+					<p class="size-btn">
+						<span>L</span>
+					</p>
+				</div>
+				<div class="size-items mt-2 me-2 ">
+					<p class="size-btn">
+						<span>XL</span>
+					</p>
+				</div>
+				<div class="size-items mt-2 me-2 active">
+					<p class="size-btn">
+						<span>XXL</span>
+					</p>
+				</div>
+			</div>
+
+			<div class="offcanvas_quantity px-3 py-2">
+				<div class="row g-0">
+					<div class="col-8">
+						<p class="fs-8 fw-medium">數量</p>
+					</div>
+					<div class="col-4 text-end">
+						<div class="number-input">
+							<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+							<input class="quantity" min="0" name="quantity" value="1" type="number">
+							<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="offcanvas_button px-3 pt-3">
+				<button type="button" class="btn btn-lg fs-6">加入購物車</button>
+			</div>
+		</div>
+	</div>	
 	
 	
 	<!-- bootstrap js -->
