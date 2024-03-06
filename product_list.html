@@ -10,6 +10,7 @@
 
 	<script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
 	<script language="javascript" type="text/javascript" src="js/swiper/swiper-bundle.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/public.js"></script>
 	<script language="javascript" type="text/javascript" src="js/product_list.js"></script>
 	<script language="javascript" type="text/javascript" src="js/list/list.min.js"></script>	
 
@@ -885,13 +886,12 @@
 						</div>
 					</div>		
 					<!-- Left Side Bar-->
-					<div class="col-12 col-lg-2 sideLeftMenu">
+					<div class="col-12 col-lg-2 d-none d-lg-block sideLeftMenu">
 						<div class="sticky-lg-top">
 							<aside>
 								<div class="side_widget">
 									<div class="menu_widget">
-										<!-- <div class="row"> -->
-											
+										<!-- <div class="row"> -->	
 											<!-- <div class="col-10"> -->
 												<h2>線上購物</h2>
 												<div class="accordion" id="accordionSideMenu">
@@ -1089,11 +1089,22 @@
 							</aside>
 						</div>
 					</div>
+					<div class="col-12 col-lg-2 d-block d-lg-none sideLeftMenuMobile">
+						<div class="sticky-lg-top">
+							<aside>
+								<div class="side_widget">
+									<div class="menu_widget">
+										<h2>線上購物</h2>
+									</div>
+								</div>	
+							</aside>
+						</div>
+					</div>
 					<!-- Right Products List -->
 					<div class="col-12 col-lg-8 " id="product-lists">
 						<div class="ms-3">
 							<!-- Breadcrumb -->
-							<nav class="nav-breadcrumb" aria-label="breadcrumb" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);">
+							<nav class="nav-breadcrumb d-none d-lg-block" aria-label="breadcrumb" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);">
 								<ol class="breadcrumb">
 									<li class="breadcrumb-item"><a href="#">首頁</a></li>
 									<li class="breadcrumb-item"><a href="#">線上購物</a></li>
@@ -1103,7 +1114,7 @@
 							<!-- Filter & Sort Btn -->
 							<div class="action-wrapper">
 								<div class="row justify-content-between border-line">
-									<div class="col-6">
+									<div class="col-8">
 										<div class="filter-area">
 											<ul class="filter-tag">
 												<!-- 篩選時，放上這批資料有的 type ，不然篩不出東西。篩選是根據 data-type的值 -->
@@ -1116,13 +1127,13 @@
 											</ul>
 										</div>
 									</div>
-									<div class="col-4">
+									<div class="col-4 d-none d-lg-block">
 										<div class="sort-area">
 											<div class="row align-items-center">
 												<div class="col-6 text-end">
 													<p class="">排序方式：</p>
 												</div>
-												<div class="col-6">
+												<div class="col-6 pe-0">
 													<ul class="nav nav-tabs justify-content-end border-0" id="sortTab" role="tablist">
 														<li class="nav-item sort-item" role="presentation">
 															<button class="nav-link active border-0" id="nav-sort-tab-1" data-bs-toggle="tab" data-bs-target="#tab-sort-contnet-1" type="button" role="tab" aria-controls="tab-sort-contnet-1" aria-selected="true">4</button>
@@ -1133,9 +1144,9 @@
 														<li class="nav-item sort-item" role="presentation">
 															<button class="nav-link border-0" id="nav-sort-tab-3" data-bs-toggle="tab" data-bs-target="#tab-sort-contnet-3" type="button" role="tab" aria-controls="tab-sort-contnet-3" aria-selected="false">2</button>
 														</li>
-														<li class="nav-item sort-item" role="presentation">
+														<!-- <li class="nav-item sort-item" role="presentation">
 															<button class="nav-link border-0" id="nav-sort-tab-4" data-bs-toggle="tab" data-bs-target="#tab-sort-contnet-4" type="button" role="tab" aria-controls="tab-sort-contnet-4" aria-selected="false">1</button>
-														</li>
+														</li> -->
 													</ul>
 												</div>
 											</div>
@@ -1155,11 +1166,10 @@
 									<div class="package-area border rounded p-3">
 										<div class="package_header mb-3">
 											<div class="row g-0 align-items-center">
-												<div class="col-10">
-													<p class="fs-4">有尺寸 任選5件 1000元 <span class="ms-1 fs-6"> | 已選 <span>3 件</span>，還差 <span>2 件</span> 即可項優惠</span></p>
-													
+												<div class="col-9">
+													<p class="fs-4">有尺寸 任選5件 1000元 <span class="d-flex align-items-center ms-1 fs-6"> | 已選 <span class="ms-1"> 3 件</span>，還差 <span class="ms-1"> 2 件</span> 即可項優惠</span></p>
 												</div>
-												<div class="col-2 text-end">
+												<div class="col-3 text-end">
 													<a class="btn btn-lg w-75 fs-6">前往結賬</a>
 												</div>
 											</div>
@@ -1172,40 +1182,38 @@
 															<div class="trash-btn">
 																<i class="fa-regular fa-trash-can"></i>
 															</div>
-															<img src="https://fakeimg.pl/180x150/?text=Hello" class="" alt="...">
+															<img src="https://fakeimg.pl/150x150/?text=Hello" class="" alt="...">
 														</picture>
 														
 														<div class="card-body px-0">
 															<div class="card-title">5522 - 簡短商品代稱</div>
-																<form action="">
-																	<div class="row g-0">
-																		<div class="col-12">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">藍格</option>
-																				<option value="2">紅格</option>
-																				<option value="3">黑格</option>
-																			</select>
-																		</div>
+															<form action="">
+																<div class="row g-0">
+																	<div class="col-12">
+																		<select class="form-select border-0" aria-label="Default select example">
+																			<option selected value="1">藍格</option>
+																			<option value="2">紅格</option>
+																			<option value="3">黑格</option>
+																		</select>
 																	</div>
-																	<div class="row g-0 mt-2">
-																		<div class="col me-1">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">L</option>
-																				<option value="2">XL</option>
-																				<option value="3">XXL</option>
-																			</select>
-																		</div>
-																		<div class="col ms-1">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">1 件</option>
-																				<option value="2">2 件</option>
-																				<option value="3">3 件</option>
-																			</select>
-																		</div>
+																</div>
+																<div class="row g-0 mt-2">
+																	<div class="col me-1">
+																		<select class="form-select border-0" aria-label="Default select example">
+																			<option selected value="1">L</option>
+																			<option value="2">XL</option>
+																			<option value="3">XXL</option>
+																		</select>
 																	</div>
-																</form>
-															
-															
+																	<div class="col ms-1">
+																		<select class="form-select border-0" aria-label="Default select example">
+																			<option selected value="1">1 件</option>
+																			<option value="2">2 件</option>
+																			<option value="3">3 件</option>
+																		</select>
+																	</div>
+																</div>
+															</form>
 														</div>
 													</div>
 												</div>
@@ -1215,40 +1223,38 @@
 															<div class="trash-btn">
 																<i class="fa-regular fa-trash-can"></i>
 															</div>
-															<img src="https://fakeimg.pl/180x150/?text=Hello" class="" alt="...">
+															<img src="https://fakeimg.pl/150x150/?text=Hello" class="" alt="...">
 														</picture>
 														
 														<div class="card-body px-0">
 															<div class="card-title">5522 - 簡短商品代稱</div>
-																<form action="">
-																	<div class="row g-0">
-																		<div class="col-12">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">藍格</option>
-																				<option value="2">紅格</option>
-																				<option value="3">黑格</option>
-																			</select>
-																		</div>
+															<form action="">
+																<div class="row g-0">
+																	<div class="col-12">
+																		<select class="form-select border-0" aria-label="Default select example">
+																			<option selected value="1">藍格</option>
+																			<option value="2">紅格</option>
+																			<option value="3">黑格</option>
+																		</select>
 																	</div>
-																	<div class="row g-0 mt-2">
-																		<div class="col me-1">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">L</option>
-																				<option value="2">XL</option>
-																				<option value="3">XXL</option>
-																			</select>
-																		</div>
-																		<div class="col ms-1">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">1 件</option>
-																				<option value="2">2 件</option>
-																				<option value="3">3 件</option>
-																			</select>
-																		</div>
+																</div>
+																<div class="row g-0 mt-2">
+																	<div class="col me-1">
+																		<select class="form-select border-0" aria-label="Default select example">
+																			<option selected value="1">L</option>
+																			<option value="2">XL</option>
+																			<option value="3">XXL</option>
+																		</select>
 																	</div>
-																</form>
-															
-															
+																	<div class="col ms-1">
+																		<select class="form-select border-0" aria-label="Default select example">
+																			<option selected value="1">1 件</option>
+																			<option value="2">2 件</option>
+																			<option value="3">3 件</option>
+																		</select>
+																	</div>
+																</div>
+															</form>
 														</div>
 													</div>
 												</div>
@@ -1258,40 +1264,38 @@
 															<div class="trash-btn">
 																<i class="fa-regular fa-trash-can"></i>
 															</div>
-															<img src="https://fakeimg.pl/180x150/?text=Hello" class="" alt="...">
+															<img src="https://fakeimg.pl/150x150/?text=Hello" class="" alt="...">
 														</picture>
 														
 														<div class="card-body px-0">
 															<div class="card-title">5522 - 簡短商品代稱</div>
-																<form action="">
-																	<div class="row g-0">
-																		<div class="col-12">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">藍格</option>
-																				<option value="2">紅格</option>
-																				<option value="3">黑格</option>
-																			</select>
-																		</div>
+															<form action="">
+																<div class="row g-0">
+																	<div class="col-12">
+																		<select class="form-select border-0" aria-label="Default select example">
+																			<option selected value="1">藍格</option>
+																			<option value="2">紅格</option>
+																			<option value="3">黑格</option>
+																		</select>
 																	</div>
-																	<div class="row g-0 mt-2">
-																		<div class="col me-1">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">L</option>
-																				<option value="2">XL</option>
-																				<option value="3">XXL</option>
-																			</select>
-																		</div>
-																		<div class="col ms-1">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">1 件</option>
-																				<option value="2">2 件</option>
-																				<option value="3">3 件</option>
-																			</select>
-																		</div>
+																</div>
+																<div class="row g-0 mt-2">
+																	<div class="col me-1">
+																		<select class="form-select border-0" aria-label="Default select example">
+																			<option selected value="1">L</option>
+																			<option value="2">XL</option>
+																			<option value="3">XXL</option>
+																		</select>
 																	</div>
-																</form>
-															
-															
+																	<div class="col ms-1">
+																		<select class="form-select border-0" aria-label="Default select example">
+																			<option selected value="1">1 件</option>
+																			<option value="2">2 件</option>
+																			<option value="3">3 件</option>
+																		</select>
+																	</div>
+																</div>
+															</form>
 														</div>
 													</div>
 												</div>
@@ -1301,40 +1305,38 @@
 															<div class="trash-btn">
 																<i class="fa-regular fa-trash-can"></i>
 															</div>
-															<img src="https://fakeimg.pl/180x150/?text=Hello" class="" alt="...">
+															<img src="https://fakeimg.pl/150x150/?text=Hello" class="" alt="...">
 														</picture>
 														
 														<div class="card-body px-0">
 															<div class="card-title">5522 - 簡短商品代稱</div>
-																<form action="">
-																	<div class="row g-0">
-																		<div class="col-12">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">藍格</option>
-																				<option value="2">紅格</option>
-																				<option value="3">黑格</option>
-																			</select>
-																		</div>
+															<form action="">
+																<div class="row g-0">
+																	<div class="col-12">
+																		<select class="form-select border-0" aria-label="Default select example">
+																			<option selected value="1">藍格</option>
+																			<option value="2">紅格</option>
+																			<option value="3">黑格</option>
+																		</select>
 																	</div>
-																	<div class="row g-0 mt-2">
-																		<div class="col me-1">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">L</option>
-																				<option value="2">XL</option>
-																				<option value="3">XXL</option>
-																			</select>
-																		</div>
-																		<div class="col ms-1">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">1 件</option>
-																				<option value="2">2 件</option>
-																				<option value="3">3 件</option>
-																			</select>
-																		</div>
+																</div>
+																<div class="row g-0 mt-2">
+																	<div class="col me-1">
+																		<select class="form-select border-0" aria-label="Default select example">
+																			<option selected value="1">L</option>
+																			<option value="2">XL</option>
+																			<option value="3">XXL</option>
+																		</select>
 																	</div>
-																</form>
-															
-															
+																	<div class="col ms-1">
+																		<select class="form-select border-0" aria-label="Default select example">
+																			<option selected value="1">1 件</option>
+																			<option value="2">2 件</option>
+																			<option value="3">3 件</option>
+																		</select>
+																	</div>
+																</div>
+															</form>
 														</div>
 													</div>
 												</div>
@@ -1344,40 +1346,38 @@
 															<div class="trash-btn">
 																<i class="fa-regular fa-trash-can"></i>
 															</div>
-															<img src="https://fakeimg.pl/180x150/?text=Hello" class="" alt="...">
+															<img src="https://fakeimg.pl/150x150/?text=Hello" class="" alt="...">
 														</picture>
 														
 														<div class="card-body px-0">
 															<div class="card-title">5522 - 簡短商品代稱</div>
-																<form action="">
-																	<div class="row g-0">
-																		<div class="col-12">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">藍格</option>
-																				<option value="2">紅格</option>
-																				<option value="3">黑格</option>
-																			</select>
-																		</div>
+															<form action="">
+																<div class="row g-0">
+																	<div class="col-12">
+																		<select class="form-select border-0" aria-label="Default select example">
+																			<option selected value="1">藍格</option>
+																			<option value="2">紅格</option>
+																			<option value="3">黑格</option>
+																		</select>
 																	</div>
-																	<div class="row g-0 mt-2">
-																		<div class="col me-1">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">L</option>
-																				<option value="2">XL</option>
-																				<option value="3">XXL</option>
-																			</select>
-																		</div>
-																		<div class="col ms-1">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">1 件</option>
-																				<option value="2">2 件</option>
-																				<option value="3">3 件</option>
-																			</select>
-																		</div>
+																</div>
+																<div class="row g-0 mt-2">
+																	<div class="col me-1">
+																		<select class="form-select border-0" aria-label="Default select example">
+																			<option selected value="1">L</option>
+																			<option value="2">XL</option>
+																			<option value="3">XXL</option>
+																		</select>
 																	</div>
-																</form>
-															
-															
+																	<div class="col ms-1">
+																		<select class="form-select border-0" aria-label="Default select example">
+																			<option selected value="1">1 件</option>
+																			<option value="2">2 件</option>
+																			<option value="3">3 件</option>
+																		</select>
+																	</div>
+																</div>
+															</form>
 														</div>
 													</div>
 												</div>	
@@ -1391,11 +1391,10 @@
 									<div class="package-area border rounded p-3">
 										<div class="package_header mb-3">
 											<div class="row g-0 align-items-center">
-												<div class="col-10">
-													<p class="fs-4">無尺寸 任選5件 1000元 <span class="ms-1 fs-6"> | 已選 <span>3 件</span>，還差 <span>2 件</span> 即可項優惠</span></p>
-													
+												<div class="col-9">
+													<p class="fs-4">無尺寸 任選5件 1000元 <span class="d-flex align-items-center ms-1 fs-6"> | 已選 <span class="ms-1">3 件</span>，還差 <span class="ms-1">2 件</span> 即可項優惠</span></p>
 												</div>
-												<div class="col-2 text-end">
+												<div class="col-3 text-end">
 													<a class="btn btn-lg w-75 fs-6">前往結賬</a>
 												</div>
 											</div>
@@ -1575,7 +1574,7 @@
 									</div>
 								</div>
 							</div>
-							<!-- List -->
+							<!-- Products List -->
 							<div class="products-wrapper">
 								<div class="row g-0">
 									<div class="col-12 tab-content" id="products-tabContent">
@@ -1584,7 +1583,11 @@
 												<div class="col-12 col-lg-3 col-md-4 mb-3">
 													<div class="product-item">
 														<div class="card border-0">
-															<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+															<div class="card-img img-hover">
+																<picture class="ratio ratio-1x1">
+																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
+																</picture>	
+															</div>
 															<div class="card-body px-0">
 																<h5 class="card-title type" data-type="平口褲,透氣">彈性貼身平口褲.四角褲.男內褲-南洋海岸[平口褲、透氣]</h5>
 																<div class="card-content">
@@ -1611,7 +1614,11 @@
 												<div class="col-12 col-lg-3 col-md-4 mb-3">
 													<div class="product-item">
 														<div class="card border-0">
-															<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+															<div class="card-img img-hover">
+																<picture class="ratio ratio-1x1">
+																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
+																</picture>	
+															</div>
 															<div class="card-body px-0">
 																<h5 class="card-title type" data-type="三角褲">彈性貼身平口褲.四角褲.男內褲-南洋海岸[三角褲]</h5>
 																<div class="card-content">
@@ -1638,7 +1645,11 @@
 												<div class="col-12 col-lg-3 col-md-4 mb-3">
 													<div class="product-item">
 														<div class="card border-0">
-															<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+															<div class="card-img img-hover">
+																<picture class="ratio ratio-1x1">
+																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
+																</picture>	
+															</div>	
 															<div class="card-body px-0">
 																<h5 class="card-title type" data-type="平口褲,彈性">彈性貼身平口褲.四角褲.男內褲-南洋海岸[平口褲、彈性]</h5>
 																<div class="card-content">
@@ -1665,7 +1676,11 @@
 												<div class="col-12 col-lg-3 col-md-4 mb-3">
 													<div class="product-item">
 														<div class="card border-0">
-															<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+															<div class="card-img img-hover">
+																<picture class="ratio ratio-1x1">
+																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
+																</picture>	
+															</div>	
 															<div class="card-body px-0">
 																<h5 class="card-title type" data-type="三角褲、針織">彈性貼身平口褲.四角褲.男內褲-南洋海岸[三角褲、針織]</h5>
 																<div class="card-content">
@@ -1692,7 +1707,11 @@
 												<div class="col-12 col-lg-3 col-md-4 mb-3">
 													<div class="product-item">
 														<div class="card border-0">
-															<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+															<div class="card-img img-hover">
+																<picture class="ratio ratio-1x1">
+																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
+																</picture>	
+															</div>	
 															<div class="card-body px-0">
 																<h5 class="card-title type" data-type="三角褲、針織、透氣">彈性貼身平口褲.四角褲.男內褲-南洋海岸[三角褲、針織、透氣]</h5>
 																<div class="card-content">
@@ -1724,7 +1743,11 @@
 												<div class="col-12 col-lg-4 col-md-4 mb-3">
 													<div class="product-item">
 														<div class="card border-0">
-															<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+															<div class="card-img img-hover">
+																<picture class="ratio ratio-1x1">
+																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
+																</picture>	
+															</div>
 															<div class="card-body px-0">
 																<h5 class="card-title type" data-type="平口褲,透氣">彈性貼身平口褲.四角褲.男內褲-南洋海岸[平口褲、透氣]</h5>
 																<div class="card-content">
@@ -1751,7 +1774,11 @@
 												<div class="col-12 col-lg-4 col-md-4 mb-3">
 													<div class="product-item">
 														<div class="card border-0">
-															<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+															<div class="card-img img-hover">
+																<picture class="ratio ratio-1x1">
+																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
+																</picture>	
+															</div>
 															<div class="card-body px-0">
 																<h5 class="card-title type" data-type="三角褲">彈性貼身平口褲.四角褲.男內褲-南洋海岸[三角褲]</h5>
 																<div class="card-content">
@@ -1778,7 +1805,11 @@
 												<div class="col-12 col-lg-4 col-md-4 mb-3">
 													<div class="product-item">
 														<div class="card border-0">
-															<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+															<div class="card-img img-hover">
+																<picture class="ratio ratio-1x1">
+																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
+																</picture>	
+															</div>	
 															<div class="card-body px-0">
 																<h5 class="card-title type" data-type="平口褲,彈性">彈性貼身平口褲.四角褲.男內褲-南洋海岸[平口褲、彈性]</h5>
 																<div class="card-content">
@@ -1805,7 +1836,11 @@
 												<div class="col-12 col-lg-4 col-md-4 mb-3">
 													<div class="product-item">
 														<div class="card border-0">
-															<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+															<div class="card-img img-hover">
+																<picture class="ratio ratio-1x1">
+																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
+																</picture>	
+															</div>	
 															<div class="card-body px-0">
 																<h5 class="card-title type" data-type="三角褲、針織">彈性貼身平口褲.四角褲.男內褲-南洋海岸[三角褲、針織]</h5>
 																<div class="card-content">
@@ -1832,7 +1867,11 @@
 												<div class="col-12 col-lg-4 col-md-4 mb-3">
 													<div class="product-item">
 														<div class="card border-0">
-															<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+															<div class="card-img img-hover">
+																<picture class="ratio ratio-1x1">
+																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
+																</picture>	
+															</div>	
 															<div class="card-body px-0">
 																<h5 class="card-title type" data-type="三角褲、針織、透氣">彈性貼身平口褲.四角褲.男內褲-南洋海岸[三角褲、針織、透氣]</h5>
 																<div class="card-content">
@@ -1864,7 +1903,11 @@
 												<div class="col-12 col-lg-6 col-md-4 mb-3">
 													<div class="product-item">
 														<div class="card border-0">
-															<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+															<div class="card-img img-hover">
+																<picture class="ratio ratio-1x1">
+																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
+																</picture>	
+															</div>	
 															<div class="card-body px-0">
 																<h5 class="card-title type" data-type="平口褲,透氣">彈性貼身平口褲.四角褲.男內褲-南洋海岸[平口褲、透氣]</h5>
 																<div class="card-content">
@@ -1891,7 +1934,11 @@
 												<div class="col-12 col-lg-6 col-md-4 mb-3">
 													<div class="product-item">
 														<div class="card border-0">
-															<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+															<div class="card-img img-hover">
+																<picture class="ratio ratio-1x1">
+																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
+																</picture>	
+															</div>	
 															<div class="card-body px-0">
 																<h5 class="card-title type" data-type="平口褲,透氣">彈性貼身平口褲.四角褲.男內褲-南洋海岸[平口褲、透氣]</h5>
 																<div class="card-content">
@@ -1918,7 +1965,11 @@
 												<div class="col-12 col-lg-6 col-md-4 mb-3">
 													<div class="product-item">
 														<div class="card border-0">
-															<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+															<div class="card-img img-hover">
+																<picture class="ratio ratio-1x1">
+																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
+																</picture>	
+															</div>	
 															<div class="card-body px-0">
 																<h5 class="card-title type" data-type="平口褲,透氣">彈性貼身平口褲.四角褲.男內褲-南洋海岸[平口褲、透氣]</h5>
 																<div class="card-content">
@@ -1945,7 +1996,11 @@
 												<div class="col-12 col-lg-6 col-md-4 mb-3">
 													<div class="product-item">
 														<div class="card border-0">
-															<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+															<div class="card-img img-hover">
+																<picture class="ratio ratio-1x1">
+																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
+																</picture>	
+															</div>	
 															<div class="card-body px-0">
 																<h5 class="card-title type" data-type="平口褲,透氣">彈性貼身平口褲.四角褲.男內褲-南洋海岸[平口褲、透氣]</h5>
 																<div class="card-content">
@@ -1972,7 +2027,11 @@
 												<div class="col-12 col-lg-6 col-md-4 mb-3">
 													<div class="product-item">
 														<div class="card border-0">
-															<img class="" src="https://fakeimg.pl/160x175/?text=img1"/>
+															<div class="card-img img-hover">
+																<picture class="ratio ratio-1x1">
+																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
+																</picture>	
+															</div>	
 															<div class="card-body px-0">
 																<h5 class="card-title type" data-type="平口褲,透氣">彈性貼身平口褲.四角褲.男內褲-南洋海岸[平口褲、透氣]</h5>
 																<div class="card-content">
@@ -1999,11 +2058,15 @@
 												
 											</div>
 										</div>
-										<div class="tab-pane fade " id="tab-sort-contnet-4" role="tabpanel" aria-labelledby="nav-sort-tab-4">
+										<!-- <div class="tab-pane fade " id="tab-sort-contnet-4" role="tabpanel" aria-labelledby="nav-sort-tab-4">
 											<div class="row list">
 												<div class="col-12 ">
 													<div class="card d-block border-0">
-														<img src="https://fakeimg.pl/160x175"/>
+														<div class="card-img img-hover">
+															<picture class="ratio ratio-1x1">
+																<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
+															</picture>	
+														</div>	
 														<div class="card-body p-0 pt-3">
 															<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
 															<div class="card-content">
@@ -2024,7 +2087,11 @@
 												</div>
 												<div class="col-12  m-md-b15 m-sm-b0 m-b30">
 													<div class="card d-block border-0">
-														<img src="https://fakeimg.pl/160x175"/>
+														<div class="card-img img-hover">
+															<picture class="ratio ratio-1x1">
+																<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
+															</picture>	
+														</div>
 														<div class="card-body p-0 pt-3">
 															<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
 															<div class="card-content">
@@ -2044,7 +2111,11 @@
 													</div>
 												</div><div class="col-12  m-md-b15 m-sm-b0 m-b30">
 													<div class="card d-block border-0">
-														<img src="https://fakeimg.pl/160x175"/>
+														<div class="card-img img-hover">
+															<picture class="ratio ratio-1x1">
+																<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
+															</picture>	
+														</div>	
 														<div class="card-body p-0 pt-3">
 															<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
 															<div class="card-content">
@@ -2064,7 +2135,11 @@
 													</div>
 												</div><div class="col-12  m-md-b15 m-sm-b0 m-b30">
 													<div class="card d-block border-0">
-														<img src="https://fakeimg.pl/160x175"/>
+														<div class="card-img img-hover">
+															<picture class="ratio ratio-1x1">
+																<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
+															</picture>	
+														</div>	
 														<div class="card-body p-0 pt-3">
 															<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
 															<div class="card-content">
@@ -2084,7 +2159,11 @@
 													</div>
 												</div><div class="col-12  m-md-b15 m-sm-b0 m-b30">
 													<div class="card d-block border-0">
-														<img src="https://fakeimg.pl/160x175"/>
+														<div class="card-img img-hover">
+															<picture class="ratio ratio-1x1">
+																<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
+															</picture>	
+														</div>
 														<div class="card-body p-0 pt-3">
 															<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
 															<div class="card-content">
@@ -2104,7 +2183,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
+										</div> -->
 									</div>
 								</div>
 							</div>

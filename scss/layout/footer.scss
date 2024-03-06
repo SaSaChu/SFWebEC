@@ -220,9 +220,9 @@ footer {
 
 	.right_widget {
 		position: fixed;
-		top: 50%;
+		top: 90%;
 		right: 20px;
-		transform: translateY(-50%);
+		// transform: translateY(-50%);
 		z-index: 1040;
 
 		.circle {
@@ -241,6 +241,7 @@ footer {
 
 			&:first-child {
 				position: relative;
+				margin-bottom: 30px;
 
 				svg {
 					border-radius: 50%;
@@ -248,8 +249,12 @@ footer {
 			}
 
 			&:last-child {
-				margin-top: 30px;
+				display: none;
 				border: 2px solid #b3b7c6;
+
+				&.show {
+					display: flex;
+				}
 
 				i {
 					color: #b3b7c6;

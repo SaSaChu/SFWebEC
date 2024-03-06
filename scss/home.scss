@@ -24,8 +24,9 @@ a {
     }
 }
 
-button {
-    outline: 0;
+button, select{
+	outline: none !important;
+   	box-shadow: none !important;
     border-width: 0;
 }
 
@@ -174,12 +175,12 @@ main {
 		padding: 3rem 0;
 
 		.cagegory-items {
-
 			h2 {
 				font-size: 34px;
 				font-weight: 600;
 				color: var(--main-blue);
 			}
+			
 			.nav {
 				.nav-item {
 					position: relative;
@@ -551,28 +552,14 @@ main {
 		}
 
 		.new-item {
-			img {
-				&:hover {
-					// img {
-				transform: scale(1.05);
-					// }
-				}
-			}
-
-			// .img-hover {
-			// 	&:hover {
-			// 		img {
-			// 			transform: scale(1.05);
-			// 		}
-			// 	}
-			// }
-
 			.card {
-				// display: block;
+				.card-img {
+					&.img-hover {
+						@extend %img-hover ;
+					}
+				}
 
 				.card-body {
-					// padding: 1rem 0 0 0;
-
 					.card-title {
 						font-size: 1rem;
 						color: var(--main-blue);
@@ -1436,6 +1423,4 @@ main {
 			background-color: transparent;
 		}
 	}
-
-	
 }
