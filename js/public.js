@@ -10,7 +10,6 @@ $(function () {
     })
 
     // goTop
-    let firstItem;
     let offsetTop;
 
     if($('.category-section').length) {

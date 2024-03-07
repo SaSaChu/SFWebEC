@@ -249,12 +249,10 @@ header {
 				}
 	
 				.navbar-menu {
-					// position: relative;
 					display: flex;
 					
 					.nav-item {
 						position: relative;
-						// width: calc(100% / 6);
 	
 						&:first-child {
 							.nav-link {
@@ -373,7 +371,6 @@ header {
 								}
 
 								&.first-level {
-									// width: 10%;
 
 									.heading {
 										font-size: 1.125rem;
@@ -505,7 +502,6 @@ header {
 								width: 300px;
 								max-width: 20rem;
 								transform: translateX(25%);
-								// min-width: none;
 
 								.cart-item {
 									padding: 1rem;
