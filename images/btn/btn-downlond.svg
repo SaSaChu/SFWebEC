@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>btn-downlond</title>
+    <g id="元素" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-nomor" transform="translate(-118, -354)">
+            <g id="btn-downlond" transform="translate(119, 355)">
+                <rect id="矩形" stroke="#D8D8D8" fill="#EFEFEF" x="0" y="0" width="50" height="50" rx="5"></rect>
+                <text id="cloud-download---simple-line-icons" fill-rule="nonzero" font-family="simple-line-icons" font-size="30" font-weight="normal" fill="#8093A8">
+                    <tspan x="10" y="38"></tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

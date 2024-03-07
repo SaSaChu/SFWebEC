@@ -1,0 +1,51 @@
+//
+// @author      OA Wu <comdan66@gmail.com>
+// @copyright   Copyright (c) 2015 - 2024, Ginkgo
+// @license     http://opensource.org/licenses/MIT  MIT License
+// @link        https://www.ioa.tw/
+//
+
+@import "compass/css3/font-face";
+
+@include font-face("icon", font-files(
+  "icomoon/fonts/icomoon.eot",
+  "icomoon/fonts/icomoon.woff",
+  "icomoon/fonts/icomoon.ttf",
+  "icomoon/fonts/icomoon.svg"));
+
+*[class^="icon-"]:before, *[class*=" icon-"]:before {
+  font-family: "icon";
+
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+}
+
+.icon-icon-favorite-full:before { content: "\e916"; }
+.icon-icon-close-ad:before { content: "\e900"; }
+.icon-icon-downlond:before { content: "\e901"; }
+.icon-icon-favorite:before { content: "\e903"; }
+.icon-icon-fb:before { content: "\e904"; }
+.icon-icon-ig:before { content: "\e905"; }
+.icon-icon-lang:before { content: "\e906"; }
+.icon-icon-line:before { content: "\e907"; }
+.icon-icon-mail:before { content: "\e908"; }
+.icon-icon-menu:before { content: "\e909"; }
+.icon-icon-pinterest:before { content: "\e90a"; }
+.icon-icon-search:before { content: "\e90b"; }
+.icon-icon-shopping:before { content: "\e90d"; }
+.icon-icon-twitter:before { content: "\e910"; }
+.icon-icon-u2:before { content: "\e912"; }
+.icon-icon-user:before { content: "\e913"; }
+.icon-line:before { content: "\e90e"; }
+.icon-play-btn-fill:before { content: "\e90f"; }
+.icon-angle-left:before { content: "\f104"; }
+.icon-angle-right:before { content: "\f105"; }
+.icon-angle-up:before { content: "\f106"; }
+.icon-angle-down:before { content: "\f107"; }
+.icon-error:before { content: "\e902"; }
+.icon-error_outline:before { content: "\e914"; }
+.icon-access_time:before { content: "\e90c"; }
+.icon-account_circle:before { content: "\e911"; }
+.icon-replay_circle_filled:before { content: "\e915"; }
