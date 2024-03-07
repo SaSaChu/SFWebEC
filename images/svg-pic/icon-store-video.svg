@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-store-video</title>
+    <g id="元素" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-nomor" transform="translate(-176, -309)" fill="#3D6DC1" fill-rule="nonzero">
+            <g id="video_library---materialcopycopycopy" transform="translate(176.512, 309.212)">
+                <path d="M7.488,9.342 L11.988,5.976 L7.488,2.592 L7.488,9.342 Z M13.5,0 C13.908,0 14.256,0.144 14.544,0.432 C14.832,0.72 14.976,1.068 14.976,1.476 L14.976,10.476 C14.976,10.884 14.832,11.238 14.544,11.538 C14.256,11.838 13.908,11.988 13.5,11.988 L4.5,11.988 C4.092,11.988 3.738,11.838 3.438,11.538 C3.138,11.238 2.988,10.884 2.988,10.476 L2.988,1.476 C2.988,1.068 3.138,0.72 3.438,0.432 C3.738,0.144 4.092,0 4.5,0 L13.5,0 Z M1.476,2.988 L1.476,13.5 L11.988,13.5 L11.988,14.976 L1.476,14.976 C1.068,14.976 0.72,14.832 0.432,14.544 C0.144,14.256 0,13.908 0,13.5 L0,2.988 L1.476,2.988 Z" id="形狀"></path>
+            </g>
+        </g>
+    </g>
+</svg>
