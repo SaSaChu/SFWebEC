@@ -1,5 +1,3 @@
-@import "GinkgoMixin";
-@import "GinkgoUi";
 @import "bootstrap/bootstrap";
 
 // 主要色系
@@ -20,7 +18,7 @@ $blue-006: #00A2D9;
 // 其他色系
 $other-001: #B3B7C6; // 取代原本的 $menu-hover: #b3b7c6;
 $other-002: #8093A8;
-
+$other-003: #00B900;
 
 $main-black: #232323;
 $action-logout: #18336c;
@@ -90,12 +88,15 @@ $main-category: #191919;
 // 其他系
 .bg-other001  { background-color:$other-001; } 
 .bg-other002  { background-color:$other-002; }
+.bg-other003  { background-color:$other-003; }
 
 .text-other001  { color:$other-001; }
 .text-other002  { color:$other-002; }
+.text-other003  { color:$other-003; }
 
 .border-other001  { border-color:$other-001; }
 .border-other002  { border-color:$other-002; }
+.border-other003  { border-color:$other-003; }
 
 
 

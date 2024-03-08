@@ -8,6 +8,13 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/components/public.css">
 	<link rel="stylesheet" type="text/css" href="css/components/color.css">
+	<link rel="stylesheet" type="text/css" href="css/components/btn.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 	<title>Style-Btn</title>
 
 	<style type="text/css">
@@ -21,39 +28,180 @@
 <body>
 	<div style="max-width: 1080px; margin: 0 auto; transform: translateY(3%);">
 
-		<!-- 主要色系 -->
-		<!-- <div class="container-fluid">
-			<h2>主要色</h2>
-
+		<div class="container-fluid">
 			<div class="row">
-		    <div class="col-2">
-		    	<p class="style-box bg-mainBlue mb-1"></p>
-		    	<p class="fs-5 fw-medium mb-1">#111C47</p>
+				<div class="col-12">
+					<h5 class="mb-0">按鈕大小：</h5>
+					<p class="fs-8 fw-lighter">
+						這個class可放可不放，若是有想要得特定padding或是按鈕寬高大小，可以自己另外寫class代替btn-xxl這個class
+					</p>
+				</div>
+				<div class="col border-end">
+					<button class="btnSF btnMainBlud btn-xxl fs-6 fw-medium">Button</button>
+					<span class="fs-5">btn-xxl</span>
+				</div>
+
+				<div class="col border-end">
+		    	<button class="btnSF btnMainBlud btn-xl fs-7 fw-medium">Button</button>
+					<span class="fs-5">btn-xl</span>
 		    </div>
 
-		    <div class="col-3 border-end">
-		    	<p class="fs-7 fw-medium mb-1">css名稱：</p>
-		    	<li class="fs-8 fw-medium ">bg-mainBlue</li>
-		    	<li class="fs-8 fw-medium">text-mainBlue</li>
-		    	<li class="fs-8 fw-medium">border-mainBlue</li>
+				<div class="col border-end">
+		    	<button class="btnSF btnMainBlud btn-l fs-8 fw-medium">Button</button>
+					<span class="fs-5">btn-l</span>
 		    </div>
 
-		    <div class="col-4 border-end">
-		    	<p class="fs-7 fw-medium mb-1">顏色參數：</p>
-		    	<p class="fs-8 fw-medium">$main-blue</p>
+		    <div class="col">
+		    	<button class="btnSF btnMainBlud btn-s fs-8 fw-medium">Button</button>
+					<span class="fs-5">btn-s</span>
+		    </div>
+
+		    <div class="col">
+					<button class="btnSF btnMainBlud btn-xs fs-8 fw-medium">Button</button>
+					<span class="fs-5">btn-xs</span>
+		    </div>
+			</div>
+		</div>
+		<hr>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-2 border-end">
+					<button class="btnSF btnMainBlud btn-xxl fs-6 fw-medium">Button</button>
+				</div>
+
+				<div class="col-3 border-end">
+		    	<p class="fs-7 fw-medium mb-1">css使用：</p>
+		    	<p class="fs-8 fw-normal mb-0">< btnSF&nbsp;&nbsp;<b class="text-mainBlue">btnMainBlud</b>&nbsp;&nbsp;btn-xxl&nbsp;&nbspfs-6&nbsp;&nbsp;fw-medium ></p>
+		    </div>
+
+				<div class="col-4 border-end">
+		    	<p class="fs-7 fw-medium mb-1">說明：</p>
+		    	<li class="fs-8 fw-lighter mb-0"><b>btnSF：</b>定位按鈕的框框、R角</li>
+		    	<li class="fs-8 fw-lighter mb-0"><b class="text-mainBlue">btnMainBlud：</b>文字、背景、Hover的設定</li>
+		    	<li class="fs-8 fw-lighter mb-0"><b>btn-xxl：</b>padding大小設定</li>
+		    	<li class="fs-8 fw-lighter mb-0"><b>fs-6：</b>文字大小</li>
+		    	<li class="fs-8 fw-lighter mb-0"><b>fw-medium：</b>文字粗細</li>
 		    </div>
 
 		    <div class="col-3">
 		    	<p class="fs-7 fw-medium mb-1">使用區域：</p>
-		    	<li class="fs-8 fw-light">layout/header</li>
-		    	<li class="fs-8 fw-light">layout/footer</li>
+		    	<li class="fs-8 fw-light">..</li>
+		    	<li class="fs-8 fw-light">..</li>
 		    </div>
-		  </div>
+			</div>
 		</div>
-		<hr> -->
+		<hr>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-2 border-end">
+					<button class="btnSF btnOtherGreen btn-xxl fs-6 fw-medium">Button</button>
+				</div>
 
+				<div class="col-3 border-end">
+		    	<p class="fs-7 fw-medium mb-1">css使用：</p>
+		    	<p class="fs-8 fw-normal mb-0">< btnSF&nbsp;&nbsp;<b class="text-other003">btnOtherGreen</b>&nbsp;&nbsp;btn-xxl&nbsp;&nbsp;fs-6&nbsp;&nbsp;fw-medium ></p>
+		    </div>
 
-		<button class="btn">ddd</button>
+				<div class="col-4 border-end">
+		    	<p class="fs-7 fw-medium mb-1">說明：</p>
+		    	<li class="fs-8 fw-lighter mb-0"><b>btnSF：</b>定位按鈕的框框、R角</li>
+		    	<li class="fs-8 fw-lighter mb-0"><b class="text-other003">btnOtherGreen：</b>文字、背景、Hover的設定</li>
+		    	<li class="fs-8 fw-lighter mb-0"><b>btn-xxl：</b>padding大小設定</li>
+		    	<li class="fs-8 fw-lighter mb-0"><b>fs-6：</b>文字大小</li>
+		    	<li class="fs-8 fw-lighter mb-0"><b>fw-medium：文字粗細</b></li>
+		    </div>
+
+		    <div class="col-3">
+		    	<p class="fs-7 fw-medium mb-1">使用區域：</p>
+		    	<li class="fs-8 fw-light">登入頁面-line</li>
+		    	<li class="fs-8 fw-light">..</li>
+		    </div>
+			</div>
+		</div>
+		<hr>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-2 border-end">
+					<button class="btnSF btnOtherGray btn-xxl fs-6 fw-medium mb-2">Button</button>
+				</div>
+
+				<div class="col-3 border-end">
+		    	<p class="fs-7 fw-medium mb-1">css使用：</p>
+		    	<p class="fs-8 fw-normal mb-0">< btnSF&nbsp;&nbsp;<b class="text-other001">btnOtherGray</b>&nbsp;&nbsp;btn-xxl&nbsp;&nbspfs-6&nbsp;&nbsp;fw-medium ></p>
+		    </div>
+
+				<div class="col-4 border-end">
+		    	<p class="fs-7 fw-medium mb-1">說明：</p>
+		    	<li class="fs-8 fw-lighter mb-0"><b>btnSF：</b>定位按鈕的框框、R角</li>
+		    	<li class="fs-8 fw-lighter mb-0"><b class="text-other001">btnOtherGray：</b>文字、背景、Hover的設定</li>
+		    	<li class="fs-8 fw-lighter mb-0"><b>btn-xxl：</b>padding大小設定</li>
+		    	<li class="fs-8 fw-lighter mb-0"><b>fs-6：</b>文字大小</li>
+		    	<li class="fs-8 fw-lighter mb-0"><b>fw-medium：</b>文字粗細</li>
+		    </div>
+
+		    <div class="col-3">
+		    	<p class="fs-7 fw-medium mb-1">使用區域：</p>
+		    	<li class="fs-8 fw-light">購物車step1-『全部刪除』按鈕</li>
+		    </div>
+			</div>
+		</div>
+		<hr>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-2 border-end">
+					<button class="btnSF btnOtherGray-line btn-xxl fs-6 fw-medium mb-2">Button</button>
+				</div>
+
+				<div class="col-3 border-end">
+		    	<p class="fs-7 fw-medium mb-1">css使用：</p>
+		    	<p class="fs-8 fw-normal mb-0">< btnSF&nbsp;&nbsp;<b class="text-other001">btnOtherGray-line</b>&nbsp;&nbsp;btn-xxl&nbsp;&nbspfs-6&nbsp;&nbsp;fw-medium ></p>
+		    </div>
+
+				<div class="col-4 border-end">
+		    	<p class="fs-7 fw-medium mb-1">說明：</p>
+		    	<li class="fs-8 fw-lighter mb-0"><b>btnSF：</b>定位按鈕的框框、R角</li>
+		    	<li class="fs-8 fw-lighter mb-0"><b class="text-other001">btnOtherGray-line：</b>文字、背景、Hover的設定</li>
+		    	<li class="fs-8 fw-lighter mb-0"><b>btn-xxl：</b>padding大小設定</li>
+		    	<li class="fs-8 fw-lighter mb-0"><b>fs-6：</b>文字大小</li>
+		    	<li class="fs-8 fw-lighter mb-0"><b>fw-medium：</b>文字粗細</li>
+		    </div>
+
+		    <div class="col-3">
+		    	<p class="fs-7 fw-medium mb-1">使用區域：</p>
+		    	<li class="fs-8 fw-light">購物車step1-『移除』按鈕</li>
+		    	<li class="fs-8 fw-light">購物車step1-『加到最愛』按鈕</li>
+		    </div>
+			</div>
+		</div>
+		<hr>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-2 border-end">
+					<button class="btnSF btnBlud001 btn-xxl fs-6 fw-medium mb-2">Button</button>
+				</div>
+
+				<div class="col-3 border-end">
+		    	<p class="fs-7 fw-medium mb-1">css使用：</p>
+		    	<p class="fs-8 fw-normal mb-0">< btnSF&nbsp;&nbsp;<b class="text-blue004">btnBlud001</b>&nbsp;&nbsp;btn-xxl&nbsp;&nbspfs-6&nbsp;&nbsp;fw-medium ></p>
+		    </div>
+
+				<div class="col-4 border-end">
+		    	<p class="fs-7 fw-medium mb-1">說明：</p>
+		    	<li class="fs-8 fw-lighter mb-0"><b>btnSF：</b>定位按鈕的框框、R角</li>
+		    	<li class="fs-8 fw-lighter mb-0"><b class="text-blue004">btnBlud001：</b>文字、背景、Hover的設定</li>
+		    	<li class="fs-8 fw-lighter mb-0"><b>btn-xxl：</b>padding大小設定</li>
+		    	<li class="fs-8 fw-lighter mb-0"><b>fs-6：</b>文字大小</li>
+		    	<li class="fs-8 fw-lighter mb-0"><b>fw-medium：</b>文字粗細</li>
+		    </div>
+
+		    <div class="col-3">
+		    	<p class="fs-7 fw-medium mb-1">使用區域：</p>
+		    	<li class="fs-8 fw-light">購物車step1-『4000點兌換』按鈕</li>
+		    	<li class="fs-8 fw-light"></li>
+		    </div>
+			</div>
+		</div>
+		<hr>
 
 	</div>
 </body>

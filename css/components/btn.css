@@ -3118,3 +3118,25 @@ textarea.form-control-lg { min-height: calc(1.5em + (1rem + 2px)); }
 .border-other002 { border-color: #8093A8; }
 
 .border-other003 { border-color: #00B900; }
+
+.btn-xxl { padding: 0.5rem 1rem; }
+
+.btn-xl { padding: 0.3rem 1rem; }
+
+.btn-l { padding: 0.2rem 1rem; }
+
+.btn-s { padding: 0.1rem 1rem; }
+
+.btn-xs { padding: 0rem 1rem; }
+
+.btnSF { display: flex; justify-content: center; align-items: center; border-radius: 0.3rem; }
+.btnSF.btnMainBlud { color: #fff; background-color: #111c47; border: 0; }
+.btnSF.btnMainBlud:hover { opacity: .9; }
+.btnSF.btnBlud001 { color: #fff; background-color: #3D6DC1; border: 0; }
+.btnSF.btnBlud001:hover { background-color: #044281; }
+.btnSF.btnOtherGreen { color: #fff; background-color: #00B900; border: 0; }
+.btnSF.btnOtherGreen:hover { opacity: .9; }
+.btnSF.btnOtherGray { color: #fff; background-color: #B3B7C6; border: 0; }
+.btnSF.btnOtherGray:hover { background-color: #3D6DC1; }
+.btnSF.btnOtherGray-line { color: #B3B7C6; background-color: #fff; border: 1px solid #B3B7C6; }
+.btnSF.btnOtherGray-line:hover { color: #fff; background-color: #3D6DC1; border: 1px solid #fff; }

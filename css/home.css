@@ -89,7 +89,7 @@ main .introduction-section .item-controller .introduction-pagination { position:
 main .new-section { padding: 6rem 0; }
 main .new-section h2 { font-size: 34px; font-weight: 600; color: var(--main-blue); }
 main .new-section .new-more-btn { display: flex; justify-content: end; }
-main .new-section .new-more-btn > .btn { display: flex; justify-content: center; align-items: center; width: 160px; height: 60px; font-size: 18px; font-weight: 600; color: var(--main-blue); border: 1px solid var(--main-blue); background-color: var(--main-white); }
+main .new-section .new-more-btn > .btn { display: flex; justify-content: center; align-items: center; width: 150px; height: 55px; font-size: 18px; font-weight: 600; color: var(--main-blue); border: 1px solid var(--main-blue); background-color: var(--main-white); }
 main .new-section .new-more-btn > .btn:focus { outline: none; box-shadow: none; }
 main .new-section .new-more-btn > .btn:hover { background-color: var(--main-blue); color: var(--main-white); }
 main .new-section .swiper { overflow-y: visible; overflow-x: clip; }
@@ -157,7 +157,7 @@ main .store-section { margin-top: 1rem; padding: 4rem 0; background-color: #efef
 main .store-section .row:first-child { border-bottom: 1px solid #fff; }
 main .store-section h2 { font-size: 34px; font-weight: 600; color: var(--main-red); }
 main .store-section .store-more-btn { display: flex; justify-content: end; }
-main .store-section .store-more-btn > .btn { display: flex; justify-content: center; align-items: center; width: 160px; height: 60px; font-size: 18px; font-weight: 600; color: var(--main-blue); background-color: var(--main-white); }
+main .store-section .store-more-btn > .btn { display: flex; justify-content: center; align-items: center; width: 150px; height: 55px; font-size: 18px; font-weight: 600; color: var(--main-blue); background-color: var(--main-white); }
 main .store-section .store-more-btn > .btn:focus { outline: none; box-shadow: none; }
 main .store-section .store-more-btn > .btn:hover { background-color: var(--main-blue); color: var(--main-white); }
 main .store-section .swiper-slide { display: inline-block; }
@@ -170,7 +170,7 @@ main .store-section .swiper-slide.storeImg-item:not(.swiper-slide-thumb-active) 
 main .instagram-section { padding: 6rem 0; }
 main .instagram-section h2 { font-size: 34px; font-weight: 600; color: var(--main-blue); }
 main .instagram-section .instagram-more-btn { display: flex; justify-content: end; }
-main .instagram-section .instagram-more-btn > .btn { display: flex; justify-content: center; align-items: center; width: 160px; height: 60px; font-size: 18px; font-weight: 600; color: var(--main-blue); border: 1px solid var(--main-blue); background-color: var(--main-white); }
+main .instagram-section .instagram-more-btn > .btn { display: flex; justify-content: center; align-items: center; width: 150px; height: 55px; font-size: 18px; font-weight: 600; color: var(--main-blue); border: 1px solid var(--main-blue); background-color: var(--main-white); }
 main .instagram-section .instagram-more-btn > .btn:focus { outline: none; box-shadow: none; }
 main .instagram-section .instagram-more-btn > .btn:hover { background-color: var(--main-blue); color: var(--main-white); }
 main .instagram-section .instagram-item { overflow: hidden; }
