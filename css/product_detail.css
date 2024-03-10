@@ -1,4 +1,4 @@
-:root { --main-blue: #111c47; --main-red: #b10e0e; --main-white: #fff; --main-text: #232323b3; --menu-hover: #b3b7c6; --action-logout: #18336c; --main-category: #191919; --font-size-30: 1.875rem; --font-size-24: 1.5rem; --font-size-20: 1.25rem; --font-size-18: 1.125; --font-size-14: .875rem; }
+:root { --main-blue: #111c47; --main-red: #b10e0e; --main-white: #fff; --main-text: #232323; --menu-hover: #b3b7c6; --action-logout: #18336c; --main-category: #191919; --font-size-30: 1.875rem; --font-size-24: 1.5rem; --font-size-20: 1.25rem; --font-size-18: 1.125; --font-size-14: .875rem; }
 
 a { text-decoration: none !important; }
 a:after, a:before { vertical-align: middle !important; }
