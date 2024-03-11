@@ -1,0 +1,13 @@
+@import "Ginkgo";
+@import "bootstrap/bootstrap";
+
+.loginBoxs {
+	width: 450px;
+	padding: 1.75rem;
+}
+
+.modal-header, .modal-footer {
+	&.mh-noBorder {
+		border: 0;
+	}
+}
