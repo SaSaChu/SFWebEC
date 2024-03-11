@@ -3119,32 +3119,11 @@ textarea.form-control-lg { min-height: calc(1.5em + (1rem + 2px)); }
 
 .border-other003 { border-color: #00B900; }
 
-.btn-xxl { padding: 0.5rem 1rem; }
+.form-select, .form-control { color: #111c47; font-weight: 300; }
 
-.btn-xl { padding: 0.3rem 1rem; }
+.form-select:focus { border-color: #dee2e6; outline: 0; box-shadow: 0 0 0 0rem rgba(179, 183, 198, 0); }
 
-.btn-l { padding: 0.2rem 1rem; }
+.form-mainBlue { color: #111c47; border: 1px solid #111c47; }
+.form-mainBlue:focus { border-color: #111c47; outline: 0; box-shadow: 0 0 0 0rem rgba(179, 183, 198, 0); }
 
-.btn-s { padding: 0.1rem 1rem; }
-
-.btn-xs { padding: 0rem 1rem; }
-
-.btnSF { display: flex; justify-content: center; align-items: center; border-radius: 0.3rem; }
-.btnSF.btnMainBlud { color: #fff; background-color: #111c47; border: 0; }
-.btnSF.btnMainBlud:hover { opacity: .9; }
-.btnSF.btnBlud001 { color: #fff; background-color: #3D6DC1; border: 0; }
-.btnSF.btnBlud001:hover { background-color: #044281; }
-.btnSF.btnBlud002 { color: #fff; background-color: #00A2D9; border: 0; }
-.btnSF.btnBlud002:hover { background-color: #044281; }
-.btnSF.btnBlud003 { color: #fff; background-color: #044281; border: 0; }
-.btnSF.btnBlud003:hover { opacity: .9; }
-.btnSF.btnBlud003-line { color: #044281; background-color: #fff; border: 1px solid #044281; }
-.btnSF.btnBlud003-line:hover { color: #fff; background-color: #044281; border: 1px solid #044281; }
-.btnSF.btnBlud004 { color: #fff; background-color: #0083D2; border: 0; }
-.btnSF.btnBlud004:hover { background-color: #044281; }
-.btnSF.btnOtherGreen { color: #fff; background-color: #00B900; border: 0; }
-.btnSF.btnOtherGreen:hover { opacity: .9; }
-.btnSF.btnOtherGray { color: #fff; background-color: #B3B7C6; border: 0; }
-.btnSF.btnOtherGray:hover { background-color: #044281; }
-.btnSF.btnOtherGray-line { color: #B3B7C6; background-color: #fff; border: 1px solid #B3B7C6; }
-.btnSF.btnOtherGray-line:hover { color: #fff; background-color: #3D6DC1; border: 1px solid #3D6DC1; }
+.form-control:focus { color: #111c47; border-color: #111c47; outline: 0; box-shadow: 0 0 0 0rem rgba(179, 183, 198, 0); }

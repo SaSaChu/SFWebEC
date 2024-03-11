@@ -33,6 +33,48 @@
 		}
 	}
 
+	&.btnBlud002 {
+		color: $white;
+		background-color: $blue-006;
+		border: 0;
+
+		&:hover {
+			background-color: $blue-700;
+		}
+	}
+
+	&.btnBlud003 {
+		color: $white;
+		background-color: $blue-700;
+		border: 0;
+
+		&:hover {
+			opacity: .9;
+		}
+	}
+
+	&.btnBlud003-line {
+		color:  $blue-700;
+		background-color: $white;
+		border: 1px solid  $blue-700;
+
+		&:hover {
+			color: $white;
+			background-color: $blue-700;
+			border: 1px solid $blue-700;
+		}
+	}
+
+	&.btnBlud004 {
+		color: $white;
+		background-color: $blue-005;
+		border: 0;
+
+		&:hover {
+			background-color: $blue-700;
+		}
+	}
+
 	&.btnOtherGreen {
 		color: $white;
 		background-color: $other-003;
@@ -49,7 +91,7 @@
 		border: 0;
 
 		&:hover {
-			background-color: $blue-004;
+			background-color: $blue-700;
 		}
 	}
 
@@ -61,7 +103,7 @@
 		&:hover {
 			color: $white;
 			background-color: $blue-004;
-			border: 1px solid $white;
+			border: 1px solid $blue-004;
 		}
 	}
 }

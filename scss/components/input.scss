@@ -1,0 +1,34 @@
+@import "bootstrap/bootstrap";
+@import "color";
+
+.form-select, .form-control {
+	color: $main-blue;
+	font-weight: 300;
+}
+
+.form-select:focus {
+    border-color: $gray-300;
+    outline: 0;
+    box-shadow: 0 0 0 0rem rgba(179, 183, 198, 0);
+}
+
+.form-mainBlue {
+	color: $main-blue;
+	border: 1px solid $main-blue;
+
+	&:focus {
+    border-color: $main-blue;
+    outline: 0;
+    box-shadow: 0 0 0 0rem rgba(179, 183, 198, 0);
+	}
+}
+
+.form-control {
+
+	&:focus {
+		color: $main-blue;
+    border-color: $main-blue;
+    outline: 0;
+    box-shadow: 0 0 0 0rem rgba(179, 183, 198, 0);
+	}
+}
