@@ -33,7 +33,7 @@ footer .footer_widget .mobile-links .accordion .accordion-item .accordion-body {
 footer .footer_widget .mobile-links .accordion .accordion-item .accordion-body .ul_li_links { padding: 0 0 0 1.5rem; }
 footer .footer_widget .mobile-links .accordion .accordion-item .accordion-body .ul_li_links:first-child { margin-bottom: 0; }
 footer .footer_widget .mobile-links .accordion .accordion-item .accordion-body .ul_li_links a { font-size: 16px; font-size: 300; line-height: 2; color: #c9d1f5; }
-footer .right_widget { position: fixed; top: 90%; right: 20px; z-index: 1040; }
+footer .right_widget { position: fixed; top: 85%; right: 20px; z-index: 1040; }
 footer .right_widget .circle { display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 50%; background-color: white; cursor: pointer; }
 footer .right_widget .circle i { font-size: 24px; }
 footer .right_widget .circle:first-child { position: relative; margin-bottom: 30px; }
