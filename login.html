@@ -12,12 +12,9 @@
 	<script language="javascript" type="text/javascript" src="js/public.js"></script>
 	<script language="javascript" type="text/javascript" src="js/home.js"></script>
 
+	<link rel="stylesheet" type="text/css" href="css/components/input.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/components/public.css">
-	<link rel="stylesheet" type="text/css" href="css/components/color.css">
-	<link rel="stylesheet" type="text/css" href="css/components/btn.css">
-	<link rel="stylesheet" type="text/css" href="css/components/link.css">
 	<link rel="stylesheet" type="text/css" href="css/icon.css">
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 	
@@ -29,7 +26,7 @@
 	<script src="https://kit.fontawesome.com/25b2931f6f.js" crossorigin="anonymous"></script>
 </head>
 
-<body style="max-width: 1080px; margin: 0 auto;">
+<body >
 	<div class="container-fluid mt-5">
 		<div class="row">
 			<div class="col">
@@ -39,24 +36,43 @@
 			<!-- 登入光箱 -->
 			<div class="modal fade" id="loginToggle" aria-hidden="true" aria-labelledby="loginToggleLabel" tabindex="-1">
 			  <div class="modal-dialog modal-dialog-centered">
-			    <div class="modal-content loginBoxs">
+			    <div class="modal-content loginBoxs px-4 pt-4">
 			      <div class="modal-header p-0 mh-noBorder">
 			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			      </div>
 
-			      <div class="modal-body px-0">
-			        <button class="btnSF btnOtherGreen btn-xxl fs-5 w-100">
+			      <div class="modal-body px-0 pb-0">
+			        <button class="btnSF btnOtherGreen btn-xxl fs-5 w-100 p-2">
 			        	<i class="icon-icon-line fs-2 me-3"></i>Line 快速登入
 			      	</button>
-			      	<h2 class="text-blue001 text-center mt-4">會員登入</h2>
-			      </div>
+			      	<h2 class="text-blue001 text-center mt-5 mb-3">會員登入</h2>
 
-			      <div class="modal-footer p-0 mh-noBorder">
-			      	<p><a href="" class="linkGray fs-8">忘記密碼</a></p>
-			      	<button type="button" class="btnSF btnBlud003 btn-xxl fs-5 w-100 m-0">登入</button>
-			      	<p style="height: 1.6rem;"></p>
-			        <button class="btnSF btnBlud003-line btn-xxl fs-5 w-100 m-0" data-bs-target="#signToggle" data-bs-toggle="modal" data-bs-dismiss="modal">立刻註冊</button>
-			        <p><a href="" class="linkGray fs-8">忘記密碼</a></p>
+			      	<div class="input-group form-outBoard-top rounded-top">
+							  <span class="input-group-text"><i class="icon-user"></i></span>
+							  <input type="text" class="form-control form-noBoard fs-6 ps-0" placeholder="手機號碼" >
+							</div>
+							<div class="input-group form-outBoard rounded-bottom">
+							  <span class="input-group-text"><i class="icon-lock"></i></span>
+							  <input type="text" class="form-control form-noBoard fs-6 ps-0" placeholder="密碼" >
+							</div>
+
+							<div class="col-6 mt-3 mb-4">
+							  <input class="form-control fs-6" type="text" placeholder="驗證碼">
+							</div>
+
+			      	<div class="my-1">
+			      		<i class="icon-lock-open text-blue006 fs-8 me-1"></i>
+			      		<a href="" class="linkGray fs-8 fw-light">忘記密碼</a>
+			      	</div>
+
+			      	<button type="button" class="btnSF btnBlud003 btn-xxl fs-6 w-100 m-0">登入</button>
+			      	<div style="height: 1.6rem;"></div>
+			        <button class="btnSF btnBlud003-line btn-xxl fs-6 w-100 m-0" data-bs-target="#signToggle" data-bs-toggle="modal" data-bs-dismiss="modal">立刻註冊</button>
+
+			        <p class="text-center text-gray001 fs-8 fw-light mt-3">
+			        	登入或完成註冊代表您同意
+			        	<a href="" class="linkBlue fs-8">隱私條款</a> 和 <a href="" class="linkBlue fs-8">使用條款</a>
+			        </p>
 			      </div>
 			    </div>
 			  </div>
@@ -65,15 +81,34 @@
 			<!-- 註冊光箱 -->
 			<div class="modal fade" id="signToggle" aria-hidden="true" aria-labelledby="signToggle" tabindex="-1">
 			  <div class="modal-dialog modal-dialog-centered">
-			    <div class="modal-content loginBoxs">
+			    <div class="modal-content loginBoxs px-4 pt-4">
 			      <div class="modal-header p-0 mh-noBorder">
 			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			      </div>
-			      <div class="modal-body p-0">
-			        Hide this modal and show the first with the button below.
-			      </div>
-			      <div class="modal-footer p-0">
-			        <button class="btn btn-primary" data-bs-target="#loginToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
+
+			     	<div class="modal-body px-0 pb-0">
+			        <button class="btnSF btnOtherGreen btn-xxl fs-5 w-100 p-2">
+			        	<i class="icon-icon-line fs-2 me-3"></i>Line 快速註冊
+			      	</button>
+			      	<h2 class="text-blue001 text-center mt-5 mb-3">加入會員</h2>
+
+			      	<div class="col-12 mt-3 mb-4">
+							  <input class="form-control fs-6" type="text" placeholder="手機號碼">
+							</div>
+
+			      	<div class="input-group form-outBoard-top rounded-top">
+							  <input class="form-control form-noBoard fs-6" type="text" placeholder="密碼規範說明文字">
+							</div>
+							<div class="input-group form-outBoard rounded-bottom mb-4">
+							  <input class="form-control form-noBoard fs-6" type="text" placeholder="確認密碼">
+							</div>
+
+							<button type="button" class="btnSF btnBlud003 btn-xxl fs-6 w-100 m-0" data-bs-target="#signToggle" data-bs-toggle="modal" data-bs-dismiss="modal">註冊</button>
+
+							<p class="text-center text-gray001 fs-8 fw-light mt-3">
+			        	登入或完成註冊代表您同意
+			        	<a href="" class="linkBlue fs-8">隱私條款</a> 和 <a href="" class="linkBlue fs-8">使用條款</a>
+			        </p>
 			      </div>
 			    </div>
 			  </div>

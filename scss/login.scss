@@ -1,9 +1,12 @@
 @import "Ginkgo";
 @import "bootstrap/bootstrap";
+@import "components/color";
+@import "components/input";
+@import "components/link";
+@import "components/btn";
 
 .loginBoxs {
 	width: 450px;
-	padding: 1.75rem;
 }
 
 .modal-header, .modal-footer {

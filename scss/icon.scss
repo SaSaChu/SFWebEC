@@ -22,6 +22,9 @@
   font-variant: normal;
 }
 
+.icon-lock-open:before { content: "\e917"; }
+.icon-lock:before { content: "\e918"; }
+.icon-user:before { content: "\e919"; }
 .icon-icon-favorite-full:before { content: "\e916"; }
 .icon-icon-close-ad:before { content: "\e900"; }
 .icon-icon-downlond:before { content: "\e901"; }

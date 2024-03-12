@@ -9,7 +9,17 @@ a{
 	color: $gray-800;
 
 	&:hover {
-		color: $blue-005;
+		color: $blue-006;
+		text-decoration: underline !important;
+	}
+}
+
+.linkBlue {
+	color: $blue-004;
+	text-decoration: underline !important;
+
+	&:hover {
+		color: $blue-006;
 		text-decoration: underline !important;
 	}
 }

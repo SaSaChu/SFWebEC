@@ -47,9 +47,10 @@
 	&.btnBlud003 {
 		color: $white;
 		background-color: $blue-700;
-		border: 0;
+		border: 1px solid $blue-700;
 
 		&:hover {
+			border: 1px solid $blue-700;
 			opacity: .9;
 		}
 	}
