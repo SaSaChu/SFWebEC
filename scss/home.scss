@@ -1159,6 +1159,10 @@ main {
 					.card-price {
 						font-weight: bold;
 						color: var(--main-red);
+
+						&:before {
+							content: attr(data-symbol)
+						}
 					}
 				}
 				&:last-child {
@@ -1198,10 +1202,7 @@ main {
 				}
 
 				span {
-					display: inline-block;
-					width: 18px;
-					height: 18px;
-					border-radius: 50%;
+					display: none;
 				}
 			}
 		}
@@ -1228,7 +1229,7 @@ main {
 				.color-wrapper {
 					margin-bottom: .5rem;
 	
-					.color-name {
+					.sub-color-name {
 						display: flex;
 						font-size: 14px;
 						color: var(--main-blue);
@@ -1238,24 +1239,50 @@ main {
 						}
 					}
 	
-					.color-items {
+					// .color-items {
+					// 	.color-item {
+					// 		&.active {
+					// 			border: solid 1px #979797;
+					// 		}
+					// 	}
+					// }
+					.sub-color-items {
+						padding-top: .5rem;
+			
 						.color-item {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							padding: 1px;
+							width: 22px;
+							height: 22px;
+							border-radius: 50%;
+							cursor: pointer;
+			
+							&:not(:first-child) {
+								margin-left: .5rem;
+							}
+			
 							&.active {
 								border: solid 1px #979797;
+							}
+			
+							span {
+								display: none;
 							}
 						}
 					}
 				}
 	
 				.size-wrapper {
-					.size-items {
+					.sub-size-items {
 						display: flex;
 						padding-top: .5rem;
 						padding-left: 0;
 						list-style: none;
 						cursor: pointer;
 	
-						.size {
+						.sub-size {
 							display: flex;
 							font-size: 14px;
 							color: var(--main-blue);
@@ -1302,13 +1329,13 @@ main {
 							box-shadow: none;
 						}
 		
-						&.add-checkout {
+						&.sub-add-checkout {
 							background-color: #36558b;
 							border-radius: 0 0 0 .25rem;
 							padding: .5rem;
 						}
 		
-						&.add-cart {
+						&.sub-add-cart {
 							background-color: #b10e0e;
 							border-radius: 0 0 .25rem 0;
 							padding: .5rem;
@@ -1333,8 +1360,24 @@ main {
 	.offcanvas-header {
 
 		.offcanvas_picture {
+			position: relative;
+
+			&:hover {
+				img {
+					&:nth-of-type(2) {
+						opacity: 1;
+					}	
+				}
+			}
+
 			img {
 				border: 1px solid #ebeae6;
+				&:nth-of-type(2) {
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+				}
 			}
 		}
 
@@ -1385,37 +1428,29 @@ main {
 		}
 
 		.offcanvas_colors {
-			.color-items {
+			.color-item {
 				position: relative;
 				display: inline-block;
+				padding: .5rem;
+				font-size: 14px;
+				border-radius: 5px;
 				cursor: pointer;
 
 				&.active {
-					// .color-btn {
-					// 	border-color: #abaaaa;
-					// }
-					
+					border: 1px solid #00a2d9;
+					border-radius: 5px;
 				}
 
-				.color-btn {
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					background-color: #f5f5f5;
-
-					span {
-						display: inline-block;
-						width: 20px;
-						height: 20px;
-						border-radius: 50%;
-
-					}
+				img {
+					width: 20px;
+					height: 20px;
+					margin-right: .5rem;
 				}
 			}	
 		}
 
 		.offcanvas_sizes {
-			.size-items {
+			.size-item {
 				position: relative;
 				display: inline-block;
 				cursor: pointer;
