@@ -1,0 +1,25 @@
+@import "bootstrap/bootstrap";
+@import "color";
+
+a{
+	text-decoration: none !important;
+}
+
+.linkGray {
+	color: $gray-800;
+
+	&:hover {
+		color: $blue-006;
+		text-decoration: underline !important;
+	}
+}
+
+.linkBlue {
+	color: $blue-004;
+	text-decoration: underline !important;
+
+	&:hover {
+		color: $blue-006;
+		text-decoration: underline !important;
+	}
+}

@@ -1,10 +1,3 @@
-/**
- * @author      OA Wu <comdan66@gmail.com>
- * @copyright   Copyright (c) 2015 - 2019, Ginkgo
- * @license     http://opensource.org/licenses/MIT  MIT License
- * @link        https://www.ioa.tw/
- */
-
 const windowPath = require('../Ginkgo').windowPath
 const Notifier   = require('../Ginkgo').notifier
 const print      = require('../Ginkgo').print

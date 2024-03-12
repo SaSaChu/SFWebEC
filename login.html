@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui">
+
+	<title>登入頁</title>
+
+	<script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/swiper/swiper-bundle.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/public.js"></script>
+	<script language="javascript" type="text/javascript" src="js/home.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/components/input.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/icon.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+	<script src="https://kit.fontawesome.com/25b2931f6f.js" crossorigin="anonymous"></script>
+</head>
+
+<body >
+	<div class="container-fluid mt-5">
+		<div class="row">
+			<div class="col">
+				<a class="btnSF btnMainBlud btn-xxl fs-6 fw-medium" data-bs-toggle="modal" href="#loginToggle" role="button">登入</a>
+			</div>
+
+			<!-- 登入光箱 -->
+			<div class="modal fade" id="loginToggle" aria-hidden="true" aria-labelledby="loginToggleLabel" tabindex="-1">
+			  <div class="modal-dialog modal-dialog-centered">
+			    <div class="modal-content loginBoxs px-4 pt-4">
+			      <div class="modal-header p-0 mh-noBorder">
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			      </div>
+
+			      <div class="modal-body px-0 pb-0">
+			        <button class="btnSF btnOtherGreen btn-xxl fs-5 w-100 p-2">
+			        	<i class="icon-icon-line fs-2 me-3"></i>Line 快速登入
+			      	</button>
+			      	<h2 class="text-blue001 text-center mt-5 mb-3">會員登入</h2>
+
+			      	<div class="input-group form-outBoard-top rounded-top">
+							  <span class="input-group-text"><i class="icon-user"></i></span>
+							  <input type="text" class="form-control form-noBoard fs-6 ps-0" placeholder="手機號碼" >
+							</div>
+							<div class="input-group form-outBoard rounded-bottom">
+							  <span class="input-group-text"><i class="icon-lock"></i></span>
+							  <input type="text" class="form-control form-noBoard fs-6 ps-0" placeholder="密碼" >
+							</div>
+
+							<div class="col-6 mt-3 mb-4">
+							  <input class="form-control fs-6" type="text" placeholder="驗證碼">
+							</div>
+
+			      	<div class="my-1">
+			      		<i class="icon-lock-open text-blue006 fs-8 me-1"></i>
+			      		<a href="" class="linkGray fs-8 fw-light">忘記密碼</a>
+			      	</div>
+
+			      	<button type="button" class="btnSF btnBlud003 btn-xxl fs-6 w-100 m-0">登入</button>
+			      	<div style="height: 1.6rem;"></div>
+			        <button class="btnSF btnBlud003-line btn-xxl fs-6 w-100 m-0" data-bs-target="#signToggle" data-bs-toggle="modal" data-bs-dismiss="modal">立刻註冊</button>
+
+			        <p class="text-center text-gray001 fs-8 fw-light mt-3">
+			        	登入或完成註冊代表您同意
+			        	<a href="" class="linkBlue fs-8">隱私條款</a> 和 <a href="" class="linkBlue fs-8">使用條款</a>
+			        </p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+			<!-- 註冊光箱 -->
+			<div class="modal fade" id="signToggle" aria-hidden="true" aria-labelledby="signToggle" tabindex="-1">
+			  <div class="modal-dialog modal-dialog-centered">
+			    <div class="modal-content loginBoxs px-4 pt-4">
+			      <div class="modal-header p-0 mh-noBorder">
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			      </div>
+
+			     	<div class="modal-body px-0 pb-0">
+			        <button class="btnSF btnOtherGreen btn-xxl fs-5 w-100 p-2">
+			        	<i class="icon-icon-line fs-2 me-3"></i>Line 快速註冊
+			      	</button>
+			      	<h2 class="text-blue001 text-center mt-5 mb-3">加入會員</h2>
+
+			      	<div class="col-12 mt-3 mb-4">
+							  <input class="form-control fs-6" type="text" placeholder="手機號碼">
+							</div>
+
+			      	<div class="input-group form-outBoard-top rounded-top">
+							  <input class="form-control form-noBoard fs-6" type="text" placeholder="密碼規範說明文字">
+							</div>
+							<div class="input-group form-outBoard rounded-bottom mb-4">
+							  <input class="form-control form-noBoard fs-6" type="text" placeholder="確認密碼">
+							</div>
+
+							<button type="button" class="btnSF btnBlud003 btn-xxl fs-6 w-100 m-0" data-bs-target="#signToggle" data-bs-toggle="modal" data-bs-dismiss="modal">註冊</button>
+
+							<p class="text-center text-gray001 fs-8 fw-light mt-3">
+			        	登入或完成註冊代表您同意
+			        	<a href="" class="linkBlue fs-8">隱私條款</a> 和 <a href="" class="linkBlue fs-8">使用條款</a>
+			        </p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+	<!-- bootstrap js -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

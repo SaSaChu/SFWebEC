@@ -1,0 +1,16 @@
+@import "Ginkgo";
+@import "bootstrap/bootstrap";
+@import "components/color";
+@import "components/input";
+@import "components/link";
+@import "components/btn";
+
+.loginBoxs {
+	width: 450px;
+}
+
+.modal-header, .modal-footer {
+	&.mh-noBorder {
+		border: 0;
+	}
+}

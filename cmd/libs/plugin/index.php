@@ -1,12 +1,5 @@
 <?php
 
-/**
- * @author      OA Wu <comdan66@gmail.com>
- * @copyright   Copyright (c) 2015 - 2019, Ginkgo
- * @license     http://opensource.org/licenses/MIT  MIT License
- * @link        https://www.ioa.tw/
- */
-
 mb_regex_encoding('UTF-8');
 mb_internal_encoding('UTF-8');
 date_default_timezone_set('Asia/Taipei');

@@ -1,10 +1,3 @@
-/**
- * @author      OA Wu <comdan66@gmail.com>
- * @copyright   Copyright (c) 2015 - 2019, Maple ApiDoc
- * @license     http://opensource.org/licenses/MIT  MIT License
- * @link        https://www.ioa.tw/
- */
-
 const Display = require('../Display')
 const Xterm   = require('../Xterm')
 
