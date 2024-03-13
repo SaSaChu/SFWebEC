@@ -65,7 +65,6 @@ $(function () {
             removeMobileArrow();
         }
     })     
-    
 
     // Introduction
     const swiperIntroduction = new Swiper(".introduction-swiper", {
@@ -159,7 +158,6 @@ $(function () {
         
         
     });
-      
 
     // IG
     var swiperIg = new Swiper(".instagram-swiper", {
@@ -193,120 +191,5 @@ $(function () {
             }
         },
         
-    });
-
-    // cart
-    // 網頁版 顏色
-    $('.product-card').find('.color-item').on('mouseenter, click', function() {
-        $(this).addClass('active').siblings().removeClass('active');
-        $(this).parents('.card').find(".card-img img").first().attr("src", $(this).attr('data-img'));
-        $(this).parents('.card').find(".card-img img").last().attr("src", $(this).attr('data-img-hover'));
-        $(this).parent().next().find('p').text($(this).attr('data-colorName'));  
-    });
-
-    // 手機版 cart offcanvas 開啟
-    $('#offcanvasBottom').on('show.bs.offcanvas', function(event) {
-        let content = $(event.relatedTarget).parents('.card-content') 
-        let pictures = content.prevAll('.card-img').html();
-        let original = content.find('.card-price').attr('data-origin');
-        let discount = content.find('.card-price').text();
-        let colors = content.find('.color-items').html();   
-        $('<div>').append(pictures).appendTo($('.offcanvas_picture'));
-        $('<div>').addClass('color-items').append(colors).appendTo($('.offcanvas_colors'));
-
-        $('.cart-offcanvas').find('.color-item').on('click', function() {
-            content.find('.color-item').eq($(this).index()).click();
-            $(this).parents('.cart-offcanvas').find(".offcanvas_picture img").first().attr("src", $(this).attr('data-img'));
-            $(this).parents('.cart-offcanvas').find(".offcanvas_picture img").last().attr("src", $(this).attr('data-img-hover'));
-            $(this).addClass('active').siblings().removeClass('active'); 
-            $(this).parents('.offcanvas_colors').find('input[name="color"]').val($(this).attr('data-colorId'));
-        })
-    })
-
-    // 手機版 cart offcanvas 關閉
-    $('#offcanvasBottom').on('hidden.bs.offcanvas', function(event) {
-        $(this).find('picture').remove();
-        $(this).find('.color-items').remove();
-    })
-
-    $('.mobile_add_cart').on('click', () => {
-        let quantity = $('input[name="quantity"]').val();
-        let color = $('input[name="color"]').val(); 
-        let size = $('input[name="size"]').val();
-        console.log(quantity, color, size);
-        // DO ajax
-        // 成功的話跳 swal()
-    })
-    console.log($('.item-action-cart').length)
-    $('.item-action-cart').on('click', function() {
-        // console.log($(this), this);
-        if (window.screen.width < 500) {
-            // cartOpen($(this));
-        } else {
-            let target = $(this).parent().find('.product-sub-card');
-            $('.product-sub-card').not(target).remove();
-            let colors = $(this).parents('.card-content').find('.color-items').html();
-            let cartItem =`
-            <div class="product-sub-card">
-                <div class="card border-0">
-                    <div class="card-body">
-                        <div class="color-wrapper">
-                            <div class="sub-color-name">
-                                <p class="text-start">顏色：</p>
-                                <span>灰色</span>
-                            </div>
-                            <div class="sub-color-items d-flex">
-                                ${colors}
-                            </div>
-                        </div>	
-                        <div class="size-wrapper">
-                            <div class="sub-size">
-                                <p class="text-start">尺寸</p>
-                            </div>	
-                            <ul class="sub-size-items">
-                                <li class="size-item active" data-size="xs">xs</li>
-                                <li class="size-item" data-size="s">s</li>
-                                <li class="size-item" data-size="m">m</li>
-                                <li class="size-item sell_out" data-size="l">l</li>
-                            </ul>
-                        </div>
-                        <div class="action-wrapper">
-                            <div class="row g-0">
-                                <div class="col px-0">
-                                    <button class="btn btn-lg sub-add-checkout">立即結帳</button>
-                                </div>
-                                <div class="col px-0">
-                                    <button class="btn btn-lg sub-add-cart">加入購物車</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>`;
-
-            if(!target.length) {
-                $(this).after(cartItem);
-                $('.product-sub-card .color-item').on('click', function() {
-                    $(this).addClass('active').siblings().removeClass('active');
-                    $(this).parents('.card-content').find('.color-items .color-item').eq($(this).index()).click()
-                    $(this).parent().prev().find('span').text($(this).attr('data-colorName'));
-                    
-                });
-    
-                $('.product-sub-card .size-item').on('click', function() {
-                    $(this).addClass('active').siblings().removeClass('active');
-
-                });
-
-                $('.product-sub-card').on('mouseleave', function() {
-                    // $(this).remove();
-                })
-    
-                // TODO Ajax
-            } else {
-                target.remove();
-            }
-        }
-	});
-
+    }); 
 });
