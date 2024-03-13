@@ -1,7 +1,14 @@
 @import "Ginkgo";
 @import "bootstrap/bootstrap";
-@import "layout/header";
-@import "layout/footer";
+
+
+* {
+  &, &:after, &:before {
+    vertical-align: middle;
+    @include box-sizing(border-box);
+    @include font-smoothing(subpixel-antialiased);
+  }
+}
 
 
 html {
@@ -17,6 +24,8 @@ body {
     margin: 0;
     padding: 0;
     color: #232323;
+
+    line-height: normal !important;
 
     font-family: Roboto, "Noto Sans TC", "Helvetica Neue", HelveticaNeue,
         Helvetica, Arial, sans-serif;
@@ -433,3 +442,11 @@ main {
 		}
 	}
 }
+
+
+// 切完版可以把這邊刪掉  ↓
+.test-01 {border: 1px solid rgba(255, 0, 0, .3);}
+.test-bg-01 {background-color: rgba(0, 128, 0, 0.2);}
+.test-bg-02 {background-color: rgba(0, 0, 255, 0.2);}
+// 切完版可以把這邊刪掉  ↑
+
