@@ -1,5 +1,6 @@
 @import "GinkgoMixin";
 @import "GinkgoUi";
+@import "components/color";
 :root {
 	--main-blue: #111c47;
     --main-red: #b10e0e;
@@ -262,13 +263,21 @@ main {
 
 				&.active {
 					.size-btn {
+						span {
+							color: var(--main-white);
+							background-color: $blue-006;
+						}
+					}
+				}
 
+				&.sell_out {
+					.size-btn {
 						span {
 							color: #c4c4c4;
 							background-color: #eaeaea;
+							text-decoration: line-through;
 						}
 					}
-					
 				}
 
 				.size-btn {
@@ -910,7 +919,16 @@ main {
 							background-color: #eaeaea;
 						}
 					}
-					
+				}
+
+				&.sell_out {
+					.size-btn {
+						span {
+							color: #c4c4c4;
+							background-color: #eaeaea;
+							text-decoration: line-through;
+						}
+					}
 				}
 
 				.size-btn {

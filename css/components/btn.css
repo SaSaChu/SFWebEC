@@ -3136,7 +3136,7 @@ textarea.form-control-lg { min-height: calc(1.5em + (1rem + 2px)); }
 .btnSF.btnBlud001:hover { background-color: #044281; }
 .btnSF.btnBlud002 { color: #fff; background-color: #00A2D9; border: 0; }
 .btnSF.btnBlud002:hover { background-color: #044281; }
-.btnSF.btnBlud003 { color: #fff; background-color: #044281; border: 1px solid #044281; border: 0; }
+.btnSF.btnBlud003 { color: #fff; background-color: #044281; border: 1px solid #044281; }
 .btnSF.btnBlud003:hover { border: 1px solid #044281; opacity: .9; }
 .btnSF.btnBlud003-line { color: #044281; background-color: #fff; border: 1px solid #044281; }
 .btnSF.btnBlud003-line:hover { color: #fff; background-color: #044281; border: 1px solid #044281; }

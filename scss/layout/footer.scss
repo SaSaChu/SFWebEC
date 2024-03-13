@@ -61,10 +61,6 @@ footer {
 						}
 					}
 				}
-				
-
-
-				
 			}
 
 			.fm_footer_newsletter {
@@ -175,9 +171,7 @@ footer {
 									content: '\2b';
 									font-family: "Font Awesome 6 Pro";
 								}
-								
 							}
-							
 						}
 
 						.footer_widget_title {
@@ -189,8 +183,6 @@ footer {
 						.ul_li_links {
 							padding: 0;
 							list-style: none;
-			
-							
 						}
 					}
 
@@ -214,15 +206,12 @@ footer {
 				}
 			}
 		}
-
-		
 	}
 
 	.right_widget {
 		position: fixed;
-		top: 90%;
+		top: 85%;
 		right: 20px;
-		// transform: translateY(-50%);
 		z-index: 1040;
 
 		.circle {
