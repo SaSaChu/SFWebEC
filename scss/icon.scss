@@ -1,5 +1,11 @@
-@import "compass/css3/font-face";
+//
+// @author      OA Wu <comdan66@gmail.com>
+// @copyright   Copyright (c) 2015 - 2024, Ginkgo
+// @license     http://opensource.org/licenses/MIT  MIT License
+// @link        https://www.ioa.tw/
+//
 
+@import "compass/css3/font-face";
 
 @include font-face("icon", font-files(
   "icomoon/fonts/icomoon.eot",
@@ -9,7 +15,7 @@
 
 *[class^="icon-"]:before, *[class*=" icon-"]:before {
   font-family: "icon";
-  vertical-align: bottom;
+
   speak: none;
   font-style: normal;
   font-weight: normal;
