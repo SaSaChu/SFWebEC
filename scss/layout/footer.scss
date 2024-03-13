@@ -1,6 +1,8 @@
 // @import "Ginkgo";
 @import "GinkgoMixin";
 @import "GinkgoUi";
+@import "bootstrap/bootstrap";
+@import "components/color";
 
 footer {
 	padding: 7rem 0 0 0;
@@ -27,6 +29,12 @@ footer {
 		padding: 2rem 0;
 		font-size: 13px;
 		color: #111c47;
+	}
+
+	.footer-four {
+		padding: 1.6rem 0;
+		font-size: 13px;
+		background-color: $gray-200;
 	}
 
 	.footer_widget {
@@ -247,6 +255,85 @@ footer {
 
 				i {
 					color: #b3b7c6;
+				}
+			}
+		}
+	}
+
+	.footer-four-flex {
+		justify-content: space-between;
+
+		@include media-breakpoint-down(md) {
+			flex-direction: column-reverse;
+    	align-items: center;
+		}
+	}
+
+	.footer-four-li {
+		display:inline-flex;
+
+		@include media-breakpoint-down(md) {
+			width: 100%;
+			justify-content: center;
+			flex-wrap: wrap;
+			padding-bottom: 10px;
+			border-bottom: 1px solid $main-blue;
+		}
+
+		> p {
+			margin-bottom: 0;
+
+			@include media-breakpoint-down(md) {
+				width: calc(100% / 3);
+				text-align: center;
+
+				&:nth-child(3) {
+					a {
+						&:after {
+							display: none;
+						}
+					}
+				}
+			}
+
+			> a {
+				display: inline-block;
+				color: $blue-800;
+
+				@include media-breakpoint-down(md) {
+						display: block;
+						text-align: center;
+						padding-bottom: 10px;
+				}
+
+				&:after {
+					vertical-align: middle;
+					display:inline-block;
+					content: '|';
+					padding: 0 1rem;
+					color: $blue-800;
+
+					@include media-breakpoint-down(md) {
+						float: right;
+						padding: 0;
+					}
+				}
+
+				&:hover {
+					color: $blue-003;
+					text-decoration: underline !important;
+
+					&:after {
+						color: $blue-800;
+					}
+				}
+			}
+
+			&:last-child {
+				a {
+					&:after {
+						display: none;
+					}
 				}
 			}
 		}

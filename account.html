@@ -864,15 +864,32 @@
 				</nav>
 			</div>
 		</section>
-	</header>
-	<div class="title-boxs">
-		<h2 class="text-white text-center">會員中心</h2>
-		<p></p>
-	</div>
 
+		<section class="title-boxs account-title-bg d-flex align-items-center justify-content-center">
+			<div class="row">
+				<div class="col-12">
+					<h2 class="text-white text-center">會員中心</h2>
+				</div>
+				<div class="col-12">
+					<nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb">
+					  <ol class="breadcrumb title-bread">
+					    <li class="breadcrumb-item title-bread-item"><a href="#">首頁</a></li>
+					    <li class="breadcrumb-item title-bread-item item-active" aria-current="page">會員中心</li>
+					  </ol>
+					</nav>
+				</div>
+			</div>
+			
+		</section>
+	</header>
+	
 	
 	<main class="my-5">
-		<div class="container-xxl test-01">1</div>
+		<div class="container-xxl d-flex justify-content-between test-01">
+				<span class="fs-5">王小明，您好</span>
+				<span class="fw-light"><i class="icon-error_outline me-2 text-blue006"></i>會員分級辦法</span>
+		</div>
+
 		<div class="container-xxl test-01">
 			<div class="row">
 				<div class="col-3 test-bg-01">
@@ -884,6 +901,30 @@
 		<div class="container-xxl test-01">3</div>
 	</main>
 
+	<footer>
+		<div class="container-fluid p-0">
+			<div class="row g-0 footer-four ">
+				<div class="col-11 mx-auto text-blue001">
+					<div class="d-flex footer-four-flex">
+						<div class="pt-md-0 pt-3">台灣三花著作權所有 保留一切權利</div>
+						<div class="mb-0 footer-four-li ps-0">
+							<p><a href="">聯絡三花</a></p>
+							<p><a href="">常見問題</a></p>
+							<p><a href="">隱私權條款</a></p>
+							<p><a href="">使用條款</a></p>
+							<p><a href="">Cookie政策</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<!-- bootstrap js -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+		crossorigin="anonymous"></script>
 
 </body>
 </html>
+

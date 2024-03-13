@@ -1,5 +1,6 @@
 @import "compass/css3/font-face";
 
+
 @include font-face("icon", font-files(
   "icomoon/fonts/icomoon.eot",
   "icomoon/fonts/icomoon.woff",
@@ -8,7 +9,7 @@
 
 *[class^="icon-"]:before, *[class*=" icon-"]:before {
   font-family: "icon";
-
+  vertical-align: bottom;
   speak: none;
   font-style: normal;
   font-weight: normal;

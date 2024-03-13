@@ -1,7 +1,14 @@
 @import "Ginkgo";
 @import "bootstrap/bootstrap";
-@import "layout/header";
-@import "layout/footer";
+
+
+// * {
+//   &, &:after, &:before {
+//     vertical-align: middle;
+//     @include box-sizing(border-box);
+//     @include font-smoothing(subpixel-antialiased);
+//   }
+// }
 
 
 html {
@@ -434,23 +441,10 @@ main {
 	}
 }
 
-.title-boxs {
-	padding: 0;
-	height: 250px;
 
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-size: cover;
-    background-image: url(../images/title-bg-pic/bg-Account.webp);
-    background-color: #ccc;
-}
-
-.test-01 {
-	border: 1px solid rgba(255, 0, 0, .3);
-}
-
+// 切完版可以把這邊刪掉  ↓
+.test-01 {border: 1px solid rgba(255, 0, 0, .3);}
 .test-bg-01 {background-color: rgba(0, 128, 0, 0.2);}
 .test-bg-02 {background-color: rgba(0, 0, 255, 0.2);}
-
+// 切完版可以把這邊刪掉  ↑
 
