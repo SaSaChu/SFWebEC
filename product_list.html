@@ -10,15 +10,15 @@
 
 	<script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
 	<script language="javascript" type="text/javascript" src="js/swiper/swiper-bundle.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/list/list.min.js"></script>	
 	<script language="javascript" type="text/javascript" src="js/public.js"></script>
 	<script language="javascript" type="text/javascript" src="js/product_list.js"></script>
-	<script language="javascript" type="text/javascript" src="js/list/list.min.js"></script>	
+	<script language="javascript" type="text/javascript" src="js/cart.js"></script>
+	
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css"> -->
-	<link rel="stylesheet" type="text/css" href="css/layout/header.css">
-	<link rel="stylesheet" type="text/css" href="css/layout/footer.css">
 	<link rel="stylesheet" type="text/css" href="css/product_list.css">
+	<link rel="stylesheet" type="text/css" href="css/icon.css">
 	<link rel="stylesheet" type="text/css" href="css/swiper/swiper-bundle.min.css">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,30 +27,35 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 	
 	<script src="https://kit.fontawesome.com/25b2931f6f.js" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
 	<header class="header">
+		<!-- 跑馬燈 -->
 		<section class="marquee-wrapper">
 			<div class="container-fluid p-0">
 				<div class="row g-0">
 					<div class="col-11 mx-auto position-relative">
 						<div id="marqueeControls" class="marquee vertical carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
 							<div class="carousel-inner">
+								<!-- 跑馬燈內容 @foreach start -->
 								<div class="carousel-item active">
 									<p>官網獨家優惠, 全館滿千免運費1</p>
 								</div>
+								<!-- 跑馬燈內容 @foreach end -->
+
 								<div class="carousel-item">
 									<p>官網獨家優惠, 全館滿千免運費2</p>
 								</div>
 								<div class="carousel-item">
 									<p>官網獨家優惠, 全館滿千免運費3</p>
 								</div>
+								
 							</div>
 						</div>
 						<span class="marquee-btn-close">
-							<i class="fa-solid fa-circle-xmark"></i>
+							<!-- <i class="fa-solid fa-circle-xmark"></i> -->
+							<i class="icon-icon-close-ad"></i>
 						</span>
 					</div>
 				</div>
@@ -62,17 +67,17 @@
 				<nav class="navbar navbar-expand-lg">
 					<div class="container-fluid p-0">
 						<div class="col-11 mx-auto">
-							<!-- Mobile Menu -->
+							<!-- 手機版 Menu -->
 							<div class="mobile_menu d-flex d-lg-none justify-content-between align-items-center">
 								<div class="col"> 
 									<!-- Mobile Toggler Bar -->
-									<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarMobileMenu" aria-controls="offcanvasNavbarMobileMenu" aria-label="mobile-menu-btn">
+									<button class="navbar-toggler p-2 fs-7" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarMobileMenu" aria-controls="offcanvasNavbarMobileMenu" aria-label="mobile-menu-btn">
 										<span class="navbar-toggler-icon"></span>
 									</button>
 
 									<!-- Mobile Search  -->
-									<button class="navbar-toggler mobile_serach" type="button" data-bs-toggle="collapse" data-bs-target=""
-										aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+									<button class="navbar-toggler mobile_serach" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+										aria-controls="collapseExample" aria-expanded="false" aria-label="mobile search">
 										<span class="fa-solid fa-magnifying-glass"></span>
 									</button>
 
@@ -141,19 +146,19 @@
 								<!-- Mobile Nav Brand -->
 								<div class="col">
 									<a class="navbar-brand" href="#">
-										<img src="https://fakeimg.pl/360x40/ffffff/" alt="fake ing">
+										<img src="images/header/sf_logo.webp" alt="fake ing">
 									</a>
 								</div>
 
 								<div class="col text-end">
 			
 									<!-- Mobile User -->
-									<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarMobileUser" aria-controls="offcanvasNavbarMobileUser" aria-label="mobile-user-btn">
+									<button class="navbar-toggler p-2 fs-7" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarMobileUser" aria-controls="offcanvasNavbarMobileUser" aria-label="mobile-user-btn">
 										<i class="fa-solid fa-circle-user"></i>
 									</button>
 
 									<!-- Mobile Cart -->
-									<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarMobileCart" aria-controls="offcanvasNavbarMobileCart" aria-label="mobile-cart-btn">
+									<button class="navbar-toggler p-2 fs-7" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarMobileCart" aria-controls="offcanvasNavbarMobileCart" aria-label="mobile-cart-btn">
 										<i class="fa-solid fa-cart-shopping"></i>
 									</button>
 
@@ -201,12 +206,32 @@
 										</div>
 										<div class="offcanvas-body">
 											<div class="cart-items">
+												<!-- 手機版購物車商品 @foreach start -->
 												<div class="cart-item">
 													<div class="card border-0">
 														<div class="row g-0">
 														<div class="col-4 border d-flex align-items-center justify-content-center">
-															<picture class="p-1">
-																<img src="https://fakeimg.pl/85x65" class="img-fluid" alt="...">
+															<picture class="ratio ratio-1x1">
+																<img src="https://fakeimg.pl/85x65" class="img-fluid img-thumbnail" alt="...">
+															</picture>
+														</div>
+														<div class="col-8">
+															<div class="card-body py-0">
+															<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+															<p class="card-text color-size">深灰藍, S</p>
+															<p class="card-text quantity-price d-flex align-items-end justify-content-between"><span>1 x NT$252</span><span><i class="fa-solid fa-trash-can"></i></span></p>
+															</div>
+														</div>
+														</div>
+													</div>
+												</div>
+												<!-- 手機版購物車商品 @foreach end -->
+												<div class="cart-item">
+													<div class="card border-0">
+														<div class="row g-0">
+														<div class="col-4 border d-flex align-items-center justify-content-center">
+															<picture class="ratio ratio-1x1">
+																<img src="https://fakeimg.pl/85x65" class="img-fluid img-thumbnail" alt="...">
 															</picture>
 														</div>
 														<div class="col-8">
@@ -223,8 +248,8 @@
 													<div class="card border-0">
 														<div class="row g-0">
 														<div class="col-4 border d-flex align-items-center justify-content-center">
-															<picture class="p-1">
-																<img src="https://fakeimg.pl/85x65" class="img-fluid" alt="...">
+															<picture class="ratio ratio-1x1">
+																<img src="https://fakeimg.pl/85x65" class="img-fluid img-thumbnail" alt="...">
 															</picture>
 														</div>
 														<div class="col-8">
@@ -237,34 +262,17 @@
 														</div>
 													</div>
 												</div>
-												<div class="cart-item">
-													<div class="card border-0">
-														<div class="row g-0">
-														<div class="col-4 border d-flex align-items-center justify-content-center">
-															<picture class="p-1">
-																<img src="https://fakeimg.pl/85x65" class="img-fluid" alt="...">
-															</picture>
-														</div>
-														<div class="col-8">
-															<div class="card-body py-0">
-															<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
-															<p class="card-text color-size">深灰藍, S</p>
-															<p class="card-text quantity-price d-flex align-items-end justify-content-between"><span>1 x NT$252</span><span><i class="fa-solid fa-trash-can"></i></span></p>
-															</div>
-														</div>
-														</div>
-													</div>
-												</div>
+												
 											</div>
 											<div class="col px-3 mb-3">
-												<button class="btn btn-lg mobile-cart-checkout-btn" type="button">結帳去</button>
+												<a href="#" class="btn btn-lg mobile-cart-checkout-btn" role="button">結帳去</a>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 
-							<!-- Web Menu  -->
+							<!-- 網頁版 Menu  -->
 							<div class="collapse navbar-collapse web_menu" id="navbarCollapse">
 
 								<!-- Web Nav Menu-->
@@ -409,16 +417,12 @@
 																</ul>
 															</div>
 															<div class="col-3 d-none d-lg-block">
-																<!-- Card -->
-																<div class="card">
-																	<!-- Image -->
+																<div class="card ratio ratio-1x1">
 																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
 																</div>
 															</div>
 															<div class="col-3 d-none d-lg-block">
-																<!-- Card -->
-																<div class="card">
-																	<!-- Image -->
+																<div class="card ratio ratio-1x1">
 																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
 																</div>
 															</div>
@@ -441,16 +445,12 @@
 													<div class="col-11 mx-auto">
 														<div class="row m-0">
 															<div class="col-3 d-none d-lg-block">
-																<!-- Card -->
-																<div class="card">
-																	<!-- Image -->
+																<div class="card ratio ratio-1x1">
 																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
 																</div>
 															</div>
 															<div class="col-3 d-none d-lg-block">
-																<!-- Card -->
-																<div class="card">
-																	<!-- Image -->
+																<div class="card ratio ratio-1x1">
 																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
 																</div>
 															</div>
@@ -582,9 +582,7 @@
 													<div class="col-11 mx-auto">
 														<div class="row m-0">
 															<div class="col-3 d-none d-lg-block">
-																<!-- Card -->
-																<div class="card">
-																	<!-- Image -->
+																<div class="card ratio ratio-1x1">
 																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
 																</div>
 															</div>
@@ -697,9 +695,7 @@
 																</ul>
 															</div>	
 															<div class="col-3 d-none d-lg-block">
-																<!-- Card -->
-																<div class="card">
-																	<!-- Image -->
+																<div class="card ratio ratio-1x1">
 																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
 																</div>
 															</div>
@@ -714,7 +710,7 @@
 								<!-- Web Nav Brand -->
 								<div class="col">
 									<a class="navbar-brand" href="#">
-										<img src="https://fakeimg.pl/360x40/ffffff/" alt="fake img">
+										<img src="images/header/sf_logo.webp" alt="fake img">
 									</a>
 								</div>
 								<!-- Web Nav Actions -->
@@ -758,7 +754,11 @@
 												</li>
 											</ul>
 										</li>
-										
+										<li class="nav-item action-love">
+											<a class="nav-link" href="#">
+												<i class="fa-regular fa-heart"></i>
+											</a>
+										</li>
 										<li class="nav-item dropdown action-cart">
 
 											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false">
@@ -769,12 +769,32 @@
 
 											<div class="dropdown-menu p-0">
 												<div class="cart-items">
+													<!-- 網頁版購物車商品 @foreach start -->
 													<div class="cart-item">
 														<div class="card border-0">
 															<div class="row g-0">
 															<div class="col-4 border d-flex align-items-center justify-content-center">
-																<picture class="p-1">
-																	<img src="https://fakeimg.pl/85x65" class="img-fluid" alt="...">
+																<picture class="ratio ratio-1x1">
+																	<img src="https://fakeimg.pl/85x65" class="img-fluid img-thumbnail" alt="...">
+																</picture>
+															</div>
+															<div class="col-8">
+																<div class="card-body py-0">
+																<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+																<p class="card-text color-size">深灰藍, S</p>
+																<p class="card-text quantity-price d-flex align-items-end justify-content-between"><span>1 x NT$252</span><span><i class="fa-solid fa-trash-can"></i></span></p>
+																</div>
+															</div>
+															</div>
+														</div>
+													</div>
+													<!-- 網頁版購物車商品 @foreach end-->
+													<div class="cart-item">
+														<div class="card border-0">
+															<div class="row g-0">
+															<div class="col-4 border d-flex align-items-center justify-content-center">
+																<picture class="ratio ratio-1x1">
+																	<img src="https://fakeimg.pl/85x65" class="img-fluid img-thumbnail" alt="...">
 																</picture>
 															</div>
 															<div class="col-8">
@@ -791,8 +811,8 @@
 														<div class="card border-0">
 															<div class="row g-0">
 															<div class="col-4 border d-flex align-items-center justify-content-center">
-																<picture class="p-1">
-																	<img src="https://fakeimg.pl/85x65" class="img-fluid" alt="...">
+																<picture class="ratio ratio-1x1">
+																	<img src="https://fakeimg.pl/85x65" class="img-fluid img-thumbnail" alt="...">
 																</picture>
 															</div>
 															<div class="col-8">
@@ -805,38 +825,13 @@
 															</div>
 														</div>
 													</div>
-													<div class="cart-item">
-														<div class="card border-0">
-															<div class="row g-0">
-															<div class="col-4 border d-flex align-items-center justify-content-center">
-																<picture class="p-1">
-																	<img src="https://fakeimg.pl/85x65" class="img-fluid" alt="...">
-																</picture>
-															</div>
-															<div class="col-8">
-																<div class="card-body py-0">
-																<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
-																<p class="card-text color-size">深灰藍, S</p>
-																<p class="card-text quantity-price d-flex align-items-end justify-content-between"><span>1 x NT$252</span><span><i class="fa-solid fa-trash-can"></i></span></p>
-																</div>
-															</div>
-															</div>
-														</div>
-													</div>
+													
 												</div>
 												<div class="col px-3 mb-3">
 													<button class="btn btn-lg cart-checkout-btn" type="button">結帳去</button>
 												</div>
-												
 											</div>
 										</li>
-
-										<li class="nav-item action-love">
-											<a class="nav-link" href="#">
-												<i class="fa-regular fa-heart"></i>
-											</a>
-										</li>
-
 										<li class="nav-item dropdown action-language">
 											<!-- Toggle -->
 											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false">
@@ -867,14 +862,23 @@
 				</nav>
 			</div>
 		</section>
+
+		<!-- 手機版 search -->
+		<div class="collapse" id="collapseExample">
+			<div class="col-12">
+				<form class="form" action="" class="search-bar">
+					<input type="search" class="form-control rounded-0" name="search" pattern=".*\S.*" placeholder="請輸入文字" required>
+				</form>
+			</div>
+		</div>
 	</header>
 
 	<main>	
-		<div class="container-fluid p-0 position-relative">
-			<div class="col-12 col-lg-11 mx-auto py-lg-4">
+		<div class="container p-0 position-relative">
+			<div class="col-12 mx-auto py-lg-4">
 				<div class="row mx-auto">
 					<!-- Left Side Bar Btn-->
-					<div class="col-1 px-0 d-none d-lg-block position-relative">
+					<div class="col px-0 d-none d-lg-block flex-shrink-1" style="max-width: 30px;">
 						<div class="sticky-lg-top">
 							<div class="closeSideBtn">
 								<i class="fa-solid fa-minus"></i>
@@ -884,237 +888,267 @@
 								<i class="fa-solid fa-plus"></i>
 								<span>開啟</span>
 							</div>
-							<!-- <button class="openSideBtn">開啟</button>  -->
 						</div>
-					</div>		
+					</div>	
+					
 					<!-- Left Side Bar-->
-					<div class="sideMenu col-lg-2">
-						<div class="sticky-top">
-							<aside class="aside_widget">
-								<div class="title_widget">
-									<div class="col-11 mx-auto">
-										<h2>線上購物</h2>
-									</div>
-								</div>	
+					<div class="sideMenu col-lg-2 ps-lg-0">
+						<aside class="aside_widget">
+							<div class="title_widget">
+								<div class="col-11 mx-auto">
+									<h2>線上購物</h2>
+								</div>
+							</div>	
 
-								<div class="web_menu_widget d-none d-lg-block">
-									<div class="accordion" id="accordionSideMenu">
-										<div class="accordion-item border-0">
-											<h3 class="accordion-header" id="heading1">
-												<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-													優惠區
-												</button>
-											</h3>
-											<div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionSideMenu">
-												<div class="accordion-body">
-													<ul class="ul_li_links">
-														<li class=""><a href="#!">新品上市</a></li>
-														<li class=""><a href="#!">暢銷組合區</a></li>
-														<li class=""><a href="#!">五片式平口褲</a></li>
-														<li class=""><a href="#!">針織平口褲</a></li>
-														<li class=""><a href="#!">彈性貼身平口褲（側邊透氣款）</a></li>
-														<li class=""><a href="#!">彈性時尚平口褲</a></li>
-														<li class=""><a href="#!">三角褲</a></li>
-														<li class=""><a href="#!">長褲</a></li>
-													</ul>
-												</div>
+							<div class="web_menu_widget d-none d-lg-block">
+								<div class="accordion" id="accordionSideMenu">
+									<div class="accordion-item border-0">
+										<h3 class="accordion-header" id="heading1">
+											<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+												<picture class="me-2">
+													<img src="images/svg-pic/doll-Gray.svg" alt="">
+													<img src="images/svg-pic/doll-Gradient.svg" alt="">
+												</picture>
+												優惠區
+											</button>
+										</h3>
+										<div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionSideMenu">
+											<div class="accordion-body">
+												<ul class="ul_li_links">
+													<li class=""><a href="#!">新品上市</a></li>
+													<li class=""><a href="#!">暢銷組合區</a></li>
+													<li class=""><a href="#!">五片式平口褲</a></li>
+													<li class=""><a href="#!">針織平口褲</a></li>
+													<li class=""><a href="#!">彈性貼身平口褲（側邊透氣款）</a></li>
+													<li class=""><a href="#!">彈性時尚平口褲</a></li>
+													<li class=""><a href="#!">三角褲</a></li>
+													<li class=""><a href="#!">長褲</a></li>
+												</ul>
 											</div>
 										</div>
-										<div class="accordion-item border-0">
-											<h3 class="accordion-header" id="heading2">
-												<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-													內褲
-												</button>
-											</h3>
-											<div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionSideMenu">
-												<div class="accordion-body">
-													<ul class="ul_li_links">
-														<li class=""><a href="#!">新品上市</a></li>
-														<li class=""><a href="#!">暢銷組合區</a></li>
-														<li class=""><a href="#!">五片式平口褲</a></li>
-														<li class=""><a href="#!">針織平口褲</a></li>
-														<li class=""><a href="#!">彈性貼身平口褲（側邊透氣款）</a></li>
-														<li class=""><a href="#!">彈性時尚平口褲</a></li>
-														<li class=""><a href="#!">三角褲</a></li>
-														<li class=""><a href="#!">長褲</a></li>
-													</ul>
-												</div>
+									</div>
+									<div class="accordion-item border-0">
+										<h3 class="accordion-header" id="heading2">
+											<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+												<picture class="me-2">
+													<img src="images/svg-pic/doll-Gray.svg" alt="">
+													<img src="images/svg-pic/doll-Gradient.svg" alt="">
+												</picture>
+												內褲
+											</button>
+										</h3>
+										<div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionSideMenu">
+											<div class="accordion-body">
+												<ul class="ul_li_links">
+													<li class=""><a href="#!">新品上市</a></li>
+													<li class=""><a href="#!">暢銷組合區</a></li>
+													<li class=""><a href="#!">五片式平口褲</a></li>
+													<li class=""><a href="#!">針織平口褲</a></li>
+													<li class=""><a href="#!">彈性貼身平口褲（側邊透氣款）</a></li>
+													<li class=""><a href="#!">彈性時尚平口褲</a></li>
+													<li class=""><a href="#!">三角褲</a></li>
+													<li class=""><a href="#!">長褲</a></li>
+												</ul>
 											</div>
 										</div>
-										<div class="accordion-item border-0">
-											<h3 class="accordion-header" id="heading3">
-												<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-													襪子
-												</button>
-											</h3>
-											<div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionSideMenu">
-												<div class="accordion-body">
-													<ul class="ul_li_links">
-														<li class=""><a href="#!">新品上市</a></li>
-														<li class=""><a href="#!">暢銷組合區</a></li>
-														<li class=""><a href="#!">五片式平口褲</a></li>
-														<li class=""><a href="#!">針織平口褲</a></li>
-														<li class=""><a href="#!">彈性貼身平口褲（側邊透氣款）</a></li>
-														<li class=""><a href="#!">彈性時尚平口褲</a></li>
-														<li class=""><a href="#!">三角褲</a></li>
-														<li class=""><a href="#!">長褲</a></li>
-													</ul>
-												</div>
+									</div>
+									<div class="accordion-item border-0">
+										<h3 class="accordion-header" id="heading3">
+											<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+												<picture class="me-2">
+													<img src="images/svg-pic/doll-Gray.svg" alt="">
+													<img src="images/svg-pic/doll-Gradient.svg" alt="">
+												</picture>
+												襪子
+											</button>
+										</h3>
+										<div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionSideMenu">
+											<div class="accordion-body">
+												<ul class="ul_li_links">
+													<li class=""><a href="#!">新品上市</a></li>
+													<li class=""><a href="#!">暢銷組合區</a></li>
+													<li class=""><a href="#!">五片式平口褲</a></li>
+													<li class=""><a href="#!">針織平口褲</a></li>
+													<li class=""><a href="#!">彈性貼身平口褲（側邊透氣款）</a></li>
+													<li class=""><a href="#!">彈性時尚平口褲</a></li>
+													<li class=""><a href="#!">三角褲</a></li>
+													<li class=""><a href="#!">長褲</a></li>
+												</ul>
 											</div>
 										</div>
-										<div class="accordion-item border-0">
-											<h3 class="accordion-header" id="heading4">
-												<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-													內衣/T恤
-												</button>
-											</h3>
-											<div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionSideMenu">
-												<div class="accordion-body">
-													<ul class="ul_li_links">
-														<li class=""><a href="#!">新品上市</a></li>
-														<li class=""><a href="#!">暢銷組合區</a></li>
-														<li class=""><a href="#!">五片式平口褲</a></li>
-														<li class=""><a href="#!">針織平口褲</a></li>
-														<li class=""><a href="#!">彈性貼身平口褲（側邊透氣款）</a></li>
-														<li class=""><a href="#!">彈性時尚平口褲</a></li>
-														<li class=""><a href="#!">三角褲</a></li>
-														<li class=""><a href="#!">長褲</a></li>
-													</ul>
-												</div>
+									</div>
+									<div class="accordion-item border-0">
+										<h3 class="accordion-header" id="heading4">
+											<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+												<picture class="me-2">
+													<img src="images/svg-pic/doll-Gray.svg" alt="">
+													<img src="images/svg-pic/doll-Gradient.svg" alt="">
+												</picture>
+												內衣/T恤
+											</button>
+										</h3>
+										<div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionSideMenu">
+											<div class="accordion-body">
+												<ul class="ul_li_links">
+													<li class=""><a href="#!">新品上市</a></li>
+													<li class=""><a href="#!">暢銷組合區</a></li>
+													<li class=""><a href="#!">五片式平口褲</a></li>
+													<li class=""><a href="#!">針織平口褲</a></li>
+													<li class=""><a href="#!">彈性貼身平口褲（側邊透氣款）</a></li>
+													<li class=""><a href="#!">彈性時尚平口褲</a></li>
+													<li class=""><a href="#!">三角褲</a></li>
+													<li class=""><a href="#!">長褲</a></li>
+												</ul>
 											</div>
 										</div>
-										<div class="accordion-item border-0">
-											<h3 class="accordion-header" id="heading5">
-												<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-													大尺碼專區
-												</button>
-											</h3>
-											<div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionSideMenu">
-												<div class="accordion-body">
-													<ul class="ul_li_links">
-														<li class=""><a href="#!">新品上市</a></li>
-														<li class=""><a href="#!">暢銷組合區</a></li>
-														<li class=""><a href="#!">五片式平口褲</a></li>
-														<li class=""><a href="#!">針織平口褲</a></li>
-														<li class=""><a href="#!">彈性貼身平口褲（側邊透氣款）</a></li>
-														<li class=""><a href="#!">彈性時尚平口褲</a></li>
-														<li class=""><a href="#!">三角褲</a></li>
-														<li class=""><a href="#!">長褲</a></li>
-													</ul>
-												</div>
+									</div>
+									<div class="accordion-item border-0">
+										<h3 class="accordion-header" id="heading5">
+											<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+												<picture class="me-2">
+													<img src="images/svg-pic/doll-Gray.svg" alt="">
+													<img src="images/svg-pic/doll-Gradient.svg" alt="">
+												</picture>
+												大尺碼專區
+											</button>
+										</h3>
+										<div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionSideMenu">
+											<div class="accordion-body">
+												<ul class="ul_li_links">
+													<li class=""><a href="#!">新品上市</a></li>
+													<li class=""><a href="#!">暢銷組合區</a></li>
+													<li class=""><a href="#!">五片式平口褲</a></li>
+													<li class=""><a href="#!">針織平口褲</a></li>
+													<li class=""><a href="#!">彈性貼身平口褲（側邊透氣款）</a></li>
+													<li class=""><a href="#!">彈性時尚平口褲</a></li>
+													<li class=""><a href="#!">三角褲</a></li>
+													<li class=""><a href="#!">長褲</a></li>
+												</ul>
 											</div>
 										</div>
-										<div class="accordion-item border-0">
-											<h3 class="accordion-header" id="heading6">
-												<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-													毛巾
-												</button>
-											</h3>
-											<div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionSideMenu">
-												<div class="accordion-body">
-													<ul class="ul_li_links">
-														<li class=""><a href="#!">新品上市</a></li>
-														<li class=""><a href="#!">暢銷組合區</a></li>
-														<li class=""><a href="#!">五片式平口褲</a></li>
-														<li class=""><a href="#!">針織平口褲</a></li>
-														<li class=""><a href="#!">彈性貼身平口褲（側邊透氣款）</a></li>
-														<li class=""><a href="#!">彈性時尚平口褲</a></li>
-														<li class=""><a href="#!">三角褲</a></li>
-														<li class=""><a href="#!">長褲</a></li>
-													</ul>
-												</div>
+									</div>
+									<div class="accordion-item border-0">
+										<h3 class="accordion-header" id="heading6">
+											<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+												<picture class="me-2">
+													<img src="images/svg-pic/doll-Gray.svg" alt="">
+													<img src="images/svg-pic/doll-Gradient.svg" alt="">
+												</picture>
+												毛巾
+											</button>
+										</h3>
+										<div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionSideMenu">
+											<div class="accordion-body">
+												<ul class="ul_li_links">
+													<li class=""><a href="#!">新品上市</a></li>
+													<li class=""><a href="#!">暢銷組合區</a></li>
+													<li class=""><a href="#!">五片式平口褲</a></li>
+													<li class=""><a href="#!">針織平口褲</a></li>
+													<li class=""><a href="#!">彈性貼身平口褲（側邊透氣款）</a></li>
+													<li class=""><a href="#!">彈性時尚平口褲</a></li>
+													<li class=""><a href="#!">三角褲</a></li>
+													<li class=""><a href="#!">長褲</a></li>
+												</ul>
 											</div>
 										</div>
-										<div class="accordion-item border-0">
-											<h3 class="accordion-header" id="heading7">
-												<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
-													雨傘
-												</button>
-											</h3>
-											<div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionSideMenu">
-												<div class="accordion-body">
-													<ul class="ul_li_links">
-														<li class=""><a href="#!">新品上市</a></li>
-														<li class=""><a href="#!">暢銷組合區</a></li>
-														<li class=""><a href="#!">五片式平口褲</a></li>
-														<li class=""><a href="#!">針織平口褲</a></li>
-														<li class=""><a href="#!">彈性貼身平口褲（側邊透氣款）</a></li>
-														<li class=""><a href="#!">彈性時尚平口褲</a></li>
-														<li class=""><a href="#!">三角褲</a></li>
-														<li class=""><a href="#!">長褲</a></li>
-													</ul>
-												</div>
+									</div>
+									<div class="accordion-item border-0">
+										<h3 class="accordion-header" id="heading7">
+											<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+												<picture class="me-2">
+													<img src="images/svg-pic/doll-Gray.svg" alt="">
+													<img src="images/svg-pic/doll-Gradient.svg" alt="">
+												</picture>
+												雨傘
+											</button>
+										</h3>
+										<div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionSideMenu">
+											<div class="accordion-body">
+												<ul class="ul_li_links">
+													<li class=""><a href="#!">新品上市</a></li>
+													<li class=""><a href="#!">暢銷組合區</a></li>
+													<li class=""><a href="#!">五片式平口褲</a></li>
+													<li class=""><a href="#!">針織平口褲</a></li>
+													<li class=""><a href="#!">彈性貼身平口褲（側邊透氣款）</a></li>
+													<li class=""><a href="#!">彈性時尚平口褲</a></li>
+													<li class=""><a href="#!">三角褲</a></li>
+													<li class=""><a href="#!">長褲</a></li>
+												</ul>
 											</div>
 										</div>
-										<div class="accordion-item border-0">
-											<h3 class="accordion-header" id="heading8">
-												<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
-													保暖衣
-												</button>
-											</h3>
-											<div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordionSideMenu">
-												<div class="accordion-body">
-													<ul class="ul_li_links">
-														<li class=""><a href="#!">新品上市</a></li>
-														<li class=""><a href="#!">暢銷組合區</a></li>
-														<li class=""><a href="#!">五片式平口褲</a></li>
-														<li class=""><a href="#!">針織平口褲</a></li>
-														<li class=""><a href="#!">彈性貼身平口褲（側邊透氣款）</a></li>
-														<li class=""><a href="#!">彈性時尚平口褲</a></li>
-														<li class=""><a href="#!">三角褲</a></li>
-														<li class=""><a href="#!">長褲</a></li>
-													</ul>
-												</div>
+									</div>
+									<div class="accordion-item border-0">
+										<h3 class="accordion-header" id="heading8">
+											<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+												<picture class="me-2">
+													<img src="images/svg-pic/doll-Gray.svg" alt="">
+													<img src="images/svg-pic/doll-Gradient.svg" alt="">
+												</picture>
+												保暖衣
+											</button>
+										</h3>
+										<div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordionSideMenu">
+											<div class="accordion-body">
+												<ul class="ul_li_links">
+													<li class=""><a href="#!">新品上市</a></li>
+													<li class=""><a href="#!">暢銷組合區</a></li>
+													<li class=""><a href="#!">五片式平口褲</a></li>
+													<li class=""><a href="#!">針織平口褲</a></li>
+													<li class=""><a href="#!">彈性貼身平口褲（側邊透氣款）</a></li>
+													<li class=""><a href="#!">彈性時尚平口褲</a></li>
+													<li class=""><a href="#!">三角褲</a></li>
+													<li class=""><a href="#!">長褲</a></li>
+												</ul>
 											</div>
 										</div>
 									</div>
 								</div>
+							</div>
 
-								<div class="mobile_menu_widge d-block d-lg-none">
-									<div class="col-11 mx-auto py-2">
-										<div class="row">
-											<div class="col-6">
-												<select class="form-select border-0 border-bottom" aria-label="Default select example">
-													<option selected="" value="1">選項1</option>
-													<option value="2">選項2</option>
-													<option value="3">選項3</option>
-												</select>
-											</div>
-											<div class="col-6">
-												<select class="form-select border-0 border-bottom" aria-label="Default select example">
-													<option selected="" value="1">選項1-1</option>
-													<option value="2">選項1-2</option>
-													<option value="3">選項1-3</option>
-												</select>
-											</div>
+							<div class="mobile_menu_widget d-block d-lg-none">
+								<div class="col-11 mx-auto py-2">
+									<div class="row">
+										<div class="col-6">
+											<select class="form-select border-0 border-bottom" aria-label="Default select example">
+												<option selected="" value="1">選項1</option>
+												<option value="2">選項2</option>
+												<option value="3">選項3</option>
+											</select>
+										</div>
+										<div class="col-6">
+											<select class="form-select border-0 border-bottom" aria-label="Default select example">
+												<option selected="" value="1">選項1-1</option>
+												<option value="2">選項1-2</option>
+												<option value="3">選項1-3</option>
+											</select>
 										</div>
 									</div>
 								</div>
+							</div>
 
-								<div class="ad_widget d-none d-lg-block">
-									<div class="swiper ad-swiper py-4">
-										<div class="swiper-wrapper">
-											<div class="swiper-slide ad-item">
-												<a href="#ad">
-													<img class="" src="https://fakeimg.pl/260x460/?text=ad1"/>
-												</a>
-											</div>	
-											<div class="swiper-slide ad-item">
-												<a href="#ad">
-													<img class="" src="https://fakeimg.pl/260x460/?text=ad2"/>
-												</a>
-											</div>		
-										</div>
-										<div class="swiper-pagination"></div>
+							<div class="ad_widget d-none d-lg-block">
+								<div class="swiper ad-swiper py-4">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide ad-item">
+											<a href="#ad">
+												<img class="" src="https://fakeimg.pl/260x460/?text=ad1"/>
+											</a>
+										</div>	
+										<div class="swiper-slide ad-item">
+											<a href="#ad">
+												<img class="" src="https://fakeimg.pl/260x460/?text=ad2"/>
+											</a>
+										</div>		
 									</div>
+									<div class="swiper-pagination"></div>
 								</div>
-							</aside>
-						</div>
+							</div>
+						</aside>
 					</div>
 					
 					<!-- Right Products List -->
-					<div id="product-lists" class="col-12 col-lg-8">
-						<div class="m-3">
+					<div id="product-lists" class="col-12 col-lg-9 flex-grow-1">
+						<div class=""> <!-- class="m-3" -->
 							<!-- Breadcrumb -->
 							<nav class="nav-breadcrumb d-none d-lg-block" aria-label="breadcrumb" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);">
 								<ol class="breadcrumb">
@@ -1125,7 +1159,7 @@
 							</nav>
 							<!-- Filter & Sort Btn -->
 							<div class="action-wrapper">
-								<div class="row justify-content-between border-line">
+								<div class="row align-items-center justify-content-between border-line">
 									<div class="col-12 col-lg-8">
 										<div class="filter-area">
 											<ul class="filter-tag">
@@ -1153,17 +1187,24 @@
 												<div class="col-6 pe-0">
 													<ul class="nav nav-tabs justify-content-end border-0" id="sortTab" role="tablist">
 														<li class="nav-item sort-item" role="presentation">
-															<button class="nav-link active border-0" id="nav-sort-tab-1" data-bs-toggle="tab" data-bs-target="#tab-sort-contnet-1" type="button" role="tab" aria-controls="tab-sort-contnet-1" aria-selected="true">4</button>
+															<button class="nav-link active border-0" id="nav-sort-tab-1" data-bs-toggle="tab" data-bs-target="#tab-sort-content-1" type="button" role="tab" aria-controls="tab-sort-contnet-1" aria-selected="true">
+																<img src="images/btn/chage-view-8.svg">
+																<img src="images/btn/chage-view-8-hover.svg">
+															</button>
 														</li>
 														<li class="nav-item sort-item" role="presentation">
-															<button class="nav-link border-0" id="nav-sort-tab-2" data-bs-toggle="tab" data-bs-target="#tab-sort-contnet-2" type="button" role="tab" aria-controls="tab-sort-contnet-2" aria-selected="false">3</button>
+															<button class="nav-link border-0" id="nav-sort-tab-2" data-bs-toggle="tab" data-bs-target="#tab-sort-content-2" type="button" role="tab" aria-controls="tab-sort-contnet-2" aria-selected="false">
+																<img src="images/btn/chage-view-6.svg" alt="">
+																<img src="images/btn/chage-view-6-hover.svg" alt="">
+															</button>
 														</li>
 														<li class="nav-item sort-item" role="presentation">
-															<button class="nav-link border-0" id="nav-sort-tab-3" data-bs-toggle="tab" data-bs-target="#tab-sort-contnet-3" type="button" role="tab" aria-controls="tab-sort-contnet-3" aria-selected="false">2</button>
+															<button class="nav-link border-0" id="nav-sort-tab-3" data-bs-toggle="tab" data-bs-target="#tab-sort-content-3" type="button" role="tab" aria-controls="tab-sort-contnet-3" aria-selected="false">
+																<img src="images/btn/chage-view-4.svg" alt="">
+																<img src="images/btn/chage-view-4-hover.svg" alt="">
+															</button>
 														</li>
-														<!-- <li class="nav-item sort-item" role="presentation">
-															<button class="nav-link border-0" id="nav-sort-tab-4" data-bs-toggle="tab" data-bs-target="#tab-sort-contnet-4" type="button" role="tab" aria-controls="tab-sort-contnet-4" aria-selected="false">1</button>
-														</li> -->
+														
 													</ul>
 												</div>
 											</div>
@@ -1177,7 +1218,7 @@
 								</div> -->
 							</div>
 							<!-- Package  -->
-							<div class="package-wrapper">
+							<div class="package-wrapper mt-lg-3">
 								<!-- 有尺寸 -->
 								<div class="package-area d-none d-lg-block border rounded p-3">
 									<div class="package_header mb-3">
@@ -1610,23 +1651,23 @@
 
 								<!-- 手機版 -->
 								<div class="package-area-m d-block d-lg-none border rounded rounded-3">
-									<div class="row g-0">
-										<div class="package_header position-relative p-3">
-											<div class="row g-0 align-items-center">
-												<div class="col-12">
-													<p class="fs-4">任選5件 1000元</p>
-													<span class="d-flex align-items-center fs-5">已選 <span class="ms-1">3 件</span>，還差 <span class="ms-1"> 2 件</span> 即可項優惠</span>
-													<a class="btn btn-lg fs-6">前往結賬</a>
+									<div class="stikcy-top">
+										<div class="row g-0">
+											<div class="package_header position-relative p-3">
+												<div class="row g-0 align-items-center">
+													<div class="col-12">
+														<p class="fs-4">任選5件 1000元</p>
+														<span class="d-flex align-items-center fs-5">已選 <span class="ms-1">3 件</span>，還差 <span class="ms-1"> 2 件</span> 即可項優惠</span>
+														<a class="btn btn-lg fs-6">前往結賬</a>
+													</div>
 												</div>
-												<!-- <div class="col-3 text-end mx-n4"> -->
-													
-												<!-- </div> -->
 											</div>
 										</div>
 									</div>
 								</div>
-								<!-- 右側欄位 -->
-								<div id="side-package" class="side_package">
+
+								<!-- 網頁版右側欄位 -->
+								<div id="side-package" class="side_package d-none d-lg-block">
 									<div class="p-2">
 										<span>已選購</span>
 										<figure class="">
@@ -1648,35 +1689,79 @@
 							<div class="products-wrapper">
 								<div class="row g-0">
 									<div class="col-12 tab-content" id="products-tabContent">
-										<div class="tab-pane fade active show" id="tab-sort-contnet-1" role="tabpanel" aria-labelledby="nav-sort-tab-1">
+										<div class="tab-pane fade active show" id="tab-sort-content-1" role="tabpanel" aria-labelledby="nav-sort-tab-1">
 											<div class="row list">
 												<div class="col-12 col-lg-3 col-md-4 mb-3">
 													<div class="product-item">
-														<div class="card border-0">
+														<div class="product-card card border-0 h-100">
 															<div class="card-img img-hover">
-																<picture class="ratio ratio-1x1">
-																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
-																</picture>	
-																<span class="sell_out d-flex align-items-center justify-content-center">售完</span>
+																<picture class="">
+																	<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+																	<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+																</picture>
 															</div>
-															<div class="card-body px-0">
-																<h5 class="card-title type" data-type="平口褲,透氣">彈性貼身平口褲.四角褲.男內褲-南洋海岸[平口褲、透氣]</h5>
-																<div class="card-content">
-																	<div class="col-6">
-																		<span class="card-price">NT$252</span>
+		
+															<h5 class="card-title mt-3 type" data-type='["平口褲","彈性"]'>
+																<a href="#">彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲1</a>
+															</h5>
+		
+															<div class="card-content border-0">
+																<div class="price-wrapper col-6 pb-1">
+																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
+																</div>
+																<div class="action-wrapper col-6 pb-1 text-end">
+																	<span class="action-item action-love" data-product-id="1234"><i class="fa-regular fa-heart"></i></span>
+																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="fa-solid fa-cart-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="fa-solid fa-cart-shopping"></i></span>
+																</div>
+																<div class="colors-wrapper col-12 border-top">
+																	<div class="color-items d-flex">
+																		<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
 																	</div>
-																	<div class="col-6">
-																		<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
-																		<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
+																	<div class="color-name">
+																		<p class="text-start">灰色</p>
 																	</div>
 																</div>
-																<div class="color-items d-flex">
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
+															</div>
+
+															.
+														</div>
+													</div>
+												</div>
+												<div class="col-12 col-lg-3 col-md-4 mb-3">
+													<div class="product-item">
+														<div class="product-card card border-0 h-100">
+															<div class="card-img img-hover">
+																<picture class="">
+																	<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+																	<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+																</picture>
+															</div>
+		
+															<h5 class="card-title mt-3 type" data-type='["三角褲","針織"]'>
+																<a href="#">彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲2</a>
+															</h5>
+		
+															<div class="card-content border-0">
+																<div class="price-wrapper col-6 pb-1">
+																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
 																</div>
-																<div class="color-name">
-																	<p class="text-start">灰色</p>
+																<div class="action-wrapper col-6 pb-1 text-end">
+																	<span class="action-item action-love" data-product-id="1234"><i class="fa-regular fa-heart"></i></span>
+																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="fa-solid fa-cart-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="fa-solid fa-cart-shopping"></i></span>
+																</div>
+																<div class="colors-wrapper col-12 border-top">
+																	<div class="color-items d-flex">
+																		<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
+																	</div>
+																	<div class="color-name">
+																		<p class="text-start">灰色</p>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -1684,61 +1769,36 @@
 												</div>
 												<div class="col-12 col-lg-3 col-md-4 mb-3">
 													<div class="product-item">
-														<div class="card border-0">
+														<div class="product-card card border-0 h-100">
 															<div class="card-img img-hover">
-																<picture class="ratio ratio-1x1">
-																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
-																</picture>	
+																<picture class="">
+																	<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+																	<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+																</picture>
 															</div>
-															<div class="card-body px-0">
-																<h5 class="card-title type" data-type="三角褲">彈性貼身平口褲.四角褲.男內褲-南洋海岸[三角褲]</h5>
-																<div class="card-content">
-																	<div class="col-6">
-																		<span class="card-price">NT$252</span>
+		
+															<h5 class="card-title mt-3">
+																<a href="#">彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲3</a>
+															</h5>
+		
+															<div class="card-content border-0">
+																<div class="price-wrapper col-6 pb-1">
+																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
+																</div>
+																<div class="action-wrapper col-6 pb-1 text-end">
+																	<span class="action-item action-love" data-product-id="1234"><i class="fa-regular fa-heart"></i></span>
+																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="fa-solid fa-cart-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="fa-solid fa-cart-shopping"></i></span>
+																</div>
+																<div class="colors-wrapper col-12 border-top">
+																	<div class="color-items d-flex">
+																		<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
 																	</div>
-																	<div class="col-6">
-																		<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
-																		<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
+																	<div class="color-name">
+																		<p class="text-start">灰色</p>
 																	</div>
-																</div>
-																<div class="color-items d-flex">
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
-																</div>
-																<div class="color-name">
-																	<p class="text-start">灰色</p>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-12 col-lg-3 col-md-4 mb-3">
-													<div class="product-item">
-														<div class="card border-0">
-															<div class="card-img img-hover">
-																<picture class="ratio ratio-1x1">
-																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
-																</picture>	
-															</div>	
-															<div class="card-body px-0">
-																<h5 class="card-title type" data-type="平口褲,彈性">彈性貼身平口褲.四角褲.男內褲-南洋海岸[平口褲、彈性]</h5>
-																<div class="card-content">
-																	<div class="col-6">
-																		<span class="card-price">NT$252</span>
-																	</div>
-																	<div class="col-6">
-																		<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
-																		<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
-																	</div>
-																</div>
-																<div class="color-items d-flex">
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
-																</div>
-																<div class="color-name">
-																	<p class="text-start">灰色</p>
 																</div>
 															</div>
 														</div>
@@ -1746,30 +1806,36 @@
 												</div>
 												<div class="col-12 col-lg-3 col-md-4 mb-3">
 													<div class="product-item">
-														<div class="card border-0">
+														<div class="product-card card border-0 h-100">
 															<div class="card-img img-hover">
-																<picture class="ratio ratio-1x1">
-																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
-																</picture>	
-															</div>	
-															<div class="card-body px-0">
-																<h5 class="card-title type" data-type="三角褲、針織">彈性貼身平口褲.四角褲.男內褲-南洋海岸[三角褲、針織]</h5>
-																<div class="card-content">
-																	<div class="col-6">
-																		<span class="card-price">NT$252</span>
-																	</div>
-																	<div class="col-6">
-																		<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
-																		<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
-																	</div>
+																<picture class="">
+																	<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+																	<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+																</picture>
+															</div>
+		
+															<h5 class="card-title mt-3">
+																<a href="#">彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲4</a>
+															</h5>
+		
+															<div class="card-content border-0">
+																<div class="price-wrapper col-6 pb-1">
+																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
 																</div>
-																<div class="color-items d-flex">
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
+																<div class="action-wrapper col-6 pb-1 text-end">
+																	<span class="action-item action-love" data-product-id="1234"><i class="fa-regular fa-heart"></i></span>
+																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="fa-solid fa-cart-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="fa-solid fa-cart-shopping"></i></span>
 																</div>
-																<div class="color-name">
-																	<p class="text-start">灰色</p>
+																<div class="colors-wrapper col-12 border-top">
+																	<div class="color-items d-flex">
+																		<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
+																	</div>
+																	<div class="color-name">
+																		<p class="text-start">灰色</p>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -1777,66 +1843,115 @@
 												</div>
 												<div class="col-12 col-lg-3 col-md-4 mb-3">
 													<div class="product-item">
-														<div class="card border-0">
+														<div class="product-card card border-0 h-100">
 															<div class="card-img img-hover">
-																<picture class="ratio ratio-1x1">
-																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
-																</picture>	
-															</div>	
-															<div class="card-body px-0">
-																<h5 class="card-title type" data-type="三角褲、針織、透氣">彈性貼身平口褲.四角褲.男內褲-南洋海岸[三角褲、針織、透氣]</h5>
-																<div class="card-content">
-																	<div class="col-6">
-																		<span class="card-price">NT$252</span>
+																<picture class="">
+																	<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+																	<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+																</picture>
+															</div>
+		
+															<h5 class="card-title mt-3">
+																<a href="#">彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲5</a>
+															</h5>
+		
+															<div class="card-content border-0">
+																<div class="price-wrapper col-6 pb-1">
+																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
+																</div>
+																<div class="action-wrapper col-6 pb-1 text-end">
+																	<span class="action-item action-love" data-product-id="1234"><i class="fa-regular fa-heart"></i></span>
+																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="fa-solid fa-cart-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="fa-solid fa-cart-shopping"></i></span>
+																</div>
+																<div class="colors-wrapper col-12 border-top">
+																	<div class="color-items d-flex">
+																		<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
 																	</div>
-																	<div class="col-6">
-																		<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
-																		<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
+																	<div class="color-name">
+																		<p class="text-start">灰色</p>
 																	</div>
 																</div>
-																<div class="color-items d-flex">
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-12 col-lg-3 col-md-4 mb-3">
+													<div class="product-item">
+														<div class="product-card card border-0 h-100">
+															<div class="card-img img-hover">
+																<picture class="">
+																	<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+																	<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+																</picture>
+															</div>
+		
+															<h5 class="card-title mt-3 type" data-type='["平口褲","彈性"]'>
+																<a href="#">彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲6</a>
+															</h5>
+		
+															<div class="card-content border-0">
+																<div class="price-wrapper col-6 pb-1">
+																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
 																</div>
-																<div class="color-name">
-																	<p class="text-start">灰色</p>
+																<div class="action-wrapper col-6 pb-1 text-end">
+																	<span class="action-item action-love" data-product-id="1234"><i class="fa-regular fa-heart"></i></span>
+																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="fa-solid fa-cart-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="fa-solid fa-cart-shopping"></i></span>
+																</div>
+																<div class="colors-wrapper col-12 border-top">
+																	<div class="color-items d-flex">
+																		<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
+																	</div>
+																	<div class="color-name">
+																		<p class="text-start">灰色</p>
+																	</div>
 																</div>
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
+											<ul class="pagination"></ul>
 										</div>
-										<div class="tab-pane fade" id="tab-sort-contnet-2" role="tabpanel" aria-labelledby="nav-sort-tab-2">
+										<div class="tab-pane fade" id="tab-sort-content-2" role="tabpanel" aria-labelledby="nav-sort-tab-2">
 											<div class="row list">
-												<!--  col-12 col-lg-4 col-md-4 -->
 												<div class="col-12 col-lg-4 col-md-4 mb-3">
 													<div class="product-item">
-														<div class="card border-0">
+														<div class="product-card card border-0 h-100">
 															<div class="card-img img-hover">
-																<picture class="ratio ratio-1x1">
-																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
-																</picture>	
+																<picture class="">
+																	<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+																	<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+																</picture>
 															</div>
-															<div class="card-body px-0">
-																<h5 class="card-title type" data-type="平口褲,透氣">彈性貼身平口褲.四角褲.男內褲-南洋海岸[平口褲、透氣]</h5>
-																<div class="card-content">
-																	<div class="col-6">
-																		<span class="card-price">NT$252</span>
-																	</div>
-																	<div class="col-6">
-																		<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
-																		<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
-																	</div>
+		
+															<h5 class="card-title mt-3">
+																<a href="#">彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲</a>
+															</h5>
+		
+															<div class="card-content border-0">
+																<div class="price-wrapper col-6 pb-1">
+																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
 																</div>
-																<div class="color-items d-flex">
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
+																<div class="action-wrapper col-6 pb-1 text-end">
+																	<span class="action-item action-love" data-product-id="1234"><i class="fa-regular fa-heart"></i></span>
+																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="fa-solid fa-cart-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="fa-solid fa-cart-shopping"></i></span>
 																</div>
-																<div class="color-name">
-																	<p class="text-start">灰色</p>
+																<div class="colors-wrapper col-12 border-top">
+																	<div class="color-items d-flex">
+																		<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
+																	</div>
+																	<div class="color-name">
+																		<p class="text-start">灰色</p>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -1844,61 +1959,36 @@
 												</div>
 												<div class="col-12 col-lg-4 col-md-4 mb-3">
 													<div class="product-item">
-														<div class="card border-0">
+														<div class="product-card card border-0 h-100">
 															<div class="card-img img-hover">
-																<picture class="ratio ratio-1x1">
-																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
-																</picture>	
+																<picture class="">
+																	<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+																	<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+																</picture>
 															</div>
-															<div class="card-body px-0">
-																<h5 class="card-title type" data-type="三角褲">彈性貼身平口褲.四角褲.男內褲-南洋海岸[三角褲]</h5>
-																<div class="card-content">
-																	<div class="col-6">
-																		<span class="card-price">NT$252</span>
+		
+															<h5 class="card-title mt-3">
+																<a href="#">彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲</a>
+															</h5>
+		
+															<div class="card-content border-0">
+																<div class="price-wrapper col-6 pb-1">
+																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
+																</div>
+																<div class="action-wrapper col-6 pb-1 text-end">
+																	<span class="action-item action-love" data-product-id="1234"><i class="fa-regular fa-heart"></i></span>
+																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="fa-solid fa-cart-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="fa-solid fa-cart-shopping"></i></span>
+																</div>
+																<div class="colors-wrapper col-12 border-top">
+																	<div class="color-items d-flex">
+																		<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
 																	</div>
-																	<div class="col-6">
-																		<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
-																		<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
+																	<div class="color-name">
+																		<p class="text-start">灰色</p>
 																	</div>
-																</div>
-																<div class="color-items d-flex">
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
-																</div>
-																<div class="color-name">
-																	<p class="text-start">灰色</p>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-12 col-lg-4 col-md-4 mb-3">
-													<div class="product-item">
-														<div class="card border-0">
-															<div class="card-img img-hover">
-																<picture class="ratio ratio-1x1">
-																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
-																</picture>	
-															</div>	
-															<div class="card-body px-0">
-																<h5 class="card-title type" data-type="平口褲,彈性">彈性貼身平口褲.四角褲.男內褲-南洋海岸[平口褲、彈性]</h5>
-																<div class="card-content">
-																	<div class="col-6">
-																		<span class="card-price">NT$252</span>
-																	</div>
-																	<div class="col-6">
-																		<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
-																		<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
-																	</div>
-																</div>
-																<div class="color-items d-flex">
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
-																</div>
-																<div class="color-name">
-																	<p class="text-start">灰色</p>
 																</div>
 															</div>
 														</div>
@@ -1906,30 +1996,36 @@
 												</div>
 												<div class="col-12 col-lg-4 col-md-4 mb-3">
 													<div class="product-item">
-														<div class="card border-0">
+														<div class="product-card card border-0 h-100">
 															<div class="card-img img-hover">
-																<picture class="ratio ratio-1x1">
-																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
-																</picture>	
-															</div>	
-															<div class="card-body px-0">
-																<h5 class="card-title type" data-type="三角褲、針織">彈性貼身平口褲.四角褲.男內褲-南洋海岸[三角褲、針織]</h5>
-																<div class="card-content">
-																	<div class="col-6">
-																		<span class="card-price">NT$252</span>
-																	</div>
-																	<div class="col-6">
-																		<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
-																		<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
-																	</div>
+																<picture class="">
+																	<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+																	<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+																</picture>
+															</div>
+		
+															<h5 class="card-title mt-3">
+																<a href="#">彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲</a>
+															</h5>
+		
+															<div class="card-content border-0">
+																<div class="price-wrapper col-6 pb-1">
+																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
 																</div>
-																<div class="color-items d-flex">
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
+																<div class="action-wrapper col-6 pb-1 text-end">
+																	<span class="action-item action-love" data-product-id="1234"><i class="fa-regular fa-heart"></i></span>
+																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="fa-solid fa-cart-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="fa-solid fa-cart-shopping"></i></span>
 																</div>
-																<div class="color-name">
-																	<p class="text-start">灰色</p>
+																<div class="colors-wrapper col-12 border-top">
+																	<div class="color-items d-flex">
+																		<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
+																	</div>
+																	<div class="color-name">
+																		<p class="text-start">灰色</p>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -1937,30 +2033,73 @@
 												</div>
 												<div class="col-12 col-lg-4 col-md-4 mb-3">
 													<div class="product-item">
-														<div class="card border-0">
+														<div class="product-card card border-0 h-100">
 															<div class="card-img img-hover">
-																<picture class="ratio ratio-1x1">
-																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
-																</picture>	
-															</div>	
-															<div class="card-body px-0">
-																<h5 class="card-title type" data-type="三角褲、針織、透氣">彈性貼身平口褲.四角褲.男內褲-南洋海岸[三角褲、針織、透氣]</h5>
-																<div class="card-content">
-																	<div class="col-6">
-																		<span class="card-price">NT$252</span>
+																<picture class="">
+																	<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+																	<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+																</picture>
+															</div>
+		
+															<h5 class="card-title mt-3">
+																<a href="#">彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲</a>
+															</h5>
+		
+															<div class="card-content border-0">
+																<div class="price-wrapper col-6 pb-1">
+																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
+																</div>
+																<div class="action-wrapper col-6 pb-1 text-end">
+																	<span class="action-item action-love" data-product-id="1234"><i class="fa-regular fa-heart"></i></span>
+																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="fa-solid fa-cart-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="fa-solid fa-cart-shopping"></i></span>
+																</div>
+																<div class="colors-wrapper col-12 border-top">
+																	<div class="color-items d-flex">
+																		<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
 																	</div>
-																	<div class="col-6">
-																		<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
-																		<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
+																	<div class="color-name">
+																		<p class="text-start">灰色</p>
 																	</div>
 																</div>
-																<div class="color-items d-flex">
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-12 col-lg-4 col-md-4 mb-3">
+													<div class="product-item">
+														<div class="product-card card border-0 h-100">
+															<div class="card-img img-hover">
+																<picture class="">
+																	<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+																	<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+																</picture>
+															</div>
+		
+															<h5 class="card-title mt-3">
+																<a href="#">彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲</a>
+															</h5>
+		
+															<div class="card-content border-0">
+																<div class="price-wrapper col-6 pb-1">
+																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
 																</div>
-																<div class="color-name">
-																	<p class="text-start">灰色</p>
+																<div class="action-wrapper col-6 pb-1 text-end">
+																	<span class="action-item action-love" data-product-id="1234"><i class="fa-regular fa-heart"></i></span>
+																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="fa-solid fa-cart-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="fa-solid fa-cart-shopping"></i></span>
+																</div>
+																<div class="colors-wrapper col-12 border-top">
+																	<div class="color-items d-flex">
+																		<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
+																	</div>
+																	<div class="color-name">
+																		<p class="text-start">灰色</p>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -1968,66 +2107,40 @@
 												</div>	
 											</div>
 										</div>
-										<div class="tab-pane fade" id="tab-sort-contnet-3" role="tabpanel" aria-labelledby="nav-sort-tab-3">
+										<div class="tab-pane fade" id="tab-sort-content-3" role="tabpanel" aria-labelledby="nav-sort-tab-3">
 											<div class="row list">
-												<!-- col-12 col-lg-6 col-md-4 -->
 												<div class="col-12 col-lg-6 col-md-4 mb-3">
 													<div class="product-item">
-														<div class="card border-0">
+														<div class="product-card card border-0 h-100">
 															<div class="card-img img-hover">
-																<picture class="ratio ratio-1x1">
-																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
-																</picture>	
-															</div>	
-															<div class="card-body px-0">
-																<h5 class="card-title type" data-type="平口褲,透氣">彈性貼身平口褲.四角褲.男內褲-南洋海岸[平口褲、透氣]</h5>
-																<div class="card-content">
-																	<div class="col-6">
-																		<span class="card-price">NT$252</span>
-																	</div>
-																	<div class="col-6">
-																		<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
-																		<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
-																	</div>
-																</div>
-																<div class="color-items d-flex">
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
-																</div>
-																<div class="color-name">
-																	<p class="text-start">灰色</p>
-																</div>
+																<picture class="">
+																	<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+																	<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+																</picture>
 															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-12 col-lg-6 col-md-4 mb-3">
-													<div class="product-item">
-														<div class="card border-0">
-															<div class="card-img img-hover">
-																<picture class="ratio ratio-1x1">
-																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
-																</picture>	
-															</div>	
-															<div class="card-body px-0">
-																<h5 class="card-title type" data-type="平口褲,透氣">彈性貼身平口褲.四角褲.男內褲-南洋海岸[平口褲、透氣]</h5>
-																<div class="card-content">
-																	<div class="col-6">
-																		<span class="card-price">NT$252</span>
-																	</div>
-																	<div class="col-6">
-																		<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
-																		<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
-																	</div>
+		
+															<h5 class="card-title mt-3">
+																<a href="#">彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲</a>
+															</h5>
+		
+															<div class="card-content border-0">
+																<div class="price-wrapper col-6 pb-1">
+																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
 																</div>
-																<div class="color-items d-flex">
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
+																<div class="action-wrapper col-6 pb-1 text-end">
+																	<span class="action-item action-love" data-product-id="1234"><i class="fa-regular fa-heart"></i></span>
+																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="fa-solid fa-cart-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="fa-solid fa-cart-shopping"></i></span>
 																</div>
-																<div class="color-name">
-																	<p class="text-start">灰色</p>
+																<div class="colors-wrapper col-12 border-top">
+																	<div class="color-items d-flex">
+																		<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
+																	</div>
+																	<div class="color-name">
+																		<p class="text-start">灰色</p>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -2035,30 +2148,36 @@
 												</div>
 												<div class="col-12 col-lg-6 col-md-4 mb-3">
 													<div class="product-item">
-														<div class="card border-0">
+														<div class="product-card card border-0 h-100">
 															<div class="card-img img-hover">
-																<picture class="ratio ratio-1x1">
-																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
-																</picture>	
-															</div>	
-															<div class="card-body px-0">
-																<h5 class="card-title type" data-type="平口褲,透氣">彈性貼身平口褲.四角褲.男內褲-南洋海岸[平口褲、透氣]</h5>
-																<div class="card-content">
-																	<div class="col-6">
-																		<span class="card-price">NT$252</span>
-																	</div>
-																	<div class="col-6">
-																		<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
-																		<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
-																	</div>
+																<picture class="">
+																	<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+																	<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+																</picture>
+															</div>
+		
+															<h5 class="card-title mt-3">
+																<a href="#">彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲</a>
+															</h5>
+		
+															<div class="card-content border-0">
+																<div class="price-wrapper col-6 pb-1">
+																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
 																</div>
-																<div class="color-items d-flex">
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
+																<div class="action-wrapper col-6 pb-1 text-end">
+																	<span class="action-item action-love" data-product-id="1234"><i class="fa-regular fa-heart"></i></span>
+																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="fa-solid fa-cart-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="fa-solid fa-cart-shopping"></i></span>
 																</div>
-																<div class="color-name">
-																	<p class="text-start">灰色</p>
+																<div class="colors-wrapper col-12 border-top">
+																	<div class="color-items d-flex">
+																		<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
+																	</div>
+																	<div class="color-name">
+																		<p class="text-start">灰色</p>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -2066,30 +2185,36 @@
 												</div>
 												<div class="col-12 col-lg-6 col-md-4 mb-3">
 													<div class="product-item">
-														<div class="card border-0">
+														<div class="product-card card border-0 h-100">
 															<div class="card-img img-hover">
-																<picture class="ratio ratio-1x1">
-																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
-																</picture>	
-															</div>	
-															<div class="card-body px-0">
-																<h5 class="card-title type" data-type="平口褲,透氣">彈性貼身平口褲.四角褲.男內褲-南洋海岸[平口褲、透氣]</h5>
-																<div class="card-content">
-																	<div class="col-6">
-																		<span class="card-price">NT$252</span>
-																	</div>
-																	<div class="col-6">
-																		<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
-																		<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
-																	</div>
+																<picture class="">
+																	<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+																	<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+																</picture>
+															</div>
+		
+															<h5 class="card-title mt-3">
+																<a href="#">彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲</a>
+															</h5>
+		
+															<div class="card-content border-0">
+																<div class="price-wrapper col-6 pb-1">
+																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
 																</div>
-																<div class="color-items d-flex">
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
+																<div class="action-wrapper col-6 pb-1 text-end">
+																	<span class="action-item action-love" data-product-id="1234"><i class="fa-regular fa-heart"></i></span>
+																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="fa-solid fa-cart-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="fa-solid fa-cart-shopping"></i></span>
 																</div>
-																<div class="color-name">
-																	<p class="text-start">灰色</p>
+																<div class="colors-wrapper col-12 border-top">
+																	<div class="color-items d-flex">
+																		<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
+																	</div>
+																	<div class="color-name">
+																		<p class="text-start">灰色</p>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -2097,164 +2222,80 @@
 												</div>
 												<div class="col-12 col-lg-6 col-md-4 mb-3">
 													<div class="product-item">
-														<div class="card border-0">
+														<div class="product-card card border-0 h-100">
 															<div class="card-img img-hover">
-																<picture class="ratio ratio-1x1">
-																	<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
-																</picture>	
-															</div>	
-															<div class="card-body px-0">
-																<h5 class="card-title type" data-type="平口褲,透氣">彈性貼身平口褲.四角褲.男內褲-南洋海岸[平口褲、透氣]</h5>
-																<div class="card-content">
-																	<div class="col-6">
-																		<span class="card-price">NT$252</span>
-																	</div>
-																	<div class="col-6">
-																		<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
-																		<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
-																	</div>
+																<picture class="">
+																	<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+																	<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+																</picture>
+															</div>
+		
+															<h5 class="card-title mt-3">
+																<a href="#">彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲</a>
+															</h5>
+		
+															<div class="card-content border-0">
+																<div class="price-wrapper col-6 pb-1">
+																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
 																</div>
-																<div class="color-items d-flex">
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img2"><span style="background-color: #818a9f;" data-colorName="灰色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img3"><span style="background-color: #253766;" data-colorName="灰藍色"></span></p>
-																	<p class="color-item" data-img="https://fakeimg.pl/160x175/?text=img4"><span style="background-color: #c41232;" data-colorName="灰紅色"></span></p>
+																<div class="action-wrapper col-6 pb-1 text-end">
+																	<span class="action-item action-love" data-product-id="1234"><i class="fa-regular fa-heart"></i></span>
+																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="fa-solid fa-cart-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="fa-solid fa-cart-shopping"></i></span>
 																</div>
-																<div class="color-name">
-																	<p class="text-start">灰色</p>
+																<div class="colors-wrapper col-12 border-top">
+																	<div class="color-items d-flex">
+																		<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
+																	</div>
+																	<div class="color-name">
+																		<p class="text-start">灰色</p>
+																	</div>
 																</div>
 															</div>
 														</div>
 													</div>
 												</div>
-												
-											</div>
-										</div>
-										<!-- <div class="tab-pane fade " id="tab-sort-contnet-4" role="tabpanel" aria-labelledby="nav-sort-tab-4">
-											<div class="row list">
-												<div class="col-12 ">
-													<div class="card d-block border-0">
-														<div class="card-img img-hover">
-															<picture class="ratio ratio-1x1">
-																<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
-															</picture>	
-														</div>	
-														<div class="card-body p-0 pt-3">
-															<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
-															<div class="card-content">
-																<div class="col-6">
-																	<span class="card-price">NT$252</span>
-																</div>
-																<div class="col-6">
-																	<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
-																	<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
-																</div>
+												<div class="col-12 col-lg-6 col-md-4 mb-3">
+													<div class="product-item">
+														<div class="product-card card border-0 h-100">
+															<div class="card-img img-hover">
+																<picture class="">
+																	<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+																	<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+																</picture>
 															</div>
-															<div class="card-color">
-																<p class="color-code" style="background-color: #ec580b;"></p>
-																<p class="color-name text-start">橘色</p>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-12  m-md-b15 m-sm-b0 m-b30">
-													<div class="card d-block border-0">
-														<div class="card-img img-hover">
-															<picture class="ratio ratio-1x1">
-																<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
-															</picture>	
-														</div>
-														<div class="card-body p-0 pt-3">
-															<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
-															<div class="card-content">
-																<div class="col-6">
-																	<span class="card-price">NT$252</span>
+		
+															<h5 class="card-title mt-3">
+																<a href="#">彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲</a>
+															</h5>
+		
+															<div class="card-content border-0">
+																<div class="price-wrapper col-6 pb-1">
+																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
 																</div>
-																<div class="col-6">
-																	<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
-																	<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
+																<div class="action-wrapper col-6 pb-1 text-end">
+																	<span class="action-item action-love" data-product-id="1234"><i class="fa-regular fa-heart"></i></span>
+																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="fa-solid fa-cart-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="fa-solid fa-cart-shopping"></i></span>
 																</div>
-															</div>
-															<div class="card-color">
-																<p class="color-code" style="background-color: #ec580b;"></p>
-																<p class="color-name text-start">橘色</p>
-															</div>
-														</div>
-													</div>
-												</div><div class="col-12  m-md-b15 m-sm-b0 m-b30">
-													<div class="card d-block border-0">
-														<div class="card-img img-hover">
-															<picture class="ratio ratio-1x1">
-																<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
-															</picture>	
-														</div>	
-														<div class="card-body p-0 pt-3">
-															<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
-															<div class="card-content">
-																<div class="col-6">
-																	<span class="card-price">NT$252</span>
+																<div class="colors-wrapper col-12 border-top">
+																	<div class="color-items d-flex">
+																		<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+																		<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
+																	</div>
+																	<div class="color-name">
+																		<p class="text-start">灰色</p>
+																	</div>
 																</div>
-																<div class="col-6">
-																	<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
-																	<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
-																</div>
-															</div>
-															<div class="card-color">
-																<p class="color-code" style="background-color: #ec580b;"></p>
-																<p class="color-name text-start">橘色</p>
-															</div>
-														</div>
-													</div>
-												</div><div class="col-12  m-md-b15 m-sm-b0 m-b30">
-													<div class="card d-block border-0">
-														<div class="card-img img-hover">
-															<picture class="ratio ratio-1x1">
-																<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
-															</picture>	
-														</div>	
-														<div class="card-body p-0 pt-3">
-															<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
-															<div class="card-content">
-																<div class="col-6">
-																	<span class="card-price">NT$252</span>
-																</div>
-																<div class="col-6">
-																	<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
-																	<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
-																</div>
-															</div>
-															<div class="card-color">
-																<p class="color-code" style="background-color: #ec580b;"></p>
-																<p class="color-name text-start">橘色</p>
-															</div>
-														</div>
-													</div>
-												</div><div class="col-12  m-md-b15 m-sm-b0 m-b30">
-													<div class="card d-block border-0">
-														<div class="card-img img-hover">
-															<picture class="ratio ratio-1x1">
-																<img src="https://fakeimg.pl/160x175/?text=img1" alt="fake img"/>
-															</picture>	
-														</div>
-														<div class="card-body p-0 pt-3">
-															<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
-															<div class="card-content">
-																<div class="col-6">
-																	<span class="card-price">NT$252</span>
-																</div>
-																<div class="col-6">
-																	<span class="item-action item-action-love"><i class="fa-regular fa-heart"></i></span>
-																	<span class="item-action item-action-cart"><i class="fa-solid fa-cart-shopping"></i></span>
-																</div>
-															</div>
-															<div class="card-color">
-																<p class="color-code" style="background-color: #ec580b;"></p>
-																<p class="color-name text-start">橘色</p>
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
-										</div> -->
+										</div>
 									</div>
 								</div>
 							</div>
@@ -2514,7 +2555,72 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- 手機版 購物車 modal -->
+	<!-- 開啟 modal -->
+	<div class="offcanvas offcanvas-bottom cart-offcanvas" tabindex="-1" id="offcanvasCartBottom" aria-labelledby="offcanvasCartBottomLabel" aria-hidden="true">
+		<div class="offcanvas-header">
+			<div class="row g-0 justify-content-between align-items-stretch">
+				<div class="col-5">
+					<div class="offcanvas_picture img-hover">
+					</div>
+				</div>
+				<div class="col-5">
+					<div class="d-flex h-100 flex-column">
+						<div class="offcanvas_price mt-4">
+							<p class="fs-8 fw-medium">原價：<span class="original text-decoration-line-through">960</span></p>
+							<p class="fs-6 fw-bold">優惠價：<span class="special">630</span></p>
+						</div>
+
+						<!-- 有優惠的話顯示 -->
+						<div class="offcanvas_package">
+							<span class="btn btn-lg fs-7">優惠兩組 1200</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-1 text-end">
+					<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+			</div>
+			
+		</div>
+		<div class="offcanvas-body px-0">
+			<div class="offcanvas_colors px-3 py-2">
+				<p class="fs-8 fw-medium">顏色</p>
+			</div>
+
+			<div class="offcanvas_sizes px-3 py-2">
+				<p class="fs-8 fw-medium">尺寸</p>
+			</div>
+
+			<div class="offcanvas_quantity px-3 py-2">
+				<div class="row g-0">
+					<div class="col-8">
+						<p class="fs-8 fw-medium">數量</p>
+					</div>
+					<div class="col-4 text-end">
+						<div class="number-input">
+							<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+							<input class="quantity" min="1" name="offcanvas-quantity" value="1" type="number">
+							<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="offcanvas_button px-3 pt-3">
+				<button type="button" class="mobile_action_add btn btn-lg fs-6">加入購物車</button>
+			</div>
+		</div>
+	</div>	
 	
+	<!-- 產品資訊 所有產品操作都直接來這邊抓資料帶回後端 -->
+	<form id="product-data" action="" class="d-none">
+		<input type="hidden" name="product-id">
+		<input type="hidden" name="product-color">
+		<input type="hidden" name="product-size">
+		<input type="hidden" name="product-quantity">
+	</form>
 	<!-- bootstrap js -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"

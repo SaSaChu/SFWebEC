@@ -16,8 +16,8 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/home.css">
-	<link rel="stylesheet" type="text/css" href="css/layout/header.css">	
-	<link rel="stylesheet" type="text/css" href="css/layout/footer.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/layout/header.css">	 -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/layout/footer.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/icon.css">
 	<link rel="stylesheet" href="css/swiper/swiper-bundle.min.css">
 	
@@ -76,8 +76,8 @@
 									</button>
 
 									<!-- Mobile Search  -->
-									<button class="navbar-toggler mobile_serach p-2 fs-7" type="button" data-bs-toggle="collapse" data-bs-target=""
-										aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+									<button class="navbar-toggler mobile_serach" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+										aria-controls="collapseExample" aria-expanded="false" aria-label="mobile search">
 										<span class="fa-solid fa-magnifying-glass"></span>
 									</button>
 
@@ -862,7 +862,17 @@
 				</nav>
 			</div>
 		</section>
+
+		<!-- 手機版 search -->
+		<div class="collapse" id="collapseExample">
+			<div class="col-12">
+				<form class="form" action="" class="search-bar">
+					<input type="search" class="form-control rounded-0" name="search" pattern=".*\S.*" placeholder="請輸入文字" required>
+				</form>
+			</div>
+		</div>
 	</header>
+
 	<main>
 		<!-- Banner -->
 		<section class="banner-section">
@@ -4201,6 +4211,7 @@
 		</div>
 	</div>	
 
+	<!-- 產品資訊 所有產品操作都直接來這邊抓資料帶回後端 -->
 	<form id="product-data" action="" class="d-none">
 		<input type="hidden" name="product-id">
 		<input type="hidden" name="product-color">

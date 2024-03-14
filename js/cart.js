@@ -157,7 +157,8 @@ $(function () {
 		$('input[name="product-color"]').val($(this).attr('data-color-id'));
         
         // 尺寸
-        let sizeItems = `<input type="hidden" name="offcanvas-size" value="${sizes[0]}">`;
+        // let sizeItems = `<input type="hidden" name="offcanvas-size" value="${sizes[0]}">`;
+        let sizeItems = ``;
         sizes.forEach(function(e, i) {
             let sold_out='';
 
