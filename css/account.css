@@ -3139,7 +3139,9 @@ textarea.form-control-lg { min-height: calc(1.5em + (1rem + 2px)); }
 
 .form-noBoard { border: 0 !important; }
 
-a { text-decoration: none !important; }
+.border-bottom-dotted { border-bottom: 1px dotted #dee2e6; }
+
+a { cursor: pointer; text-decoration: none !important; }
 
 .linkGray { color: #343a40; }
 .linkGray:hover { color: #00A2D9; text-decoration: underline !important; }
@@ -3149,15 +3151,15 @@ a { text-decoration: none !important; }
 
 .btn-xxl { padding: 0.5rem 1rem; }
 
-.btn-xl { padding: 0.3rem 1rem; }
+.btn-xl { padding: 0.4rem 1rem; }
 
-.btn-l { padding: 0.2rem 1rem; }
+.btn-l { padding: 0.3rem 1rem; }
 
-.btn-s { padding: 0.1rem 1rem; }
+.btn-s { padding: 0.2rem .8rem; }
 
-.btn-xs { padding: 0rem 1rem; }
+.btn-xs { padding: 0.1rem .8rem; }
 
-.btnSF { display: flex; justify-content: center; align-items: center; border-radius: 0.3rem; text-decoration: none; }
+.btnSF { align-items: center; border-radius: 0.3rem; text-decoration: none; line-height: 1.5; }
 .btnSF.btnMainBlud { color: #fff; background-color: #111c47; border: 0; }
 .btnSF.btnMainBlud:hover { opacity: .9; }
 .btnSF.btnBlud001 { color: #fff; background-color: #3D6DC1; border: 0; }
@@ -3176,3 +3178,19 @@ a { text-decoration: none !important; }
 .btnSF.btnOtherGray:hover { background-color: #044281; }
 .btnSF.btnOtherGray-line { color: #B3B7C6; background-color: #fff; border: 1px solid #B3B7C6; }
 .btnSF.btnOtherGray-line:hover { color: #fff; background-color: #3D6DC1; border: 1px solid #3D6DC1; }
+
+.account-pointsBoxs { display: flex; align-items: center; width: 100%; background-color: #044281; padding: .5rem 1rem; border-radius: 0.25rem; margin-bottom: 1rem; color: #fff; font-size: 1.25rem; }
+@media (max-width: 767.98px) { .account-pointsBoxs { display: none; } }
+
+.account-userName { display: inline-block; width: 100%; line-height: 1.5; font-size: 1.25rem; color: #044281; }
+.account-userName:before { display: inline-block; content: ''; height: 35px; width: 5px; background-color: #B10E0E; margin-right: 15px; }
+
+.account-memberBoxs { display: flex; flex-direction: column; text-align: center; width: 100%; border-radius: 0.25rem; padding: 1rem; border: 1px solid #B3B7C6; }
+@media (max-width: 767.98px) { .account-memberBoxs { text-align: left; } }
+.account-memberBoxs > h5, .account-memberBoxs > .h5 { display: inline-block; width: 100%; color: #044281; text-align: center; font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; }
+
+.account-redLine { border-bottom: 3px solid #B10E0E; }
+
+.account-grayLine { border-bottom: 3px solid #adb5bd; }
+
+.accoutn-contact-icon { display: inline-block; width: 20px; height: 20px; line-height: 18px; color: white; text-align: center; background-color: #0083D2; border-radius: 10px; margin-right: 5px; }

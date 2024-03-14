@@ -3119,7 +3119,7 @@ textarea.form-control-lg { min-height: calc(1.5em + (1rem + 2px)); }
 
 .border-other003 { border-color: #00B900; }
 
-a { text-decoration: none !important; }
+a { cursor: pointer; text-decoration: none !important; }
 
 .linkGray { color: #343a40; }
 .linkGray:hover { color: #00A2D9; text-decoration: underline !important; }

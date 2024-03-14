@@ -5,3 +5,85 @@
 @import "components/link";
 @import "components/btn";
 
+
+.account-pointsBoxs {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	background-color: $blue-700;
+	padding: .5rem 1rem;
+	border-radius: 0.25rem;
+	margin-bottom: 1rem;
+	color: $white;
+	font-size: 1.25rem;
+
+	@include media-breakpoint-down(md) {
+		display: none;
+	}
+}
+
+.account-userName {
+	display: inline-block;
+	width: 100%;
+	line-height: 1.5;
+	font-size: 1.25rem;
+	color: $blue-700;
+
+	&:before {
+		display: inline-block;
+		content: '';
+		height: 35px;
+		width: 5px;
+		background-color: $main-red;
+		margin-right: 15px;
+	}
+}
+
+.account-memberBoxs {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  border: 1px solid #B3B7C6;
+
+  @include media-breakpoint-down(md) {
+		text-align: left;
+	}
+
+	> h5 {
+		display: inline-block;
+		width: 100%;
+		color: $blue-700;
+		text-align: center;
+		font-size: 1.25rem;
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+}
+
+.account-redLine {
+	border-bottom: 3px solid $main-red;
+}
+
+.account-grayLine {
+	border-bottom: 3px solid $gray-500;
+}
+
+.accoutn-contact-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 18px;
+  color: white;
+  text-align: center;
+  background-color: $blue-005;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+
+
+
+
