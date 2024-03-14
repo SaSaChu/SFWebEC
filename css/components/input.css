@@ -3136,3 +3136,5 @@ textarea.form-control-lg { min-height: calc(1.5em + (1rem + 2px)); }
 .form-outBoard-top { border-left: 1px solid #ced4da; border-top: 1px solid #ced4da; border-right: 1px solid #ced4da; }
 
 .form-noBoard { border: 0 !important; }
+
+.border-bottom-dotted { border-bottom: 1px dotted #dee2e6; }

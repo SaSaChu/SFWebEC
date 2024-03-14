@@ -11,6 +11,13 @@
 }
 
 
+.icon-vertical {
+	&:after, &:before {
+		vertical-align: middle !important;
+	}
+}
+
+
 html {
     font-size: 16px;
 }
@@ -38,6 +45,7 @@ body {
 }
 
 a {
+	cursor: pointer;
     text-decoration: none !important;
 
     &:after,

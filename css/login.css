@@ -3139,7 +3139,9 @@ textarea.form-control-lg { min-height: calc(1.5em + (1rem + 2px)); }
 
 .form-noBoard { border: 0 !important; }
 
-a { text-decoration: none !important; }
+.border-bottom-dotted { border-bottom: 1px dotted #dee2e6; }
+
+a { cursor: pointer; text-decoration: none !important; }
 
 .linkGray { color: #343a40; }
 .linkGray:hover { color: #00A2D9; text-decoration: underline !important; }
@@ -3149,15 +3151,15 @@ a { text-decoration: none !important; }
 
 .btn-xxl { padding: 0.5rem 1rem; }
 
-.btn-xl { padding: 0.3rem 1rem; }
+.btn-xl { padding: 0.4rem 1rem; }
 
-.btn-l { padding: 0.2rem 1rem; }
+.btn-l { padding: 0.3rem 1rem; }
 
-.btn-s { padding: 0.1rem 1rem; }
+.btn-s { padding: 0.2rem .8rem; }
 
-.btn-xs { padding: 0rem 1rem; }
+.btn-xs { padding: 0.1rem .8rem; }
 
-.btnSF { display: flex; justify-content: center; align-items: center; border-radius: 0.3rem; text-decoration: none; }
+.btnSF { align-items: center; border-radius: 0.3rem; text-decoration: none; line-height: 1.5; }
 .btnSF.btnMainBlud { color: #fff; background-color: #111c47; border: 0; }
 .btnSF.btnMainBlud:hover { opacity: .9; }
 .btnSF.btnBlud001 { color: #fff; background-color: #3D6DC1; border: 0; }
