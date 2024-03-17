@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui">
 
-	<title>321_個人資料_變更郵件地址</title>
+	<title>323_發票載具設定</title>
 
 	<script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
 	<script language="javascript" type="text/javascript" src="js/swiper/swiper-bundle.min.js"></script>
@@ -989,55 +989,141 @@
 				<!-- Right Side -->
 				<div class="col-md-9 col-12">
 					<div class="row mx-auto">
-						<div class="col-auto account-redLine pt-0 pb-2 fs-4 fw-semi">個人資料：變更電子郵件</div>
+						<div class="col-auto account-redLine pt-0 pb-2 fs-4 fw-semi">發票設定</div>
 						<div class="col account-grayLine"></div>
 					</div>
 
 					<div class="row mx-auto border-bottom">
-						<div class="col-md-5 col-12 pt-3 px-0">
-							<ul class="fs-8 fw-light text-gray002 mb-md-3 mb-0">
-								<li>請確實填寫個人資料，以確保客戶權益。</li>
-								<li>個人資料的使用方式，請參考<a href="" class="linkblue fs-8 fw-light align-baseline">隱私權聲明。</a></li>
-							</ul>
-						</div>
-						<div class="col-md-7 col-12 pt-md-3 pt-0 px-0">
-							<ul class="fs-8 fw-light text-gray002">
-								<li>若電子郵件信箱未完成驗證，將可能無法收到三花棉業寄出的活動訊息及會員專函</li>
+						<div class="col-12 pt-3 px-0">
+							<ul class="fs-8 fw-light text-gray002 mb-3">
+								<li>手機載具條碼輸入確認綁定後，消費時使用手機條碼載具，系統會自動將發票存入財政部電子發票整合服務平台。
+								</br>如因輸入資料錯誤所致損害，本公司無法補償。 </li>
 							</ul>
 						</div>
 					</div>
 					
 					<!-- 第1欄 -->
-					<div class="row mx-auto border-bottom-dotted align-items-center py-4">
-						<div class="col-auto">
-							<label for="formGroupExampleInput" class="form-label mb-0">電子郵件信箱：</label>
-						</div>
-						<div class="col-md-5 col-12 pt-3 pt-md-0">
-							<input class="form-control d-inline-block" type="text">
-						</div>
-						<div class="col-auto pt-3 pt-md-0">
-							<button class="btnSF btnBlud003-line btn-xl fs-8 fw-medium">發送驗證信</button>
+					<div class="row mx-auto align-items-center py-4">
+						<div class="col-12"><h6 class="text-blue002 mb-3">常用手機載具</h6></div>
+						<div class="col-12">
+							<div class="account-tableBoxs justify-content-between bg-gray005">
+								<div class="col-auto fs-7">手機載具條碼</div>
+								<div class="col-md-2 col-5 fs-7 text-center">編輯&nbsp;/&nbsp;修改</div>
+							</div>
+							<div class="account-tableBoxs justify-content-between align-items-center border-bottom-dotted py-4">
+								<div class="col-md-3 col-6 fs-7 text-blue002 fw-light">
+									/T23IUH5
+								</div>
+								<div class="col-md-2 col-5 fs-7 text-center">
+									<button class="btnSF btnOtherGray-line btn-xl fs-8 fw-light">編輯 / 修改</button>
+								</div>
+							</div>
+							<!-- 修改狀態 -->
+							<!-- <div class="account-tableBoxs justify-content-between align-items-center border-bottom-dotted py-4">
+								<div class="col-md-3 col-6 fs-7">
+									<input class="form-control d-inline-block" type="text">
+								</div>
+								<div class="col-md-2 col-5 fs-7 text-center">
+									<button class="btnSF btnOtherGray-line btn-xl fs-8 fw-light">確定修改</button>
+								</div>
+							</div> -->
 						</div>
 					</div>
 
 					<!-- 第2欄 -->
-					<div class="row mx-auto border-bottom-dotted align-items-center py-4">
-						<div class="col-auto">
-							<label for="formGroupExampleInput" class="form-label mb-0">信箱驗證碼：&nbsp;&nbsp;&nbsp;&nbsp;</label>
-						</div>
-						<div class="col-md-2 col">
-							<input class="form-control d-inline-block w-md-25 w-100 me-2" type="text">
+					<div class="row mx-auto align-items-center py-4">
+						<div class="col-12"><h6 class="text-blue002 mb-3">常用公司用發票統編</h6></div>
+						<div class="col-12">
+							<div class="account-tableBoxs justify-content-between align-items-center bg-gray005 d-md-flex d-none">
+								<div class="col-1 fs-7 text-center">順序</div>
+								<div class="col-2 fs-7 text-center">統一編號</div>
+								<div class="col-5 fs-7 text-center">公司名稱</div>
+								<div class="col-1 fs-7 text-center">編輯順序</div>
+								<div class="col-2 fs-7 text-center">編輯&nbsp;/&nbsp;修改</div>
+							</div>
+
+							<!-- 最多三筆 301 -->
+							<div class="account-tableBoxs justify-content-between align-items-center bg-gray005 d-flex d-md-none">
+								<div class="col-12 fs-7 text-md-center text-start">順序：1</div>
+							</div>
+							<div class="account-tableBoxs justify-content-between align-items-center border-bottom-dotted py-4">
+								<div class="col-md-1 col-12 fs-7 text-blue002 fw-light text-center text-center d-md-inline d-none">1</div>
+								<div class="col-md-2 col-12 account-tableTtpe pb-md-0 pb-3" title='統一編號：'>78910234</div>
+								<div class="col-md-5 col-12 account-tableTtpe pb-md-0 pb-3" title='公司名稱：'>好運旺旺來股份有限公司</div>
+								<div class="col-md-1 col-7 fs-7 account-tableTtpe" title='編輯順序：'>
+									<select class="form-select w-auto d-inline-block" aria-label="">
+									  <option selected>1</option>
+									  <option value="1">1</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									</select>
+								</div>
+								<div class="col-md-2 col-5 fs-7 text-center">
+									<button class="btnSF btnOtherGray-line btn-xl fs-8 fw-light">編輯 / 修改</button>
+								</div>
+							</div>
+							<!-- 最多三筆 302 -->
+							<div class="account-tableBoxs justify-content-between align-items-center bg-gray005 d-flex d-md-none">
+								<div class="col-12 fs-7 text-md-center text-start">順序：2</div>
+							</div>
+							<div class="account-tableBoxs justify-content-between align-items-center border-bottom-dotted py-4">
+								<div class="col-md-1 col-12 fs-7 text-blue002 fw-light text-center text-center d-md-inline d-none">2</div>
+								<div class="col-md-2 col-12 account-tableTtpe pb-md-0 pb-3" title='統一編號：'>
+									<input class="form-control w-auto pt-2 d-inline-block" type="text">
+								</div>
+								<div class="col-md-5 col-12 account-tableTtpe pb-md-0 pb-3" title='公司名稱：'>
+									<input class="form-control w-auto pt-2 d-inline-block" type="text">
+								</div>
+								<div class="col-md-1 col-7 fs-7 account-tableTtpe" title='編輯順序：'>
+									<select class="form-select w-auto d-inline-block" aria-label="">
+									  <option selected>2</option>
+									  <option value="1">1</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									</select>
+								</div>
+								<div class="col-md-2 col-5 fs-7 text-center">
+									<!-- <button class="btnSF btnOtherGray-line btn-xl fs-8 fw-light">編輯 / 修改</button> -->
+								</div>
+							</div>
+							<!-- 最多三筆 303 -->
+							<div class="account-tableBoxs justify-content-between align-items-center bg-gray005 d-flex d-md-none">
+								<div class="col-12 fs-7 text-md-center text-start">順序：3</div>
+							</div>
+							<div class="account-tableBoxs justify-content-between align-items-center border-bottom-dotted py-4">
+								<div class="col-md-1 col-12 fs-7 text-blue002 fw-light text-center text-center d-md-inline d-none">3</div>
+								<div class="col-md-2 col-12 account-tableTtpe pb-md-0 pb-3" title='統一編號：'>
+									<input class="form-control w-auto pt-2 d-inline-block" type="text">
+								</div>
+								<div class="col-md-5 col-12 account-tableTtpe pb-md-0 pb-3" title='公司名稱：'>
+									<input class="form-control w-auto pt-2 d-inline-block" type="text">
+								</div>
+								<div class="col-md-1 col-7 fs-7 account-tableTtpe" title='編輯順序：'>
+									<select class="form-select w-auto d-inline-block" aria-label="">
+									  <option selected>3</option>
+									  <option value="1">1</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									</select>
+								</div>
+								<div class="col-md-2 col-5 fs-7 text-center">
+									<!-- <button class="btnSF btnOtherGray-line btn-xl fs-8 fw-light">編輯 / 修改</button> -->
+								</div>
+							</div>
+
+
+
+							
 						</div>
 					</div>
 
 					<div class="col-12 text-center">
-						<button class="btnSF btnOtherGray btn-xxl fs-8 fw-medium mt-3 me-3">回上一頁</button>
-						<button class="btnSF btnBlud004 btn-xxl fs-8 fw-medium mt-3">確定送出</button>
+						<button class="btnSF btnBlud004 btn-xxl fs-8 fw-medium mt-3">儲存變更</button>
 					</div>
+
 				</div>
 			</div>
 		</div>
-
 	</main>
 
 	<footer>

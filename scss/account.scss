@@ -83,7 +83,107 @@
   margin-right: 5px;
 }
 
+.accoutn-phoneBoxs {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
 
+	.w-phone01, .w-phone02, .w-phone03, .w-add-25, .w-add-50, .w-add-100 {
+		display: inline-block !important;
+	}
+
+	.w-phone01 {
+		width: 15%;
+		min-width: 45px;
+	}
+
+	.w-phone02 {
+		width: 30%;
+		min-width: 160px;
+	}
+
+	.w-phone03 {
+		width: 20%;
+		min-width: 70px;
+	}
+
+	.w-add-25 {
+		width: 25%;
+
+		@include media-breakpoint-down(md) {
+			width: 48%;
+		}
+	}
+
+	.w-add-50 {
+		width: 49%;
+	}
+
+	.w-add-100 {
+		width: 100%;
+	}
+
+	@include media-breakpoint-down(md) {
+		margin-top: 10px;
+	}
+}
+
+.account-socialBtn-Line, .account-socialBtn-google, .account-socialBtn-face {
+	background-color: $gray-600;
+	color: $white;
+	font-size: 1rem;
+	font-weight: 600;
+	text-align: left;
+	border-radius: 0.3rem;
+	align-items: center;
+	padding: 1rem 1.5rem;
+	min-width: 140px;
+}
+
+.account-socialBtn-Line {
+	&:hover, &.active {
+		background-color: $other-003;
+	}
+}
+
+.account-socialBtn-google {
+	&:hover, &.active {
+		background-color: $main-red;
+	}
+}
+
+.account-socialBtn-face {
+	&:hover, &.active {
+		background-color: $blue-004;
+	}
+}
+
+
+.account-tableBoxs {
+	display: flex;
+	width: 100%;
+	padding: .5rem 1rem;
+	flex-wrap: wrap;
+}
+
+.account-tableTtpe {
+	font-size: 1rem;
+	color: $blue-700;
+	font-weight: 300;
+	text-align: center;
+
+	@include media-breakpoint-down(md) {
+		text-align: left;
+
+		&:before {
+			display: inline-block;
+			content: attr(title);
+			color: $gray-600;
+			font-weight: 400;
+		}
+	}
+}
 
 
 

@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui">
 
-	<title>321_個人資料_變更郵件地址</title>
+	<title>324_密碼變更</title>
 
 	<script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
 	<script language="javascript" type="text/javascript" src="js/swiper/swiper-bundle.min.js"></script>
@@ -989,55 +989,79 @@
 				<!-- Right Side -->
 				<div class="col-md-9 col-12">
 					<div class="row mx-auto">
-						<div class="col-auto account-redLine pt-0 pb-2 fs-4 fw-semi">個人資料：變更電子郵件</div>
+						<div class="col-auto account-redLine pt-0 pb-2 fs-4 fw-semi">密碼變更</div>
 						<div class="col account-grayLine"></div>
 					</div>
 
 					<div class="row mx-auto border-bottom">
-						<div class="col-md-5 col-12 pt-3 px-0">
-							<ul class="fs-8 fw-light text-gray002 mb-md-3 mb-0">
-								<li>請確實填寫個人資料，以確保客戶權益。</li>
-								<li>個人資料的使用方式，請參考<a href="" class="linkblue fs-8 fw-light align-baseline">隱私權聲明。</a></li>
-							</ul>
-						</div>
-						<div class="col-md-7 col-12 pt-md-3 pt-0 px-0">
-							<ul class="fs-8 fw-light text-gray002">
-								<li>若電子郵件信箱未完成驗證，將可能無法收到三花棉業寄出的活動訊息及會員專函</li>
+						<div class="col-12 pt-3 px-0">
+							<ul class="fs-8 fw-light text-gray002 mb-3">
+								<li>您可在下方欄位修改您的密碼，下一次便可使用新的密碼登入會員專區。</li>
+								<li>設定密碼時請不要使用簡易數字，例：生日、電話、身分證字號，或帳號與密碼相同。</li>
+								<li>建議密碼定期更換。</li>
+								<li>不在公用電腦輸入帳號密碼：公用電腦被安裝木馬程式的可能性較高，個人機密可能會被側錄。使用免費無線上網，缺乏防火牆保護，電腦資料容易被駭客截取。</li>
 							</ul>
 						</div>
 					</div>
-					
+
 					<!-- 第1欄 -->
-					<div class="row mx-auto border-bottom-dotted align-items-center py-4">
+					<div class="row mx-auto border-bottom-dotted py-4">
 						<div class="col-auto">
-							<label for="formGroupExampleInput" class="form-label mb-0">電子郵件信箱：</label>
+							<label for="formGroupExampleInput" class="form-label mb-0 mt-2">舊密碼：</label>
 						</div>
-						<div class="col-md-5 col-12 pt-3 pt-md-0">
-							<input class="form-control d-inline-block" type="text">
-						</div>
-						<div class="col-auto pt-3 pt-md-0">
-							<button class="btnSF btnBlud003-line btn-xl fs-8 fw-medium">發送驗證信</button>
+
+						<div class="col">
+						 <div class="accoutn-phoneBoxs mb-2">
+						 	<div class="col-md-2 col-12">
+						 		<input type="text" class="form-control">
+						 	</div>
+						 	<div class="col-md-10 col-12 fs-8 text-gray003 ps-md-2 ps-0 pt-md-0 pt-2">
+						 		請輸入原始密碼
+						 	</div>
+						 </div>
 						</div>
 					</div>
 
 					<!-- 第2欄 -->
-					<div class="row mx-auto border-bottom-dotted align-items-center py-4">
+					<div class="row mx-auto border-bottom-dotted py-4">
 						<div class="col-auto">
-							<label for="formGroupExampleInput" class="form-label mb-0">信箱驗證碼：&nbsp;&nbsp;&nbsp;&nbsp;</label>
+							<label for="formGroupExampleInput" class="form-label mb-0 mt-2">新密碼：</label>
 						</div>
-						<div class="col-md-2 col">
-							<input class="form-control d-inline-block w-md-25 w-100 me-2" type="text">
+
+						<div class="col">
+						 <div class="accoutn-phoneBoxs mb-2">
+						 	<div class="col-md-2 col-12">
+						 		<input type="text" class="form-control d-inline-block">
+						 	</div>
+						 	<div class="col-md-10 col-12 fs-8 text-gray003 ps-md-2 ps-0 pt-md-0 pt-2">
+						 		8-16字元，包含數字+大寫英文+小寫英文+特殊符號(不可含有空白、星號、單雙引號)。注意密碼不與其他網站相同，確保帳戶安全
+						 	</div>
+						 </div>
+						</div>
+					</div>
+
+					<!-- 第3欄 -->
+					<div class="row mx-auto border-bottom-dotted py-4 align-items-center">
+						<div class="col-auto">
+							<label for="formGroupExampleInput" class="form-label mb-0">再輸入一次新密碼：</label>
+						</div>
+
+						<div class="col">
+						 <div class="accoutn-phoneBoxs mb-2">
+						 	<div class="col-md-3 col-12">
+						 		<input type="text" class="form-control d-inline-block">
+						 	</div>
+						 </div>
 						</div>
 					</div>
 
 					<div class="col-12 text-center">
-						<button class="btnSF btnOtherGray btn-xxl fs-8 fw-medium mt-3 me-3">回上一頁</button>
-						<button class="btnSF btnBlud004 btn-xxl fs-8 fw-medium mt-3">確定送出</button>
+						<button class="btnSF btnBlud004 btn-xxl fs-8 fw-medium mt-3">儲存變更</button>
 					</div>
+
 				</div>
 			</div>
 		</div>
-
 	</main>
 
 	<footer>

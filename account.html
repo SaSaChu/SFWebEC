@@ -1118,33 +1118,49 @@
 
 					<!-- 第5欄 -->
 					<div class="row mx-auto border-bottom-dotted py-4">
-						<div class="col">
+						<div class="col-auto">
 							<label for="formGroupExampleInput" class="form-label mb-0 mt-2">市內電話：</label>
 						</div>
 
-						<div class="col-md-12 col-5">
-							<div class="row g-3 align-items-center">
-								<div class="col-2">
-							    <input type="text" class="form-control">
-							  </div>
-							  <div class="col-auto px-0">
-									<label for="formGroupExampleInput" class="form-label mb-0">-</label>
-								</div>
-							  <div class="col-5">
-							    <input type="text" class="form-control">
-							  </div>
-							  <div class="col-auto px-0">
-									<label for="formGroupExampleInput" class="form-label mb-0">#</label>
-								</div>
-							  <div class="col-3">
-							    <input type="text" class="form-control">
-							  </div>
-							  <div class="col-12 mt-1">
-							  	<div class="fs-8 text-gray003 ">範例: 02-22228888  #1234</div>	
-							  </div>		
-							</div>
+						<div class="col-md-6 col-12">
+						 <div class="accoutn-phoneBoxs mb-2">
+						 	<input type="text" class="form-control w-phone01">
+						 	<span class="mx-2">-</span>
+						 	<input type="text" class="form-control w-phone02">
+						 	<span class="mx-2">#</span>
+						 	<input type="text" class="form-control w-phone03">
+						 </div>
+
+						 <span class="w-100 fs-8 text-gray003">範例:&nbsp;02-22228888&nbsp;&nbsp;#1234</span>
 						</div>
-						
+					</div>
+
+					<!-- 第6欄 -->
+					<div class="row mx-auto border-bottom-dotted py-4">
+						<div class="col-auto">
+							<label for="formGroupExampleInput" class="form-label mb-0 mt-2">聯絡地址：</label>
+						</div>
+
+						<div class="col-md-10 col-12">
+						 <div class="accoutn-phoneBoxs mb-2">
+						 	<select class="form-select d-inline-block w-add-25 me-2" aria-label="">
+							  <option selected>城市</option>
+							  <option value="1">One</option>
+							  <option value="2">Two</option>
+							  <option value="3">Three</option>
+							</select>
+							
+							<select class="form-select d-inline-block w-add-25" aria-label="">
+							  <option selected>區域</option>
+							  <option value="1">One</option>
+							  <option value="2">Two</option>
+							  <option value="3">Three</option>
+							</select> 
+
+							<input type="text" class="form-control w-add-100 mt-2">
+						 </div>
+
+						</div>
 					</div>
 
 					<div class="col-12 text-center">
