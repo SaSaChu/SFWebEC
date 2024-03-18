@@ -3228,6 +3228,11 @@ header .title-bread { font-size: .85rem; justify-content: center; }
 header .title-bread .title-bread-item > a { color: #fff; }
 header .title-bread .title-bread-item > a:hover { text-decoration: underline !important; }
 header .title-bread .title-bread-item.item-active { color: #fff; }
+header .title-bread .title-bread-item:before { float: left; padding-right: 0.5rem; padding-top: 4px !important; color: #fff !important; }
+
+.loginBoxs { width: 450px; }
+
+.modal-header.mh-noBorder, .modal-footer.mh-noBorder { border: 0; }
 
 footer { padding: 7rem 0 0 0; }
 @media screen and (max-width: 768px) and (min-width: 0) { footer { padding: 1rem 0; } }
