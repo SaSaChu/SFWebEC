@@ -729,6 +729,13 @@ header {
 			&.item-active {
 				color: $white;
 			}
+
+			&:before {
+			    float: left;
+			    padding-right: 0.5rem;
+			    padding-top: 4px !important;
+			    color: $white !important;
+		   }
 		}
 	}
 }

@@ -237,3 +237,15 @@
 	}
 }
 
+.breadcrumb-item + .breadcrumb-item {
+	&.ac-bread {
+		&:before {
+	    float: left;
+	    padding-right: 0.5rem;
+	    padding-top: 3px;
+	    padding-top: 8px !important;
+	    color: $white !important;
+   }
+	}
+}
+

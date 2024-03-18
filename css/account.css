@@ -3234,3 +3234,5 @@ a { cursor: pointer; text-decoration: none !important; }
 
 .ac-m50 { width: auto; }
 @media (max-width: 767.98px) { .ac-m50 { width: 46%; } }
+
+.breadcrumb-item + .breadcrumb-item.ac-bread:before { float: left; padding-right: 0.5rem; padding-top: 3px; padding-top: 8px !important; color: #fff !important; }
