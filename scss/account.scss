@@ -165,6 +165,10 @@
 	width: 100%;
 	padding: .5rem 1rem;
 	flex-wrap: wrap;
+
+	@include media-breakpoint-down(md) {
+		padding: .2rem 1rem;
+	}
 }
 
 .account-tableTtpe {
@@ -185,5 +189,51 @@
 	}
 }
 
+.account-tableTtpe-v2 {
+	font-size: 1rem;
+	color: $blue-700;
+	font-weight: 300;
+	text-align: center;
 
+	@include media-breakpoint-down(md) {
+		text-align: left;
+
+		&:before {
+			display: block;
+			content: attr(title);
+			color: $gray-600;
+			font-weight: 400;
+			margin-bottom: 5px;
+		}
+	}
+}
+
+.account-iconBig {
+	font-size: 7rem;
+}
+
+.ac-tagBlue {
+	display: inline-block;
+	font-size: .8rem;
+	color: $white;
+  padding: 0.2rem 0.5rem;
+	border-radius: 0.3rem;
+	background-color: $blue-005;
+}
+
+.ac-w50 {
+	width: 50%;
+
+	@include media-breakpoint-down(md) {
+		width: auto;
+	}
+}
+
+.ac-m50 {
+	width: auto;
+
+	@include media-breakpoint-down(md) {
+		width: 46%;
+	}
+}
 

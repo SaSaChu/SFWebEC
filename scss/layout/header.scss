@@ -733,3 +733,12 @@ header {
 	}
 }
 
+.loginBoxs {
+	width: 450px;
+}
+
+.modal-header, .modal-footer {
+	&.mh-noBorder {
+		border: 0;
+	}
+}

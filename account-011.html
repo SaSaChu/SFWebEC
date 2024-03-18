@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui">
 
-	<title>324_密碼變更</title>
+	<title>331_門市收藏</title>
 
 	<script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
 	<script language="javascript" type="text/javascript" src="js/swiper/swiper-bundle.min.js"></script>
@@ -989,121 +989,94 @@
 				<!-- Right Side -->
 				<div class="col-md-9 col-12">
 					<div class="row mx-auto">
-						<div class="col-auto account-redLine pt-0 pb-2 fs-4 fw-semi">密碼變更</div>
+						<div class="col-auto account-redLine pt-0 pb-2 fs-4 fw-semi">門市收藏</div>
 						<div class="col account-grayLine"></div>
 					</div>
 
 					<div class="row mx-auto border-bottom">
 						<div class="col-12 pt-3 px-0">
 							<ul class="fs-8 fw-light text-gray002 mb-3">
-								<li>您可在下方欄位修改您的密碼，下一次便可使用新的密碼登入會員專區。</li>
-								<li>設定密碼時請不要使用簡易數字，例：生日、電話、身分證字號，或帳號與密碼相同。</li>
-								<li>建議密碼定期更換。</li>
-								<li>不在公用電腦輸入帳號密碼：公用電腦被安裝木馬程式的可能性較高，個人機密可能會被側錄。使用免費無線上網，缺乏防火牆保護，電腦資料容易被駭客截取。</li>
+								<li>常用門市將做為您下訂單時的預設門市，若您有多個常用門市，將會依照您設定的優先順序帶出。</li>
+								<li>您可以設定5個國內常用7-11門市。</li>
 							</ul>
 						</div>
 					</div>
 
 					<!-- 第1欄 -->
-					<div class="row mx-auto border-bottom-dotted py-4">
-						<div class="col-auto">
-							<label for="formGroupExampleInput" class="form-label mb-0 mt-2">舊密碼：</label>
-						</div>
+					<div class="row mx-auto align-items-center py-4">
+						<div class="col-12">
+							<div class="account-tableBoxs justify-content-between align-items-center bg-gray005 d-md-flex d-none">
+								<div class="col-1 fs-7 text-center">順序</div>
+								<div class="col-2 fs-7 text-center">店號</div>
+								<div class="col-2 fs-7 text-center">門市名稱</div>
+								<div class="col-4 fs-7 text-center">地址</div>
+								<div class="col-1 fs-7 text-center">編輯順序</div>
+								<div class="col-2 fs-7 text-center">刪除</div>
+							</div>
 
-						<div class="col">
-						 <div class="accoutn-phoneBoxs mb-2">
-						 	<div class="col-md-2 col-12">
-						 		<input type="text" class="form-control">
-						 	</div>
-						 	<div class="col-md-10 col-12 fs-8 text-gray003 ps-md-2 ps-0 pt-md-0 pt-2">
-						 		請輸入原始密碼
-						 	</div>
-						 </div>
+							<!-- 最多五筆 501 -->
+							<div class="account-tableBoxs justify-content-between align-items-center bg-gray005 d-flex d-md-none">
+								<div class="col-12 fs-7 text-md-center text-start">順序：1</div>
+							</div>
+							<div class="account-tableBoxs justify-content-between align-items-center border-bottom-dotted py-4">
+								<div class="col-md-1 col-12 fs-7 text-blue002 fw-light text-center text-center d-md-inline d-none">1</div>
+								<div class="col-md-2 col-12 account-tableTtpe pb-md-0 pb-3" title='店號：'>958901</div>
+								<div class="col-md-2 col-12 account-tableTtpe pb-md-0 pb-3" title='門市名稱：'>寶中</div>
+								<div class="col-md-4 col-12 pb-md-0 pb-3" >
+									<span class='account-tableTtpe-v2 me-2' title='地址：'>新北市新店區寶慶街66號 </span>
+									<span class="ac-tagBlue">預設</span>
+								</div>
+								<div class="col-md-1 col-7 fs-7 account-tableTtpe" title='編輯順序：'>
+									<select class="form-select w-auto d-inline-block" aria-label="">
+									  <option selected>1</option>
+									  <option value="1">1</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									</select>
+								</div>
+								<div class="col-md-2 col-5 fs-7 text-md-center text-end">
+									<button class="btnSF btnOtherGray-line btn-xl fs-8 fw-light">移除</button>
+								</div>
+							</div>
+
+							<!-- 最多五筆 502 -->
+							<div class="account-tableBoxs justify-content-between align-items-center bg-gray005 d-flex d-md-none">
+								<div class="col-12 fs-7 text-md-center text-start">順序：2</div>
+							</div>
+							<div class="account-tableBoxs justify-content-between align-items-center border-bottom-dotted py-4">
+								<div class="col-md-1 col-12 fs-7 text-blue002 fw-light text-center text-center d-md-inline d-none">2</div>
+								<div class="col-md-2 col-12 account-tableTtpe pb-md-0 pb-3" title='店號：'>958901</div>
+								<div class="col-md-2 col-12 account-tableTtpe pb-md-0 pb-3" title='門市名稱：'>寶中</div>
+								<div class="col-md-4 col-12 pb-md-0 pb-3" >
+									<span class='account-tableTtpe-v2 me-2' title='地址：'>新北市新店區寶慶街66號 </span>
+								</div>
+								<div class="col-md-1 col-7 fs-7 account-tableTtpe" title='編輯順序：'>
+									<select class="form-select w-auto d-inline-block" aria-label="">
+									  <option selected>2</option>
+									  <option value="1">1</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									</select>
+								</div>
+								<div class="col-md-2 col-5 fs-7 text-md-center text-end">
+									<button class="btnSF btnOtherGray-line btn-xl fs-8 fw-light">移除</button>
+								</div>
+							</div>
+
 						</div>
 					</div>
 
-					<!-- 第2欄 -->
-					<div class="row mx-auto border-bottom-dotted py-4">
-						<div class="col-auto">
-							<label for="formGroupExampleInput" class="form-label mb-0 mt-2">新密碼：</label>
-						</div>
-
-						<div class="col">
-						 <div class="accoutn-phoneBoxs mb-2">
-						 	<div class="col-md-2 col-12">
-						 		<input type="text" class="form-control d-inline-block">
-						 	</div>
-						 	<div class="col-md-10 col-12 fs-8 text-gray003 ps-md-2 ps-0 pt-md-0 pt-2">
-						 		8-16字元，包含數字+大寫英文+小寫英文+特殊符號(不可含有空白、星號、單雙引號)。注意密碼不與其他網站相同，確保帳戶安全
-						 	</div>
-						 </div>
-						</div>
+					<div class="col-12 text-md-end text-center">
+						<button class="btnSF btnOtherGray btn-xxl ac-m50 fs-8 fw-medium me-3">
+							<i class="bi bi-plus-lg me-2"></i>依照地圖選擇新增
+						</button>
+						<button class="btnSF btnBlud004 btn-xxl ac-m50 fs-8 fw-medium">儲存變更</button>
 					</div>
 
-					<!-- 第3欄 -->
-					<div class="row mx-auto border-bottom-dotted py-4 align-items-center">
-						<div class="col-auto">
-							<label for="formGroupExampleInput" class="form-label mb-0">再輸入一次新密碼：</label>
-						</div>
-
-						<div class="col">
-						 <div class="accoutn-phoneBoxs mb-2">
-						 	<div class="col-md-3 col-12">
-						 		<input type="text" class="form-control d-inline-block">
-						 	</div>
-						 </div>
-						</div>
-					</div>
-
-					<div class="col-12 text-center">
-						<button class="btnSF btnBlud004 btn-xxl fs-8 fw-medium mt-3" data-bs-toggle="modal" href="#loginToggle" role="button">儲存變更</button>
-					</div>
 				</div>
 			</div>
 		</div>
 	</main>
-
-	<!-- 變更 - 成功 -->
-	<!-- <div class="modal fade" id="loginToggle" aria-hidden="true" aria-labelledby="loginToggleLabel" tabindex="-1">
-	  <div class="modal-dialog modal-dialog-centered">
-	    <div class="modal-content loginBoxs px-3 pt-4">
-	      <div class="modal-header p-0 mh-noBorder">
-	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-	      </div>
-
-	      <div class="modal-body px-0">
-	       	<div class="text-mainYellow account-iconBig text-center">
-	       		<i class="bi bi-check-circle-fill"></i>
-	       	</div>
-	       	<h3 class="text-blue001 text-center my-3">密碼變更成功，請重新登入！</h3>
-	       	<p class="fs-7 text-gray002 text-center fw-normal">
-	       		畫面將自動轉跳至三花棉業登入畫面</br>請輸入新的密碼重新登入。
-	       	</p>
-	      </div>
-	    </div>
-	  </div>
-	</div> -->
-
-	<!-- 變更 - 失敗 -->
-	<div class="modal fade" id="loginToggle" aria-hidden="true" aria-labelledby="loginToggleLabel" tabindex="-1">
-	  <div class="modal-dialog modal-dialog-centered">
-	    <div class="modal-content loginBoxs px-3 pt-4">
-	      <div class="modal-header p-0 mh-noBorder">
-	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-	      </div>
-
-	      <div class="modal-body px-0">
-	       	<div class="text-mainRed account-iconBig text-center">
-	       		<i class="bi bi-x-circle-fill"></i>
-	       	</div>
-	       	<h3 class="text-blue001 text-center my-3">密碼變更失敗！</h3>
-	       	<p class="fs-7 text-gray002 text-center fw-normal">
-	       		這邊輸入失敗的訊息文字。
-	       	</p>
-	      </div>
-	    </div>
-	  </div>
-	</div>
 
 	<footer>
 		<div class="container-fluid p-0">

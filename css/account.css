@@ -3215,7 +3215,22 @@ a { cursor: pointer; text-decoration: none !important; }
 .account-socialBtn-face:hover, .account-socialBtn-face.active { background-color: #3D6DC1; }
 
 .account-tableBoxs { display: flex; width: 100%; padding: .5rem 1rem; flex-wrap: wrap; }
+@media (max-width: 767.98px) { .account-tableBoxs { padding: .2rem 1rem; } }
 
 .account-tableTtpe { font-size: 1rem; color: #044281; font-weight: 300; text-align: center; }
 @media (max-width: 767.98px) { .account-tableTtpe { text-align: left; }
   .account-tableTtpe:before { display: inline-block; content: attr(title); color: #6c757d; font-weight: 400; } }
+
+.account-tableTtpe-v2 { font-size: 1rem; color: #044281; font-weight: 300; text-align: center; }
+@media (max-width: 767.98px) { .account-tableTtpe-v2 { text-align: left; }
+  .account-tableTtpe-v2:before { display: block; content: attr(title); color: #6c757d; font-weight: 400; margin-bottom: 5px; } }
+
+.account-iconBig { font-size: 7rem; }
+
+.ac-tagBlue { display: inline-block; font-size: .8rem; color: #fff; padding: 0.2rem 0.5rem; border-radius: 0.3rem; background-color: #0083D2; }
+
+.ac-w50 { width: 50%; }
+@media (max-width: 767.98px) { .ac-w50 { width: auto; } }
+
+.ac-m50 { width: auto; }
+@media (max-width: 767.98px) { .ac-m50 { width: 46%; } }
