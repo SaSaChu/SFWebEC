@@ -3227,8 +3227,6 @@ a { cursor: pointer; text-decoration: none !important; }
 
 .account-iconBig { font-size: 7rem; }
 
-.ac-tagBlue { display: inline-block; font-size: .8rem; color: #fff; padding: 0.2rem 0.5rem; border-radius: 0.3rem; background-color: #0083D2; }
-
 .ac-w50 { width: 50%; }
 @media (max-width: 767.98px) { .ac-w50 { width: auto; } }
 
@@ -3236,3 +3234,8 @@ a { cursor: pointer; text-decoration: none !important; }
 @media (max-width: 767.98px) { .ac-m50 { width: 46%; } }
 
 .breadcrumb-item + .breadcrumb-item.ac-bread:before { float: left; padding-right: 0.5rem; padding-top: 3px; padding-top: 8px !important; color: #fff !important; }
+
+.nav-item .nav-link.ac-nav-link { width: 95% !important; padding: 10px 0; color: #4B4B4B; font-size: 1.125rem; background-color: #dee2e6; border: 1px solid #ced4da; margin: 0 auto; }
+.nav-item .nav-link.ac-nav-link.active { color: #fff; background-color: #044281; border: 1px solid #044281; }
+
+.pic-gray { -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); -ms-filter: grayscale(100%); -o-filter: grayscale(100%); filter: grayscale(100%); filter: gray; }
