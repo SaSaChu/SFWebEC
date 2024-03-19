@@ -3418,9 +3418,9 @@ main .check_label .checkmark { position: relative; display: inline-block; margin
 main .check_label .checkmark:after { content: ""; position: absolute; left: 9px; top: 3px; display: none; border: solid #36558b; width: 7px; height: 15px; border: solid #36558b; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
 main .radio_label { position: relative; display: block; padding-left: 2rem; font-size: 18px; font-weight: 600; color: #4b4b4b; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 main .radio_label input[type="radio"] { position: absolute; opacity: 0; cursor: pointer; }
-main .radio_label input[type="radio"]:checked ~ .checkmark:after { display: block; }
-main .radio_label .checkmark { position: absolute; top: 0; left: 0; width: 25px; height: 25px; background-color: #fff; border: 1px solid #d8d8d8; border-radius: 50%; }
-main .radio_label .checkmark:after { content: ""; position: absolute; top: calc(50% - 6.5px); left: calc(50% - 6.5px); width: 13px; height: 13px; display: none; border-radius: 50%; background-color: #00a2d9; }
+main .radio_label input[type="radio"]:checked ~ .radiomark:after { display: block; }
+main .radio_label .radiomark { position: absolute; top: 0; left: 0; width: 25px; height: 25px; background-color: #fff; border: 1px solid #d8d8d8; border-radius: 50%; }
+main .radio_label .radiomark:after { content: ""; position: absolute; top: calc(50% - 6.5px); left: calc(50% - 6.5px); width: 13px; height: 13px; display: none; border-radius: 50%; background-color: #00a2d9; }
 @media (max-width: 991.98px) { main .shopping_cart_step > .row > .col { padding: 0; } }
 main .shopping_cart_step > .row > .col h4, main .shopping_cart_step > .row > .col .h4 { margin: 0; padding: 1rem; font-size: 18px; color: #b3b7c6; border-radius: 5px; background-color: white; text-align: center; }
 @media (max-width: 991.98px) { main .shopping_cart_step > .row > .col h4, main .shopping_cart_step > .row > .col .h4 { padding: 1rem .5rem; font-size: 14px; border-radius: 0; } }
@@ -3540,19 +3540,27 @@ main .shopping_cart_like .like-swiper .likeMobile-button-prev { left: calc(100% 
 main .shopping_cart_like .like-swiper .likeMobile-button-prev:after { display: flex; align-items: center; justify-content: center; width: 33px; height: 33px; background-color: rgba(17, 28, 71, 0.5); color: #fff; border-radius: 5px; font-size: 16px; font-weight: bold; }
 main .shopping_cart_like .like-swiper .likeMobile-button-next { right: 0; width: inherit; }
 main .shopping_cart_like .like-swiper .likeMobile-button-next:after { display: flex; align-items: center; justify-content: center; width: 33px; height: 33px; background-color: rgba(17, 28, 71, 0.5); color: #fff; border-radius: 5px; font-size: 16px; font-weight: bold; }
-main form .container { max-width: 800px; }
+main form#step-second-form .container { max-width: 800px; }
+main form#step-second-form .container .delivery-type { display: none; }
+main form#step-second-form .container .invoice-type { display: none; }
 main .step_second_section { margin-top: 1rem; padding: 1rem; background-color: white; border-radius: 5px; }
 main .step_second_section .section_title { padding-bottom: .5rem; border-bottom: 1px solid #d8d8d8; }
 main .step_second_section .section_title h5, main .step_second_section .section_title .h5 { margin-bottom: 0; font-size: 20px; font-weight: 600; color: #3d5dc1; }
 main .step_second_section .section_title h5 img, main .step_second_section .section_title .h5 img { margin-right: .5rem; }
 @media (max-width: 991.98px) { main .step_second_section .form-check { padding-left: 0; } }
 main .step_second_section .tip { margin-top: .5rem; font-size: 16px; line-height: 1.5; color: #8c8c8c; }
-main .shopping_cart_orderer_info .check_label { margin-top: .5rem; }
-main .shopping_cart_orderer_info .check_label .checkmark { padding-right: 1rem; margin-right: .5rem; }
-@media (min-width: 992px) { main .shopping_cart_recipient_info .mt-lg-n3 { margin-top: -1rem; } }
-main .shopping_cart_invoice_info .check_label { display: inline-block; padding-left: 2rem; font-size: 14px; color: #6b6b6b; }
-main .shopping_cart_invoice_info .check_label .checkmark { position: absolute; top: 0; left: 0; }
-main .shopping_cart_method_store button { width: 100%; }
+main .shopping_cart_orderer_section .check_label { margin-top: .5rem; }
+main .shopping_cart_orderer_section .check_label .checkmark { padding-right: 1rem; margin-right: .5rem; }
+@media (min-width: 992px) { main .shopping_cart_recipient_section .mt-lg-n3 { margin-top: -1rem; } }
+main .shopping_cart_invoice_section .check_label { display: inline-block; padding-left: 2rem; font-size: 14px; color: #6b6b6b; }
+main .shopping_cart_invoice_section .check_label .checkmark { position: absolute; top: 0; left: 0; }
+main .shopping_cart_invoice_section .invoice-person .form-check, main .shopping_cart_invoice_section .invoice-company .form-check { padding-left: 0; }
+main .shopping_cart_invoice_section .invoice-person .form-check .radio_label, main .shopping_cart_invoice_section .invoice-company .form-check .radio_label { font-size: 16px; }
+main .shopping_cart_invoice_section .invoice-person .form-check .radio_label.active .radiomark:after, main .shopping_cart_invoice_section .invoice-company .form-check .radio_label.active .radiomark:after { display: block; }
+main .shopping_cart_delivery_store button { width: 100%; }
+main .shopping_cart_action button { width: 100%; }
+main .shopping_cart_action button.btnBlud003 { border: 0; }
+main .shopping_cart_action button.btnBlud003:hover { border: 0; }
 main .step_third_section { margin-top: 1rem; padding: 1rem; background-color: white; border-radius: 5px; }
 main .step_third_section .section_title { padding-bottom: .5rem; }
 main .step_third_section .section_title h5, main .step_third_section .section_title .h5 { margin-bottom: 0; font-size: 20px; font-weight: 600; color: #3d5dc1; }

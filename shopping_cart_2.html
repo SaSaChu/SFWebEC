@@ -885,10 +885,12 @@
 						</div>
 					</div>
 				</div>
-				<form id="form" action="" method="POST">
+				<!-- TODO 驗證、常用收件人、公司光箱內容＆ js 功能 -->
+				<!-- 確認資料是否一次收集，如果是分開的話，每個部分都要有 form 表單 -->
+				<form id="step-second-form" action="#">
 					<div class="container p-0">
 						<!-- 寄送方式 -->
-						<div class="shopping_cart_shipping_method step_second_section">
+						<div class="shopping_cart_delivery_section step_second_section">
 							<div class="section_title col">
 								<div class="row align-items-center justify-content-between">
 									<div class="col">
@@ -901,15 +903,15 @@
 								<div class="col">
 									<div class="form-check mb-3">
 										<label class="radio_label">7-11門市取貨
-											<input type="radio" checked="checked" name="shipping_method">
-											<span class="checkmark"></span>
+											<input type="radio" name="delivery_type" value="store" required>
+											<span class="radiomark"></span>
 										</label>
 										
 									</div>
 									<div class="form-check">
 										<label class="radio_label">宅配到府
-											<input type="radio" name="shipping_method">
-											<span class="checkmark"></span>
+											<input type="radio" name="delivery_type" value="home">
+											<span class="radiomark"></span>
 										</label>	
 									</div>
 								</div>
@@ -917,7 +919,7 @@
 						</div>
 
 						<!-- 付款方式 -->
-						<div class="shopping_cart_pay_method step_second_section">
+						<div class="shopping_cart_pay_section step_second_section">
 							<div class="section_title col">
 								<div class="row align-items-center justify-content-between">
 									<div class="col">
@@ -931,55 +933,55 @@
 									<div class="form-check mb-3">
 										<div class="d-flex align-items-center">
 											<label class="radio_label">信用卡
-												<input type="radio" checked="checked" name="shipping_pay" required>
-												<span class="checkmark"></span>
+												<input type="radio" checked="checked" name="shipping_pay" value="credit-card">
+												<span class="radiomark"></span>
 											</label>
 											<img src="images/other/card.webp" alt="">	
 										</div>
 									</div>
 									<div class="form-check mb-3">
 										<label class="radio_label">網路ATM
-											<input type="radio" name="shipping_pay">
-											<span class="checkmark"></span>
+											<input type="radio" name="pay_method" value="web-atm">
+											<span class="radiomark"></span>
 											<p class="tip">使用台新銀行轉帳免交易手續費；請先安裝好讀卡機並插入卡片後再按『下一步』，避免程式錯誤，造成交易無法正常執行。</p>
 										</label>	
 									</div>
 									<div class="form-check mb-3">
 										<label class="radio_label">虛擬帳號付款
-											<input type="radio" name="shipping_pay">
-											<span class="checkmark"></span>
+											<input type="radio" name="pay_method" value="virtual-account">
+											<span class="radiomark"></span>
 											<p class="tip">完成結帳將取得當次訂單的專屬虛擬帳號，請於５日內完成匯款，逾時帳號即失效。</p>
 										</label>	
 									</div>
 									<div class="form-check mb-3">
 										<div class="d-flex align-items-center">
 											<label class="radio_label">Line Pay
-												<input type="radio" name="shipping_pay">
-												<span class="checkmark"></span>
+												<input type="radio" name="pay_method" value="line-pay">
+												<span class="radiomark"></span>
 											</label>
 										</div>
 									</div>
 									<div class="form-check mb-3">
 										<div class="d-flex align-items-center">
 											<label class="radio_label">Google Pay
-												<input type="radio" name="shipping_pay">
-												<span class="checkmark"></span>
+												<input type="radio" name="pay_method" value="google-pay">
+												<span class="radiomark"></span>
 											</label>
 										</div>
 									</div>
 									<div class="form-check mb-3">
 										<div class="d-flex align-items-center">
 											<label class="radio_label">Apple Pay
-												<input type="radio" name="shipping_pay">
-												<span class="checkmark"></span>
+												<input type="radio" name="pay_method" value="apple-pay">
+												<span class="radiomark"></span>
 											</label>
 										</div>
 									</div>
 									<div class="form-check">
 										<div class="d-flex align-items-center">
 											<label class="radio_label">街口支付
-												<input type="radio" name="shipping_pay">
-												<span class="checkmark"></span>
+												<input type="radio" name="pay_method" value="jko-pay">
+												<span class="radiomark"></span>
 											</label>
 										</div>
 									</div>
@@ -987,8 +989,8 @@
 							</div>
 						</div>
 
-						<!-- 7-11取貨門市 -->
-						<div class="shopping_cart_method_store step_second_section">
+						<!-- 7-11取貨門市 delivery-store -->
+						<div class="shopping_cart_delivery_store step_second_section delivery-type delivery-store">
 							<div class="section_title col-12">
 								<div class="row align-items-center justify-content-between ">
 									<div class="col-12 col-lg-3">
@@ -1000,10 +1002,10 @@
 							<!-- 門市選擇 -->
 							<div class="row mt-3 ps-lg-4">
 								<div class="col-6 col-lg-3">
-									<button class="btnSF btnOtherGray btn-xxl fs-6 fw-medium mb-2">依照地圖選擇</button>
+									<button type="button" class="btnSF btnOtherGray btn-xxl fs-6 fw-medium mb-2">依照地圖選擇</button>
 								</div>
 								<div class="col-6 col-lg-3">
-									<button class="btnSF btnBlud003 btn-xxl fs-6 fw-medium mb-2">選擇常用門市</button>
+									<button type="button" class="btnSF btnBlud003 btn-xxl fs-6 fw-medium mb-2" data-bs-toggle="modal" data-bs-target="#storeModal">選擇常用門市</button>
 								</div>
 							</div>
 
@@ -1013,12 +1015,13 @@
 									<p>門市名稱：<span class="store-name">景新</span> </p>
 									<p>門市地址：<span class="store-address">新北市中和區景新街436號</span> </p>
 									<span class="tip">門市取件時需配合門市相關規範，部分門市已陸續調整為「自助取件」，可重新依地圖選擇確認。</span>
+									<input type="hidden" name="store_info" disabled>
 								</div>	
 							</div>
 						</div>
 
 						<!-- 訂購人資訊 -->
-						<div class="shopping_cart_orderer_info step_second_section">
+						<div class="shopping_cart_orderer_section step_second_section">
 							<div class="section_title col-12">
 								<div class="row align-items-center justify-content-between ">
 									<div class="col-12 col-lg-3">
@@ -1026,7 +1029,7 @@
 									</div>
 									<div class="col-12 col-lg-8">
 										<label class="check_label justify-content-end">
-											<input type="checkbox" name="sync_user_info">
+											<input type="checkbox" name="sync_orderer_info" value="1">
 											<span class="checkmark"></span>
 											同步訂購人資料到會員資料（已完成認證欄位無法同步）
 										</label>
@@ -1036,33 +1039,35 @@
 
 							<!-- 姓名 -->
 							<div class="row mt-3 ps-lg-4">
-								<label for="name" class="col-3 col-lg-1 col-form-label flex-shrink-1">姓名</label>
-								<div class="col-9 col-lg-6 flex-grow-1">
-									<input class="form-control" type="text" name="name" aria-label="user name">
+								<label for="name" class="col-3 col-lg-1 col-form-label">姓名</label>
+								<div class="col-9 col-lg-6">
+									<input class="form-control" type="text" name="orderer_name" aria-label="orderer name">
 								</div>
 							</div>
+							
 							<!-- 手機 -->
 							<div class="row mt-3 ps-lg-4">
 								<label for="phone" class="col-3 col-lg-1 col-form-label">手機</label>
 								<div class="col-9 col-lg-6">
-									<input class="form-control" type="text" name="phone" aria-label="user phone">
+									<input class="form-control" type="text" name="orderer_phone" aria-label="orderer phone">
 								</div>
 							</div>
+
 							<!-- 市話 -->
 							<div class="row align-items-center mt-3 ps-lg-4">
 								<label for="tel" class="col-3 col-lg-1 col-form-label">市話</label>
 								<div class="col-9 col-lg-6">
 									<div class="row g-0 align-items-center">
 										<div class="col-2">
-											<input class="form-control" type="text" name="tel_area" aria-label="tel area">
+											<input class="form-control" type="text" name="orderer_tel_area" aria-label="tel area">
 										</div>
 										<div class="col text-center"> - </div>
 										<div class="col-4">
-											<input class="form-control" type="text" name="tel_number" aria-label="tel number">
+											<input class="form-control" type="text" name="orderer_tel_number" aria-label="tel number">
 										</div>
 										<div class="col text-center"> # </div>
 										<div class="col-3">
-											<input class="form-control" type="text" name="tel_extension" aria-label="tel extension">
+											<input class="form-control" type="text" name="orderer_tel_extension" aria-label="tel extension">
 										</div>
 									</div>
 								</div>
@@ -1074,7 +1079,7 @@
 							<div class="row align-items-center mt-3 ps-lg-4">
 								<label for="name" class="col-3 col-lg-1 col-form-label">Email</label>
 								<div class="col-9 col-lg-6">
-									<input class="form-control" type="email" name="eamil" aria-label="user email">
+									<input class="form-control" type="email" name="orderer_eamil" aria-label="orderer email">
 								</div>
 								<div class="col-9 col-lg-5 ms-auto mt-2 mt-lg-0">
 									<span class="tip">交易通知將會發送到此Email</span>
@@ -1083,14 +1088,14 @@
 						</div>
 
 						<!-- 收件人資訊 -->
-						<div class="shopping_cart_recipient_info step_second_section">
+						<div class="shopping_cart_recipient_section step_second_section">
 							<div class="section_title col-12">
 								<div class="row align-items-center justify-content-between ">
 									<div class="col-6 col-lg-3">
 										<h5 class=""><img src="images/svg-pic/doll-Gradient.svg" alt="">收件人資訊</h5>
 									</div>
-									<div class="col-6 col-lg-9 text-end">
-										<button class="btnSF btnBlud002 btn-xxl fs-6 fw-medium mb-2">選擇常用收件人</button>
+									<div class="col-6 col-lg-9 text-end delivery-type delivery-home">
+										<button type="button" class="btnSF btnBlud002 btn-xxl fs-6 fw-medium mb-2" data-bs-toggle="modal" data-bs-target="#recipientModal">選擇常用收件人</button>
 									</div>
 								</div>
 							</div>
@@ -1099,10 +1104,11 @@
 							<div class="row align-items-center mt-3 ps-lg-4 ">
 								<label for="name" class="col-3 col-lg-2 col-form-label">姓名</label>
 								<div class="col-9 col-lg-6">
-									<input class="form-control" type="text" name="name" aria-label="user name">
+									<input class="form-control" type="text" name="recipient_name" aria-label="recipient name">
 								</div>
 								<div class="col-9 col-lg-4 ms-auto mt-2 mt-lg-0">
-									<span class="tip">請填寫正確中文姓名</span>
+									<span class="tip delivery-type delivery-home">請填寫正確中文姓名</span>
+									<span class="tip delivery-type delivery-store">請填寫正確中文姓名，以便取貨識別</span>
 								</div>
 							</div>
 
@@ -1110,139 +1116,207 @@
 							<div class="row align-items-center mt-3 ps-lg-4">
 								<label for="phone" class="col-3 col-lg-2 col-form-label">手機</label>
 								<div class="col-9 col-lg-6">
-									<input class="form-control" type="text" name="phone" aria-label="user phone" placeholder="ex:0912345678">
+									<input class="form-control" type="text" name="recipient_phone"  placeholder="ex:0912345678" aria-label="recipient phone">
 								</div>
 								<div class="col-9 col-lg-4 ms-auto mt-2 mt-lg-0">
-									<span class="tip">宅配人員將以此區資料聯繫</span>
+									<span class="tip delivery-type delivery-home">宅配人員將以此區資料聯繫</span>
+									<span class="tip delivery-type delivery-store">請輸入正確格式，以便發送取貨簡訊</span>
 								</div>
 							</div>
 
-							<!-- 宅配 -->
+							<!-- 宅配 delivery-home -->
 							<!-- 收件地址 -->
-							<div class="row mt-3 ps-lg-4">
-								<label for="name" class="col-3 col-lg-2 col-form-label">收件地址</label>
-								<div class="col-9 col-lg-3">
-									<select class="form-select form-mainBlue" name="city" aria-label="city">
-										<option selected="">新北市</option>
-										<option value="1">One</option>
-										<option value="2">Two</option>
-										<option value="3">Three</option>
-									</select>
-								</div>
-								<div class="col-9 col-lg-3 ms-auto mt-3 mt-lg-0">
-									<select class="form-select form-mainBlue" name="area" aria-label="area">
-										<option selected="">板橋區</option>
-										<option value="1">One</option>
-										<option value="2">Two</option>
-										<option value="3">Three</option>
-									</select>
-								</div>
-								<div class="col-10 col-lg-4 d-none d-lg-block">
-									<div class="col">
-										<button class="btnSF btnOtherGray btn-xxl fs-6 fw-medium"> <i class=""></i>加入常用收件人 </button>
+							<div class="delivery-type delivery-home">
+								<div class="row mt-3 ps-lg-4">
+									<label for="name" class="col-3 col-lg-2 col-form-label">收件地址</label>
+									<div class="col-9 col-lg-3">
+										<select class="form-select form-mainBlue" name="recipient_city" disabled aria-label="Recipient city">
+											<option selected="">新北市</option>
+											<option value="1">One</option>
+											<option value="2">Two</option>
+											<option value="3">Three</option>
+										</select>
 									</div>
-									<div class="col">
-										<span class="tip">需專人簽收，勿填郵政信箱</span>
+									<div class="col-9 col-lg-3 ms-auto mt-3 mt-lg-0">
+										<select class="form-select form-mainBlue" name="recipient_area" disabled aria-label="Recipient area">
+											<option selected="">板橋區</option>
+											<option value="1">One</option>
+											<option value="2">Two</option>
+											<option value="3">Three</option>
+										</select>
+									</div>
+									<div class="col-10 col-lg-4 d-none d-lg-block">
+										<div class="col">
+											<button class="btnSF btnOtherGray btn-xxl fs-6 fw-medium add-recipient"> <i class=""></i>加入常用收件人 </button>
+										</div>
+										<div class="col">
+											<span class="tip">需專人簽收，勿填郵政信箱</span>
+										</div>
+									</div>
+								</div>
+								<div class="row ps-lg-4 mt-3 mt-lg-0 mt-lg-n3">
+									<label class="col-3 col-lg-2 col-form-label"></label>
+									<div class="col-9 col-lg-6 ">
+										<input class="form-control" type="text" name="recipient_address" disabled aria-label="Recipient address" placeholder="建國街xxxxxxxx">
 									</div>
 								</div>
 							</div>
-							<div class="row ps-lg-4 mt-lg-n3">
-								<label class="col-3 col-lg-2 col-form-label"></label>
-								<div class="col-9 col-lg-6 ">
-									<input class="form-control" type="text" name="address" aria-label="user address" placeholder="建國街xxxxxxxx">
-								</div>
-							</div>
-
-							<!-- 宅配 -->
+							
+							<!-- 宅配 delivery-home-->
 							<!-- 配送時間 -->
-							<div class="row align-items-center mt-3 ps-lg-4">
-								<label for="name" class="col-3 col-lg-2 col-form-label">配送時間</label>
-								<div class="col-9 col-lg-6">
-									<select class="form-select form-mainBlue" aria-label="Default select example">
-										<option selected="">不限時</option>
-										<option value="1">時段1</option>
-										<option value="2">時段2</option>
-										<option value="3">時段3</option>
-									</select>
+							<div class="delivery-type delivery-home"> 
+								<div class="row align-items-center mt-3 ps-lg-4">
+									<label for="name" class="col-3 col-lg-2 col-form-label">配送時間</label>
+									<div class="col-9 col-lg-6">
+										<select class="form-select form-mainBlue" name="recipient_time" disabled aria-label="Select delivery time">
+											<option selected="" value="0">不限時</option>
+											<option value="1">時段1</option>
+											<option value="2">時段2</option>
+											<option value="3">時段3</option>
+										</select>
+									</div>
 								</div>
 							</div>
 						</div>
 
 						<!-- 發票資料 -->
-						<div class="shopping_cart_invoice_info step_second_section">
+						<div class="shopping_cart_invoice_section step_second_section">
 							<div class="section_title col-12">
 								<div class="row align-items-center justify-content-between ">
-									<div class="col-12 col-lg-2">
+									<div class="col-6 col-lg-3">
 										<h5 class=""><img src="images/svg-pic/doll-Gradient.svg" alt="">發票資料</h5>
+									</div>
+									<div class="col-6 col-lg-9 text-end invoice-company invoice-type">
+										<button type="button" class="btnSF btnBlud002 btn-xxl fs-6 fw-medium mb-2" data-bs-toggle="modal" data-bs-target="#companyModal">選擇常用公司</button>
 									</div>
 								</div>
 							</div>
-							<div class="row align-items-center mt-3 ps-lg-4">
-								<label for="name" class="col-3 col-lg-2 col-form-label">類型</label>
-								<div class="col-9 col-lg-6">
-									<select class="form-select form-mainBlue" aria-label="Default select example">
-										<option selected="">手機載具條碼</option>
-										<option value="1">時段1</option>
-										<option value="2">時段2</option>
-										<option value="3">時段3</option>
-									</select>
+
+							<div class="invoice_type">
+								<div class="row align-items-center mt-3 ps-lg-4">
+									<label for="name" class="col-3 col-lg-2 col-form-label">類型</label>
+									<div class="col-9 col-lg-6">
+										<select class="form-select form-mainBlue" name="invoice_type" aria-label="Select Invoice Type" required>
+											<option >請選擇</option>
+											<option value="barcode">手機載具條碼</option>
+											<option value="person">個人發票</option>
+											<option value="company">公司發票</option>
+										</select>
+									</div>
 								</div>
 							</div>
 							
-							<!-- 手機載具條碼 -->	
-							<div class="row align-items-center mt-3 ps-lg-4">
-								<label class="col-3 col-lg-2 col-form-label"></label>
-								<div class="col-9 col-lg-6">
-									<input class="form-control" type="text" name="name" aria-label="user name">
-								</div>
-							</div>
-
 							<!-- 手機載具條碼 -->
-							<div class="row align-items-center mt-3 ps-lg-4">
-								<label class="col-lg-2 col-form-label"></label>
-								<div class="col-12 col-lg-10">
-									<label class="check_label fs-7">
-										<input type="checkbox" name="sync_user_info">
-										<span class="checkmark"></span>
-										我同意紀錄本次手機條碼為常用載具
-									</label>
-									<p class="tip">手機載具條碼輸入確認綁定後，消費時使用手機條碼載具，系統會自動將發票存入財政部電子發票整合服務平台。如因輸入資料錯誤所致損害，本公司無法補償。</p>
+							<div class="invoice-barcode invoice-type">
+								<div class="mobile_barcode">
+									<div class="row align-items-center mt-3 ps-lg-4">
+										<label class="col-3 col-lg-2 col-form-label"></label>
+										<div class="col-9 col-lg-6">
+											<input class="form-control" type="text" name="mobile_barcode" aria-label="Input Mobile Barcode" value="" disabled>
+										</div>
+									</div>
 								</div>
-							</div>
+
+								<!-- 加入常用手機載具條碼 -->
+								<div class="mobile_barcode_action">
+									<div class="row align-items-center mt-3 ps-lg-4">
+										<label class="col-lg-2 col-form-label"></label>
+										<div class="col-12 col-lg-10">
+											<label class="check_label fs-7">
+												<input type="checkbox" name="add_mobile_barcode" value="1">
+												<span class="checkmark"></span>
+												我同意紀錄本次手機條碼為常用載具
+											</label>
+											<p class="tip">手機載具條碼輸入確認綁定後，消費時使用手機條碼載具，系統會自動將發票存入財政部電子發票整合服務平台。如因輸入資料錯誤所致損害，本公司無法補償。</p>
+										</div>
+									</div>
+								</div>
+							</div>							
 
 							<!-- 個人發票 -->
-							<div class="row align-items-center mt-3 ps-lg-4 ">
-								<label for="name" class="col-3 col-lg-2 col-form-label">姓名</label>
-								<div class="col-9 col-lg-6">
-									<input class="form-control" type="text" name="name" aria-label="user name">
+							<div class="invoice-person invoice-type">
+								<div class="row align-items-center mt-3 ps-lg-4 ">
+									<label for="name" class="col-3 col-lg-2 col-form-label">姓名</label>
+									<div class="col-9 col-lg-6">
+										<input class="form-control" type="text" name="invoice_name" disabled aria-label="Person user name">
+									</div>
+									<div class="col-9 col-lg-4 ms-auto">
+										<div class="row mt-3">
+											<div class="col">
+												<div class="form-check mb-3">
+													<label class="radio_label sync-name" data-target="orderer_name">同訂購人
+														<span class="radiomark"></span>
+													</label>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-check">
+													<label class="radio_label sync-name" data-target="recipient_name">同收件人
+														<span class="radiomark"></span>
+													</label>	
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="col-9 col-lg-4 ms-auto mt-2 mt-lg-0"></div>
 							</div>
 
 							<!-- 公司發票 -->
-							<div class="row align-items-center mt-3 ps-lg-4 ">
-								<label for="name" class="col-3 col-lg-2 col-form-label">統編</label>
-								<div class="col-9 col-lg-6">
-									<input class="form-control" type="text" name="name" aria-label="user name">
+							<div class="invoice-company invoice-type">
+								<div class="row align-items-center mt-3 ps-lg-4 ">
+									<label for="name" class="col-3 col-lg-2 col-form-label">姓名</label>
+									<div class="col-9 col-lg-6">
+										<input class="form-control" type="text" name="invoice_name" disabled aria-label="Company user name">
+									</div>
+									<div class="col-9 col-lg-4 ms-auto mt-2 mt-lg-0">
+										<div class="row mt-3">
+											<div class="col">
+												<div class="form-check mb-3">
+													<label class="radio_label sync-name" data-target="orderer_name">同訂購人
+														<span class="radiomark"></span>
+													</label>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-check">
+													<label class="radio_label sync-name" data-target="recipient_name">同收件人
+														<span class="radiomark"></span>
+													</label>	
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="col-9 col-lg-4 ms-auto mt-2 mt-lg-0"></div>
-							</div>
-							<div class="row align-items-center mt-3 ps-lg-4 ">
-								<label for="name" class="col-3 col-lg-2 col-form-label">公司名稱</label>
-								<div class="col-9 col-lg-">
-									<input class="form-control" type="text" name="name" aria-label="user name">
+
+								<div class="row align-items-center mt-3 ps-lg-4 ">
+									<label for="name" class="col-3 col-lg-2 col-form-label">統編</label>
+									<div class="col-9 col-lg-6">
+										<input class="form-control" type="text" name="company_number" disabled aria-label="Company number">
+									</div>
+									<div class="col-9 col-lg-4 ms-auto mt-2 mt-lg-0">
+										<button type="button" class="btnSF btnOtherGray btn-xxl fs-6 fw-medium mb-2">加入常用公司</button>
+									</div>
 								</div>
-								<div class="col-9 col-lg-4 ms-auto mt-2 mt-lg-0"></div>
+								<div class="row align-items-center mt-3 ps-lg-4 ">
+									<label for="name" class="col-3 col-lg-2 col-form-label">公司名稱</label>
+									<div class="col-9 col-lg-6">
+										<input class="form-control" type="text" name="company_name" disabled aria-label="Company name">
+									</div>
+									<div class="col-9 col-lg-4 ms-auto mt-2 mt-lg-0"></div>
+								</div>
 							</div>
 
 							<div class="row align-items-center mt-3 ps-lg-4">
-								<label class="col-lg-2 col-form-label"></label>
+								<label class="d-none d-lg-block col-lg-2 col-form-label"></label>
 								<div class="col-12 col-lg-10">
 									<label class="check_label">
-										<input type="checkbox" name="sync_user_info">
+										<input type="checkbox" name="agree_terms" required>
 										<span class="checkmark"></span>
 										我同意辦理退貨時，由三花代為處理發票及銷貨退回證明單，以加速退貨退款作業。依法規定，發票一經開立，不得更改或改開公司戶發票。<a href="#" target="_blank">財政部電子發票流程說明</a>。
 									</label>
+									<div class="invalid-feedback">
+										You must agree before submitting.
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1258,11 +1332,24 @@
 							</div>
 							<div class="row align-items-center mt-3">
 								<div class="col-12">
-									<!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
-									<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="有什麼想特別告訴我們的嗎？"></textarea>
+									<textarea class="form-control" id="order-remark" name="order_remark" rows="3" placeholder="有什麼想特別告訴我們的嗎？"></textarea>
 								</div>	
 							</div>
 							
+						</div>
+
+						<div class="shopping_cart_action mt-5">
+							<div class="col-10 mx-auto">
+								<div class="row">	
+									<div class="col-6">
+										<!-- 回步驟 1 -->
+										<button type="button" class="btnSF btnOtherGray btn-xxl fs-6 fw-medium">回購物車</button>
+									</div>
+									<div class="col-6">
+										<button type="button" class="check-order btnSF btnBlud003 btn-xxl fs-6 fw-medium">提交完成訂單</button>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</form>
@@ -1520,90 +1607,54 @@
 		</div>
 	</footer>
 
-	<!-- Modal -->
-	<div class="modal fade" id="changeModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="changeModalLabel" aria-hidden="true">
+	
+	<!-- 選擇常用門市 -->
+	<div class="modal fade" id="storeModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="storeModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="changeModalLabel">請選擇商品規格</h5>
+					<h5 class="modal-title" id="changeModalLabel">常用門市</h5>
+				</div>
+				<div class="modal-body">
+					常用門市畫面	
+				</div>
+				<div class="modal-footer justify-content-center">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary">確定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 常用收件人 -->
+	<div class="modal fade" id="recipientModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="recipientModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="changeModalLabel">請選擇收件人</h5>
 					<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
 				</div>
 				<div class="modal-body">
-					<div class="cart_info pb-3">
-						<div class="row">
-							<div class="col-2">
-								<div class="ratio ratio-1x1">
-									<img src="http://fakeimg.pl/100x100?text=img1" class="img-fluid" alt="">
-								</div>
-							</div>
-							<div class="col-10 px-3">
-								<span>U3C8711</span>
-								<h5>彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
-							</div>	
-						</div>
-					</div>
-					<div class="cart_colors py-3">
-						<p>顏色</p>
-						<div class="cart-color-items">
-							<div class="cart-color-item active">
-								<img src="http://fakeimg.pl/40x40?text=img1" class="img-fluid rounded-circle" alt="">
-								<span class="ms-1">深藍色</span>
-							</div>
-							<div class="cart-color-item">
-								<img src="http://fakeimg.pl/40x40?text=img2" class="img-fluid rounded-circle" alt="">
-								<span class="ms-1">深藍色</span>
-							</div>
-							<div class="cart-color-item">
-								<img src="http://fakeimg.pl/40x40?text=img3" class="img-fluid rounded-circle" alt="">
-								<span class="ms-1">深藍色</span>
-							</div>
-							<div class="cart-color-item">
-								<img src="http://fakeimg.pl/40x40?text=img4" class="img-fluid rounded-circle" alt="">
-								<span class="ms-1">深藍色</span>
-							</div>
-							<div class="cart-color-item">
-								<img src="http://fakeimg.pl/40x40?text=img2" class="img-fluid rounded-circle" alt="">
-								<span class="ms-1">深藍色</span>
-							</div>
-							<div class="cart-color-item">
-								<img src="http://fakeimg.pl/40x40?text=img3" class="img-fluid rounded-circle" alt="">
-								<span class="ms-1">深藍色</span>
-							</div>
-							<div class="cart-color-item">
-								<img src="http://fakeimg.pl/40x40?text=img4" class="img-fluid rounded-circle" alt="">
-								<span class="ms-1">深藍色</span>
-							</div>
-							<div class="cart-color-item">
-								<img src="http://fakeimg.pl/40x40?text=img2" class="img-fluid rounded-circle" alt="">
-								<span class="ms-1">深藍色</span>
-							</div>
-							<div class="cart-color-item">
-								<img src="http://fakeimg.pl/40x40?text=img3" class="img-fluid rounded-circle" alt="">
-								<span class="ms-1">深藍色</span>
-							</div>
-							<div class="cart-color-item">
-								<img src="http://fakeimg.pl/40x40?text=img4" class="img-fluid rounded-circle" alt="">
-								<span class="ms-1">深藍色</span>
-							</div>
-						</div>
-					</div>
-					<div class="cart_size py-3">
-						<p>尺寸</p>
-						<div class="cart-size-items">
-							<div class="cart-size-item active">
-								<span class="">M</span>
-							</div>
-							<div class="cart-size-item">
-								<span class="">L</span>
-							</div>
-							<div class="cart-size-item">
-								<span class="">XL</span>
-							</div>
-							<div class="cart-size-item sold_out">
-								<span class="">XXL</span>
-							</div>
-						</div>
-					</div>
+					
+				</div>
+				<div class="modal-footer justify-content-center">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary">確定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 常用公司 -->
+	<div class="modal fade" id="companyModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="companyModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="changeModalLabel">請選擇常用公司</h5>
+					<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+				</div>
+				<div class="modal-body">
+					
 				</div>
 				<div class="modal-footer justify-content-center">
 					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>

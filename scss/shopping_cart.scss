@@ -142,14 +142,14 @@ main {
 			cursor: pointer;
 			
 
-			&:checked ~ .checkmark {
+			&:checked ~ .radiomark {
 				&:after {
 					display: block;
 				}
 			}
 		}
 
-		.checkmark {
+		.radiomark {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -1041,9 +1041,17 @@ main {
 
 	
 
-	form {
+	form#step-second-form {
 		.container {
 			max-width: 800px;
+
+			.delivery-type {
+				display: none;
+			}
+
+			.invoice-type {
+				display: none;
+			}
 		}
 	}
 
@@ -1083,14 +1091,14 @@ main {
 		}
 	}
 
-	.shopping_cart_shipping_method {
+	.shopping_cart_delivery_section {
 		
 	}
 
-	.shopping_cart_pay_method {
+	.shopping_cart_pay_section {
 	}
 
-	.shopping_cart_orderer_info {
+	.shopping_cart_orderer_section {
 		.check_label {
 			margin-top: .5rem;
 
@@ -1101,7 +1109,7 @@ main {
 		}	
 	}
 
-	.shopping_cart_recipient_info {
+	.shopping_cart_recipient_section {
 
 		.mt-lg-n3 {
 			@include media-breakpoint-up(lg) {
@@ -1110,7 +1118,7 @@ main {
 		}	
 	}
 
-	.shopping_cart_invoice_info {
+	.shopping_cart_invoice_section {
 
 		.check_label {
 			display: inline-block;
@@ -1124,14 +1132,48 @@ main {
 				left: 0;
 			}
 		}
+
+		
+
+		.invoice-person, .invoice-company {
+			.form-check {
+				padding-left: 0;
+
+				.radio_label {
+					font-size: 16px;
+
+					&.active {
+						.radiomark {
+							&:after {
+								display: block;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 
 	.shopping_cart_remark {
 	}
 
-	.shopping_cart_method_store {
+	.shopping_cart_delivery_store {
 		button {
 			width: 100%;
+		}
+	}
+
+	.shopping_cart_action {
+		button {
+			width: 100%;
+			
+			&.btnBlud003 {
+				border: 0;
+
+				&:hover {
+					border: 0;
+				}
+			}
 		}
 	}
 
