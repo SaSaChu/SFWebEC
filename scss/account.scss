@@ -212,15 +212,6 @@
 	font-size: 7rem;
 }
 
-.ac-tagBlue {
-	display: inline-block;
-	font-size: .8rem;
-	color: $white;
-  padding: 0.2rem 0.5rem;
-	border-radius: 0.3rem;
-	background-color: $blue-005;
-}
-
 .ac-w50 {
 	width: 50%;
 
@@ -248,4 +239,37 @@
    }
 	}
 }
+
+.nav-item {
+	.nav-link {
+		&.ac-nav-link {
+			width: 95% !important;
+			padding: 10px 0;
+			color: #4B4B4B;
+			font-size: 1.125rem;
+			background-color: $gray-300;
+			border: 1px solid $gray-400;
+			margin: 0 auto;
+
+			&.active {
+				color: $white;
+				background-color: $blue-700;
+				border: 1px solid $blue-700;
+			} 
+		}
+	}
+}
+
+.pic-gray {
+	-webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+}
+
+
+
+
 
