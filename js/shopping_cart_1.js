@@ -138,6 +138,7 @@ $(function() {
 	}
 
 	// 選擇常用門市
+	
 	let storeModal = $('#storeModal');
 	storeModal.on('show.bs.modal', function() {
 		// Ajax 抓資料
@@ -163,5 +164,54 @@ $(function() {
 			console.log($('#step-second-form').serializeArray());
 		})
 	}
+	// 選擇常用門市
+	$('.select-store').on('click', function() {
+		// 抓 input 或者 點擊的 btn 放 data-xxx 直接抓 data; 
+		let storeName = $(this).parents('.row').find('.select-store-name').text();
+		let storeAddress = $(this).parents('.row').find('.select-store-address').text();
+			console.log(storeName);
+		$('.store-name').text(storeName);
+		$('.store-address').text(storeAddress);
+	});
 	
+	// 選擇常用收件人
+	// step-2 & step-3 可共用
+	$('.select-recipient').on('click', function() {
+		// 抓 input 或者 點擊的 btn 放 data-xxx 直接抓 data; 
+		// recipient_city recipient_area 可放 data ，或分解 address;
+		let selectName = $(this).parents('.row').find('.select-name').text();
+		let selectPhone = $(this).parents('.row').find('.select-phone').text();
+		let selectAddress = $(this).parents('.row').find('.select-address').text();
+			
+		$('input[name="recipient_name"]').val(selectName);
+		$('input[name="recipient_phone"]').val(selectPhone);
+		$('input[name="recipient_address"').val(selectAddress);
+	});
+
+	$('.select-company').on('click', function() {
+		// 抓 input 或者 點擊的 btn 放 data-xxx 直接抓 data; 
+		let companyNumber = $(this).parents('.row').find('.select-company-number').text();
+		let companyName = $(this).parents('.row').find('.select-company-name').text();
+		
+		$('input[name="company_number"]').val(companyNumber);
+		$('input[name="company_name"]').val(companyName);
+	});
+
+	// step3 
+
+	$('.change-recipient').on('click', function() {
+		// ajax 後 資料帶回頁面，要補上 city 跟 area
+		let recipientName = $('input[name="recipient_name"]').val();
+		let recipientPhone = $('input[name="recipient_phone"]').val();
+		let recipientAddress = $('input[name="recipient_phone"]').val();
+		
+		if(recipientName && recipientPhone && recipientAddress) {
+			$('.order-recipient-name').text($('input[name="recipient_name"]').val());
+			$('.order-recipient-phone').text($('input[name="recipient_phone"]').val());
+			$('.order-recipient-address').text($('input[name="recipient_address"]').val());
+			$(this).prev().click();
+		}
+	})
 })
+
+

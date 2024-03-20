@@ -1338,6 +1338,7 @@
 							
 						</div>
 
+						<!-- 訂單動作 -->
 						<div class="shopping_cart_action mt-5">
 							<div class="col-10 mx-auto">
 								<div class="row">	
@@ -1606,7 +1607,6 @@
 			</div>
 		</div>
 	</footer>
-
 	
 	<!-- 選擇常用門市 -->
 	<div class="modal fade" id="storeModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="storeModalLabel" aria-hidden="true">
@@ -1616,11 +1616,33 @@
 					<h5 class="modal-title" id="changeModalLabel">常用門市</h5>
 				</div>
 				<div class="modal-body">
-					常用門市畫面	
+					<div class="row g-0 align-items-center p-lg-2">
+						<div class="col col-lg-3">
+							店號
+						</div>
+						<div class="col col-lg-3">
+							門市名稱
+						</div>
+						<div class="col col-lg-4 text-center">
+							地址
+						</div>
+						<div class="col col-lg-2"></div>
+					</div>
+
+					<!-- @foreach 常用門市 -->
+					<div class="row g-0 align-items-center p-lg-2">
+						<div class="col col-lg-3 select-store-number">958901</div>
+						<div class="col col-lg-3 select-store-name">寶中</div>
+						<div class="col col-lg-4 select-store-address">新北市新店區寶慶街66號</div>
+						<div class="col col-lg-2">
+							<button class="btnSF btnBlud003-line btn-xxl fs-6 fw-medium mb-2 select-store" data-bs-dismiss="modal">選取</button>
+						</div>
+					</div>	
+					<!-- @foreach 常用門市 -->
 				</div>
 				<div class="modal-footer justify-content-center">
 					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-					<button type="button" class="btn btn-primary">確定</button>
+					<!-- <button type="button" class="btn btn-primary">確定</button> -->
 				</div>
 			</div>
 		</div>
@@ -1635,11 +1657,33 @@
 					<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
 				</div>
 				<div class="modal-body">
-					
+					<div class="row g-0 align-items-center p-lg-2">
+						<div class="col col-lg-3">
+							收件人
+						</div>
+						<div class="col col-lg-3">
+							聯絡電話
+						</div>
+						<div class="col col-lg-4 text-center">
+							收件地址
+						</div>
+						<div class="col col-lg-2"></div>
+					</div>
+
+					<!-- @foreach 常用收件人 -->
+					<div class="row g-0 align-items-center p-lg-2">
+						<div class="col col-lg-3 select-name">張小明</div>
+						<div class="col col-lg-3 select-phone">0912345678</div>
+						<div class="col col-lg-4 select-address">新北市板橋區建國街***** 220 </div>
+						<div class="col col-lg-2">
+							<button class="btnSF btnBlud003-line btn-xxl fs-6 fw-medium mb-2 select-recipient" data-bs-dismiss="modal">選取</button>
+						</div>
+					</div>
+					<!-- @foreach 常用收件人 -->
 				</div>
 				<div class="modal-footer justify-content-center">
 					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-					<button type="button" class="btn btn-primary">確定</button>
+					<!-- <button type="button" class="btn btn-primary">確定</button> -->
 				</div>
 			</div>
 		</div>
@@ -1654,11 +1698,32 @@
 					<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
 				</div>
 				<div class="modal-body">
-					
+					<div class="row g-0 align-items-center p-lg-2">
+						
+						<div class="col col-lg-3">
+							統編
+						</div>
+						<div class="col col-lg-4">
+							公司名稱
+						</div>
+						<div class="col col-lg-3"></div>
+						<div class="col col-lg-2"></div>
+					</div>
+
+					<!-- @foreach 常用公司 -->
+					<div class="row g-0 align-items-center p-lg-2">
+						<div class="col col-lg-3 select-company-number">0912345678</div>
+						<div class="col col-lg-4 select-company-name">三花</div>
+						<div class="col col-lg-3"></div>
+						<div class="col col-lg-2">
+							<button class="btnSF btnBlud003-line btn-xxl fs-6 fw-medium mb-2 select-company" data-bs-dismiss="modal">選取</button>
+						</div>
+					</div>		
+					<!-- @foreach 常用公司 -->
 				</div>
 				<div class="modal-footer justify-content-center">
 					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-					<button type="button" class="btn btn-primary">確定</button>
+					<!-- <button type="button" class="btn btn-primary">確定</button> -->
 				</div>
 			</div>
 		</div>
