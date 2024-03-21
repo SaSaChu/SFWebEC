@@ -3179,6 +3179,17 @@ a { cursor: pointer; text-decoration: none !important; }
 .btnSF.btnOtherGray-line { color: #B3B7C6; background-color: #fff; border: 1px solid #B3B7C6; }
 .btnSF.btnOtherGray-line:hover { color: #fff; background-color: #3D6DC1; border: 1px solid #3D6DC1; }
 
+.title-boxs { display: inline-block; width: 100%; height: 250px; background-repeat: no-repeat; background-position: right bottom; background-size: cover; }
+.title-boxs.account-title-bg { background-image: url(../../images/title-bg-pic/bg-Account.webp); }
+@media (max-width: 1199.98px) { .title-boxs.account-title-bg { background-image: url(../../images/title-bg-pic/mob-bg-Account.webp); } }
+@media (max-width: 1199.98px) { .title-boxs { height: 150px; } }
+
+.title-bread { font-size: .85rem; justify-content: center; }
+.title-bread .title-bread-item > a { color: #fff; }
+.title-bread .title-bread-item > a:hover { text-decoration: underline !important; }
+.title-bread .title-bread-item.item-active { color: #fff; }
+.title-bread .title-bread-item:before { float: left; padding-right: 0.5rem; padding-top: 4px !important; color: #fff !important; }
+
 .account-pointsBoxs { display: flex; align-items: center; width: 100%; background-color: #044281; padding: .5rem 1rem; border-radius: 0.25rem; margin-bottom: 1rem; color: #fff; font-size: 1.25rem; }
 @media (max-width: 767.98px) { .account-pointsBoxs { display: none; } }
 
