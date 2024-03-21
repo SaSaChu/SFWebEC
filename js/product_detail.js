@@ -66,6 +66,20 @@ $(function() {
 		},
 	});
 
+	// 點擊也許你也喜歡顏色
+	$('.like-item .color-item').click(function() {
+		$(this).addClass('active').siblings().removeClass('active');
+		$(this).parents('.product-card').find(".card-img img").first().attr("src", $(this).attr('data-img'));
+        $(this).parents('.product-card').find(".card-img img").last().attr("src", $(this).attr('data-img-hover'));
+        $(this).parent().next().find('p').text($(this).attr('data-color-name'));  
+	})	
+
+	$('.recent-item .color-item').click(function() {
+		$(this).addClass('active').siblings().removeClass('active');
+		$(this).parents('.product-card').find(".card-img img").first().attr("src", $(this).attr('data-img'));
+        $(this).parents('.product-card').find(".card-img img").last().attr("src", $(this).attr('data-img-hover'));
+        $(this).parent().next().find('p').text($(this).attr('data-color-name'));  
+	})
 
 	// 產品圖放大
 	$('.blowup-img').map(function() {

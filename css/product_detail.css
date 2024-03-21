@@ -3447,7 +3447,7 @@ main .product_like .like-swiper .likeMobile-button-prev { left: calc(100% -  70p
 main .product_like .like-swiper .likeMobile-button-prev:after { display: flex; align-items: center; justify-content: center; width: 33px; height: 33px; background-color: rgba(17, 28, 71, 0.5); color: #fff; border-radius: 5px; font-size: 16px; font-weight: bold; }
 main .product_like .like-swiper .likeMobile-button-next { right: 0; width: inherit; }
 main .product_like .like-swiper .likeMobile-button-next:after { display: flex; align-items: center; justify-content: center; width: 33px; height: 33px; background-color: rgba(17, 28, 71, 0.5); color: #fff; border-radius: 5px; font-size: 16px; font-weight: bold; }
-main .product_recent .recent_title { background-color: rgba(238, 238, 238, 0.5); }
+main .product_recent .recent_title { background-color: rgba(238, 238, 238, 0.5); max-width: 1440px; margin: 0 auto; }
 main .product_recent .recent_title h3, main .product_recent .recent_title .h3 { color: #111c47; }
 main .product_recent .recentWeb-button-prev { left: 0; width: inherit; }
 main .product_recent .recentWeb-button-prev:before { content: ""; width: 0; height: 0; border-style: solid; border-width: 4px 8px 4px 0; border-color: transparent #959595 transparent transparent; }

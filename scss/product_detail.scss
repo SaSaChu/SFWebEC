@@ -533,7 +533,9 @@ main {
 	.product_recent {
 		.recent_title {
 			background-color: rgba(238, 238, 238, 0.5);
-
+			max-width: 1440px;
+			margin: 0 auto;
+			
 			h3 {
 				color: #111c47;
 			}
