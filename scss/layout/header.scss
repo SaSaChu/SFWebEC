@@ -449,8 +449,8 @@ header {
 									input {
 										display: block;
 									}
-	
-									.fa {
+									
+									.icon {
 										top: 50%;
 										right: .5rem;
 										transform: translateY(-50%);
@@ -459,6 +459,16 @@ header {
 										background: #FF9C00;
 										color: white;	
 									}
+
+									// .fa {
+									// 	top: 50%;
+									// 	right: .5rem;
+									// 	transform: translateY(-50%);
+									// 	width: 35px;
+									// 	height: 35px;
+									// 	background: #FF9C00;
+									// 	color: white;	
+									// }
 								}
 
 								input{
@@ -476,7 +486,7 @@ header {
 									padding: 0 20px;
 								}
 								
-								.fa{
+								.icon {
 									display: flex;
 									justify-content: center;
 									align-items: center;
@@ -490,8 +500,24 @@ header {
 									color: #fff;
 									text-align: center;
 									font-size: 1.2em;
-									cursor: pointer;
+									cursor: pointer;	
 								}
+								// .fa{
+								// 	display: flex;
+								// 	justify-content: center;
+								// 	align-items: center;
+								// 	box-sizing: border-box;
+								// 	width: 40px;
+								// 	height: 40px;
+								// 	position: absolute;
+								// 	top: 0;
+								// 	right: 0;	
+								// 	border-radius: 50%;
+								// 	color: #fff;
+								// 	text-align: center;
+								// 	font-size: 1.2em;
+								// 	cursor: pointer;
+								// }
 								
 							}
 						}
@@ -582,8 +608,8 @@ header {
 							}
 	
 							i {
-								width: 20px !important;
-								height: 20px !important;
+								// width: 20px !important;
+								// height: 20px !important;
 								font-size: 1.25rem;
 								color: var(--main-white);
 
