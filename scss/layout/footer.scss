@@ -35,6 +35,10 @@ footer {
 		padding: 1.6rem 0;
 		font-size: 13px;
 		background-color: $gray-200;
+
+		&.footer-four-white {
+			background-color: $white;
+		}
 	}
 
 	.footer_widget {
