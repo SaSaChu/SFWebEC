@@ -1,8 +1,9 @@
-// @import "Ginkgo";
-@import "GinkgoMixin";
-@import "GinkgoUi";
+@import "Ginkgo";
 @import "bootstrap/bootstrap";
 @import "components/color";
+@import "components/input";
+@import "components/link";
+@import "components/btn";
 
 footer {
 	padding: 7rem 0 0 0;
@@ -13,7 +14,7 @@ footer {
 
 	.footer-first {
 		padding: 6rem 0;
-		background-color: var(--main-blue);
+		background-color: $main-blue;
 
 		@include range-width(0, 769px) {
 			padding: 1rem 0;
@@ -22,13 +23,13 @@ footer {
 
 	.footer-second {
 		padding: 3rem 0;
-		background-color: rgba(17, 28, 71, 0.5);
+		background-color: $gray-600;
 	}
 
 	.footer-third {
 		padding: 2rem 0;
 		font-size: 13px;
-		color: #111c47;
+		color: $main-blue;
 	}
 
 	.footer-four {
@@ -64,7 +65,7 @@ footer {
 	
 						i {
 							font-size: 30px;
-							color: #fff;
+							color: $white;
 							opacity: .6;
 						}
 					}
@@ -94,8 +95,8 @@ footer {
 				}
 
 				.btn {
-					background-color: var(--main-red);
-					color: var(--main-white);
+					background-color: $main-red;
+					color: $white;
 
 					&:hover {
 						i {
@@ -116,7 +117,7 @@ footer {
 			font-size: 15px;
 			font-weight: 300;
 			line-height: 2;
-			color: #fff;
+			color: $white;
 			opacity: .6;
 		}
 
@@ -153,7 +154,7 @@ footer {
 
 						.accordion-button {
 							background-color: transparent;
-							color: var(--main-white);
+							color: $white;
 							padding: 1rem 0;
 
 							&:focus {
@@ -247,14 +248,14 @@ footer {
 
 			&:last-child {
 				display: none;
-				border: 2px solid #b3b7c6;
+				border: 2px solid $other-001;
 
 				&.show {
 					display: flex;
 				}
 
 				i {
-					color: #b3b7c6;
+					color: $other-001;
 				}
 			}
 		}

@@ -17,9 +17,11 @@
 	
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-	<link rel="stylesheet" type="text/css" href="css/product_list.css">
-	<link rel="stylesheet" type="text/css" href="css/icon.css">
 	<link rel="stylesheet" type="text/css" href="css/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="css/icon.css">
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/product_list.css">
+	
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,30 +33,24 @@
 
 <body>
 	<header class="header">
-		<!-- 跑馬燈 -->
 		<section class="marquee-wrapper">
 			<div class="container-fluid p-0">
 				<div class="row g-0">
 					<div class="col-11 mx-auto position-relative">
 						<div id="marqueeControls" class="marquee vertical carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
 							<div class="carousel-inner">
-								<!-- 跑馬燈內容 @foreach start -->
 								<div class="carousel-item active">
 									<p>官網獨家優惠, 全館滿千免運費1</p>
 								</div>
-								<!-- 跑馬燈內容 @foreach end -->
-
 								<div class="carousel-item">
 									<p>官網獨家優惠, 全館滿千免運費2</p>
 								</div>
 								<div class="carousel-item">
 									<p>官網獨家優惠, 全館滿千免運費3</p>
 								</div>
-								
 							</div>
 						</div>
 						<span class="marquee-btn-close">
-							<!-- <i class="fa-solid fa-circle-xmark"></i> -->
 							<i class="icon-icon-close-ad"></i>
 						</span>
 					</div>
@@ -67,18 +63,18 @@
 				<nav class="navbar navbar-expand-lg">
 					<div class="container-fluid p-0">
 						<div class="col-11 mx-auto">
-							<!-- 手機版 Menu -->
+							<!-- Mobile Menu -->
 							<div class="mobile_menu d-flex d-lg-none justify-content-between align-items-center">
 								<div class="col"> 
 									<!-- Mobile Toggler Bar -->
-									<button class="navbar-toggler p-2 fs-7" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarMobileMenu" aria-controls="offcanvasNavbarMobileMenu" aria-label="mobile-menu-btn">
-										<span class="navbar-toggler-icon"></span>
+									<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarMobileMenu" aria-controls="offcanvasNavbarMobileMenu" aria-label="mobile-menu-btn">
+										<span class="icon icon-icon-menu"></span>
 									</button>
 
 									<!-- Mobile Search  -->
 									<button class="navbar-toggler mobile_serach" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
 										aria-controls="collapseExample" aria-expanded="false" aria-label="mobile search">
-										<span class="fa-solid fa-magnifying-glass"></span>
+										<span class="icon icon-icon-search"></span>
 									</button>
 
 									<!-- Mobile Menu Offcanvas -->
@@ -146,20 +142,21 @@
 								<!-- Mobile Nav Brand -->
 								<div class="col">
 									<a class="navbar-brand" href="#">
-										<img src="images/header/sf_logo.webp" alt="fake ing">
+										<img src="images/header/header-logo-moble.svg" class="img-fluid" alt="sunflower mobile logo">
 									</a>
 								</div>
 
 								<div class="col text-end">
-			
 									<!-- Mobile User -->
-									<button class="navbar-toggler p-2 fs-7" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarMobileUser" aria-controls="offcanvasNavbarMobileUser" aria-label="mobile-user-btn">
-										<i class="fa-solid fa-circle-user"></i>
+									<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarMobileUser" aria-controls="offcanvasNavbarMobileUser" aria-label="mobile-user-btn">
+										<i class="icon icon-account_circle"></i>
 									</button>
 
 									<!-- Mobile Cart -->
-									<button class="navbar-toggler p-2 fs-7" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarMobileCart" aria-controls="offcanvasNavbarMobileCart" aria-label="mobile-cart-btn">
-										<i class="fa-solid fa-cart-shopping"></i>
+									<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarMobileCart" aria-controls="offcanvasNavbarMobileCart" aria-label="mobile-cart-btn">
+										<span class="cart-items-count" data-cart-items="2">
+											<i class="icon icon-icon-shopping"></i>
+										</span>
 									</button>
 
 									<!-- Mobile User Offcanvas -->
@@ -206,32 +203,12 @@
 										</div>
 										<div class="offcanvas-body">
 											<div class="cart-items">
-												<!-- 手機版購物車商品 @foreach start -->
 												<div class="cart-item">
 													<div class="card border-0">
 														<div class="row g-0">
 														<div class="col-4 border d-flex align-items-center justify-content-center">
-															<picture class="ratio ratio-1x1">
-																<img src="https://fakeimg.pl/85x65" class="img-fluid img-thumbnail" alt="...">
-															</picture>
-														</div>
-														<div class="col-8">
-															<div class="card-body py-0">
-															<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
-															<p class="card-text color-size">深灰藍, S</p>
-															<p class="card-text quantity-price d-flex align-items-end justify-content-between"><span>1 x NT$252</span><span><i class="fa-solid fa-trash-can"></i></span></p>
-															</div>
-														</div>
-														</div>
-													</div>
-												</div>
-												<!-- 手機版購物車商品 @foreach end -->
-												<div class="cart-item">
-													<div class="card border-0">
-														<div class="row g-0">
-														<div class="col-4 border d-flex align-items-center justify-content-center">
-															<picture class="ratio ratio-1x1">
-																<img src="https://fakeimg.pl/85x65" class="img-fluid img-thumbnail" alt="...">
+															<picture class="p-1">
+																<img src="https://fakeimg.pl/85x65" class="img-fluid" alt="...">
 															</picture>
 														</div>
 														<div class="col-8">
@@ -248,8 +225,8 @@
 													<div class="card border-0">
 														<div class="row g-0">
 														<div class="col-4 border d-flex align-items-center justify-content-center">
-															<picture class="ratio ratio-1x1">
-																<img src="https://fakeimg.pl/85x65" class="img-fluid img-thumbnail" alt="...">
+															<picture class="p-1">
+																<img src="https://fakeimg.pl/85x65" class="img-fluid" alt="...">
 															</picture>
 														</div>
 														<div class="col-8">
@@ -262,17 +239,34 @@
 														</div>
 													</div>
 												</div>
-												
+												<div class="cart-item">
+													<div class="card border-0">
+														<div class="row g-0">
+														<div class="col-4 border d-flex align-items-center justify-content-center">
+															<picture class="p-1">
+																<img src="https://fakeimg.pl/85x65" class="img-fluid" alt="...">
+															</picture>
+														</div>
+														<div class="col-8">
+															<div class="card-body py-0">
+															<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+															<p class="card-text color-size">深灰藍, S</p>
+															<p class="card-text quantity-price d-flex align-items-end justify-content-between"><span>1 x NT$252</span><span><i class="fa-solid fa-trash-can"></i></span></p>
+															</div>
+														</div>
+														</div>
+													</div>
+												</div>
 											</div>
 											<div class="col px-3 mb-3">
-												<a href="#" class="btn btn-lg mobile-cart-checkout-btn" role="button">結帳去</a>
+												<button class="btn btn-lg mobile-cart-checkout-btn" type="button">結帳去</button>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 
-							<!-- 網頁版 Menu  -->
+							<!-- Web Menu  -->
 							<div class="collapse navbar-collapse web_menu" id="navbarCollapse">
 
 								<!-- Web Nav Menu-->
@@ -280,8 +274,7 @@
 									<ul class="navbar-nav navbar-menu">
 										<!-- 選單 -->
 										<li class="nav-item dropdown">
-											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false">
-												<i class="icon-icon-menu me-2"></i><span>選單</span></a>
+											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false"><i class="icon icon-icon-menu me-3"></i><span>選單</span></a>
 
 											<!-- Menu -->
 											<ul class="dropdown-menu">
@@ -418,12 +411,16 @@
 																</ul>
 															</div>
 															<div class="col-3 d-none d-lg-block">
-																<div class="card ratio ratio-1x1">
+																<!-- Card -->
+																<div class="card">
+																	<!-- Image -->
 																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
 																</div>
 															</div>
 															<div class="col-3 d-none d-lg-block">
-																<div class="card ratio ratio-1x1">
+																<!-- Card -->
+																<div class="card">
+																	<!-- Image -->
 																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
 																</div>
 															</div>
@@ -446,12 +443,16 @@
 													<div class="col-11 mx-auto">
 														<div class="row m-0">
 															<div class="col-3 d-none d-lg-block">
-																<div class="card ratio ratio-1x1">
+																<!-- Card -->
+																<div class="card">
+																	<!-- Image -->
 																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
 																</div>
 															</div>
 															<div class="col-3 d-none d-lg-block">
-																<div class="card ratio ratio-1x1">
+																<!-- Card -->
+																<div class="card">
+																	<!-- Image -->
 																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
 																</div>
 															</div>
@@ -583,7 +584,9 @@
 													<div class="col-11 mx-auto">
 														<div class="row m-0">
 															<div class="col-3 d-none d-lg-block">
-																<div class="card ratio ratio-1x1">
+																<!-- Card -->
+																<div class="card">
+																	<!-- Image -->
 																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
 																</div>
 															</div>
@@ -696,7 +699,9 @@
 																</ul>
 															</div>	
 															<div class="col-3 d-none d-lg-block">
-																<div class="card ratio ratio-1x1">
+																<!-- Card -->
+																<div class="card">
+																	<!-- Image -->
 																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
 																</div>
 															</div>
@@ -711,7 +716,7 @@
 								<!-- Web Nav Brand -->
 								<div class="col">
 									<a class="navbar-brand" href="#">
-										<img src="images/header/sf_logo.webp" alt="fake img">
+										<img src="images/header/header-logo-web.svg" alt="fake img">
 									</a>
 								</div>
 								<!-- Web Nav Actions -->
@@ -722,12 +727,11 @@
 											<form action="" class="search-bar">
 												<input type="search" name="search" pattern=".*\S.*" placeholder="請輸入文字" required>
 												<i class="icon icon-icon-search search-btn"></i>
-												<!-- <i class="fa fa-search search-btn"></i> -->
 											</form>
 										</li>
 										<li class="nav-item dropdown action-user">
 											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false">
-												<i class="icon icon-icon-user"></i>
+												<i class="icon icon-account_circle"></i>	
 												<!-- <i class="fa-solid fa-circle-user"></i> -->
 											</a>
 											<ul class="dropdown-menu p-0">
@@ -760,45 +764,24 @@
 										<li class="nav-item action-love">
 											<a class="nav-link" href="#">
 												<i class="icon icon-icon-favorite"></i>
-												<!-- <i class="fa-regular fa-heart"></i> -->
 											</a>
 										</li>
 										<li class="nav-item dropdown action-cart">
 
 											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false">
-												<span class="apple" data-cart-items="2">
+												<span class="cart-items-count" data-cart-items="2">
 													<i class="icon icon-icon-shopping"></i>
 												</span>
 											</a>
 
 											<div class="dropdown-menu p-0">
 												<div class="cart-items">
-													<!-- 網頁版購物車商品 @foreach start -->
 													<div class="cart-item">
 														<div class="card border-0">
 															<div class="row g-0">
 															<div class="col-4 border d-flex align-items-center justify-content-center">
-																<picture class="ratio ratio-1x1">
-																	<img src="https://fakeimg.pl/85x65" class="img-fluid img-thumbnail" alt="...">
-																</picture>
-															</div>
-															<div class="col-8">
-																<div class="card-body py-0">
-																<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
-																<p class="card-text color-size">深灰藍, S</p>
-																<p class="card-text quantity-price d-flex align-items-end justify-content-between"><span>1 x NT$252</span><span><i class="fa-solid fa-trash-can"></i></span></p>
-																</div>
-															</div>
-															</div>
-														</div>
-													</div>
-													<!-- 網頁版購物車商品 @foreach end-->
-													<div class="cart-item">
-														<div class="card border-0">
-															<div class="row g-0">
-															<div class="col-4 border d-flex align-items-center justify-content-center">
-																<picture class="ratio ratio-1x1">
-																	<img src="https://fakeimg.pl/85x65" class="img-fluid img-thumbnail" alt="...">
+																<picture class="p-1">
+																	<img src="https://fakeimg.pl/85x65" class="img-fluid" alt="...">
 																</picture>
 															</div>
 															<div class="col-8">
@@ -815,8 +798,8 @@
 														<div class="card border-0">
 															<div class="row g-0">
 															<div class="col-4 border d-flex align-items-center justify-content-center">
-																<picture class="ratio ratio-1x1">
-																	<img src="https://fakeimg.pl/85x65" class="img-fluid img-thumbnail" alt="...">
+																<picture class="p-1">
+																	<img src="https://fakeimg.pl/85x65" class="img-fluid" alt="...">
 																</picture>
 															</div>
 															<div class="col-8">
@@ -829,11 +812,29 @@
 															</div>
 														</div>
 													</div>
-													
+													<div class="cart-item">
+														<div class="card border-0">
+															<div class="row g-0">
+															<div class="col-4 border d-flex align-items-center justify-content-center">
+																<picture class="p-1">
+																	<img src="https://fakeimg.pl/85x65" class="img-fluid" alt="...">
+																</picture>
+															</div>
+															<div class="col-8">
+																<div class="card-body py-0">
+																<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+																<p class="card-text color-size">深灰藍, S</p>
+																<p class="card-text quantity-price d-flex align-items-end justify-content-between"><span>1 x NT$252</span><span><i class="fa-solid fa-trash-can"></i></span></p>
+																</div>
+															</div>
+															</div>
+														</div>
+													</div>
 												</div>
 												<div class="col px-3 mb-3">
 													<button class="btn btn-lg cart-checkout-btn" type="button">結帳去</button>
 												</div>
+												
 											</div>
 										</li>
 										<li class="nav-item dropdown action-language">

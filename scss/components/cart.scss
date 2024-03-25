@@ -1,5 +1,10 @@
+@import "Ginkgo";
 @import "bootstrap/bootstrap";
 @import "components/color";
+@import "components/color";
+@import "components/input";
+@import "components/link";
+@import "components/btn";
 
 .product-card {
 
@@ -30,7 +35,7 @@
 
 		a {
 			font-size: 1rem;
-			color: var(--main-blue);
+			color: $main-blue;
 		}
 	}
 
@@ -38,32 +43,33 @@
 		display: flex;
 		flex-wrap: wrap;
 		padding-bottom: .5rem;
-		border-bottom: 1px solid #efefef;;
+		border-bottom: 1px solid $gray-100;
+
 		.col-6 {
 			&:first-child {
 				text-align: left;
 				.card-price {
 					font-weight: bold;
-					color: var(--main-red);
+					color: $main-red;
 
 					&:before {
 						content: attr(data-symbol)
 					}
 				}
 			}
+
 			&:last-child {
 				text-align: right;
 				.item-action {
-					color: #8093a8;
+					color: $other-002;
 					cursor: pointer;
 
 					&.active, &:hover {
-						color: var(--main-blue);
+						color: $other-002;
 					}
 				}
 			}
 		}
-		
 	}
 	
 	.color-items {
@@ -96,7 +102,7 @@
 	.color-name {
 		padding-top: .5rem;
 		font-size: 14px;
-		color: #6b6b6b;
+		color: $gray-600;
 	}
 }
 
@@ -118,10 +124,10 @@
 				.sub-color-name {
 					display: flex;
 					font-size: 14px;
-					color: var(--main-blue);
+					color: $main-blue;
 					
 					span {
-						color: #6b6b6b;
+						color: $gray-600;
 					}
 				}
 
@@ -164,7 +170,7 @@
 					.sub-size {
 						display: flex;
 						font-size: 14px;
-						color: var(--main-blue);
+						color: $main-blue;
 					}
 
 					.size-item {
@@ -175,13 +181,13 @@
 						width: 35px;
 						height: 35px;
 						font-size: 16px;
-						color: #fff;
+						color: $white;
 						background-color: #9d9d9d;
 						border-radius: 50%;
 						text-transform: uppercase;
 
 						&.active {
-							background-color: #00a2d9;
+							background-color: $blue-006;
 						}	
 
 						&.sold_out {
@@ -215,7 +221,7 @@
 					}
 	
 					&.sub-action-add {
-						background-color: #b10e0e;
+						background-color: $main-red;
 						border-radius: 0 0 .25rem 0;
 						padding: .5rem;
 					}
@@ -297,11 +303,11 @@
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				background-color: #b10e0e;
+				background-color: $main-red;
 				border-radius: 22.5px;
 				width: 60%;
 				text-align: left;
-				color: var(--main-white);
+				color: $white;
 
 				@include media-breakpoint-down(md) {
 					width: 100%;
@@ -327,7 +333,7 @@
 
 
 				&.active {
-					border: 1px solid #00a2d9;
+					border: 1px solid $blue-006;
 					border-radius: 5px;
 				}
 
@@ -347,7 +353,7 @@
 
 				&.active {
 					span {
-						color: var(--main-white);
+						color: $white;
 						background-color: $blue-006;
 					}
 				}
@@ -367,8 +373,8 @@
 					width: 36px;
 					height: 36px;
 					border-radius: 50%;
-					background-color: #b3b7c6;
-					color: var(--main-white);
+					background-color: $other-001;
+					color: $white;
 				}
 			}	
 		}
@@ -438,8 +444,8 @@
 
 		.offcanvas_button {
 			button {
-				background-color: var(--main-red);
-				color: white;
+				background-color: $main-red;
+				color: $white;
 				width: 100%;
 			}
 		}

@@ -11,11 +11,11 @@ header {
 		z-index: 1051;
 	}
 
-	.nav-item {
-		.dropdown-menu {
-			z-index: 1;
-		}	
-	}	
+	// .nav-item {
+	// 	.dropdown-menu {
+	// 		z-index: 1;
+	// 	}	
+	// }	
  
   .marquee-wrapper {
 		display: flex;
@@ -81,9 +81,6 @@ header {
 			.icon {
 				color: #fff;
 			}
-			// .navbar-toggler-icon {
-			// 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-			// }
 
 			button {
 				&:focus {
@@ -324,9 +321,10 @@ header {
 							display: block;
 							visibility: hidden;
 							opacity: 0;
+							box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 							transform: translateY(15px);
 							transition: all .3s ease-in-out;
-							z-index: 1;
+							// z-index: 1;
 
 							&.w-100 {
 								border: 0;
@@ -342,7 +340,6 @@ header {
 								animation-fill-mode: both;
 								transform: translateY(0px);
 							}
-
 
 							.level-styled {
 								position: relative;
@@ -440,11 +437,12 @@ header {
 				}
 	
 				.navbar-action {
+					align-items: flex-end;
 					justify-content: flex-end;
 	
 					.nav-item {
 						margin-left: 1rem;
-						height: 40px;
+						// height: 40px;
 
 						&.action-search {
 							form{ 
