@@ -20,12 +20,12 @@ main {
 	background-size: cover;
 
 	&.title-bg {
-			background-image: url(../images/title-bg-pic/bg-ShoppingGuide.webp);
-			background-position: left;
+			background-image: url(../images/title-bg-pic/bg-CustomerService.webp);
+			background-position: center;
 			background-size: cover;
 
 			@include media-breakpoint-down(xl) {
-				background-image: url(../images/title-bg-pic/bg-ShoppingGuide.webp);
+				background-image: url(../images/title-bg-pic/bg-CustomerService.webp);
 			}
 	}
 
@@ -164,7 +164,8 @@ main {
 					}
 	
 					.accordion-body {
-						padding: .5rem 20px;
+						padding: 0 20px 0.5rem 24px;
+						// padding: .5rem 20px;
 						// background-color: rgba(238, 238, 238, 0.5);
 	
 						.ul_li_links {

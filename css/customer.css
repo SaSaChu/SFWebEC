@@ -3356,8 +3356,8 @@ footer .footer-four-li > p:last-child a:after { display: none; }
 main { position: relative; }
 
 .title-boxs { display: inline-block; width: 100%; height: 250px; background-repeat: no-repeat; background-position: right bottom; background-size: cover; }
-.title-boxs.title-bg { background-image: url(../images/title-bg-pic/bg-ShoppingGuide.webp); background-position: left; background-size: cover; }
-@media (max-width: 1199.98px) { .title-boxs.title-bg { background-image: url(../images/title-bg-pic/bg-ShoppingGuide.webp); } }
+.title-boxs.title-bg { background-image: url(../images/title-bg-pic/bg-CustomerService.webp); background-position: center; background-size: cover; }
+@media (max-width: 1199.98px) { .title-boxs.title-bg { background-image: url(../images/title-bg-pic/bg-CustomerService.webp); } }
 @media (max-width: 1199.98px) { .title-boxs { height: 150px; } }
 
 .title-bread { font-size: .85rem; justify-content: center; }
@@ -3384,7 +3384,7 @@ main { position: relative; }
 .sideMenu aside.aside_widget .web_menu_widget .accordion .accordion-item .accordion-header .side_widget_title[aria-expanded="true"] { color: #36558b; padding-bottom: .5rem; }
 .sideMenu aside.aside_widget .web_menu_widget .accordion .accordion-item .accordion-header .side_widget_title[aria-expanded="true"] img:nth-of-type(1) { display: none; }
 .sideMenu aside.aside_widget .web_menu_widget .accordion .accordion-item .accordion-header .side_widget_title[aria-expanded="true"] img:nth-of-type(2) { display: inline-block; }
-.sideMenu aside.aside_widget .web_menu_widget .accordion .accordion-item .accordion-body { padding: .5rem 20px; }
+.sideMenu aside.aside_widget .web_menu_widget .accordion .accordion-item .accordion-body { padding: 0 20px 0.5rem 24px; }
 .sideMenu aside.aside_widget .web_menu_widget .accordion .accordion-item .accordion-body .ul_li_links { padding-left: calc(.5rem + 10px); margin-bottom: 0; list-style: none; }
 .sideMenu aside.aside_widget .web_menu_widget .accordion .accordion-item .accordion-body .ul_li_links li.active a { color: #36558b; }
 .sideMenu aside.aside_widget .web_menu_widget .accordion .accordion-item .accordion-body .ul_li_links li a { font-size: 15px; line-height: 2.73; color: #737373; }
