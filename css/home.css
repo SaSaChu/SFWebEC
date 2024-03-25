@@ -3305,6 +3305,7 @@ footer .footer-first { padding: 6rem 0; background-color: #111c47; }
 footer .footer-second { padding: 3rem 0; background-color: #6c757d; }
 footer .footer-third { padding: 2rem 0; font-size: 13px; color: #111c47; }
 footer .footer-four { padding: 1.6rem 0; font-size: 13px; background-color: #e9ecef; }
+footer .footer-four.footer-four-white { background-color: #fff; }
 footer .footer_widget.socilas_widget { display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
 @media screen and (max-width: 768px) and (min-width: 0) { footer .footer_widget.socilas_widget { padding: 1rem 0; text-align: center; } }
 footer .footer_widget.socilas_widget .ul_li_socials { display: flex; padding: 0; list-style: none; }
