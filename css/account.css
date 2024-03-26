@@ -3405,10 +3405,6 @@ footer .footer-four-li > p:last-child a:after { display: none; }
 @media (max-width: 767.98px) { .account-memberBoxs { text-align: left; } }
 .account-memberBoxs > h5, .account-memberBoxs > .h5 { display: inline-block; width: 100%; color: #044281; text-align: center; font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; }
 
-.account-redLine { border-bottom: 3px solid #B10E0E; }
-
-.account-grayLine { border-bottom: 3px solid #adb5bd; }
-
 .accoutn-contact-icon { display: inline-block; width: 20px; height: 20px; line-height: 18px; color: white; text-align: center; background-color: #0083D2; border-radius: 10px; margin-right: 5px; }
 
 .accoutn-phoneBoxs { display: flex; align-items: center; flex-wrap: wrap; width: 100%; }

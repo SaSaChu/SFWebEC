@@ -222,18 +222,30 @@ main {
 }
 
 .customer-text {
-	display: inline-block;
+	// display: inline-block;
 	color: #4b4b4b;
 	font-size: 1.125rem;
 	line-height: 2;
 	font-weight: 300;
 
 	li {
-		padding-bottom: 15px;
+		// padding-bottom: 15px;
 
 		&::marker {
 			font-size: 1.7rem;
 		}
+	}
+
+	dt {
+		&:before {
+			display: inline-block;
+			content: '•';
+			margin-right: 5px;
+		}
+	}
+
+	dd {
+		padding-left: 11px;
 	}
 }
 

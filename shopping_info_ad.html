@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui">
 
-	<title>103_客戶服務-隱私權條款</title>
+	<title>204_廣告專區</title>
 
 	<script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
 	<script language="javascript" type="text/javascript" src="js/public.js"></script>
@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<link rel="stylesheet" type="text/css" href="css/icon.css">
 	<link rel="stylesheet" type="text/css" href="css/public.css">
-	<link rel="stylesheet" type="text/css" href="css/customer.css">
+	<link rel="stylesheet" type="text/css" href="css/shopping_info_v2.css">
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,7 +67,6 @@
 									<button class="navbar-toggler mobile_serach" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
 										aria-controls="collapseExample" aria-expanded="false" aria-label="mobile search">
 										<span class="icon icon-icon-search"></span>
-										<!-- <span class="fa-solid fa-magnifying-glass"></span> -->
 									</button>
 
 									<!-- Mobile Menu Offcanvas -->
@@ -135,7 +134,7 @@
 								<!-- Mobile Nav Brand -->
 								<div class="col">
 									<a class="navbar-brand" href="#">
-										<img src="images/header/sf_logo.webp" class="img-fluid" alt="sunflower mobile logo">
+										<img src="images/header/header-logo-moble.svg" class="img-fluid" alt="sunflower mobile logo">
 									</a>
 								</div>
 
@@ -143,14 +142,12 @@
 									<!-- Mobile User -->
 									<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarMobileUser" aria-controls="offcanvasNavbarMobileUser" aria-label="mobile-user-btn">
 										<i class="icon icon-account_circle"></i>
-										<!-- <i class="fa-solid fa-circle-user"></i> -->
 									</button>
 
 									<!-- Mobile Cart -->
 									<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarMobileCart" aria-controls="offcanvasNavbarMobileCart" aria-label="mobile-cart-btn">
 										<span class="cart-items-count" data-cart-items="2">
 											<i class="icon icon-icon-shopping"></i>
-											<!-- <i class="fa-solid fa-cart-shopping"></i> -->
 										</span>
 									</button>
 
@@ -711,7 +708,7 @@
 								<!-- Web Nav Brand -->
 								<div class="col">
 									<a class="navbar-brand" href="#">
-										<img src="images/header/sf_logo.webp" alt="fake img">
+										<img src="images/header/header-logo-web.svg" alt="fake img">
 									</a>
 								</div>
 								<!-- Web Nav Actions -->
@@ -726,7 +723,8 @@
 										</li>
 										<li class="nav-item dropdown action-user">
 											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false">
-												<i class="fa-solid fa-circle-user"></i>
+												<i class="icon icon-account_circle"></i>	
+												<!-- <i class="fa-solid fa-circle-user"></i> -->
 											</a>
 											<ul class="dropdown-menu p-0">
 												<li>
@@ -757,7 +755,7 @@
 										</li>
 										<li class="nav-item action-love">
 											<a class="nav-link" href="#">
-												<i class="fa-regular fa-heart"></i>
+												<i class="icon icon-icon-favorite"></i>
 											</a>
 										</li>
 										<li class="nav-item dropdown action-cart">
@@ -765,7 +763,6 @@
 											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false">
 												<span class="cart-items-count" data-cart-items="2">
 													<i class="icon icon-icon-shopping"></i>
-													<!-- <i class="fa-solid fa-cart-shopping"></i> -->
 												</span>
 											</a>
 
@@ -836,7 +833,6 @@
 											<!-- Toggle -->
 											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false">
 												<i class="icon icon-icon-lang"></i>
-												<!-- <i class="fa-solid fa-globe"></i> -->
 											</a>
 											
 											<!-- Menu -->
@@ -875,148 +871,49 @@
 	</header>
 	
 	<main class="">
+		
 		<!-- banner -->
-		<!-- 0321 從 header 搬到 main account.scss 增加 title-boxs 語法-->
-		<section class="title-boxs title-bg d-flex align-items-center justify-content-center">
-			<div class="row">
-				<div class="col-12">
-					<h2 class="text-white text-center">隱私權條款</h2>
+		<section class="title-boxs">
+			<!-- <div class="col-11"> -->
+				<div class="row g-0 align-items-center">
+					<div class="col-11 col-lg-4 mx-auto">
+						<div class="title-content">
+							<h2 class="text-mainBlue">廣告專區</h2>
+							<nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb">
+								<ol class="breadcrumb title-bread">
+									<li class="breadcrumb-item title-bread-item"><a href="#">首頁</a></li>
+									<li class="breadcrumb-item title-bread-item"><a href="#">三花品牌誌</a></li>
+									<li class="breadcrumb-item title-bread-item item-active" aria-current="page">廣告專區</li>
+								</ol>
+							</nav>	
+						</div>
+					</div>
+					<div class="col-12 col-lg-8 title-bg">
+						<picture>
+							<img src="images/title-bg-pic/bg-Brand-01.webp" alt="">
+						</picture>
+					</div>
 				</div>
-				<div class="col-12">
-					<nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb">
-					  <ol class="breadcrumb title-bread">
-					    <li class="breadcrumb-item title-bread-item"><a href="#">首頁</a></li>
-					    <li class="breadcrumb-item title-bread-item"><a href="#">顧客服務</a></li>
-					    <li class="breadcrumb-item title-bread-item item-active" aria-current="page">隱私權條款</li>
-					  </ol>
-					</nav>
-				</div>
-			</div>
+			<!-- </div> -->
 		</section>
 
 		<!-- 資料顯示區 -->
-		<div class="container-xxl mt-lg-5 position-relative">
-			<div class="row">
-				<!-- Left Side -->
-					<!-- Left Side Menu - Web -->
-					<div class="sideMenu col-12 col-md-2">
-						<aside class="aside_widget">
-							<div class="web_menu_widget d-none d-lg-block">
-								<div class="accordion" id="accordionSideMenu">
-									<!-- item01 -->
-									<div class="accordion-item border-0">
-										<h3 class="accordion-header" id="heading1">
-											<button class="accordion-button side_widget_title pt-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-												<picture class="me-2">
-													<img class="img-fluid mb-1" src="images/svg-pic/doll-Gray.svg" alt="">
-													<img class="img-fluid mb-1" src="images/svg-pic/doll-Gradient.svg" alt="">
-												</picture>
-												顧客服務
-											</button>
-										</h3>
-										<div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionSideMenu">
-											<div class="accordion-body">
-												<ul class="ul_li_links">
-													<li class=""><a href="#!">聯絡三花</a></li>
-													<li class=""><a href="#!">防詐騙聲明</a></li>
-													<li class="active"><a href="#!">隱私權條款</a></li>
-													<li class=""><a href="#!">COOKIE 政策</a></li>
-													<li class=""><a href="#!">使用條款</a></li>
-													<li class=""><a href="#!">免責聲明</a></li>
-													<li class=""><a href="#!">會員條款</a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<!-- item02 -->
-									<div class="accordion-item border-0">
-										<h3 class="accordion-header" id="heading1">
-											<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-												<picture class="me-2">
-													<img class="img-fluid mb-1"  src="images/svg-pic/doll-Gray.svg" alt="">
-													<img class="img-fluid mb-1"  src="images/svg-pic/doll-Gradient.svg" alt="">
-												</picture>
-												購物說明
-											</button>
-										</h3>
-										<div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionSideMenu">
-											<div class="accordion-body">
-												<ul class="ul_li_links">
-													<li class=""><a href="#!">常見問題</a></li>
-													<li class=""><a href="#!">新手上路</a></li>
-													<li class=""><a href="#!">帳戶問題</a></li>
-													<li class=""><a href="#!">付款方式</a></li>
-													<li class=""><a href="#!">商品相關</a></li>
-													<li class=""><a href="#!">優惠與促銷活動</a></li>
-													<li class=""><a href="#!">電子票卷與繳費</a></li>
-													<li class=""><a href="#!">結帳方式</a></li>
-													<li class=""><a href="#!">配送方式</a></li>
-													<li class=""><a href="#!">退換貨說明</a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+		<div class="container-xxl my-5">
+			<div class="row mx-auto mb-4">
+				<div class="col-auto account-redLine pt-0 pb-2 fs-4 fw-semi">廣告專區</div>
+				<div class="col account-grayLine"></div>
+			</div>
 
-							<!-- Left Side Menu - Mobile -->
-							<div class="mobile_menu_widget d-block d-lg-none">
-								<div class="col-11 mx-auto py-2">
-									<div class="row">
-										<div class="col-6">
-											<select class="form-select border-0" aria-label="Default select example">
-												<option selected="" value="1">顧客服務</option>
-												<option value="2">購物說明</option>
-											</select>
-										</div>
-										<div class="col-6">
-											<select class="form-select border-0" aria-label="Default select example">
-												<option selected="" value="1">防詐騙聲明</option>
-												<option value="2">聯絡三花</option>
-												<option value="2">隱私權條款</option>
-												<option value="3">COOKIE 政策</option>
-												<option value="3">使用條款</option>
-												<option value="3">免責聲明</option>
-												<option value="3">會員條款</option>
-											</select>
-										</div>
-									</div>
-								</div>
-							</div>
-						</aside>
-					</div>
-
-				<!-- Right Side -->
-				<div class="col-md-10 col-12">
-					<div class="row mx-auto">
-						<div class="col-12 mb-4 mt-4 mt-md-0">
-							<span class="h3 text-blue005 lh-sm">隱私權條款</span>
-						</div>
-					</div>
-
-					<div class="row mx-auto">
-						<div class="col-12">
-							<span class="customer-text">
-								三花棉業（以下簡稱三花）針對消費者的個人資料之蒐集和運用，依中華民國「個人資料保護法」及本隱私權保護聲明，三花 已加強維護您的隱私權。提醒您，網際網路是公開的請勿在網路上公開透露您個人資料，資料有可能會被他人蒐集和利用，尤其是網路上公開的發言場合，如聊天室、 留言版，更應避免發表個人身份、密碼或電子郵件等相關個人資訊。
-	 							</br></br>
-								當您瀏覽三花相關網站時，不會主動要求輸入個人資料。 當您完成購物流程或參加其他活動時，三花會要求您登錄個人資料，以便完成交易與相關服務。 訂閱電子報也只需提供Em ail帳號，使用者想取消訂閱，可隨時至三花相關網站取消訂閱。三花及其相關網站所取得的個人資料，都僅供三花內部依照原說明的使用目的和範圍。 除事先說明或依台灣法律規定外，三花不會擅自將您的個人資料提供給第三者或作為其他目的之用。
-								</br></br>
-								三花會自動記錄您在網站內的瀏覽，這些資料僅作為流量分析和網路行為調查，便於改善網站服務品質。三花保留更改本聲明各項內容之權利，將於網站同一位置公告更改聲明外，不另對會員進行個別通知。若您對本隱私權保護政策有任何問題，請直接與本公司聯繫。
-								</br></br>
-								依個人資料保護法第 3 條規定，除非有其他法令限制，您就您所提供之個人資料享有查詢或請求閱覽、請求製給複製本、請求補充或更正、請求停止蒐集處理或利用(包含撤回同意、反對本公司繼續處理您的資料)、請求刪除的權利。
-								</br></br>
-								如果您欲行使上述權利或是有其他諮詢、投訴事項，可以逕由客服中心聯絡客服提出意見，我們將盡快回覆您的問題。
-								</br></br> 
-								本公司受理您行使各項個人權利，若為查詢或請求閱覽、請求製給複製本，本公司將於提出請求之15日內回覆，必要時得再延長15日，本公司將以書面通知您延長原因；若為請求補充或更正、請求停止蒐集處理或利用、請求刪除，本公司將於提出請求之30日內回覆，必要時得再延長30日，本公司將以書面通知您延長原因。
-							</span>
-						</div>
-					</div>
-				</div>
+			<div class="row gx-5 mx-auto">
+				<div class="col-4 test-01">2</div>
+				<div class="col-4 test-01">3</div>
+				<div class="col-4 test-01">4</div>
 			</div>
 		</div>
+
 	</main>
 
-	<footer style="height: 2000px;">
+	<footer>
 		<div class="container-fluid p-0">
 			<div class="row g-0 footer-four ">
 				<div class="col-11 mx-auto text-blue001">
