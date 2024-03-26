@@ -4,7 +4,7 @@
 @import "components/input";
 @import "components/link";
 @import "components/btn";
-@import "layout/header";
+// @import "layout/header";
 @import "layout/footer";
 
 
@@ -81,17 +81,18 @@ main {
 		}
 	}
 
-	&.title-bg {
-		// position: absolute;
-		// top: 0;
-		// right: 0;
-		background-image: url('../images/title-bg-pic/bg-Brand-02.webp');
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: 250px;
+	.title-bg {
+		
+		// background-image: url('../images/title-bg-pic/bg-Brand-02.webp');
+		// background-repeat: no-repeat;
+		// background-size: cover;
+		// height: 250px;
+		img {
+			width: 100%;
+		}
 
 		@include media-breakpoint-down(lg) {
-			height: 150px;
+			// height: 150px;
 		}
 	}
 

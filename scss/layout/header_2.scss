@@ -3,69 +3,69 @@
 @import "components/color";
 
 header {
-  display: inline-block;
-  width: 100%;
-  
+	display: inline-block;
+	width: 100%;
+
 	@include media-breakpoint-down(lg) {
 		position: sticky;
 		top: 0;
 		z-index: 1051;
 	}
  
-  .marquee-wrapper {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		position: relative;
-		min-height: 1rem;
-		max-height: 2rem;
-		overflow: hidden;
-     	background-color: $main-red;
-	
-	.marquee {
-		min-height: 1rem;
-		max-height: 2rem;
-		overflow: hidden;
-
-		&.vertical {
-			transition: all;
-			&.carousel {
-				.carousel-inner {
-					> .carousel-item {
-						text-align: center;
-						transition: all .6s ease-in-out;
-
-						p {
-							padding: .25rem 0;
-							color: $white;
-						}
+	.marquee-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			min-height: 1rem;
+			max-height: 2rem;
+			overflow: hidden;
+			background-color: $main-red;
 		
-						&.carousel-item-next:not(.carousel-item-start),
-						&.active.carousel-item-end {
-							transform: translateY(100%);
-						}
-		
-						&.carousel-item-prev:not(.carousel-item-end),
-						&.active.carousel-item-start {
-							transform: translateY(-100%);
+		.marquee {
+			min-height: 1rem;
+			max-height: 2rem;
+			overflow: hidden;
+
+			&.vertical {
+				transition: all;
+				&.carousel {
+					.carousel-inner {
+						> .carousel-item {
+							text-align: center;
+							transition: all .6s ease-in-out;
+
+							p {
+								padding: .25rem 0;
+								color: $white;
+							}
+			
+							&.carousel-item-next:not(.carousel-item-start),
+							&.active.carousel-item-end {
+								transform: translateY(100%);
+							}
+			
+							&.carousel-item-prev:not(.carousel-item-end),
+							&.active.carousel-item-start {
+								transform: translateY(-100%);
+							}
 						}
 					}
 				}
-			}
-		}	
-	}
+			}	
+		}
 
-	.marquee-btn-close {
-		position: absolute;
-		top: 50%;
-		right: .625rem;
-		transform: translateY(-50%);
-		display: flex;
-		color: $white;
-		font-size: 1rem;
-		z-index: 1;
+		.marquee-btn-close {
+			position: absolute;
+			top: 50%;
+			right: .625rem;
+			transform: translateY(-50%);
+			display: flex;
+			color: $white;
+			font-size: 1rem;
+			z-index: 1;
+		}
 	}
-  }
 
 	.nav-wrapper {
 		background-color: $main-blue;
@@ -374,6 +374,10 @@ header {
 							transform: translateY(15px);
 							transition: all .3s ease-in-out;
 
+							&[data-bs-popper] {
+								margin-top: 0;
+							}
+
 							&.w-100 {
 								border: 0;
 								top: 100%;
@@ -433,20 +437,12 @@ header {
 
 								&.first-level {
 
-									
-
 									.heading {
 										font-size: 1.125rem;
 									}
 
 									.list-styled {
-
 										.list-styled-item {
-											&:hover {
-												.second-level {
-													display: block;
-												}
-											}
 											.list-styled-link {
 												font-size: 1.125rem;
 											}
@@ -456,11 +452,19 @@ header {
 								}
 
 								&.second-level {
-									display: none;
+									// display: none;
+
+									&.show {
+										display: inline-block;
+									}
 								}
 
 								&.third-level {
-									display: none;
+									// display: none;
+
+									&.show {
+										display: inline-block;
+									}
 
 									&:after {
 										border: 0;
@@ -761,31 +765,30 @@ header {
 		}
 	}
 
-	// 0321 title-boxs, title-bread 已移到 account.scss ，但不確定是不是有其他使用，暫時保留，視情況可刪除
 	.title-boxs {
 		display: inline-block;
 		width: 100%;
 		height: 250px;
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: cover;
+		background-repeat: no-repeat;
+		background-position: right bottom;
+		background-size: cover;
 
-    &.account-title-bg {
+		&.account-title-bg {
 			background-image: url(../../images/title-bg-pic/bg-Account.webp);
 
 			@include media-breakpoint-down(xl) {
 				background-image: url(../../images/title-bg-pic/mob-bg-Account.webp);
 			}
-    }
+		}
 
-    @include media-breakpoint-down(xl) {
+    	@include media-breakpoint-down(xl) {
 			height: 150px;
 		}
 	}
 
 	.title-bread {
-		  font-size: .85rem; 
-			justify-content: center;
+		font-size: .85rem; 
+		justify-content: center;
 
 		.title-bread-item {
 
