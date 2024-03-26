@@ -1,4 +1,5 @@
 @import "Ginkgo";
+@import "components/color";
 // @import "bootstrap/bootstrap";
 
 
@@ -83,8 +84,18 @@ img {
 }
 
 
+.account-redLine {
+    border-bottom: 3px solid $main-red;
+}
+
+.account-grayLine {
+    border-bottom: 3px solid $gray-500;
+}
+
+
+
 // 切完版可以把這邊刪掉  ↓
-.test-01 {border: 1px solid rgba(255, 0, 0, .3);}
+.test-01 {border: 1px solid rgba(255, 0, 0, .3); height: 300px;}
 .test-bg-01 {background-color: rgba(0, 128, 0, 0.2);}
 .test-bg-02 {background-color: rgba(0, 0, 255, 0.2);}
 // 切完版可以把這邊刪掉  ↑
