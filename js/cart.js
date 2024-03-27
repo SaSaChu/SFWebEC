@@ -20,7 +20,7 @@ $(function () {
     // 網頁版 購物車
     $('.action-cart').on('click', function() {
         
-        if (window.screen.width > 769) {
+        if (window.screen.width >= 992) {
             // 確認哪個產品要顯示 product-sub-card，將不是目標的其他產品 product-sub-card 刪除
             let target = $(this).parent().find('.product-sub-card');
             $('.product-sub-card').not(target).remove();
