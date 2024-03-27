@@ -3220,6 +3220,7 @@ header .nav-wrapper .navbar .mobile_menu #offcanvasNavbarMobileUser .offcanvas-b
 header .nav-wrapper .navbar .mobile_menu #offcanvasNavbarMobileUser .offcanvas-body .nav-item .unit-style:after { content: attr(data-unit); margin-left: .5rem; font-weight: 400; color: #161616; }
 header .nav-wrapper .navbar .mobile_menu #offcanvasNavbarMobileUser .offcanvas-body .nav-item .unit-style:first-child { padding-bottom: 0; }
 header .nav-wrapper .navbar .mobile_menu #offcanvasNavbarMobileUser .offcanvas-body .nav-item .nav-link { color: rgba(35, 35, 35, 0.7); }
+header .nav-wrapper .navbar .mobile_menu #offcanvasNavbarMobileUser .offcanvas-body .nav-item .nav-link.logout { font-weight: 500; color: #044281; text-align: center; }
 header .nav-wrapper .navbar .mobile_menu #offcanvasNavbarMobileCart .offcanvas-header { padding: .5rem 1rem; background-color: #111c47; }
 header .nav-wrapper .navbar .mobile_menu #offcanvasNavbarMobileCart .offcanvas-body .cart-items .cart-item { padding: 1rem 0; }
 header .nav-wrapper .navbar .mobile_menu #offcanvasNavbarMobileCart .offcanvas-body .cart-items .cart-item:not(:last-child) { border-bottom: 1px solid #f8f9fa; }

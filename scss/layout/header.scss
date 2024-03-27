@@ -231,6 +231,12 @@ header {
 
 							.nav-link {
 								color: rgba(35, 35, 35, 0.7);
+
+								&.logout {
+									font-weight: 500;
+									color: $blue-700;
+									text-align: center;
+								}
 							}
 						}
 					}
