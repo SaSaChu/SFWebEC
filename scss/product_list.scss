@@ -239,9 +239,14 @@ main {
 			}
 
 			.mobile_menu_widget {
-				background-color: $white;		
+				background-color: $white;
+				
+				.dropdown {
+					.dropdown-menu {
+						width: 100%;
+					}
+				}
 			}
-			
 	
 			.ad_widget {
 				.swiper-pagination {
@@ -269,7 +274,7 @@ main {
 				@include media-breakpoint-down(lg) {
 					position: sticky;
 					top: 221px;
-					z-index: 1051;
+					z-index: 1050;
 					background-color: $white;
 				}
 
@@ -397,7 +402,7 @@ main {
 						}
 						
 						&:last-of-type {
-							color: #b10e0e;
+							color: $main-red;
 						}
 					}
 				}
@@ -456,7 +461,7 @@ main {
 					}
 					
 					&:last-of-type {
-						color: #b10e0e;
+						color: $main-red;
 					}
 				}
 			}

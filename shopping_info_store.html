@@ -13,7 +13,6 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<link rel="stylesheet" type="text/css" href="css/icon.css">
 	<link rel="stylesheet" type="text/css" href="css/public.css">
-	<link rel="stylesheet" type="text/css" href="css/layout/header_2.css">	
 	<link rel="stylesheet" type="text/css" href="css/shopping_info_v2.css">
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -305,11 +304,9 @@
 														<div class="row m-0">
 															<!-- 第一層項目 Hover 時 透過 ajax (publis.js) 去撈第二層資料 -->
 															<div class="col px-3 level-styled first-level">
-																<!-- Heading -->
-																<div class="mb-3 fw-bold heading">優惠區</div>
 																<!-- Links -->
-																<ul class="list-styled mb-5 px-2 mb-md-0">
-																	<li class="list-styled-item">
+																<ul class="list-styled mb-5 mb-md-0">
+																	<li class="list-styled-item active">
 																		<a class="list-styled-link" href="#">內褲</a>
 																	</li>
 																	<li class="list-styled-item">
@@ -334,12 +331,10 @@
 															</div>
 															<!-- 第二層項目 Hover 時 透過 ajax (publis.js) 去撈第三層資料 -->
 															<div class="col px-3 level-styled second-level">
-																<!-- Heading -->
-																<div class="mb-3 fw-bold heading">內褲</div>
 																<!-- Links -->
-																<ul class="list-styled mb-5 px-2 mb-md-0">
+																<ul class="list-styled mb-5 mb-md-0">
 																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">襪子</a>
+																		<a class="list-styled-link active" href="#">襪子</a>
 																	</li>
 																	<li class="list-styled-item">
 																		<a class="list-styled-link" href="#">冬季商品</a>
@@ -349,6 +344,7 @@
 																	</li>
 																</ul>
 															</div>
+															<!-- 第三層項目 -->
 															<div class="col-4 level-styled third-level">
 																<div class="row">
 																	<div class="col-6">
@@ -420,14 +416,14 @@
 																<!-- Card -->
 																<div class="card">
 																	<!-- Image -->
-																	<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/" alt="...">
+																	<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
 																</div>
 															</div>
 															<div class="col-3">
 																<!-- Card -->
 																<div class="card">
 																	<!-- Image -->
-																	<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/" alt="...">
+																	<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
 																</div>
 															</div>
 														</div>
@@ -452,22 +448,21 @@
 																<!-- Card -->
 																<div class="card">
 																	<!-- Image -->
-																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
+																	<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
 																</div>
 															</div>
 															<div class="col-3 d-none d-lg-block">
 																<!-- Card -->
 																<div class="card">
 																	<!-- Image -->
-																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
+																	<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
 																</div>
 															</div>
-															<div class="col-1 px-3 level-styled first-level">
-																<!-- Heading -->
-																<div class="mb-3 fw-bold heading">優惠區</div>
+															<!-- 第一層項目 Hover 時 透過 ajax (publis.js) 去撈第二層資料 -->
+															<div class="col px-3 level-styled first-level">
 																<!-- Links -->
-																<ul class="list-styled mb-5 px-2 mb-md-0">
-																	<li class="list-styled-item">
+																<ul class="list-styled mb-5 mb-md-0">
+																	<li class="list-styled-item active">
 																		<a class="list-styled-link" href="#">內褲</a>
 																	</li>
 																	<li class="list-styled-item">
@@ -490,13 +485,12 @@
 																	</li>
 																</ul>
 															</div>
-															<div class="col-1 px-3 level-styled second-level">
-																<!-- Heading -->
-																<div class="mb-3 fw-bold heading">內衣褲</div>
+															<!-- 第二層項目 Hover 時 透過 ajax (publis.js) 去撈第三層資料 -->
+															<div class="col px-3 level-styled second-level">
 																<!-- Links -->
-																<ul class="list-styled mb-5 px-2 mb-md-0">
+																<ul class="list-styled mb-5 mb-md-0">
 																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">襪子</a>
+																		<a class="list-styled-link active" href="#">襪子</a>
 																	</li>
 																	<li class="list-styled-item">
 																		<a class="list-styled-link" href="#">冬季商品</a>
@@ -506,70 +500,73 @@
 																	</li>
 																</ul>
 															</div>
-															<div class="col-2 col-md level-styled third-level">
-																<!-- Links -->
-																<ul class="list-styled mb-5 px-2 mb-md-0">
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">男內褲 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
-																	</li>
-																</ul>
+															<!-- 第三層項目 -->
+															<div class="col-4 level-styled third-level">
+																<div class="row">
+																	<div class="col-6">
+																		<ul class="list-styled mb-5 px-2 mb-md-0">
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">男內褲 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																			</li>
+																		</ul>
+																	</div>
+																	<div class="col-6">
+																		<ul class="list-styled mb-0 fs-base">
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																			</li>
+																		</ul>	
+																	</div>
+																</div>
 															</div>
-															<div class="col-2 col-md level-styled third-level">
-																<!-- Links -->
-																<ul class="list-styled mb-0 fs-base">
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
-																	</li>
-																</ul>
-															</div>	
 														</div>
 													</div>
 													
@@ -593,15 +590,14 @@
 																<!-- Card -->
 																<div class="card">
 																	<!-- Image -->
-																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
+																	<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
 																</div>
 															</div>
-															<div class="col-1 px-3 level-styled first-level">
-																<!-- Heading -->
-																<div class="mb-3 fw-bold heading">優惠區</div>
+															<!-- 第一層項目 Hover 時 透過 ajax (publis.js) 去撈第二層資料 -->
+															<div class="col px-3 level-styled first-level">
 																<!-- Links -->
-																<ul class="list-styled mb-5 px-2 mb-md-0">
-																	<li class="list-styled-item">
+																<ul class="list-styled mb-5 mb-md-0">
+																	<li class="list-styled-item active">
 																		<a class="list-styled-link" href="#">內褲</a>
 																	</li>
 																	<li class="list-styled-item">
@@ -624,13 +620,12 @@
 																	</li>
 																</ul>
 															</div>
-															<div class="col-1 px-3 level-styled second-level">
-																<!-- Heading -->
-																<div class="mb-3 fw-bold heading">內衣褲</div>
+															<!-- 第二層項目 Hover 時 透過 ajax (publis.js) 去撈第三層資料 -->
+															<div class="col px-3 level-styled second-level">
 																<!-- Links -->
-																<ul class="list-styled mb-5 px-2 mb-md-0">
+																<ul class="list-styled mb-5 mb-md-0">
 																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">襪子</a>
+																		<a class="list-styled-link active" href="#">襪子</a>
 																	</li>
 																	<li class="list-styled-item">
 																		<a class="list-styled-link" href="#">冬季商品</a>
@@ -640,75 +635,78 @@
 																	</li>
 																</ul>
 															</div>
-															<div class="col-2 col-md level-styled third-level">
-																<!-- Links -->
-																<ul class="list-styled mb-5 px-2 mb-md-0">
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">男內褲 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
-																	</li>
-																</ul>
+															<!-- 第三層項目 -->
+															<div class="col-4 level-styled third-level">
+																<div class="row">
+																	<div class="col-6">
+																		<ul class="list-styled mb-5 px-2 mb-md-0">
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">男內褲 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																			</li>
+																		</ul>
+																	</div>
+																	<div class="col-6">
+																		<ul class="list-styled mb-0 fs-base">
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																			</li>
+																			<li class="list-styled-item">
+																				<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																			</li>
+																		</ul>	
+																	</div>
+																</div>
 															</div>
-															<div class="col-2 col-md level-styled third-level">
-																<!-- Links -->
-																<ul class="list-styled mb-0 fs-base">
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
-																	</li>
-																</ul>
-															</div>	
 															<div class="col-3 d-none d-lg-block">
 																<!-- Card -->
 																<div class="card">
 																	<!-- Image -->
-																	<img class="card-img" src="https://fakeimg.pl/400x400/" alt="...">
+																	<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
 																</div>
 															</div>
 														</div>

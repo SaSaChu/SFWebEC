@@ -12,60 +12,60 @@ header {
 		z-index: 1051;
 	}
  
-  .marquee-wrapper {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		position: relative;
-		min-height: 1rem;
-		max-height: 2rem;
-		overflow: hidden;
-     	background-color: $main-red;
-	
-	.marquee {
-		min-height: 1rem;
-		max-height: 2rem;
-		overflow: hidden;
-
-		&.vertical {
-			transition: all;
-			&.carousel {
-				.carousel-inner {
-					> .carousel-item {
-						text-align: center;
-						transition: all .6s ease-in-out;
-
-						p {
-							padding: .25rem 0;
-							color: $white;
-						}
+	.marquee-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			min-height: 1rem;
+			max-height: 2rem;
+			overflow: hidden;
+			background-color: $main-red;
 		
-						&.carousel-item-next:not(.carousel-item-start),
-						&.active.carousel-item-end {
-							transform: translateY(100%);
-						}
-		
-						&.carousel-item-prev:not(.carousel-item-end),
-						&.active.carousel-item-start {
-							transform: translateY(-100%);
+		.marquee {
+			min-height: 1rem;
+			max-height: 2rem;
+			overflow: hidden;
+
+			&.vertical {
+				transition: all;
+				&.carousel {
+					.carousel-inner {
+						> .carousel-item {
+							text-align: center;
+							transition: all .6s ease-in-out;
+
+							p {
+								padding: .25rem 0;
+								color: $white;
+							}
+			
+							&.carousel-item-next:not(.carousel-item-start),
+							&.active.carousel-item-end {
+								transform: translateY(100%);
+							}
+			
+							&.carousel-item-prev:not(.carousel-item-end),
+							&.active.carousel-item-start {
+								transform: translateY(-100%);
+							}
 						}
 					}
 				}
-			}
-		}	
-	}
+			}	
+		}
 
-	.marquee-btn-close {
-		position: absolute;
-		top: 50%;
-		right: .625rem;
-		transform: translateY(-50%);
-		display: flex;
-		color: $white;
-		font-size: 1rem;
-		z-index: 1;
+		.marquee-btn-close {
+			position: absolute;
+			top: 50%;
+			right: .625rem;
+			transform: translateY(-50%);
+			display: flex;
+			color: $white;
+			font-size: 1rem;
+			z-index: 1;
+		}
 	}
-  }
 
 	.nav-wrapper {
 		background-color: $main-blue;
@@ -102,12 +102,6 @@ header {
 						justify-content: center;
 						align-items: center;
 						box-sizing: border-box;
-						// width: 40px;
-						// height: 40px;
-						// position: absolute;
-						// top: 0;
-						// right: 0;	
-						// border-radius: 50%;
 						color: $white;
 						text-align: center;
 						font-size: 1.25rem;
@@ -374,6 +368,10 @@ header {
 							transform: translateY(15px);
 							transition: all .3s ease-in-out;
 
+							&[data-bs-popper] {
+								margin-top: 0;
+							}
+
 							&.w-100 {
 								border: 0;
 								top: 100%;
@@ -411,7 +409,7 @@ header {
 										position: absolute;
 										left: 0;
 										bottom: 0;
-										height: 90%;
+										height: 100%;
 										border-left: 3px solid $main-blue;
 										
 									}
@@ -422,7 +420,20 @@ header {
 									list-style: none;
 									
 									.list-styled-item {
-										padding-top: 1rem;
+										position: relative;
+										margin-bottom: 1rem;
+										padding-left: .5rem;
+
+										&.active {
+											&:before {
+												content: '';
+												position: absolute;
+												left: 0;
+												bottom: 0;
+												height: 90%;
+												border-left: 3px solid $main-blue;	
+											}
+										}
 
 										.list-styled-link {
 											font-size: 1rem;
@@ -433,20 +444,12 @@ header {
 
 								&.first-level {
 
-									
-
 									.heading {
 										font-size: 1.125rem;
 									}
 
 									.list-styled {
-
 										.list-styled-item {
-											&:hover {
-												.second-level {
-													display: block;
-												}
-											}
 											.list-styled-link {
 												font-size: 1.125rem;
 											}
@@ -456,11 +459,19 @@ header {
 								}
 
 								&.second-level {
-									display: none;
+									// display: none;
+
+									&.show {
+										display: inline-block;
+									}
 								}
 
 								&.third-level {
-									display: none;
+									// display: none;
+
+									&.show {
+										display: inline-block;
+									}
 
 									&:after {
 										border: 0;
@@ -642,6 +653,7 @@ header {
 							width: 40px;
 							height: 40px;
 							padding: .625rem;
+							border-radius: 50%;	
 	
 							&.show {
 								background-color: $main-yellow;
@@ -732,7 +744,6 @@ header {
 									
 								}
 							}
-							
 						}
 
 						&.action-language {

@@ -3175,20 +3175,21 @@ header .nav-wrapper .navbar .web_menu .navbar-menu .nav-item .nav-link { display
 header .nav-wrapper .navbar .web_menu .navbar-menu .nav-item .nav-link.show { color: #FF9C00; }
 header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown:not(.position-static) .dropdown-menu { top: calc(100% + 1.125rem); }
 header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu { display: block; visibility: hidden; opacity: 0; box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); transform: translateY(15px); transition: all .3s ease-in-out; }
+header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu[data-bs-popper] { margin-top: 0; }
 header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu.w-100 { border: 0; top: 100%; left: 0; }
 header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu.show { opacity: 1; visibility: visible; animation-name: fadeIn; animation-duration: 1s; animation-fill-mode: both; transform: translateY(0px); }
 header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled { position: relative; }
 header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled:after { content: ""; position: absolute; top: 0; right: 0; height: 100%; border-right: 1px solid #cacaca; }
 header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled .heading { position: relative; padding-left: .5rem; font-size: 1rem; }
-header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled .heading:before { content: ''; position: absolute; left: 0; bottom: 0; height: 90%; border-left: 3px solid #111c47; }
+header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled .heading:before { content: ''; position: absolute; left: 0; bottom: 0; height: 100%; border-left: 3px solid #111c47; }
 header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled .list-styled { padding: 0; list-style: none; }
-header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled .list-styled .list-styled-item { padding-top: 1rem; }
+header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled .list-styled .list-styled-item { position: relative; margin-bottom: 1rem; padding-left: .5rem; }
+header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled .list-styled .list-styled-item.active:before { content: ''; position: absolute; left: 0; bottom: 0; height: 90%; border-left: 3px solid #111c47; }
 header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled .list-styled .list-styled-item .list-styled-link { font-size: 1rem; color: #232323; }
 header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled.first-level .heading { font-size: 1.125rem; }
-header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled.first-level .list-styled .list-styled-item:hover .second-level { display: block; }
 header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled.first-level .list-styled .list-styled-item .list-styled-link { font-size: 1.125rem; }
-header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled.second-level { display: none; }
-header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled.third-level { display: none; }
+header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled.second-level.show { display: inline-block; }
+header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled.third-level.show { display: inline-block; }
 header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled.third-level:after { border: 0; }
 header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled.third-level .list-styled .list-styled-item:first-child { padding-top: 0; }
 header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled.third-level .list-styled .list-styled-item .list-styled-link { font-size: 1.125rem; }
@@ -3212,7 +3213,7 @@ header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.action-cart .drop
 header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.action-cart .dropdown-menu .cart-item .card .card-body .card-text.quantity-price span:last-child { display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; background-color: #B3B7C6; border-radius: 50%; }
 header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.action-cart .dropdown-menu .cart-item .card .card-body .card-text.quantity-price span:last-child i { color: #fff; }
 header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.action-cart .dropdown-menu .cart-checkout-btn { width: 100%; font-size: 18px; font-weight: 500; color: #fff; background-color: #0083D2; }
-header .nav-wrapper .navbar .web_menu .navbar-action .nav-item .nav-link { width: 40px; height: 40px; padding: .625rem; }
+header .nav-wrapper .navbar .web_menu .navbar-action .nav-item .nav-link { width: 40px; height: 40px; padding: .625rem; border-radius: 50%; }
 header .nav-wrapper .navbar .web_menu .navbar-action .nav-item .nav-link.show { background-color: #FF9C00; border-radius: 50%; }
 header .nav-wrapper .navbar .web_menu .navbar-action .nav-item .nav-link .icon { display: flex; justify-content: center; align-items: center; box-sizing: border-box; width: 40px; height: 40px; position: absolute; top: 0; right: 0; border-radius: 50%; color: #fff; text-align: center; font-size: 1.25rem; cursor: pointer; }
 header .nav-wrapper .navbar .web_menu .navbar-action .nav-item .nav-link span[data-cart-items]:before { content: attr(data-cart-items); display: flex; align-items: center; justify-content: center; position: absolute; top: 0; right: 0; height: 20px; width: 20px; font-size: 11px; font-weight: 500; background-color: #B10E0E; border: 1px solid #fff; border-radius: 50%; color: #fff; }

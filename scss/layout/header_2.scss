@@ -415,7 +415,7 @@ header {
 										position: absolute;
 										left: 0;
 										bottom: 0;
-										height: 90%;
+										height: 100%;
 										border-left: 3px solid $main-blue;
 										
 									}
@@ -426,7 +426,20 @@ header {
 									list-style: none;
 									
 									.list-styled-item {
-										padding-top: 1rem;
+										position: relative;
+										margin-bottom: 1rem;
+										padding-left: .5rem;
+
+										&.active {
+											&:before {
+												content: '';
+												position: absolute;
+												left: 0;
+												bottom: 0;
+												height: 90%;
+												border-left: 3px solid $main-blue;	
+											}
+										}
 
 										.list-styled-link {
 											font-size: 1rem;
@@ -774,10 +787,10 @@ header {
 		background-size: cover;
 
 		&.account-title-bg {
-			background-image: url(../../images/title-bg-pic/bg-Account.webp);
+			background-image: url(../images/title-bg-pic/bg-Account.webp);
 
 			@include media-breakpoint-down(xl) {
-				background-image: url(../../images/title-bg-pic/mob-bg-Account.webp);
+				background-image: url(../images/title-bg-pic/mob-bg-Account.webp);
 			}
 		}
 

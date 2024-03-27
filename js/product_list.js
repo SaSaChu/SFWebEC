@@ -17,8 +17,23 @@ $(function() {
         $('#side-menu').remove('col-lg-1');
 		$('#product-lists').removeClass('col-lg-11');
 	});
+
+	// sideMenu Mobile 
+	$('.mobile_menu_widget .mobile-main-menu .dropdown-item').on('click', function() {
+		// ajax 後 example
+		let title = $(this).text();
+		let itemExample = `
+			<li><a class="dropdown-item" href="#">${title}-1</a></li>
+			<li><a class="dropdown-item" href="#">${title}-2</a></li>
+			<li><a class="dropdown-item" href="#">${title}-3</a></li>
+		`
+		$('#dropdownMobileMainMenuButton').text(title);
+		$('#dropdownMobileSubMenuButton').text(title+'-1');
+		$('.mobile_menu_widget .mobile-sub-menu').empty();
+		$('.mobile_menu_widget .mobile-sub-menu').append(itemExample);
+	})
 	
-    // side package
+    // side package 出現時機
     let offsetTop;
 	let footerTop = $('footer').offset().top;
 	
@@ -29,7 +44,7 @@ $(function() {
     }
 
     $(window).on('scroll', function () {
-        if (window.screen.width > 769) {
+        if (window.screen.width >= 992 ) {
             if($(window).scrollTop() > offsetTop && $(window).scrollTop() < footerTop) {
                 $('#side-package').addClass('show');
             } else {
@@ -39,7 +54,7 @@ $(function() {
     })
 
 	// Ad
-    if (window.screen.width > 769) { 
+    if (window.screen.width >= 992) { 
         var swiperAd = new Swiper(".ad-swiper", {
             slidesPerView: 1,
             watchSlidesProgress: true,
@@ -68,7 +83,7 @@ $(function() {
 	function productList(id='tab-sort-content-1') {
 		let options = {
 			valueNames: [{name: 'type', attr:'data-type'}],
-            page: 2,
+            page: 4,
             pagination: true
 		};
 		
