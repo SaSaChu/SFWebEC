@@ -1,70 +1,12 @@
-@import "bootstrap/bootstrap";
 @import "Ginkgo";
+@import "bootstrap/bootstrap";
+@import "components/color";
+@import "components/input";
+@import "components/link";
+@import "components/btn";
 @import "layout/header";
 @import "layout/footer";
-@import "components/color";
 @import "components/cart";
-
-:root {
-	--main-blue: #111c47;
-    --main-red: #b10e0e;
-	--main-white: #fff;
-	--main-text: #232323;
-	--menu-hover: #b3b7c6;
-	--action-logout: #18336c;
-	--main-category: #191919;
-
-	--font-size-30: 1.875rem;
-	--font-size-24: 1.5rem;
-	--font-size-20: 1.25rem;	
-	--font-size-18: 1.125;		
-	--font-size-14: .875rem;	
-}
-
-a {
-    text-decoration: none !important;
-
-    &:after,
-    &:before {
-        vertical-align: middle !important;
-    }
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-button, select{
-	outline: none !important;
-   	box-shadow: none !important;
-    border-width: 0;
-}
-
-p {
-    margin-bottom: 0;
-}
-
-img {
-	width: auto;
-	height: auto;
-	max-width: 100%;
-	max-height: 100%;
-	object-fit: cover;
-}
-
-header {
-	@include media-breakpoint-down(lg) {
-		position: sticky;
-		top: 0;
-		z-index: 1051;
-	}
-
-	.nav-item {
-		.dropdown-menu {
-			z-index: 1;
-		}	
-	}	
-}
 
 main {
 	position: relative;
@@ -82,11 +24,11 @@ main {
 					font-weight: 500;
 	
 					a {
-						color: var(--main-blue);
+						color: $main-blue;
 					}				
 	
 					&.active {
-						color: var(--main-red);
+						color: $main-red;
 					}
 				}
 			}
@@ -149,10 +91,10 @@ main {
 			}
 
 			p {
-				color: #3d6dc1;
+				color: $blue-004;
 
 				span {
-					color: #6b6b6b;
+					color: $gray-600;
 
 					> span {
 						&:first-of-type {
@@ -160,7 +102,7 @@ main {
 						}
 						
 						&:last-of-type {
-							color: #b10e0e;
+							color: $main-red;
 						}
 					}
 				}
@@ -170,15 +112,11 @@ main {
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				background-color: #b10e0e;
+				background-color: $main-red;
 				border-radius: 22.5px;
 				width: 60%;
 				text-align: left;
-				color: var(--main-white);
-
-				&:after {
-
-				}
+				color: $white;
 
 				@include range-width(0, 451px) {
 					width: 100%;
@@ -437,11 +375,11 @@ main {
 
 	.product_like {
 		.like_title {
-			background-color: #8093a8;
+			background-color: $other-002;
 			max-width: 1440px;
 			margin: 0 auto;
 			h3 {
-				color: white;
+				color: $white;
 			}
 		}
 
@@ -494,7 +432,6 @@ main {
 			.likeMobile-button-prev {
 				left: calc(100% -  70px);
 				width: inherit;
-				// transform: rotate(180deg);
 	
 				&:after {
 					display: flex;
@@ -503,7 +440,7 @@ main {
 					width: 33px;
 					height: 33px;
 					background-color: rgba(17, 28, 71, 0.5);
-					color: #fff;
+					color: $white;
 					border-radius: 5px;
 					font-size: 16px;
 					font-weight: bold;
@@ -521,7 +458,7 @@ main {
 					width: 33px;
 					height: 33px;
 					background-color: rgba(17, 28, 71, 0.5);
-					color: #fff;
+					color: $white;
 					border-radius: 5px;
 					font-size: 16px;
 					font-weight: bold;
@@ -537,7 +474,7 @@ main {
 			margin: 0 auto;
 			
 			h3 {
-				color: #111c47;
+				color: $main-blue;
 			}
 		}	
 
@@ -598,7 +535,7 @@ main {
 				width: 33px;
 				height: 33px;
 				background-color: rgba(17, 28, 71, 0.5);
-				color: #fff;
+				color: $white;
 				border-radius: 5px;
 				font-size: 16px;
 				font-weight: bold;
@@ -616,7 +553,7 @@ main {
 				width: 33px;
 				height: 33px;
 				background-color: rgba(17, 28, 71, 0.5);
-				color: #fff;
+				color: $white;
 				border-radius: 5px;
 				font-size: 16px;
 				font-weight: bold;
