@@ -929,18 +929,18 @@
 								<div class="accordion" id="accordionSideMenu">
 									<div class="accordion-item border-0">
 										<h3 class="accordion-header" id="heading1">
-											<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+											<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
 												<picture class="me-2">
-													<img src="images/svg-pic/doll-Gray.svg" alt="">
-													<img src="images/svg-pic/doll-Gradient.svg" alt="">
+													<img class="img-fluid" src="images/svg-pic/doll-Gray.svg" alt="">
+													<img class="img-fluid" src="images/svg-pic/doll-Gradient.svg" alt="">
 												</picture>
 												優惠區
 											</button>
 										</h3>
-										<div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionSideMenu">
+										<div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionSideMenu">
 											<div class="accordion-body">
 												<ul class="ul_li_links">
-													<li class=""><a href="#!">新品上市</a></li>
+													<li class="active"><a href="#!">新品上市</a></li>
 													<li class=""><a href="#!">暢銷組合區</a></li>
 													<li class=""><a href="#!">五片式平口褲</a></li>
 													<li class=""><a href="#!">針織平口褲</a></li>
@@ -1136,34 +1136,38 @@
 										<div class="col-6">
 											<div class="dropdown">
 												<button class="form-select border-0 border-bottom" type="button" id="dropdownMobileMainMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-													選項0
+													優惠區
 												</button>
 												<ul class="dropdown-menu mobile-main-menu" aria-labelledby="dropdownMobileMainMenuButton">
-												  <li class="dropdown-item">選項1</a></li>
-												  <li class="dropdown-item">選項2</a></li>
-												  <li class="dropdown-item">選項3</a></li>
+													<!-- @foreach 主選單內容 start-->
+												  	<li class="dropdown-item">優惠區</li>
+												  	<!-- @foreach 主選單內容 end-->
+													<li class="dropdown-item">內褲</li>
+													<li class="dropdown-item">襪子</li>
+													<li class="dropdown-item">內衣/T恤</li>
+													<li class="dropdown-item">大尺碼專區</li>
+													<li class="dropdown-item">毛巾</li>
+													<li class="dropdown-item">雨傘</li>
+													<li class="dropdown-item">保暖衣</li>
 												</ul>
 											</div>
-											<!-- <select class="form-select border-0 border-bottom" aria-label="Default select example">
-												<option selected="" value="1">選項1</option>
-												<option value="2">選項2</option>
-												<option value="3">選項3</option>
-											</select> -->
 										</div>
 										<div class="col-6">
 											<button class="form-select border-0 border-bottom" type="button" id="dropdownMobileSubMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-												選項1-1
+												新品上市
 											</button>
 											<ul class="dropdown-menu mobile-sub-menu" aria-labelledby="dropdownMobileSubMenuButton">
-												<li><a class="dropdown-item" href="#">選項0-1</a></li>
-												<li><a class="dropdown-item" href="#">選項0-2</a></li>
-												<li><a class="dropdown-item" href="#">選項0-3</a></li>
+												<!-- @foreach 次選單內容 start-->
+												<li><a class="dropdown-item" href="#">新品上市</a></li>
+												<!-- @foreach 次選單內容 end-->
+												<li><a class="dropdown-item" href="#">暢銷組合</a></li>
+												<li><a class="dropdown-item" href="#">五片式平口褲</a></li>
+												<li><a class="dropdown-item" href="#">針織平口褲</a></li>
+												<li><a class="dropdown-item" href="#">彈性貼身平口褲（側邊透氣款）</a></li>
+												<li><a class="dropdown-item" href="#">彈性時尚平口褲</a></li>
+												<li><a class="dropdown-item" href="#">三角褲</a></li>
+												<li><a class="dropdown-item" href="#">長褲</a></li>
 											</ul>
-											<!-- <select class="form-select border-0 border-bottom" aria-label="Default select example">
-												<option selected="" value="1">選項1-1</option>
-												<option value="2">選項1-2</option>
-												<option value="3">選項1-3</option>
-											</select> -->
 										</div>
 									</div>
 								</div>
@@ -1712,13 +1716,13 @@
 									<div class="p-2">
 										<span>已選購</span>
 										<figure class="">
-											<img src="https://fakeimg.pl/150x150/?text=img1" alt="fake img"/>
+											<img src="https://fakeimg.pl/150x150/?text=img1" class="img-fluid ratio ratio-1x1" alt="fake img"/>
 										</figure>
 										<figure class="">
-											<img src="https://fakeimg.pl/150x150/?text=img1" alt="fake img"/>
+											<img src="https://fakeimg.pl/150x150/?text=img1" class="img-fluid ratio ratio-1x1" alt="fake img"/>
 										</figure>
 										<figure class="">
-											<img src="https://fakeimg.pl/150x150/?text=img1" alt="fake img"/>
+											<img src="https://fakeimg.pl/150x150/?text=img1" class="img-fluid ratio ratio-1x1" alt="fake img"/>
 										</figure>
 									</div>
 									<div class="p-2">

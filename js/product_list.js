@@ -17,20 +17,21 @@ $(function() {
         $('#side-menu').remove('col-lg-1');
 		$('#product-lists').removeClass('col-lg-11');
 	});
+	
+	// sideMenu mobile menu widget
+	$('.mobile-main-menu .dropdown-item').on('click', function() {
+		$('.mobile-sub-menu').empty();
+		$('#dropdownMobileMainMenuButton').text($(this).text());
+		$('#dropdownMobileSubMenuButton').text('請選擇');
 
-	// sideMenu Mobile 
-	$('.mobile_menu_widget .mobile-main-menu .dropdown-item').on('click', function() {
-		// ajax 後 example
-		let title = $(this).text();
-		let itemExample = `
-			<li><a class="dropdown-item" href="#">${title}-1</a></li>
-			<li><a class="dropdown-item" href="#">${title}-2</a></li>
-			<li><a class="dropdown-item" href="#">${title}-3</a></li>
-		`
-		$('#dropdownMobileMainMenuButton').text(title);
-		$('#dropdownMobileSubMenuButton').text(title+'-1');
-		$('.mobile_menu_widget .mobile-sub-menu').empty();
-		$('.mobile_menu_widget .mobile-sub-menu').append(itemExample);
+		let targetId = `#collapse${$(this).index() + 1}`
+		let children = $(targetId).find('.ul_li_links').children();
+		
+		children.map(function() {
+			let targetA = $(this).find('a'); 
+			let item = `<li><a class="dropdown-item" href="${targetA.attr('href')}">${targetA.text().trim()}</a></li>`
+			$('.mobile-sub-menu').append(item);	
+		})
 	})
 	
     // side package 出現時機
