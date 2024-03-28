@@ -5,7 +5,8 @@
 
 .badge {
   display: inline-block;
-  padding: $badge-padding-y $badge-padding-x;
+  padding: 0.4em $badge-padding-x $badge-padding-y $badge-padding-x;
+  // padding: $badge-padding-y $badge-padding-x;
   @include font-size($badge-font-size);
   font-weight: $badge-font-weight;
   line-height: 1;

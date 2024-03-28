@@ -26,25 +26,31 @@
 
 <body>
 	<header class="header">
+		<!-- 跑馬燈 -->
 		<section class="marquee-wrapper">
 			<div class="container-fluid p-0">
 				<div class="row g-0">
 					<div class="col-11 mx-auto position-relative">
 						<div id="marqueeControls" class="marquee vertical carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
 							<div class="carousel-inner">
+								<!-- 跑馬燈內容 @foreach start -->
 								<div class="carousel-item active">
 									<p>官網獨家優惠, 全館滿千免運費1</p>
 								</div>
+								<!-- 跑馬燈內容 @foreach end -->
+
 								<div class="carousel-item">
 									<p>官網獨家優惠, 全館滿千免運費2</p>
 								</div>
 								<div class="carousel-item">
 									<p>官網獨家優惠, 全館滿千免運費3</p>
 								</div>
+								
 							</div>
 						</div>
 						<span class="marquee-btn-close">
-							<i class="icon-icon-close-ad"></i>
+							<!-- <i class="fa-solid fa-circle-xmark"></i> -->
+							<i class="fa-solid fa-circle-xmark"></i>
 						</span>
 					</div>
 				</div>
@@ -889,7 +895,7 @@
 					<input type="search" class="form-control rounded-0" name="search" pattern=".*\S.*" placeholder="請輸入文字" required>
 				</form>
 			</div>
-		</div>	
+		</div>
 	</header>
 	
 	<!-- 0321 main class 移除 my-5 -->
@@ -910,8 +916,9 @@
 					</nav>
 				</div>
 			</div>
-			
 		</section>
+
+
 		<!-- 會員姓名區 -->
 		<!-- 0321 container-xxl 加上 mt-5 -->
 		<div class="container-xxl mt-5">
@@ -985,8 +992,8 @@
 											<h3 class="accordion-header" id="heading1">
 												<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
 													<picture class="me-2">
-														<img src="images/svg-pic/doll-Gray.svg" alt="">
-														<img src="images/svg-pic/doll-Gradient.svg" alt="">
+														<img class="img-fluid mb-1" src="images/svg-pic/doll-Gray.svg" alt="">
+														<img class="img-fluid mb-1" src="images/svg-pic/doll-Gradient.svg" alt="">
 													</picture>
 													我的帳戶
 												</button>
@@ -994,7 +1001,7 @@
 											<div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionSideMenu">
 												<div class="accordion-body">
 													<ul class="ul_li_links">
-														<li class=""><a href="#!">個人資料</a></li>
+														<li class="active"><a href="#!">個人資料</a></li>
 														<li class=""><a href="#!">綁定社群帳號</a></li>
 														<li class=""><a href="#!">發票設定</a></li>
 														<li class=""><a href="#!">密碼變更</a></li>
@@ -1007,8 +1014,8 @@
 											<h3 class="accordion-header" id="heading1">
 												<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
 													<picture class="me-2">
-														<img src="images/svg-pic/doll-Gray.svg" alt="">
-														<img src="images/svg-pic/doll-Gradient.svg" alt="">
+														<img class="img-fluid mb-1" src="images/svg-pic/doll-Gray.svg" alt="">
+														<img class="img-fluid mb-1" src="images/svg-pic/doll-Gradient.svg" alt="">
 													</picture>
 													訂單中心
 												</button>
@@ -1027,8 +1034,8 @@
 											<h3 class="accordion-header" id="heading1">
 												<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
 													<picture class="me-2">
-														<img src="images/svg-pic/doll-Gray.svg" alt="">
-														<img src="images/svg-pic/doll-Gradient.svg" alt="">
+														<img class="img-fluid mb-1" src="images/svg-pic/doll-Gray.svg" alt="">
+														<img class="img-fluid mb-1" src="images/svg-pic/doll-Gradient.svg" alt="">
 													</picture>
 													配送/門市
 												</button>
@@ -1200,7 +1207,6 @@
 
 							<input type="text" class="form-control w-add-100 mt-2">
 						 </div>
-
 						</div>
 					</div>
 

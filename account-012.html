@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui">
 
-	<title>321_個人資料_變更郵件地址</title>
+	<title>332_網路訂單查詢-list</title>
 
 	<script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
 	<script language="javascript" type="text/javascript" src="js/swiper/swiper-bundle.min.js"></script>
@@ -941,7 +941,7 @@
 										<!-- item01 -->
 										<div class="accordion-item border-0">
 											<h3 class="accordion-header" id="heading1">
-												<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+												<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
 													<picture class="me-2">
 														<img class="img-fluid mb-1" src="images/svg-pic/doll-Gray.svg" alt="">
 														<img class="img-fluid mb-1" src="images/svg-pic/doll-Gradient.svg" alt="">
@@ -949,10 +949,10 @@
 													我的帳戶
 												</button>
 											</h3>
-											<div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionSideMenu">
+											<div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionSideMenu">
 												<div class="accordion-body">
 													<ul class="ul_li_links">
-														<li class="active"><a href="#!">個人資料</a></li>
+														<li class=""><a href="#!">個人資料</a></li>
 														<li class=""><a href="#!">綁定社群帳號</a></li>
 														<li class=""><a href="#!">發票設定</a></li>
 														<li class=""><a href="#!">密碼變更</a></li>
@@ -963,7 +963,7 @@
 										<!-- item02 -->
 										<div class="accordion-item border-0">
 											<h3 class="accordion-header" id="heading1">
-												<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+												<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
 													<picture class="me-2">
 														<img class="img-fluid mb-1" src="images/svg-pic/doll-Gray.svg" alt="">
 														<img class="img-fluid mb-1" src="images/svg-pic/doll-Gradient.svg" alt="">
@@ -971,10 +971,10 @@
 													訂單中心
 												</button>
 											</h3>
-											<div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionSideMenu">
+											<div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2" data-bs-parent="#accordionSideMenu">
 												<div class="accordion-body">
 													<ul class="ul_li_links">
-														<li class=""><a href="#!">訂單查詢</a></li>
+														<li class="active"><a href="#!">訂單查詢</a></li>
 														<li class=""><a href="#!">退貨紀錄</a></li>
 													</ul>
 												</div>
@@ -1005,8 +1005,8 @@
 											<h3 class="accordion-header" id="heading1">
 												<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
 													<picture class="me-2">
-														<img src="images/svg-pic/doll-Gray.svg" alt="">
-														<img src="images/svg-pic/doll-Gradient.svg" alt="">
+														<img class="img-fluid mb-1" src="images/svg-pic/doll-Gray.svg" alt="">
+														<img class="img-fluid mb-1" src="images/svg-pic/doll-Gradient.svg" alt="">
 													</picture>
 													會員專屬
 												</button>
@@ -1032,55 +1032,164 @@
 				<!-- Right Side -->
 				<div class="col-md-9 col-12">
 					<div class="row mx-auto">
-						<div class="col-auto account-redLine pt-0 pb-2 fs-4 fw-semi">個人資料：變更電子郵件</div>
+						<div class="col-auto account-redLine pt-0 pb-2 fs-4 fw-semi">訂單查詢</div>
 						<div class="col account-grayLine"></div>
 					</div>
 
-					<div class="row mx-auto border-bottom">
-						<div class="col-md-5 col-12 pt-3 px-0">
-							<ul class="fs-8 fw-light text-gray002 mb-md-3 mb-0">
-								<li>請確實填寫個人資料，以確保客戶權益。</li>
-								<li>個人資料的使用方式，請參考<a href="" class="linkblue fs-8 fw-light align-baseline">隱私權聲明。</a></li>
-							</ul>
-						</div>
-						<div class="col-md-7 col-12 pt-md-3 pt-0 px-0">
-							<ul class="fs-8 fw-light text-gray002">
-								<li>若電子郵件信箱未完成驗證，將可能無法收到三花棉業寄出的活動訊息及會員專函</li>
+					<div class="row mx-auto">
+						<div class="col-12 pt-3 px-0">
+							<ul class="fs-8 fw-light text-gray002 mb-3">
+								<li>訂單問題請多加利用「我要詢問」，將有專人對應。</li>
+								<li>訂單退換貨問題請先參閱 <a href="" class="linkblue fs-8 fw-light align-baseline">訂單取消、退貨、換貨</a>。</li>
 							</ul>
 						</div>
 					</div>
-					
-					<!-- 第1欄 -->
-					<div class="row mx-auto border-bottom-dotted align-items-center py-4">
-						<div class="col-auto">
-							<label for="formGroupExampleInput" class="form-label mb-0">電子郵件信箱：</label>
-						</div>
-						<div class="col-md-5 col-12 pt-3 pt-md-0">
-							<input class="form-control d-inline-block" type="text">
-						</div>
-						<div class="col-auto pt-3 pt-md-0">
-							<button class="btnSF btnBlud003-line btn-xl fs-8 fw-medium">發送驗證信</button>
+
+					<!-- 訂單list -->
+					<div class="row mx-auto my-4">
+						<ul class="nav nav-pills nav-fill nav-justified mb-4 pe-0" id="pills-tab" role="tablist">
+						  <li class="nav-item" role="presentation">
+						    <button class="nav-link ac-nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#tag01" type="button" role="tab" aria-controls="tag01" aria-selected="true">全部</button>
+						  </li>
+						  <li class="nav-item" role="presentation">
+						    <button class="nav-link ac-nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#tag02" type="button" role="tab" aria-controls="tag02" aria-selected="false">處理中</button>
+						  </li>
+						  <li class="nav-item" role="presentation">
+						    <button class="nav-link ac-nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#tag03" type="button" role="tab" aria-controls="tag03" aria-selected="false">運送中待取貨</button>
+						  </li>
+						  <li class="nav-item" role="presentation">
+						    <button class="nav-link ac-nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#tag04" type="button" role="tab" aria-controls="tag04" aria-selected="false">已完成</button>
+						  </li>
+						  <li class="nav-item" role="presentation">
+						    <button class="nav-link ac-nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#tag05" type="button" role="tab" aria-controls="tag05" aria-selected="false">取消退貨</button>
+						  </li>
+						</ul>
+
+						<div class="tab-content px-0" id="pills-tabContent">
+							<!-- 01 -->
+						  <div class="tab-pane fade show active" id="tag01" role="tabpanel" aria-labelledby="pills-home-tab">
+						  	<!-- 搜尋區間 -->
+						  	<div class="row mx-auto mb-4">
+						  		<div class="col-md-6 col-12 px-0">
+						  			<!-- 購買通路 -->
+						  			<div class="row mx-auto">
+											<div class="col-auto">
+												<label for="formGroupExampleInput" class="form-label mb-0 mt-2">購買通路：</label>
+											</div>
+
+											<div class="col-8 pe-0">
+												<select class="form-select d-inline-block me-2" aria-label="">
+												  <option selected>全部</option>
+												  <option value="1">三花官網</option>
+												  <option value="2">線下門市</option>
+												  <option value="3">Line商城</option>
+												</select>
+											</div>
+										</div>	
+						  		</div>
+
+							  	<div class="col-md-6 col-12 pe-0 mt-md-0 ps-0 mt-3">
+							  		<!-- 購買通路 -->
+						  			<div class="row mx-auto justify-content-md-end justify-content-start">
+											<div class="col-auto">
+												<label for="formGroupExampleInput" class="form-label mb-0 mt-2">訂單時間：</label>
+											</div>
+
+											<div class="col-8 pe-md-2 pe-0">
+												<select class="form-select d-inline-block me-2" aria-label="">
+												  <option selected>最近三個月</option>
+												  <option value="1">最近二個月</option>
+												  <option value="2">最近一個月</option>
+												  <option value="3">最近三個月</option>
+												</select>
+											</div>
+										</div>	
+							  	</div>
+						  	</div>
+								
+						  	<!-- list-01 -->
+						  	<div class="row mx-auto align-items-center border rounded p-md-3 px-3 py-3 my-4">
+						  		<div class="col-12 border-bottom px-0">
+						  			<div class="row mx-auto pb-3">
+						  				<div class="col-md-4 col-12 px-0">
+						  					<span class="badge bg-secondary">三花官網</span>
+						  					訂單狀態：已取消
+						  				</div>
+						  				<div class="col-md-4 col-12 px-0">訂購日期：2023/10/12 00:00:00</div>
+						  				<div class="col-md-4 col-12 px-0">訂單編號：SF202305232778<i class="icon-copy align-baseline ms-2" type='button'></i></div>
+						  			</div>
+						  		</div>
+
+						  		<div class="col-12 border-bottom px-0">
+						  			<div class="row mx-auto py-3">
+						  				<div class="col-6 px-0">2</div>
+						  				<div class="col-6 px-0">22</div>
+						  			</div>
+						  		</div>
+
+						  		<div class="col-12 border-bottom px-0">
+						  			<div class="row mx-auto py-3">
+						  				<div class="col-6 px-0">3</div>
+						  				<div class="col-6 px-0">32</div>
+						  			</div>
+						  		</div>
+
+						  		<div class="col-12 px-0">
+						  			<div class="row mx-auto pt-3">
+						  				<div class="col-6 px-0">4</div>
+						  				<div class="col-6 px-0">42</div>
+						  			</div>
+						  		</div>
+						  	</div>
+						  	
+						  </div>
+
+						  <!-- 02 -->
+						  <div class="tab-pane fade" id="tag02" role="tabpanel" aria-labelledby="pills-profile-tab">
+						  	2
+						  </div>
+
+						  <!-- 03 -->
+						  <div class="tab-pane fade" id="tag03" role="tabpanel" aria-labelledby="pills-contact-tab">
+						  	3
+						  </div>
+
+						  <!-- 04 -->
+						  <div class="tab-pane fade" id="tag04" role="tabpanel" aria-labelledby="pills-contact-tab">
+						  	4
+						  </div>
+
+						  <!-- 05 -->
+						  <div class="tab-pane fade" id="tag05" role="tabpanel" aria-labelledby="pills-contact-tab">
+						  	4
+						  </div>
 						</div>
 					</div>
 
-					<!-- 第2欄 -->
-					<div class="row mx-auto border-bottom-dotted align-items-center py-4">
-						<div class="col-auto">
-							<label for="formGroupExampleInput" class="form-label mb-0">信箱驗證碼：&nbsp;&nbsp;&nbsp;&nbsp;</label>
-						</div>
-						<div class="col-md-2 col">
-							<input class="form-control d-inline-block w-md-25 w-100 me-2" type="text">
-						</div>
+					<!-- 分頁 -->
+					<div class="col-12 text-md-end text-center">
+						<nav aria-label="Page navigation example">
+						  <ul class="pagination justify-content-end">
+						    <li class="page-item">
+						      <a class="page-link" href="#" aria-label="Previous">
+						        <span class="align-baseline" aria-hidden="true">&laquo;</span>
+						      </a>
+						    </li>
+						    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+						    <li class="page-item"><a class="page-link" href="#">3</a></li>
+						    <li class="page-item"><a class="page-link" href="#">4</a></li>
+						    <li class="page-item">
+						      <a class="page-link" href="#" aria-label="Next">
+						        <span class="align-baseline" aria-hidden="true">&raquo;</span>
+						      </a>
+						    </li>
+						  </ul>
+						</nav>
 					</div>
 
-					<div class="col-12 text-center">
-						<button class="btnSF btnOtherGray btn-xxl fs-8 fw-medium mt-3 me-3">回上一頁</button>
-						<button class="btnSF btnBlud004 btn-xxl fs-8 fw-medium mt-3">確定送出</button>
-					</div>
 				</div>
 			</div>
 		</div>
-
 	</main>
 
 	<footer>
