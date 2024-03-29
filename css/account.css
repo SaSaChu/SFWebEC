@@ -3446,7 +3446,7 @@ footer .footer-four-li > p:last-child a:after { display: none; }
 
 .account-tableTtpe { font-size: 1rem; color: #044281; font-weight: 300; text-align: center; }
 @media (max-width: 767.98px) { .account-tableTtpe { text-align: left; }
-  .account-tableTtpe:before { display: inline-block; content: attr(title); color: #6c757d; font-weight: 400; } }
+  .account-tableTtpe:before { display: inline-block; content: attr(title); color: #6c757d; font-weight: 400; margin-top: -4px; } }
 
 .account-tableTtpe-v2 { font-size: 1rem; color: #044281; font-weight: 300; text-align: center; }
 @media (max-width: 767.98px) { .account-tableTtpe-v2 { text-align: left; }

@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui">
 
-	<title>330_常用收件人清單</title>
+	<title>326_紅利點數</title>
 
 	<script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
 	<script language="javascript" type="text/javascript" src="js/swiper/swiper-bundle.min.js"></script>
@@ -914,7 +914,6 @@
 		</section>
 	</header>
 	
-	
 	<main class="my-5">
 		<!-- 資料顯示區 -->
 		<div class="container-xxl">
@@ -984,7 +983,7 @@
 										<!-- item03 -->
 										<div class="accordion-item border-0">
 											<h3 class="accordion-header" id="heading1">
-												<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+												<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
 													<picture class="me-2">
 														<img class="img-fluid mb-1" src="images/svg-pic/doll-Gray.svg" alt="">
 														<img class="img-fluid mb-1" src="images/svg-pic/doll-Gradient.svg" alt="">
@@ -992,10 +991,10 @@
 													配送/門市
 												</button>
 											</h3>
-											<div id="collapse3" class="accordion-collapse collapse show" aria-labelledby="heading3" data-bs-parent="#accordionSideMenu">
+											<div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionSideMenu">
 												<div class="accordion-body">
 													<ul class="ul_li_links">
-														<li class="active"><a href="#!">常用收件人清單</a></li>
+														<li class=""><a href="#!">常用收件人清單</a></li>
 														<li class=""><a href="#!">門市收藏</a></li>
 													</ul>
 												</div>
@@ -1004,7 +1003,7 @@
 										<!-- item04 -->
 										<div class="accordion-item border-0">
 											<h3 class="accordion-header" id="heading1">
-												<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+												<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
 													<picture class="me-2">
 														<img class="img-fluid mb-1" src="images/svg-pic/doll-Gray.svg" alt="">
 														<img class="img-fluid mb-1" src="images/svg-pic/doll-Gradient.svg" alt="">
@@ -1012,10 +1011,10 @@
 													會員專屬
 												</button>
 											</h3>
-											<div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionSideMenu">
+											<div id="collapse4" class="accordion-collapse collapse show" aria-labelledby="heading4" data-bs-parent="#accordionSideMenu">
 												<div class="accordion-body">
 													<ul class="ul_li_links">
-														<li class=""><a href="#!">紅利點數</a></li>
+														<li class="active"><a href="#!">紅利點數</a></li>
 														<li class=""><a href="#!">優惠劵</a></li>
 														<li class=""><a href="#!">我的最愛</a></li>
 														<li class=""><a href="#!">商品瀏覽紀錄</a></li>
@@ -1033,147 +1032,42 @@
 				<!-- Right Side -->
 				<div class="col-md-9 col-12">
 					<div class="row mx-auto">
-						<div class="col-auto account-redLine pt-0 pb-2 fs-4 fw-semi">常用收件人清單</div>
+						<div class="col-auto account-redLine pt-0 pb-2 fs-4 fw-semi">紅利點數</div>
 						<div class="col account-grayLine"></div>
 					</div>
 
-					<div class="row mx-auto border-bottom">
-						<div class="col-12 pt-3 px-0">
-							<ul class="fs-8 fw-light text-gray002 mb-3">
-								<li>常用地址將做為您下訂單時的預設地址，若您有多個常用地址，將會依照您設定的優先順序帶出。</li>
-								<li>您可以設定5個國內常用地址。</li>
-								<li>地址欄位請勿填寫郵政信箱。</li>
+					<div class="row mx-auto">
+						<div class="col-md-9 col-8 pt-3 px-0">
+							<ul class="fs-8 fw-light text-gray002 mb-md-3 mb-0">
+								<li>目前可用點數：目前累積可以使用的紅利點數</li>
+								<li>待核發點數：目前累積的待生效紅利點數，出貨後 xx 天將轉為已生效點數</li>
 							</ul>
 						</div>
-					</div>
-
-					<!-- 第1欄 -->
-					<div class="row mx-auto align-items-center py-4">
-						<div class="col-12">
-							<div class="account-tableBoxs justify-content-between align-items-center bg-gray005 d-md-flex d-none">
-								<div class="col-1 fs-7 text-center">順序</div>
-								<div class="col-1 fs-7 text-center">收件人</div>
-								<div class="col-2 fs-7 text-center">聯絡電話</div>
-								<div class="col-5 fs-7 text-center">收件地址</div>
-								<div class="col-1 fs-7 text-center">編輯順序</div>
-								<div class="col-2 fs-7 text-center">刪除</div>
-							</div>
-
-							<!-- 最多五筆 501 -->
-							<div class="account-tableBoxs justify-content-between align-items-center bg-gray005 d-flex d-md-none">
-								<div class="col-12 fs-7 text-md-center text-start">順序：1</div>
-							</div>
-							<div class="account-tableBoxs justify-content-between align-items-center border-bottom-dotted py-4">
-								<div class="col-md-1 col-12 fs-7 text-blue002 fw-light text-center text-center d-md-inline d-none">1</div>
-								<div class="col-md-1 col-12 account-tableTtpe pb-md-0 pb-3 px-md-2 px-0" title='收件人：'>王*明</div>
-								<div class="col-md-2 col-12 account-tableTtpe pb-md-0 pb-3 px-md-2 px-0" title='聯絡電話：'>0966*****91</div>
-								<div class="col-md-5 col-12 pb-md-0 pb-3" >
-									<span class='account-tableTtpe-v2 me-2 px-md-2 px-0' title='收件地址：'>新北市新店區寶慶街66號 </span>
-									<span class="badge bg-blue002">預設</span>
-								</div>
-								<div class="col-md-1 col-6 fs-7 account-tableTtpe" title='編輯順序：'>
-									<select class="form-select w-auto d-inline-block" aria-label="">
-									  <option selected>1</option>
-									  <option value="1">1</option>
-									  <option value="2">2</option>
-									  <option value="3">3</option>
-									  <option value="4">4</option>
-									  <option value="5">5</option>
-									</select>
-								</div>
-								<div class="col-md-2 col-6 fs-7 text-md-center text-end">
-									<button class="btnSF btnBlud003-line btn-xl ac-w50 fs-8 fw-light">修改</button>
-									<button class="btnSF btnOtherGray-line btn-xl ac-w50 fs-8 fw-light mt-md-2 ms-md-0 mt-0 ms-2">移除</button>
-								</div>
-							</div>
-
-							<!-- 最多五筆 502 -->
-							<div class="account-tableBoxs justify-content-between align-items-center bg-gray005 d-flex d-md-none">
-								<div class="col-12 fs-7 text-md-center text-start">順序：2</div>
-							</div>
-							<div class="account-tableBoxs justify-content-between align-items-center border-bottom-dotted py-4">
-								<div class="col-md-1 col-12 fs-7 text-blue002 fw-light text-center text-center d-md-inline d-none">2</div>
-								<div class="col-md-1 col-12 account-tableTtpe pb-md-0 pb-3 px-md-2 px-0" title='收件人：'>王*明</div>
-								<div class="col-md-2 col-12 account-tableTtpe pb-md-0 pb-3 px-md-2 px-0" title='聯絡電話：'>0966*****91</div>
-								<div class="col-md-5 col-12 pb-md-0 pb-3" >
-									<span class='account-tableTtpe-v2 me-2 px-md-2 px-0' title='收件地址：'>新北市新店區寶慶街66號 </span>
-								</div>
-								<div class="col-md-1 col-6 fs-7 account-tableTtpe" title='編輯順序：'>
-									<select class="form-select w-auto d-inline-block" aria-label="">
-									  <option selected>2</option>
-									  <option value="1">1</option>
-									  <option value="2">2</option>
-									  <option value="3">3</option>
-									  <option value="4">4</option>
-									  <option value="5">5</option>
-									</select>
-								</div>
-								<div class="col-md-2 col-6 fs-7 text-md-center text-end">
-									<button class="btnSF btnBlud003-line btn-xl ac-w50 fs-8 fw-light">修改</button>
-									<button class="btnSF btnOtherGray-line btn-xl ac-w50 fs-8 fw-light mt-md-2 ms-md-0 mt-0 ms-2">移除</button>
-								</div>
-							</div>
-
-							<!-- 最多五筆 503 -->
-							<div class="account-tableBoxs justify-content-between align-items-center bg-gray005 d-flex d-md-none">
-								<div class="col-12 fs-7 text-md-center text-start">順序：3</div>
-							</div>
-							<div class="account-tableBoxs justify-content-between border-bottom-dotted py-4">
-								<div class="col-md-1 col-12 fs-7 text-blue002 fw-light text-center text-center d-md-inline d-none">3</div>
-								<div class="col-md-1 col-12 account-tableTtpe-v2 pb-md-0 pb-3 px-md-2 px-0" title='收件人：'>
-									<input class="form-control d-inline-block" type="text" aria-label="">
-								</div>
-								<div class="col-md-2 col-12 account-tableTtpe-v2 pb-md-0 pb-3 px-md-2 px-0" title='聯絡電話：'>
-									<input class="form-control d-inline-block" type="text" aria-label="">
-								</div>
-								<div class="col-md-5 col-12 pb-md-0 pb-3 px-md-2 px-0" >
-									<span class='account-tableTtpe-v2 me-2' title='收件地址：'>
-										<div class="accoutn-phoneBoxs mb-2">
-										 	<select class="form-select d-inline-block w-add-25 me-2" aria-label="">
-											  <option selected>城市</option>
-											  <option value="1">One</option>
-											  <option value="2">Two</option>
-											  <option value="3">Three</option>
-											</select>
-											
-											<select class="form-select d-inline-block w-add-25" aria-label="">
-											  <option selected>區域</option>
-											  <option value="1">One</option>
-											  <option value="2">Two</option>
-											  <option value="3">Three</option>
-											</select> 
-
-											<input type="text" class="form-control w-add-100 mt-2">
-										 </div>
-									</span>
-								</div>
-								<div class="col-md-1 col-6 fs-7 account-tableTtpe" title='編輯順序：'>
-									<select class="form-select w-auto d-inline-block" aria-label="">
-									  <option selected>3</option>
-									  <option value="1">1</option>
-									  <option value="2">2</option>
-									  <option value="3">3</option>
-									  <option value="4">4</option>
-									  <option value="5">5</option>
-									</select>
-								</div>
-								<div class="col-md-2 col-6 fs-7 text-md-center text-end"></div>
-							</div>
-							
-
-
-
-							
+						<div class="col-md-3 col-4 pt-md-3 pt-0 px-0">
+							<a class="btnSF btnBlud001 btn-xl fs-6 fw-medium float-end">兌換商品</a>
 						</div>
 					</div>
+					
 
-					<div class="col-12 text-md-end text-center">
-						<button class="btnSF btnOtherGray btn-xxl ac-m50 fs-8 fw-medium me-3">
-							<i class="bi bi-plus-lg me-2"></i>新增
-						</button>
-						<button class="btnSF btnBlud004 btn-xxl ac-m50 fs-8 fw-medium">儲存變更</button>
+					<!-- 點數顯示區 -->
+					<div class="row mx-auto align-items-center border rounded p-2 mt-md-0 mt-4 mb-4">
+						<div class="col-6 border-end">1</div>
+						<div class="col-6">2</div>
 					</div>
 
+					<!-- 點數列表 -->
+					<div class="row mx-auto align-items-center">
+						<div class="col-12 px-0">
+							<div class="account-tableBoxs justify-content-between align-items-center bg-gray005 d-md-flex d-none">
+								<div class="col-3 fs-7 text-center">訂單編號</div>
+								<div class="col-3 fs-7 text-center">異動日期</div>
+								<div class="col-2 fs-7 text-center">獲得點數</div>
+								<div class="col-2 fs-7 text-center">使用點數</div>
+								<div class="col-2 fs-7 text-center">點數通路</div>
+							</div>
+						</div>
+					</div>
+					
 				</div>
 			</div>
 		</div>
