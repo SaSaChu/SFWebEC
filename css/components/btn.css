@@ -1194,7 +1194,7 @@ textarea.form-control-lg { min-height: calc(1.5em + (1rem + 2px)); }
 .pagination-sm .page-item:first-child .page-link { border-radius: 0.2rem; margin-right: 5px; }
 .pagination-sm .page-item:last-child .page-link { border-radius: 0.2rem; margin-left: 5px; }
 
-.badge { display: inline-block; padding: 0.35em 0.65em; font-size: 0.75em; font-weight: 700; line-height: 1; color: #fff; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 0.25rem; }
+.badge { display: inline-block; padding: 0.4em 0.65em 0.35em 0.65em; font-size: 0.75em; font-weight: 700; line-height: 1; color: #fff; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 0.25rem; }
 .badge:empty { display: none; }
 
 .btn .badge { position: relative; top: -1px; }

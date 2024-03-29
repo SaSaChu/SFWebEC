@@ -3149,6 +3149,9 @@ a { cursor: pointer; text-decoration: none !important; }
 .linkBlue { color: #3D6DC1; text-decoration: underline !important; }
 .linkBlue:hover { color: #00A2D9; text-decoration: underline !important; }
 
+.linkBlue-light { color: #00A2D9; text-decoration: underline !important; font-weight: 300; }
+.linkBlue-light:hover { color: #3D6DC1; text-decoration: underline !important; }
+
 .btn-xxl { padding: 0.5rem 1rem; }
 
 .btn-xl { padding: 0.4rem 1rem; }
@@ -3464,3 +3467,30 @@ footer .footer-four-li > p:last-child a:after { display: none; }
 .nav-item .nav-link.ac-nav-link.active { color: #fff; background-color: #044281; border: 1px solid #044281; }
 
 .pic-gray { -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); -ms-filter: grayscale(100%); -o-filter: grayscale(100%); filter: grayscale(100%); filter: gray; }
+
+.order-btn { height: 40px; line-height: 27px; }
+.order-btn i:before { vertical-align: baseline !important; }
+@media (max-width: 767.98px) { .order-btn { width: 50% !important; } }
+
+.order-btn2 { height: 40px; line-height: 27px; }
+.order-btn2 i:before { vertical-align: baseline !important; }
+@media (max-width: 767.98px) { .order-btn2 { width: 100% !important; } }
+
+.order-btn3 { width: 100%; height: 40px; line-height: 27px; }
+.order-btn3 i:before { vertical-align: baseline !important; }
+@media (max-width: 767.98px) { .order-btn3 { width: 100% !important; } }
+
+.border-y-mainBlue { border-top: 1px solid #044281; border-bottom: 1px solid #044281; }
+
+.order-border-RB { border-right: 1px solid #dee2e6; }
+@media (max-width: 767.98px) { .order-border-RB { border-bottom: 1px solid #dee2e6; } }
+
+.order-total-box { display: inline-block; width: 100%; max-width: 240px; float: right; }
+@media (max-width: 767.98px) { .order-total-box { float: left; } }
+
+.order-total, .order-total-002 { margin-bottom: 10px; text-align: right; }
+@media (max-width: 767.98px) { .order-total, .order-total-002 { text-align: left; } }
+.order-total.price, .order-total-002.price { color: #B10E0E; }
+.order-total:before, .order-total-002:before { display: inline-block; content: attr(title); color: #6c757d; vertical-align: baseline; margin-top: -4px; float: left; }
+
+.order-total-002:before { margin-top: 0; }
