@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, *:after, *:before { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-osx-font-smoothing: subpixel-antialiased; -webkit-font-smoothing: subpixel-antialiased; -moz-font-smoothing: subpixel-antialiased; -ms-font-smoothing: subpixel-antialiased; -o-font-smoothing: subpixel-antialiased; }
 
 /*!
@@ -3387,13 +3388,18 @@ main { position: relative; }
 .store-body .store-item { padding: .5rem 1rem; }
 @media (max-width: 991.98px) { .store-body .store-item { margin-top: 1rem; padding: 12px; } }
 .store-body .store-item:nth-of-type(even) { background-color: #f8f9fa; }
-.store-body .store-item .store_name h3, .store-body .store-item .store_name .h3 { margin-top: .5rem; }
-@media (max-width: 991.98px) { .store-body .store-item .store_name h3, .store-body .store-item .store_name .h3 { margin: 0; } }
-.store-body .store-item .store_name .store_tag { display: inline-block; width: 60px; text-align: center; }
-@media (max-width: 991.98px) { .store-body .store-item .store_name .store_tag { width: 70px; } }
+.store-body .store-item .store_heading .store-title { margin-top: .5rem; }
+@media (max-width: 991.98px) { .store-body .store-item .store_heading .store-title { margin: 0; } }
+.store-body .store-item .store_heading .store_tag { display: inline-block; width: 70px; height: 35px; text-align: center; }
 @media (max-width: 991.98px) { .store-body .store-item .store_address { margin-top: 1rem; } }
 .store-body .store-item .store_address img { margin-right: .5rem; }
 @media (max-width: 991.98px) { .store-body .store-item .store_address img { margin-right: 0; } }
 @media (max-width: 991.98px) { .store-body .store-item .store_tel { margin-top: 1rem; } }
 @media (max-width: 991.98px) { .store-body .store-item .store_time { margin-top: 1rem; } }
 @media (max-width: 991.98px) { .store-body .store-item .store_detail { display: inline-block; margin-top: 1rem; width: 100%; text-align: center !important; } }
+
+#storeDetailModal .modal-body span.modal_info { position: relative; padding-right: 1rem; display: inline-block; width: 90px; height: 25px; color: #032c56; font-weight: 600; text-align: justify; text-align-last: justify; }
+#storeDetailModal .modal-body span.modal_info:after { content: '：'; position: absolute; top: 0; right: 0; }
+#storeDetailModal .modal-body span.store_tag { display: inline-block; width: 70px; height: 35px; text-align: center; }
+#storeDetailModal .modal-body span.day_tag { display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 35px; color: #fff; }
+#storeDetailModal .modal-body span.day_tag + span { padding-left: .5rem; color: #343a40; }
