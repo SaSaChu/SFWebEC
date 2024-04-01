@@ -25,3 +25,14 @@ a{
 	}
 }
 
+.linkBlue-light {
+	color: $blue-006;
+	text-decoration: underline !important;
+	font-weight: 300;
+
+	&:hover {
+		color: $blue-004;
+		text-decoration: underline !important;
+	}
+}
+

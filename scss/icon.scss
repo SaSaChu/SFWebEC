@@ -22,6 +22,8 @@
   font-variant: normal;
 }
 
+.icon-openmain:before { content: "\e91c"; }
+.icon-copy:before { content: "\e91b"; }
 .icon-service:before { content: "\e91a"; }
 .icon-lock-open:before { content: "\e917"; }
 .icon-lock:before { content: "\e918"; }
