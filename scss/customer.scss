@@ -227,8 +227,12 @@ main {
 	// display: inline-block;
 	color: #4b4b4b;
 	font-size: 1.125rem;
-	line-height: 2;
 	font-weight: 300;
+
+	&.ul-use {
+		padding-left: 1.6rem !important;
+	}
+	
 
 	li {
 		// padding-bottom: 15px;
@@ -251,7 +255,24 @@ main {
 	}
 }
 
+.customer-h6 {
+	display: inline-block;
+	position: relative;
+	line-height: 1.5;
+	padding-left: 3.8rem;
+	margin-bottom: 3.6rem;
 
+	&.c-h6-nomb {
+		margin-bottom: 0;
+	}
+
+	&:before {
+		display: inline-block;
+		content: attr(title);
+		position: absolute;
+		left: 0;
+	}
+}
 
 
 .noto-warn {
