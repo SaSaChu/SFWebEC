@@ -245,13 +245,17 @@ main {
 	dt {
 		&:before {
 			display: inline-block;
-			content: '•';
+			font-family: 'bootstrap-icons';
+			content: ' \F519';
+			margin-top: -4px;
 			margin-right: 5px;
+			font-size: .8rem;
 		}
 	}
 
 	dd {
-		padding-left: 11px;
+		padding-left: 19px;
+		margin-bottom: 30px;
 	}
 }
 
@@ -283,7 +287,7 @@ main {
 .noto-text {
 	color: $gray-800;
 	font-size: 1rem;
-	}
+}
 
 
 
