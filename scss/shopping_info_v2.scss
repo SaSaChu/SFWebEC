@@ -248,7 +248,42 @@ main {
 }
 
 
+.nav-item {
+	padding-right: .5rem;
 
+	@include media-breakpoint-down(md) {
+		width: calc(100% / 4) !important;
+		height: 68px;
+	}
+
+	.nav-link {
+
+		@include media-breakpoint-down(md) {
+			font-size: .9rem !important;
+		}
+		
+		&.ac-nav-link {
+			padding: 10px 15px;
+			color: #4B4B4B;
+			font-size: 1rem;
+			background-color: $gray-300;
+			border: 1px solid $gray-400;
+			margin: 0 auto;
+
+			@include media-breakpoint-down(md) {
+				// width: 65% !important;
+				height: 68px;
+				// margin-left: 0;
+			}
+
+			&.active {
+				color: $white;
+				background-color: $blue-700;
+				border: 1px solid $blue-700;
+			} 
+		}
+	}
+}
 
 
 

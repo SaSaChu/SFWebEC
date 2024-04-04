@@ -3404,3 +3404,10 @@ main { position: relative; }
 #storeDetailModal .modal-body span.store_tag { display: inline-block; width: 70px; height: 35px; text-align: center; }
 #storeDetailModal .modal-body span.day_tag { display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 35px; color: #fff; }
 #storeDetailModal .modal-body span.day_tag + span { padding-left: .5rem; color: #343a40; }
+
+.nav-item { padding-right: .5rem; }
+@media (max-width: 767.98px) { .nav-item { width: calc(100% / 4) !important; height: 68px; } }
+@media (max-width: 767.98px) { .nav-item .nav-link { font-size: .9rem !important; } }
+.nav-item .nav-link.ac-nav-link { padding: 10px 15px; color: #4B4B4B; font-size: 1rem; background-color: #dee2e6; border: 1px solid #ced4da; margin: 0 auto; }
+@media (max-width: 767.98px) { .nav-item .nav-link.ac-nav-link { height: 68px; } }
+.nav-item .nav-link.ac-nav-link.active { color: #fff; background-color: #044281; border: 1px solid #044281; }
