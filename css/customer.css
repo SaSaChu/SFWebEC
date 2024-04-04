@@ -3369,6 +3369,8 @@ main { position: relative; z-index: 0; }
 .title-boxs { display: inline-block; width: 100%; height: 250px; background-repeat: no-repeat; background-position: right bottom; background-size: cover; }
 .title-boxs.title-bg { background-image: url(../images/title-bg-pic/bg-CustomerService.webp); background-position: center; background-size: cover; }
 @media (max-width: 1199.98px) { .title-boxs.title-bg { background-image: url(../images/title-bg-pic/bg-CustomerService-mobile.webp); } }
+.title-boxs.title-bg2 { background-image: url(../images/title-bg-pic/bg-ShoppingGuide.webp); background-position: center; background-size: cover; }
+@media (max-width: 1199.98px) { .title-boxs.title-bg2 { background-image: url(../images/title-bg-pic/bg-ShoppingGuide-mobile.webp); } }
 @media (max-width: 1199.98px) { .title-boxs { height: 150px; } }
 
 .title-bread { font-size: .85rem; justify-content: center; }
@@ -3417,3 +3419,10 @@ main { position: relative; z-index: 0; }
 .noto-warn { display: inline-block; background-color: #FFDCA5; }
 
 .noto-text { color: #343a40; font-size: 1rem; }
+
+.customer-btn { display: inline-block; width: 100%; border-radius: 0.3rem; border: 1px solid #dee2e6; color: #6c757d; text-align: center; padding: .9rem; margin-bottom: 15px; }
+.customer-btn:hover, .customer-btn.active { background-color: #3368C6; color: #fff; border: 1px solid #3368C6; }
+
+.coutomer-qa { display: inline-block; border-bottom: 1px dotted #adb5bd; color: #6c757d; font-weight: 500; padding: 1rem 0; }
+.coutomer-qa.border-updown { border-top: 1px dotted #adb5bd; }
+.coutomer-qa:hover { color: #B10E0E; }

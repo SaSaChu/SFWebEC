@@ -31,6 +31,16 @@ main {
 			}
 	}
 
+	&.title-bg2 {
+			background-image: url(../images/title-bg-pic/bg-ShoppingGuide.webp);
+			background-position: center;
+			background-size: cover;
+
+			@include media-breakpoint-down(xl) {
+				background-image: url(../images/title-bg-pic/bg-ShoppingGuide-mobile.webp);
+			}
+	}
+
 	@include media-breakpoint-down(xl) {
 		height: 150px;
 	}
@@ -290,7 +300,38 @@ main {
 }
 
 
+.customer-btn {
+	display: inline-block;
+	width: 100%;
+	border-radius: 0.3rem;
+	border: 1px solid $gray-300;
+	color: $gray-600;
+	text-align: center;
+	padding: .9rem;
+	margin-bottom: 15px;
 
+	&:hover, &.active {
+		background-color: $blue-003;
+		color: $white;
+		border: 1px solid $blue-003;
+	}
+}
+
+.coutomer-qa {
+	display: inline-block;
+	border-bottom: 1px dotted $gray-500;
+	color: $gray-600;;
+	font-weight: 500;
+	padding: 1rem 0;
+
+	&.border-updown {
+		border-top: 1px dotted $gray-500;
+	}
+
+	&:hover {
+		color:$main-red;
+	} 
+}
 
 
 
