@@ -3370,13 +3370,13 @@ footer .footer-four-li > p:last-child a:after { display: none; }
 main { position: relative; }
 
 .title-boxs { position: relative; background-color: #efefef; }
-.title-boxs .title-content { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.title-boxs .title-content { display: flex; flex-direction: column; }
 @media (max-width: 991.98px) { .title-boxs .title-content { align-items: flex-start; margin-top: 1rem; padding-left: 12px; } }
-.title-boxs .title-content h2, .title-boxs .title-content .h2 { display: flex; align-items: center; justify-content: center; color: #18336c; }
+.title-boxs .title-content h2, .title-boxs .title-content .h2 { display: flex; align-items: center; color: #18336c; }
 .title-boxs .title-content h2:before, .title-boxs .title-content .h2:before { content: ''; display: inline-block; margin-right: 1rem; width: 8px; height: 45px; background-color: #18336c; }
 @media (max-width: 991.98px) { .title-boxs .title-content h2:before, .title-boxs .title-content .h2:before { margin-right: 0.5rem; height: 30px; } }
-.title-boxs .title-content .title-bread { font-size: .85rem; }
-@media (max-width: 991.98px) { .title-boxs .title-content .title-bread { margin-right: 1rem; } }
+.title-boxs .title-content .title-bread { padding-left: 24px; font-size: .85rem; }
+@media (max-width: 991.98px) { .title-boxs .title-content .title-bread { margin-right: 1rem; padding-left: 24px; } }
 .title-boxs .title-content .title-bread .title-bread-item > a { color: #111c47; }
 .title-boxs .title-content .title-bread .title-bread-item > a:hover { text-decoration: underline !important; }
 .title-boxs .title-content .title-bread .title-bread-item.item-active { color: #B10E0E; }

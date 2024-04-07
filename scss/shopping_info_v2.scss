@@ -19,8 +19,8 @@ main {
 	.title-content {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		// align-items: center;
+		// justify-content: center;
 
 		@include media-breakpoint-down(lg) {
 			align-items: flex-start;
@@ -31,7 +31,7 @@ main {
 		h2 {
 			display: flex;			
 			align-items: center;
-			justify-content: center;
+			// justify-content: center;
 			color: $action-logout;
 	
 			&:before {
@@ -50,10 +50,12 @@ main {
 		}
 
 		.title-bread {
+			padding-left: 24px;
 			font-size: .85rem; 
 	
-			@include media-breakpoint-down(lg) {
+			@include media-breakpoint-down(lg) {				
 				margin-right: 1rem;
+				padding-left: 24px;
 			}
 			
 		
