@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>c-icon-02</title>
+    <g id="page-v1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="102_客戶服務-聯絡三花" transform="translate(-541.000000, -446.000000)">
+            <g id="c-icon-02" transform="translate(541.000000, 446.000000)">
+                <circle id="橢圓形copy" fill="#B10E0E" cx="14" cy="14" r="14"></circle>
+                <g id="picture_in_picture---material" transform="translate(5.738000, 6.950000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M15.012,12.024 L15.012,1.476 L1.512,1.476 L1.512,12.024 L15.012,12.024 Z M15.012,0 C15.42,0 15.774,0.15 16.074,0.45 C16.374,0.75 16.524,1.104 16.524,1.512 L16.524,11.988 C16.524,12.396 16.374,12.75 16.074,13.05 C15.774,13.35 15.42,13.5 15.012,13.5 L1.512,13.5 C1.104,13.5 0.75,13.35 0.45,13.05 C0.15,12.75 0,12.396 0,11.988 L0,1.512 C0,1.104 0.15,0.75 0.45,0.45 C0.75,0.15 1.104,0 1.512,0 L15.012,0 Z M13.5,2.988 L13.5,7.488 L7.524,7.488 L7.524,2.988 L13.5,2.988 Z" id="形狀"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

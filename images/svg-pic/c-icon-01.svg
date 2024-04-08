@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>c-icon-01</title>
+    <defs>
+        <circle id="path-1" cx="14" cy="14" r="14"></circle>
+    </defs>
+    <g id="page-v1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="102_客戶服務-聯絡三花" transform="translate(-541.000000, -400.000000)">
+            <g id="c-icon-01" transform="translate(541.000000, 400.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="橢圓形copycopy-2" fill="#B10E0E" xlink:href="#path-1"></use>
+                <image id="/" mask="url(#mask-2)" x="0" y="0" width="28" height="28" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAB9UlEQVRYCWNk0Mj5zzCAgGkA7QZbPeqA0RAYDYEBDwEWXOUACzNt3Pbn7z8UK7E6oCLVlaEl34eBmcqO+Au0XM6pjuHZq49wR2B4085EhaG9yI/qloNsBHlIRU4UbjmIgRECScEWKAqOnL3L8PcfdaqLL99+Mly6+RTFfAwHGGjIwBVsPXiVwSdjBpxPCwaGA169+wy3x8ZIiWFBewycj8z4/PUnw+JNpxhOXXoIFw7zNGLwstOC89EZ2w5dY1i1/RyKMCN6dZwdZccwpTYURREuDihRGQV3gYNVSoyf4enBFlxKweKgxCdtX4OiBiMRzlx5hGH3sRsoinBxQImqKMERLM3GyoxLGVz86p3ncDaMgREFoHzqlTadwc1akwGboWxsLAz9FUEMIB+DgI2RMswsOP3x83eGvNY1DJ++/ICLgRgHTt1G4YM4GA7gYGdl4ABacuz8PQzFIAEBPk6G1+++wB3AycGKoe7B03cMizaewhDHJoDiAJCvrm2pZuDn5cSmFqsYKJtSAlDSAKiQIMVyUFDXTd5Kif2oUXDrwSuGF28+MXACo4EQuHzrGUN282qGm/dfgZW+ePOZ4e6jNwzKciJEJ2KQRoxsSMhiQvKgSgy9wsGnByUK8CkkVo4Uy0FmUt0BxDoUpm7UAaMhMBoCAx4CACygjJH3PwXzAAAAAElFTkSuQmCC"></image>
+            </g>
+        </g>
+    </g>
+</svg>
