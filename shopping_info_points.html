@@ -8,13 +8,15 @@
 	<title>201_會員兌點商品表</title>
 
 	<script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/swiper/swiper-bundle.min.js"></script>
 	<script language="javascript" type="text/javascript" src="js/public.js"></script>
+	<script language="javascript" type="text/javascript" src="js/shopping_cart_1.js"></script>
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<link rel="stylesheet" type="text/css" href="css/icon.css">
 	<link rel="stylesheet" type="text/css" href="css/public.css">
 	<link rel="stylesheet" type="text/css" href="css/shopping_info_v2.css">
-	
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -891,8 +893,7 @@
 		</div>	
 	</header>
 	
-	<main class="">
-		
+	<main class="">	
 		<!-- banner -->
 		<section class="title-boxs">
 			<!-- <div class="col-11"> -->
@@ -926,7 +927,7 @@
 			</div>
 
 			<div class="row gx-5 mx-auto">
-				<ul class="nav nav-pills mb-4 pe-0" id="pills-tab" role="tablist">
+				<ul class="nav nav-pills mb-5 pe-0" id="pills-tab" role="tablist">
 				  <li class="nav-item" role="presentation">
 				    <button class="nav-link ac-nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#tag01" type="button" role="tab" aria-controls="tag01" aria-selected="true">兌換商品說明</button>
 				  </li>
@@ -942,90 +943,47 @@
 				</ul>
 
 				<div class="tab-content px-0" id="pills-tabContent">
-					<!-- 01 兌換商品說明 -->
+					<!-- 01 兌換商品說明內容 -->
 				  <div class="tab-pane fade show active" id="tag01" role="tabpanel" aria-labelledby="pills-home-tab">
 				  	<img src="images/points/points-pro.webp" class="rounded mx-auto d-block" alt="...">
 				  </div>
 
 				  <!-- 02 新創銀卡 -->
 				  <div class="tab-pane fade" id="tag02" role="tabpanel" aria-labelledby="pills-profile-tab">
-				  	<!-- list-05 -->
-				  	<div class="row mx-auto border rounded p-md-3 px-3 py-3 my-4">
-				  		<div class="col-12 border-bottom px-0">
-				  			<div class="row mx-auto align-items-center pb-3">
-				  				<div class="col-md-4 col-12 px-0 flex-grow-1">
-				  					<span class="badge bg-other003 me-2 mb-md-0 mb-2">Line商城</span>
-				  					<span class="text-mainRed">訂單狀態：</span>
-				  					<span class="text-gray002">退貨申請中</span>
-				  				</div>
-				  				<div class="col-md-auto col-12 px-0 mb-md-0 mb-1">
-				  				 <span class="text-mainBlue">訂購日期：</span>
-				  				 <span class="text-gray002 fw-light">2023/10/12 00:00:00</span>
-				  				</div>
-				  				<div class="col-md-auto d-none d-md-inline mx-2">|</div>
-				  				<div class="col-md-auto col-12 px-0">
-				  					<span class="text-mainBlue">訂單編號：</span>
-				  					<span class="text-gray002 fw-light">SF202305232778</span>
-				  					<i class="icon-copy align-baseline ms-2 float-end" type='button'></i>
-				  				</div>
-				  			</div>
-				  		</div>
+				  	<div class="row mx-auto mb-4">
+							<div class="col-auto account-redLine pt-0 pb-2 fs-4 fw-semi">2000 點</div>
+							<div class="col account-grayLine"></div>
+						</div>
+						<div class="row mx-auto mb-5">
+							<div class="col">
+									<div class="col px-4 text-center">
+										<div class="point-card card border-0 h-100">
+											<div class="card-img img-hover">
+												<picture class="">
+													<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+													<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+												</picture>
+											</div>
 
-				  		<div class="col-12 border-bottom px-0 py-3">
-				  			<div class="row mx-auto row-cols-4 row-cols-lg-6 g-2">
-				  				<div class="col"><img class="img-fluid" src="images/product/pic-product-hover.webp"></div>
-				  				<div class="col"><img class="img-fluid" src="images/product/pic-product-hover.webp"></div>
-				  			</div>
-				  		</div>
+											<h5 class="card-title">
+												50黑<br>1/2休閒襪
+											</h5>
 
-				  		<div class="col-12 px-0">
-				  			<div class="row mx-auto align-items-center py-3">
-				  				<div class="col-md-auto col-12 px-0 mb-md-0 mb-2">
-				  				 <span class="text-mainBlue">配送方式：</span>
-				  				 <span class="text-gray002 fw-light">宅配</span>
-				  				</div>
-				  				<div class="col-md-auto d-none d-md-inline mx-2">|</div>
-				  				<div class="col-md-auto col-12 px-0 mb-md-0 mb-2">
-				  					<span class="text-mainBlue">付款方式：</span>
-				  					<span class="text-gray002 fw-light">Line Pay</span>
-				  				</div>
-				  				<div class="col-md-4 col-12 px-0 flex-grow-1 mb-md-0 mb-2">
-				  					<div class="row mx-auto align-items-center justify-content-md-end justify-content-start">
-					  					<div class="col-auto text-gray002 px-0">訂單總金額：</div>
-					  					<div class="col-3 px-0 text-mainRed">$7,480</div>
-				  					</div>
-				  				</div>
-				  				<div class="col-12 px-0">
-				  					<span class="text-mainBlue">宅配單號：</span>
-				  					<a class="linkBlue-light">300127025295</a>
-				  				</div>
-				  			</div>
-				  		</div>
-
-				  		<div class="col-12 px-0">
-				  			<div class="row mx-auto gy-2">
-				  				<div class="col-md-6 col-12 px-0">
-				  					<div class="d-flex">
-										  <button class='btnSF btnBlud003-line btn-xl fs-8 fw-medium order-btn me-2'>
-					  					<i class="icon-openmain me-2"></i>聯絡客服
-					  					</button>
-										  <button class='btnSF btnBlud003-line btn-xl fs-8 fw-medium order-btn'>
-					  						<i class="icon-service me-2"></i>線上客服
-					  					</button>
+											<div class="card-content border-0">
+												<p>市價：<span class="market_price" data-symbol="NT$">100</span></p>
+											</div>
+											
+											<div class="card-action">
+												<button class="btnSF btnBlud001 btn-xxl fs-6 fw-medium mb-2"><span class="point-price">2000</span>點兌換</button>
+											</div>
 										</div>
-				  				</div>
-
-				  				<div class="col-md-6 col-12 px-0">
-				  					<div class="d-flex justify-content-md-end justify-content-start">
-										  <a class='btnSF btnBlud003-line btn-xl fs-8 fw-medium order-btn' href='account-013.html'>查看詳情</a>
-										  <button class='btnSF btnBlud001 btn-xl fs-8 fw-medium order-btn ms-2'>再買一次</button>
-										  <button class='btnSF btnOtherGray btn-xl fs-8 fw-medium order-btn ms-2'>退換貨申請</button>
-										</div>
-				  				</div>
-				  				
-				  			</div>
-				  		</div>
-				  	</div>
+									</div>	
+							</div>
+							<div class="col">2</div>
+							<div class="col">3</div>
+							<div class="col">4</div>
+							<div class="col">5</div>
+						</div>
 				  </div>
 
 				  <!-- 03 感恩金卡 -->

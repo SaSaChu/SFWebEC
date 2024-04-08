@@ -3408,6 +3408,6 @@ main { position: relative; }
 .nav-item { padding-right: .5rem; }
 @media (max-width: 767.98px) { .nav-item { width: calc(100% / 4) !important; height: 68px; } }
 @media (max-width: 767.98px) { .nav-item .nav-link { font-size: .9rem !important; } }
-.nav-item .nav-link.ac-nav-link { padding: 10px 15px; color: #4B4B4B; font-size: 1rem; background-color: #dee2e6; border: 1px solid #ced4da; margin: 0 auto; }
+.nav-item .nav-link.ac-nav-link { padding: 10px 11px; color: #4B4B4B; font-size: 1rem; background-color: #dee2e6; border: 1px solid #ced4da; margin: 0 auto; }
 @media (max-width: 767.98px) { .nav-item .nav-link.ac-nav-link { height: 68px; } }
 .nav-item .nav-link.ac-nav-link.active { color: #fff; background-color: #044281; border: 1px solid #044281; }
