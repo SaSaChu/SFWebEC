@@ -431,6 +431,27 @@
 	}
 }
 
+.account-tableTtpe-v3 {
+	font-size: 1rem;
+	color: $gray-600;
+	font-weight: 400;
+	text-align: center;
+
+	@include media-breakpoint-down(md) {
+		text-align: left;
+
+		&:before {
+			// display: block;
+			vertical-align: baseline;
+			content: attr(title);
+			color: $gray-600;
+			font-weight: 400;
+			margin-bottom: 5px;
+		}
+	}
+}
+
+
 .account-iconBig {
 	font-size: 7rem;
 }
