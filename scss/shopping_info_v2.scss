@@ -12,6 +12,7 @@ main {
 	position: relative;
 }
 
+// banner 
 .title-boxs {
 	position: relative;
 	background-color: #efefef;
@@ -101,6 +102,7 @@ main {
 	
 }
 
+// 店鋪資訊
 .store-search {
 	font-size: 1.125rem;
 }
@@ -246,6 +248,116 @@ main {
 
 			
 		}
+	}
+}
+
+// 三花誌
+.info-nav {
+	.nav {
+		.nav-item {
+			&:not(:last-child) {
+				.nav-link {
+					&:after {
+						content: "|";
+						position: absolute;
+						right: 0;
+						color: $gray-600;
+					}
+				}
+			}
+
+			.nav-link {
+				position: relative;
+				display: flex;
+				align-items: center;
+				color: $gray-600;
+	
+				&.active {
+					color: $main-red;
+					font-weight: 600;
+				}
+			}
+		}
+		
+	}
+}
+
+.featured-articles {
+	.title {
+		position: relative;
+		margin-bottom: 0;
+		padding-bottom: 1rem;
+		font-size: 24px;
+		font-weight: 500;
+		color: $gray-800;
+		border-bottom: 3px solid $gray-200;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 20px;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: -3px;
+			left: 0;
+			display: inline-block;
+			width: 10%;
+			height: 3px;
+			background-color: $main-red;
+
+			@include media-breakpoint-down(lg) {
+				width: 30%;
+			}
+		}
+	}
+
+	.article-item {
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 2rem;
+		}
+
+		img {
+			@include media-breakpoint-down(lg) {
+				height: 100%;
+			}
+		}
+
+		.article_desc {
+			-webkit-line-clamp: 2;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+
+			@include media-breakpoint-down(lg) {
+				-webkit-line-clamp: 3;
+
+				&:hover {
+					color: $main-red;
+				}
+			}
+
+			span {
+				display: inline-block;
+			}
+		}
+
+		.article_from {
+			display: flex;
+			justify-content: space-between;
+			color: $gray-600;
+
+			@include media-breakpoint-down(lg) {
+				flex-direction: column;
+
+				a {
+					padding: 0;
+					height: 0;
+				}
+			}
+		}
+
 	}
 }
 

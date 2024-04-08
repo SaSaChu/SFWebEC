@@ -3407,6 +3407,24 @@ main { position: relative; }
 #storeDetailModal .modal-body span.day_tag { display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 35px; color: #fff; }
 #storeDetailModal .modal-body span.day_tag + span { padding-left: .5rem; color: #343a40; }
 
+.info-nav .nav .nav-item:not(:last-child) .nav-link:after { content: "|"; position: absolute; right: 0; color: #6c757d; }
+.info-nav .nav .nav-item .nav-link { position: relative; display: flex; align-items: center; color: #6c757d; }
+.info-nav .nav .nav-item .nav-link.active { color: #B10E0E; font-weight: 600; }
+
+.featured-articles .title { position: relative; margin-bottom: 0; padding-bottom: 1rem; font-size: 24px; font-weight: 500; color: #343a40; border-bottom: 3px solid #e9ecef; }
+@media (max-width: 991.98px) { .featured-articles .title { font-size: 20px; } }
+.featured-articles .title:after { content: ""; position: absolute; bottom: -3px; left: 0; display: inline-block; width: 10%; height: 3px; background-color: #B10E0E; }
+@media (max-width: 991.98px) { .featured-articles .title:after { width: 30%; } }
+@media (max-width: 991.98px) { .featured-articles .article-item { margin-bottom: 2rem; } }
+@media (max-width: 991.98px) { .featured-articles .article-item img { height: 100%; } }
+.featured-articles .article-item .article_desc { -webkit-line-clamp: 2; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 991.98px) { .featured-articles .article-item .article_desc { -webkit-line-clamp: 3; }
+  .featured-articles .article-item .article_desc:hover { color: #B10E0E; } }
+.featured-articles .article-item .article_desc span { display: inline-block; }
+.featured-articles .article-item .article_from { display: flex; justify-content: space-between; color: #6c757d; }
+@media (max-width: 991.98px) { .featured-articles .article-item .article_from { flex-direction: column; }
+  .featured-articles .article-item .article_from a { padding: 0; height: 0; } }
+
 .nav-item { padding-right: .5rem; }
 @media (max-width: 767.98px) { .nav-item { width: calc(100% / 4) !important; height: 68px; } }
 @media (max-width: 767.98px) { .nav-item .nav-link { font-size: .9rem !important; } }
