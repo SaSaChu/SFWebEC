@@ -3411,3 +3411,16 @@ main { position: relative; }
 .nav-item .nav-link.ac-nav-link { padding: 10px 11px; color: #4B4B4B; font-size: 1rem; background-color: #dee2e6; border: 1px solid #ced4da; margin: 0 auto; }
 @media (max-width: 767.98px) { .nav-item .nav-link.ac-nav-link { height: 68px; } }
 .nav-item .nav-link.ac-nav-link.active { color: #fff; background-color: #044281; border: 1px solid #044281; }
+
+.point-card .card-img { position: relative; }
+.point-card .card-img:hover img:nth-of-type(2) { opacity: 1; }
+.point-card .card-img img:nth-of-type(2) { position: absolute; top: 0; left: 0; opacity: 0; }
+.point-card .card-body { font-size: 1rem; text-align: left; padding: 0; color: #111C47; }
+.point-card .card-content { text-align: left; }
+.point-card .card-content p { font-size: 14px; color: #a1a1a1; }
+.point-card .card-content p span { font-size: 16px; font-weight: bold; color: #B10E0E; }
+.point-card .card-content p span:before { content: attr(data-symbol); }
+.point-card .card-action { margin-top: .5rem; }
+.point-card .card-action button { width: 100%; }
+
+.z666 { z-index: 666; }

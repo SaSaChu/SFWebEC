@@ -286,6 +286,66 @@ main {
 }
 
 
+// 紅利點數
+.point-card {
 
+	.card-img {
+		position: relative;
 
+		&:hover {
+			img {
+				&:nth-of-type(2) {
+					opacity: 1;
+				}	
+			}
+		}
+
+		img {
+
+			&:nth-of-type(2) {
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+			}
+		}
+	}
+
+	.card-body {
+		font-size: 1rem;
+		text-align: left;
+		padding: 0;
+		color: #111C47;
+	}
+
+	.card-content {
+		text-align: left;
+		p {
+			font-size: 14px;
+			color: #a1a1a1;
+
+			span {
+				font-size: 16px;
+				font-weight: bold;
+				color: #B10E0E;
+
+				&:before {
+					content: attr(data-symbol);
+				}
+			}
+		}
+	}
+
+	.card-action {
+		margin-top: .5rem;
+
+		button {
+			width: 100%;
+		}
+	}
+}
+
+.z666 {
+	z-index: 666;
+}
 
