@@ -258,9 +258,9 @@ main {
 			&:not(:last-child) {
 				.nav-link {
 					&:after {
-						content: "|";
+						content: "｜";
 						position: absolute;
-						right: 0;
+						right: -8px;
 						color: $gray-600;
 					}
 				}
@@ -359,6 +359,72 @@ main {
 		}
 
 	}
+}
+
+.current-magazine {
+	.magazine-title {
+		position: relative;
+		padding: 1rem 0;
+		border-top: 3px solid $gray-200;
+		border-bottom: 3px solid $gray-200;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 20px;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: -3px;
+			left: 0;
+			display: inline-block;
+			width: 12%;
+			height: 3px;
+			background-color: $main-red;
+
+			@include media-breakpoint-down(lg) {
+				width: 30%;
+			}
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: -3px;
+			left: 0;
+			display: inline-block;
+			width: 12%;
+			height: 3px;
+			background-color: $main-red;
+
+			@include media-breakpoint-down(lg) {
+				width: 30%;
+			}
+		}
+
+		h3 {
+			display: flex;
+			align-items: center;
+			margin-bottom: 0;
+			font-size: 24px;
+			font-weight: 500;
+			color: $gray-800;
+
+			span {
+				font-weight: normal;
+				color: inherit;
+			}
+		}
+
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size: 20px;
+			font-weight: 600;
+			color: #36558b;
+		}
+	}	
 }
 
 
