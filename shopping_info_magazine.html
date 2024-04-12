@@ -21,9 +21,11 @@
 	<script src="https://kit.fontawesome.com/25b2931f6f.js" crossorigin="anonymous"></script>
 
 	<!-- 自訂 css -->
+	<!-- 三花誌有使用輪播套件 swiper -->
 	<link rel="stylesheet" href="css/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" type="text/css" href="css/shopping_info_v2.css">
 	<!-- 自訂 js  -->
+	<!-- 三花誌有使用輪播套件 swiper -->
 	<script language="javascript" type="text/javascript" src="js/swiper/swiper-bundle.min.js"></script>
 	<script src="js/shopping_info_store.js"></script>
 	
@@ -929,12 +931,8 @@
 		<!-- nav info 選單 -->
 		<section class="info-nav shadow-sm">
 			<div class="container-xxl">
-				<div class="col-11 mx-auto">
-					<!-- <button class="form-select border-0 border-bottom d-block d-lg-none" type="button" id="dropdownMobileSubMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-						防詐騙聲明
-					</button> -->
-					<!-- class="dropdown-menu mobile-sub-menu"  aria-labelledby="dropdownMobileSubMenuButton"-->
-					<ul class="nav">
+				<div class="col-12 col-lg-11 mx-auto">
+					<ul class="nav web-nav d-none d-lg-flex">
 						<li class="nav-item">
 							<a class="nav-link"  href="#">會員兌點商品表</a>
 						</li>
@@ -960,6 +958,38 @@
 							<a class="nav-link" href="#">廣告專區</a>
 						</li>
 					</ul>
+					
+					<div class="dropdown mobile-nav d-block d-lg-none">
+						<button class="form-select border-0 border-bottom" type="button" id="dropdownMobileMainMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+							三花誌
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMobileMainMenuButton">
+							<li class="dropdown-item">
+								<a class="nav-link"  href="#">會員兌點商品表</a>
+							</li>
+							<li class="dropdown-item">
+								<a class="nav-link" href="#">會員分級辦法</a>
+							</li>
+							<li class="dropdown-item">
+								<a class="nav-link" href="#">關於三花</a>
+							</li>
+							<li class="dropdown-item">
+								<a class="nav-link" href="#">製襪工藝</a>
+							</li>
+							<li class="dropdown-item">
+								<a class="nav-link" href="#">因為在乎・所以付出</a>
+							</li>
+							<li class="dropdown-item">
+								<a class="nav-link" href="#">製襪工藝</a>
+							</li>
+							<li class="dropdown-item">
+								<a class="nav-link active" aria-current="page" href="#">三花誌</a>
+							</li>
+							<li class="dropdown-item">
+								<a class="nav-link" href="#">廣告專區</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</section>

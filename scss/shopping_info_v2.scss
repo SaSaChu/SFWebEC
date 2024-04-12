@@ -20,13 +20,11 @@ main {
 	.title-content {
 		display: flex;
 		flex-direction: column;
-		// align-items: center;
-		// justify-content: center;
 
 		@include media-breakpoint-down(lg) {
 			align-items: flex-start;
 			margin-top: 1rem;
-			padding-left: 12px;
+			padding-left: 6px;
 		}
 
 		h2 {
@@ -254,32 +252,53 @@ main {
 // 三花誌
 .info-nav {
 	.nav {
-		.nav-item {
-			&:not(:last-child) {
+		&.web-nav {
+			position: relative;
+			border: 0;
+
+			.nav-item {
+				&:not(:last-child) {
+					.nav-link {
+						&:after {
+							content: "｜";
+							position: absolute;
+							right: -8px;
+							color: $gray-600;
+						}
+					}
+				}
+	
 				.nav-link {
-					&:after {
-						content: "｜";
-						position: absolute;
-						right: -8px;
-						color: $gray-600;
+					position: relative;
+					display: flex;
+					align-items: center;
+					color: $gray-600;
+		
+					&.active {
+						color: $main-red;
+						font-weight: 600;
 					}
 				}
 			}
+		}		
+	}
 
-			.nav-link {
-				position: relative;
-				display: flex;
-				align-items: center;
-				color: $gray-600;
+	.dropdown {
+		&.mobile-nav {
+			.dropdown-menu {
+				// width: 100%;
 	
-				&.active {
-					color: $main-red;
-					font-weight: 600;
+				.nav-link {
+					color: $gray-600;
+
+					&.active {
+						color: $main-red;
+					}
 				}
 			}
 		}
-		
 	}
+	
 }
 
 .featured-articles {
