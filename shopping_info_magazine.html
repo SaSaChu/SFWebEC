@@ -27,7 +27,7 @@
 	<!-- 自訂 js  -->
 	<!-- 三花誌有使用輪播套件 swiper -->
 	<script language="javascript" type="text/javascript" src="js/swiper/swiper-bundle.min.js"></script>
-	<script src="js/shopping_info_store.js"></script>
+	<script src="js/shopping_info_magazine.js"></script>
 	
 </head>
 
@@ -1251,94 +1251,7 @@
 		</div>
 	</footer>
 
-	<script>
-		$(function(){
-			const swiper = new Swiper('.otherMa-swiper', {
-				// Optional parameters
-				slidesPerView: 1,
-				spaceBetween: 50,
-				loop: true,
-				breakpoints: {
-					768: {
-						slidesPerView: 2,
-					},
-					992: {
-						slidesPerView: 3,
-					},
-					1200: {
-						slidesPerView: 4,
-					}
-				},
-
-				// Navigation arrows
-				navigation: {
-					nextEl: '.otherMa-button-next',
-					prevEl: '.otherMa-button-prev',
-				},
-
-			});
-
-			let maModalSwiper;
-
-			$('#magazineModal').on('show.bs.modal', function(){
-				// ajax 取得該雜誌得 data;
-				// example 
-				let data = ['https://fakeimg.pl/1000x750?text=1000x750-11','https://fakeimg.pl/1000x750?text=1000x750-2','https://fakeimg.pl/1000x750?text=1000x750-3','https://fakeimg.pl/1000x750?text=1000x750-4','https://fakeimg.pl/1000x750?text=1000x750-5'];
-				
-				let example = '';
-				for (let i in data) {
-					example +=  `<div class="swiper-slide">
-						<img src="${data[i]}" class="ratio" alt="magazine page">
-						</div>`;
-				}
-				console.log(example);
-				// let example = `<div class="swiper-slide">
-				// 	<img src="https://fakeimg.pl/1000x750?text=1000x750-1" class="ratio" alt="">
-				// </div>`
-				$('.maModal-swiper .swiper-wrapper').append(example);
-
-				maModalSwiper = new Swiper('.maModal-swiper', {
-					slidesPerView: 1,
-					spaceBetween: 50,
-					pagination: {
-						el: ".maModal-pagination",
-						clickable: true,
-					},
-
-					breakpoints: {
-						992: {
-							navigation: {
-								nextEl: '.maModal-button-next',
-								prevEl: '.maModal-button-prev',
-							},
-							
-							pagination: {
-								el: ".maModal-pagination",
-								type: "fraction",
-								renderFraction: function (currentClass, totalClass) {
-								return '<span>第 </span> <span class="' + currentClass + '"></span>' +
-										'<span> 頁 / 共 </span>' +
-										'<span class="' + totalClass + '"></span> <span> 頁</span>';
-								}
-							},
-						},
-					},
-				});
-			});
-		
-			$('#magazineModal').on('shown.bs.modal', function(){
-				
-			});
-
-			$('#magazineModal').on('hide.bs.modal', function(){
-				maModalSwiper.destroy()	;
-				$('.maModal-swiper .swiper-wrapper').empty() ;
-			});
-
-		});
-	</script>
-
-	<!-- Store Detail Modal -->
+	<!-- Magazine Modal -->
 	<div class="modal fade" id="magazineModal" tabindex="-1" aria-labelledby="magazineModalToggleLabel" aria-hidden="true" data-bs-backdrop="static">
 		<div class="modal-dialog modal-xl modal-dialog-centered">
 			<div class="modal-content">
@@ -1359,26 +1272,7 @@
 				</div>
 				<div class="modal-body ">
 					<div class="swiper maModal-swiper px-lg-5 pb-5">
-						<div class="swiper-wrapper">
-							<!-- <div class="swiper-slide">
-								<img src="https://fakeimg.pl/1000x750?text=1000x750-1" class="ratio" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="https://fakeimg.pl/1000x750?text=1000x750-2" class="ratio" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="https://fakeimg.pl/1000x750?text=1000x750-3" class="ratio" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="https://fakeimg.pl/1000x750?text=1000x750-4" class="ratio" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="https://fakeimg.pl/1000x750?text=1000x750-5" class="ratio" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="https://fakeimg.pl/1000x750?text=1000x750-6" class="ratio" alt="">
-							</div> -->
-						</div>
+						<div class="swiper-wrapper"></div>
 						<div class="swiper-pagination maModal-pagination"></div>
 						<div class="swiper-button-prev maModal-button-prev"></div>
 						<div class="swiper-button-next maModal-button-next"></div>
