@@ -30,7 +30,6 @@ main {
 		h2 {
 			display: flex;			
 			align-items: center;
-			// justify-content: center;
 			color: $action-logout;
 	
 			&:before {
@@ -54,7 +53,7 @@ main {
 	
 			@include media-breakpoint-down(lg) {				
 				margin-right: 1rem;
-				padding-left: 24px;
+				padding-left: 16px;
 			}
 			
 		
@@ -83,21 +82,41 @@ main {
 	}
 
 	.title-bg {
-		
-		// background-image: url('../images/title-bg-pic/bg-Brand-02.webp');
-		// background-repeat: no-repeat;
-		// background-size: cover;
-		// height: 250px;
 		img {
 			width: 100%;
-		}
-
-		@include media-breakpoint-down(lg) {
-			// height: 150px;
 		}
 	}
 
 	
+}
+
+.title {
+	position: relative;
+	margin-bottom: 0;
+	padding-bottom: 12px;
+	font-size: 24px;
+	font-weight: 500;
+	color: $gray-800;
+	border-bottom: 3px solid $gray-200;
+
+	@include media-breakpoint-down(lg) {
+		font-size: 20px;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -3px;
+		left: 0;
+		display: inline-block;
+		width: 12%;
+		height: 3px;
+		background-color: $main-red;
+
+		@include media-breakpoint-down(lg) {
+			width: 30%;
+		}
+	}
 }
 
 // 店鋪資訊

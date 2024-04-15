@@ -3376,12 +3376,17 @@ main { position: relative; }
 .title-boxs .title-content h2:before, .title-boxs .title-content .h2:before { content: ''; display: inline-block; margin-right: 1rem; width: 8px; height: 45px; background-color: #18336c; }
 @media (max-width: 991.98px) { .title-boxs .title-content h2:before, .title-boxs .title-content .h2:before { margin-right: 0.5rem; height: 30px; } }
 .title-boxs .title-content .title-bread { padding-left: 24px; font-size: .85rem; }
-@media (max-width: 991.98px) { .title-boxs .title-content .title-bread { margin-right: 1rem; padding-left: 24px; } }
+@media (max-width: 991.98px) { .title-boxs .title-content .title-bread { margin-right: 1rem; padding-left: 16px; } }
 .title-boxs .title-content .title-bread .title-bread-item > a { color: #111c47; }
 .title-boxs .title-content .title-bread .title-bread-item > a:hover { text-decoration: underline !important; }
 .title-boxs .title-content .title-bread .title-bread-item.item-active { color: #B10E0E; }
 .title-boxs .title-content .title-bread .title-bread-item:before { float: left; padding-right: 0.5rem; padding-top: 4px !important; color: #6c757d !important; }
 .title-boxs .title-bg img { width: 100%; }
+
+.title { position: relative; margin-bottom: 0; padding-bottom: 12px; font-size: 24px; font-weight: 500; color: #343a40; border-bottom: 3px solid #e9ecef; }
+@media (max-width: 991.98px) { .title { font-size: 20px; } }
+.title:after { content: ""; position: absolute; bottom: -3px; left: 0; display: inline-block; width: 12%; height: 3px; background-color: #B10E0E; }
+@media (max-width: 991.98px) { .title:after { width: 30%; } }
 
 .store-search { font-size: 1.125rem; }
 

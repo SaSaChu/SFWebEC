@@ -7,13 +7,12 @@
 
 	<title>208_最新消息</title>
 
-	<script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
 	<script language="javascript" type="text/javascript" src="js/public.js"></script>
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<link rel="stylesheet" type="text/css" href="css/icon.css">
 	<link rel="stylesheet" type="text/css" href="css/public.css">
-	<link rel="stylesheet" type="text/css" href="css/shopping_info_v2.css">
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +20,10 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 	<script src="https://kit.fontawesome.com/25b2931f6f.js" crossorigin="anonymous"></script>
+
+	<!-- 自訂 css -->
+	<link rel="stylesheet" type="text/css" href="css/shopping_info_v2.css">
+
 </head>
 
 <body>
@@ -893,78 +896,121 @@
 	
 	<main class="">
 		
-		<!-- banner -->
+		<!-- banner -->	
 		<section class="title-boxs">
-			<!-- <div class="col-11"> -->
-				<div class="row g-0 align-items-center">
-					<div class="col-11 col-lg-4 mx-auto">
-						<div class="title-content">
+			<div class="row g-0 align-items-center">
+				<div class="col-11 col-lg-4 mx-auto">
+					<div class="title-content row">
+						<div class="col-12 col-lg-8 offset-lg-4">
 							<h2 class="text-mainBlue">最新消息</h2>
+						</div>
+						<div class="col-12 col-lg-8 offset-lg-4">
 							<nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb">
 								<ol class="breadcrumb title-bread">
 									<li class="breadcrumb-item title-bread-item"><a href="#">首頁</a></li>
 									<li class="breadcrumb-item title-bread-item"><a href="#">最新消息</a></li>
 									<li class="breadcrumb-item title-bread-item item-active" aria-current="page">最新消息</li>
 								</ol>
-							</nav>	
+							</nav>
 						</div>
 					</div>
-					<div class="col-12 col-lg-8 title-bg">
-						<picture>
-							<img src="images/title-bg-pic/bg-Brand-01.webp" alt="">
-						</picture>
+				</div>
+				<div class="col-12 col-lg-8 title-bg">
+					<picture>
+						<img src="images/title-bg-pic/bg-Brand-01.webp" class="img-fluid" alt="">
+					</picture>
+				</div>
+			</div>
+		</section>
+
+		<!-- nav info 選單 -->
+		<section class="info-nav shadow-sm">
+			<div class="container-xxl">
+				<div class="col-12 col-lg-11 mx-auto">
+					<ul class="nav web-nav d-none d-lg-flex">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#">最新消息</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">最新活動</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">百貨新櫃</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">媒體報導</a>
+						</li>
+					</ul>
+					
+					<div class="dropdown mobile-nav d-block d-lg-none">
+						<button class="form-select border-0 border-bottom" type="button" id="dropdownMobileMainMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+							最新消息
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMobileMainMenuButton">
+							<li class="dropdown-item">
+								<a class="nav-link active" aria-current="page"  href="#">最新消息</a>
+							</li>
+							<li class="dropdown-item">
+								<a class="nav-link" href="#">最新活動</a>
+							</li>
+							<li class="dropdown-item">
+								<a class="nav-link" href="#">百貨新櫃</a>
+							</li>
+							<li class="dropdown-item">
+								<a class="nav-link" href="#">媒體報導</a>
+							</li>	
+						</ul>
 					</div>
 				</div>
-			<!-- </div> -->
+			</div>
 		</section>
 
 		<!-- 資料顯示區 -->
 		<div class="container-xxl my-5">
-			<div class="row mx-auto mb-4">
-				<div class="col-auto account-redLine pt-0 pb-2 fs-4 fw-semi">最新消息</div>
-				<div class="col account-grayLine"></div>
+			<div class="col-12 col-lg-11 mx-auto px-0 px-lg-3 mb-4">
+				<h3 class="title">最新消息</h3>
 			</div>
 
-			<div class="row gx-5 mx-auto">
-				<div class="col-md-4 col-12 mb-3 px-md-3 px-0">
-					<figure class="figure">
-					  <img src="images/article/IMG_6491.JPG" class="figure-img img-fluid rounded" alt="...">
-					  <figcaption class="figure-caption text-blue002 mb-2">圖片尺寸建議：400x225px</figcaption>
-					  <figcaption class="figure-caption">Jul.2023</figcaption>
-					</figure>
+			<div class="col-12 col-lg-11 mx-auto px-0 px-lg-3">
+				<div class="row gx-5 mx-auto">
+					<div class="col-md-4 col-12 mb-3 px-md-3 px-0">
+						<figure class="figure">
+						<img src="images/article/IMG_6491.JPG" class="figure-img img-fluid rounded" alt="...">
+						<figcaption class="figure-caption text-blue002 mb-2">圖片尺寸建議：400x225px</figcaption>
+						<figcaption class="figure-caption">Jul.2023</figcaption>
+						</figure>
+					</div>
+					<div class="col-md-4 col-12 mb-3 px-md-3 px-0">
+						<figure class="figure">
+						<img src="images/article/IMG_5742.JPG" class="figure-img img-fluid rounded" alt="...">
+						<figcaption class="figure-caption text-blue002 mb-2">圖片尺寸建議：400x225px</figcaption>
+						<figcaption class="figure-caption">Jul.2023</figcaption>
+						</figure>
+					</div>
+					<div class="col-md-4 col-12 mb-3 px-md-3 px-0">
+						<figure class="figure">
+						<img src="images/article/IMG_5742.JPG" class="figure-img img-fluid rounded" alt="...">
+						<figcaption class="figure-caption text-blue002 mb-2">圖片尺寸建議：400x225px</figcaption>
+						<figcaption class="figure-caption">Jul.2023</figcaption>
+						</figure>
+					</div>
+					<div class="col-md-4 col-12 mb-3 px-md-3 px-0">
+						<figure class="figure">
+						<img src="images/article/IMG_5742.JPG" class="figure-img img-fluid rounded" alt="...">
+						<figcaption class="figure-caption text-blue002 mb-2">圖片尺寸建議：400x225px</figcaption>
+						<figcaption class="figure-caption">Jul.2023</figcaption>
+						</figure>
+					</div>
+					<div class="col-md-4 col-12 mb-3 px-md-3 px-0">
+						<figure class="figure">
+						<img src="images/article/IMG_5742.JPG" class="figure-img img-fluid rounded" alt="...">
+						<figcaption class="figure-caption text-blue002 mb-2">圖片尺寸建議：400x225px</figcaption>
+						<figcaption class="figure-caption">Jul.2023</figcaption>
+						</figure>
+					</div>
 				</div>
-				<div class="col-md-4 col-12 mb-3 px-md-3 px-0">
-					<figure class="figure">
-					  <img src="images/article/IMG_5742.JPG" class="figure-img img-fluid rounded" alt="...">
-					  <figcaption class="figure-caption text-blue002 mb-2">圖片尺寸建議：400x225px</figcaption>
-					  <figcaption class="figure-caption">Jul.2023</figcaption>
-					</figure>
-				</div>
-				<div class="col-md-4 col-12 mb-3 px-md-3 px-0">
-					<figure class="figure">
-					  <img src="images/article/IMG_5742.JPG" class="figure-img img-fluid rounded" alt="...">
-					  <figcaption class="figure-caption text-blue002 mb-2">圖片尺寸建議：400x225px</figcaption>
-					  <figcaption class="figure-caption">Jul.2023</figcaption>
-					</figure>
-				</div>
-				<div class="col-md-4 col-12 mb-3 px-md-3 px-0">
-					<figure class="figure">
-					  <img src="images/article/IMG_5742.JPG" class="figure-img img-fluid rounded" alt="...">
-					  <figcaption class="figure-caption text-blue002 mb-2">圖片尺寸建議：400x225px</figcaption>
-					  <figcaption class="figure-caption">Jul.2023</figcaption>
-					</figure>
-				</div>
-				<div class="col-md-4 col-12 mb-3 px-md-3 px-0">
-					<figure class="figure">
-					  <img src="images/article/IMG_5742.JPG" class="figure-img img-fluid rounded" alt="...">
-					  <figcaption class="figure-caption text-blue002 mb-2">圖片尺寸建議：400x225px</figcaption>
-					  <figcaption class="figure-caption">Jul.2023</figcaption>
-					</figure>
-				</div>
-				
 			</div>
 		</div>
-
 	</main>
 
 	<footer>
