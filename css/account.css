@@ -3423,6 +3423,7 @@ footer .footer-four-li > p:last-child a:after { display: none; }
 .account-memberCardBoxs .memberCard-tip p { display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 500; line-height: 1.51; color: #343a40; }
 .account-memberCardBoxs .memberCard-tip p span { color: #B10E0E; }
 .account-memberCardBoxs .memberCard-progress { position: relative; }
+@media (max-width: 991.98px) { .account-memberCardBoxs .memberCard-progress { margin: 0 .5rem; } }
 .account-memberCardBoxs .memberCard-progress .progress-bar { background-color: #6c757d; }
 .account-memberCardBoxs .memberCard-progress .progress-step { position: absolute; transform: translateY(-30%); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
 .account-memberCardBoxs .memberCard-progress .progress-step.step-first { left: 0; }
@@ -3430,8 +3431,10 @@ footer .footer-four-li > p:last-child a:after { display: none; }
 .account-memberCardBoxs .memberCard-progress .progress-step.step-third { left: calc(100% - 45px); }
 .account-memberCardBoxs .memberCard-progress .progress-step.active p { background: #6c757d; }
 .account-memberCardBoxs .memberCard-progress .progress-step p { display: flex; align-items: center; justify-content: center; margin-bottom: .5rem; width: 45px; height: 45px; font-size: 20px; border-radius: 50%; color: #fff; background: #e9ecef; }
+@media (max-width: 991.98px) { .account-memberCardBoxs .memberCard-progress .progress-step p { font-size: 20px; } }
 .account-memberCardBoxs .memberCard-progress .progress-step span { font-size: 22px; font-weight: 900; color: #6c757d; }
-.account-memberCardBoxs .memberCard-progress .progress-now { position: absolute; top: 0; transform: translateX(-50%); }
+@media (max-width: 991.98px) { .account-memberCardBoxs .memberCard-progress .progress-step span { font-size: 18px; } }
+.account-memberCardBoxs .memberCard-progress .progress-now { position: absolute; top: 0; }
 .account-memberCardBoxs .memberCard-progress .progress-now p { margin-bottom: 0; font-size: 14px; color: #343a40; }
 .account-memberCardBoxs .memberCard-progress .progress-now span { font-size: 16px; color: #044281; font-weight: 900; }
 

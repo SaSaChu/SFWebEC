@@ -312,6 +312,10 @@
 	.memberCard-progress {
 		position: relative;
 
+		@include media-breakpoint-down(lg) {
+			margin: 0 .5rem;
+		}
+
 		.progress-bar {
 			background-color: $gray-600;
 		}
@@ -357,12 +361,20 @@
 				border-radius: 50%;
 				color: $white;
 				background: $gray-200;
+
+				@include media-breakpoint-down(lg) {
+					font-size: 20px;
+				}
 			}
 
 			span {
 				font-size: 22px;
 				font-weight: 900;
 				color: $gray-600;
+
+				@include media-breakpoint-down(lg) {
+					font-size: 18px;
+				}
 			}
 			
 		}
@@ -370,7 +382,6 @@
 		.progress-now {
 			position: absolute;
 			top: 0;
-			transform: translateX(-50%);
 
 			p {
 				margin-bottom: 0;
