@@ -3420,6 +3420,21 @@ footer .footer-four-li > p:last-child a:after { display: none; }
 @media (max-width: 767.98px) { .account-memberBoxs { text-align: left; } }
 .account-memberBoxs > h5, .account-memberBoxs > .h5 { display: inline-block; width: 100%; color: #044281; text-align: center; font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; }
 
+.account-memberCardBoxs .memberCard-tip p { display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 500; line-height: 1.51; color: #343a40; }
+.account-memberCardBoxs .memberCard-tip p span { color: #B10E0E; }
+.account-memberCardBoxs .memberCard-progress { position: relative; }
+.account-memberCardBoxs .memberCard-progress .progress-bar { background-color: #6c757d; }
+.account-memberCardBoxs .memberCard-progress .progress-step { position: absolute; transform: translateY(-30%); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.account-memberCardBoxs .memberCard-progress .progress-step.step-first { left: 0; }
+.account-memberCardBoxs .memberCard-progress .progress-step.step-second { left: calc(50% - 22.5px); }
+.account-memberCardBoxs .memberCard-progress .progress-step.step-third { left: calc(100% - 45px); }
+.account-memberCardBoxs .memberCard-progress .progress-step.active p { background: #6c757d; }
+.account-memberCardBoxs .memberCard-progress .progress-step p { display: flex; align-items: center; justify-content: center; margin-bottom: .5rem; width: 45px; height: 45px; font-size: 20px; border-radius: 50%; color: #fff; background: #e9ecef; }
+.account-memberCardBoxs .memberCard-progress .progress-step span { font-size: 22px; font-weight: 900; color: #6c757d; }
+.account-memberCardBoxs .memberCard-progress .progress-now { position: absolute; top: 0; transform: translateX(-50%); }
+.account-memberCardBoxs .memberCard-progress .progress-now p { margin-bottom: 0; font-size: 14px; color: #343a40; }
+.account-memberCardBoxs .memberCard-progress .progress-now span { font-size: 16px; color: #044281; font-weight: 900; }
+
 .accoutn-contact-icon { display: inline-block; width: 20px; height: 20px; line-height: 18px; color: white; text-align: center; background-color: #0083D2; border-radius: 10px; margin-right: 5px; }
 
 .accoutn-phoneBoxs { display: flex; align-items: center; flex-wrap: wrap; width: 100%; }
