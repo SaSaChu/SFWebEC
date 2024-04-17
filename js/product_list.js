@@ -73,47 +73,47 @@ $(function() {
 	let alreadyTab = ['tab-sort-content-1'];
     $('#sortTab').on('show.bs.tab', function(event) {
 		let id = event.target.getAttribute('data-bs-target').replace('#', '');
-		if(!alreadyTab.includes(id)) {
-			productList(id);
-			alreadyTab.push(id);
-	   	}
+		// if(!alreadyTab.includes(id)) {
+			// productList(id);
+			// alreadyTab.push(id);
+	   	// }
     })
 
-	productList();
+	// productList();
 
-	function productList(id='tab-sort-content-1') {
-		let options = {
-			valueNames: [{name: 'type', attr:'data-type'}],
-            page: 4,
-            pagination: true
-		};
+	// function productList(id='tab-sort-content-1') {
+	// 	let options = {
+	// 		valueNames: [{name: 'type', attr:'data-type'}],
+    //         page: 4,
+    //         pagination: true
+	// 	};
 		
-		let productList = new List(id, options);
-		console.log(productList)
+	// 	let productList = new List(id, options);
+	// 	console.log(productList)
 
-		let type = [];
+	// 	let type = [];
 
-		$('.filter-tag-btn').on('click', function () {
-			if(!type.includes($(this).attr('data-type'))) {
-				type.push($(this).attr('data-type'));
-			}
+	// 	$('.filter-tag-btn').on('click', function () {
+	// 		if(!type.includes($(this).attr('data-type'))) {
+	// 			type.push($(this).attr('data-type'));
+	// 		}
 			
-			if ($(this).hasClass('active')) {
-				// productList.filter();
-				// $(this).removeClass('active');
-			} else {
-				// $('.filter-tag-btn').removeClass('active');
-				if(type == 'all') {
-					productList.filter();
-				} else {
-					productList.filter(function (item) {
-						console.log(item.values().type)
-						return (item.values().type.includes(type));
-					});
-				}
-				$(this).addClass('active');
-			}			
-		});
-	}
+	// 		if ($(this).hasClass('active')) {
+	// 			// productList.filter();
+	// 			// $(this).removeClass('active');
+	// 		} else {
+	// 			// $('.filter-tag-btn').removeClass('active');
+	// 			if(type == 'all') {
+	// 				productList.filter();
+	// 			} else {
+	// 				productList.filter(function (item) {
+	// 					console.log(item.values().type)
+	// 					return (item.values().type.includes(type));
+	// 				});
+	// 			}
+	// 			$(this).addClass('active');
+	// 		}			
+	// 	});
+	// }
 	
 })
