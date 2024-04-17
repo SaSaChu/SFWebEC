@@ -1,11 +1,6 @@
 $(function () {
 
 	// mobile menu widget
-	
-	// $('.side_widget_title').map(function(i) {
-	// 	let item = `<li class="dropdown-item">${$(this).text().trim()}</a></li>`
-	// 	$('.mobile-main-menu').append(item);
-	// });
 
 	$('.mobile-main-menu .dropdown-item').on('click', function() {
 		$('.mobile-sub-menu').empty();
