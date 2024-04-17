@@ -72,37 +72,55 @@
 		}
 	}
 	
-	.color-items {
-		padding-top: .5rem;
-
-		.color-item {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			padding: 1px;
-			width: 22px;
-			height: 22px;
-			border-radius: 50%;
-			cursor: pointer;
-
-			&:not(:first-child) {
-				margin-left: .5rem;
+	.action-wrapper {
+		.action-item {
+			&.action-love {
+				&.active {
+					color: $main-yellow;
+				}
 			}
 
-			&.active {
-				border: solid 1px #979797;
-			}
-
-			span {
-				display: none;
+			&.action-cart {
+				&.active {
+					color: $main-blue;
+				}
 			}
 		}
 	}
 
-	.color-name {
-		padding-top: .5rem;
-		font-size: 14px;
-		color: $gray-600;
+	.colors-wrapper {
+		.color-items {
+			padding-top: .5rem;
+	
+			.color-item {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 1px;
+				width: 22px;
+				height: 22px;
+				border-radius: 50%;
+				cursor: pointer;
+	
+				&:not(:first-child) {
+					margin-left: .5rem;
+				}
+	
+				&.active {
+					border: solid 1px #979797;
+				}
+	
+				span {
+					display: none;
+				}
+			}
+		}
+	
+		.color-name {
+			padding-top: .5rem;
+			font-size: 14px;
+			color: $gray-600;
+		}
 	}
 }
 
@@ -282,6 +300,9 @@
 
 		.offcanvas_price {
 			p {
+				display: flex;
+				align-items: center;
+
 				&:first-of-type {
 					color: #7d7d7d;
 				}
@@ -292,6 +313,9 @@
 			}
 
 			span {
+				display: flex;
+				align-items: center;
+				
 				&:before {
 					content: "NT$ ";
 				}	

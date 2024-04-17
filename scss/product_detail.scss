@@ -53,12 +53,24 @@ main {
 			}
 		}
 
-		.detail_no {
-			color: rgba(17, 28, 71, 0.8);
+		.detail_title {
+			h3 {
+				display: flex;
+				align-items: center;
+
+				.detail_no {
+					color: rgba(17, 28, 71, 0.8);
+				}
+			}
+			
 		}
+
+
 
 		.detail_price {
 			p {
+				display: flex;
+				align-items: center;
 				&:first-of-type {
 					color: #7d7d7d;
 				}
@@ -68,6 +80,9 @@ main {
 				}
 			}
 			span {
+				display: flex;
+				align-items: center;
+				
 				&:before {
 					content: "NT$ ";
 				}	
@@ -91,12 +106,37 @@ main {
 			}
 
 			p {
+				display: flex;
+				align-items: center;
 				color: $blue-004;
 
-				span {
+				@include media-breakpoint-down(lg) {
+					display: block;
+				}
+
+				> span {
+					display: inline-flex;
+					align-items: center;
 					color: $gray-600;
 
+					@include media-breakpoint-down(lg) {
+						display: flex;
+					}
+
+
+					&:before {
+						content: '| ';
+						margin: 0 .5rem;
+						vertical-align: middle;
+
+						@include media-breakpoint-down(lg) {
+							content: none;
+						}
+					}
+
 					> span {
+						margin: 0 .5rem;
+
 						&:first-of-type {
 							color: #cd0000;
 						}
@@ -209,9 +249,15 @@ main {
 				}
 
 				.size_chart {
+					display: inline-flex;
+					align-items: center;
 					font-size: 16px;
 					color: #7d7d7d;
 					border-bottom: 1px solid #979797;
+
+					> i {
+						margin-left: .5rem;
+					}
 				}
 			}
 
@@ -223,7 +269,7 @@ main {
 				&.active {
 					.size-btn {
 						span {
-							color: var(--main-white);
+							color: $white;
 							background-color: $blue-006;
 						}
 					}
@@ -257,7 +303,7 @@ main {
 						height: 36px;
 						border-radius: 50%;
 						background-color: #b3b7c6;
-						color: var(--main-white);
+						color: $white;
 					}
 				}
 			}
@@ -272,7 +318,7 @@ main {
 		.detail_action {
 			button {
 				width: 100%;
-				color: var(--main-white);
+				color: $white;
 
 				&:focus {
 					outline: none;
@@ -309,7 +355,7 @@ main {
 
 				&.bg-3 {
 					background-color: #b3b7c6;
-					color: var(--main-white);
+					color: $white;
 				}
 			}
 		}

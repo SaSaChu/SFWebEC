@@ -7,7 +7,8 @@ $(function () {
         let productId = $(this).attr('data-product-id');
         console.log(productId);
         // Do Ajax
-        // 成功的話跳訊息
+        // 0412 成功的話跳訊息並添加 active
+        $(this).addClass('active');
     })
     // 網頁版 顏色
     $('.product-card').find('.color-item').on('mouseenter click', function() {
@@ -123,6 +124,8 @@ $(function () {
 					let color = $('input[name="product-color"]').val(); 
 					let size = $('input[name="product-size"]').val();
 					console.log('產品 ID:'+productId, '顏色：'+color, '尺寸：'+ size, '數量：'+quantity);
+                    // 0412 成功後添加 active 
+                    $(this).parents('.action-wrapper').find('.action-cart').addClass('active')
                 })
                 
             } else {
@@ -157,7 +160,6 @@ $(function () {
 		$('input[name="product-color"]').val($(this).attr('data-color-id'));
         
         // 尺寸
-        // let sizeItems = `<input type="hidden" name="offcanvas-size" value="${sizes[0]}">`;
         let sizeItems = ``;
         sizes.forEach(function(e, i) {
             let sold_out='';
@@ -218,8 +220,13 @@ $(function () {
         let quantity = $('input[name="product-quantity"]').val($('input[name="offcanvas-quantity"]').val()).val();
         let color = $('input[name="product-color"]').val(); 
         let size = $('input[name="product-size"]').val();
+        
         console.log('產品 ID:'+productId, '顏色：'+color, '尺寸：'+ size, '數量：'+quantity);
         // Do Ajax
-        // 成功的話跳訊息
+        // 0412 成功的話跳訊息並添加 active
+        $(`.action-cart[data-product-id="${productId}"]`).addClass('active');
+        let count = parseInt($('.cart-items-count').attr('data-cart-items'));
+        console.log(count, typeof(count));
+        $('.cart-items-count').attr('data-cart-items', ++count);
     })
 });
