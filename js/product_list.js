@@ -70,50 +70,15 @@ $(function() {
             },
         });
     }
-	let alreadyTab = ['tab-sort-content-1'];
+
     $('#sortTab').on('show.bs.tab', function(event) {
-		let id = event.target.getAttribute('data-bs-target').replace('#', '');
-		// if(!alreadyTab.includes(id)) {
-			// productList(id);
-			// alreadyTab.push(id);
-	   	// }
+		// 0412 排序改由 js 控制 col-lg
+		let relatedTargetCol = event.relatedTarget.getAttribute('data-bs-target');
+		let targetCol = event.target.getAttribute('data-bs-target');
+		$('#tab-sort-content').find('.row > .col-12').removeClass(relatedTargetCol).addClass(targetCol);
+		// 0412 拿掉篩選套件 list.js 
     })
 
-	// productList();
-
-	// function productList(id='tab-sort-content-1') {
-	// 	let options = {
-	// 		valueNames: [{name: 'type', attr:'data-type'}],
-    //         page: 4,
-    //         pagination: true
-	// 	};
-		
-	// 	let productList = new List(id, options);
-	// 	console.log(productList)
-
-	// 	let type = [];
-
-	// 	$('.filter-tag-btn').on('click', function () {
-	// 		if(!type.includes($(this).attr('data-type'))) {
-	// 			type.push($(this).attr('data-type'));
-	// 		}
-			
-	// 		if ($(this).hasClass('active')) {
-	// 			// productList.filter();
-	// 			// $(this).removeClass('active');
-	// 		} else {
-	// 			// $('.filter-tag-btn').removeClass('active');
-	// 			if(type == 'all') {
-	// 				productList.filter();
-	// 			} else {
-	// 				productList.filter(function (item) {
-	// 					console.log(item.values().type)
-	// 					return (item.values().type.includes(type));
-	// 				});
-	// 			}
-	// 			$(this).addClass('active');
-	// 		}			
-	// 	});
-	// }
+	// 0412 拿掉篩選套件 list.js 
 	
 })

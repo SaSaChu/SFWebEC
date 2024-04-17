@@ -3443,6 +3443,7 @@ footer .footer-four-li > p:last-child a:after { display: none; }
 .cart-offcanvas .offcanvas-body .offcanvas_button button, .detail-offcanvas .offcanvas-body .offcanvas_button button { background-color: #B10E0E; color: #fff; width: 100%; }
 
 main { position: relative; z-index: 1; }
+@media (min-width: 768px) and (max-width: 991.98px) { main .container { max-width: 100%; } }
 main .closeSideBtn { display: flex; flex-direction: column; width: 30px; font-size: 13px; line-height: 1.23; color: #fff; transform: translateY(15vh); cursor: pointer; }
 main .closeSideBtn i { display: flex; align-items: center; justify-content: center; width: 100%; padding: .5rem .25rem; background-color: #FF9C00; font-size: 13px; border-radius: 6px 0 0 0; }
 main .closeSideBtn span { display: flex; align-items: center; justify-content: center; width: 100%; padding: .5rem 0; font-size: 16px; font-weight: 500; border-radius: 0 0 0 6px; background-color: #6c757d; writing-mode: vertical-rl; text-orientation: upright; }
@@ -3524,7 +3525,6 @@ main .package-wrapper .side_package figure:last-child { margin-bottom: 0; }
 main .package-wrapper .side_package p { color: #fff; }
 main .products-wrapper .tab-content { padding: 1.5rem 0; }
 main .products-wrapper .tab-content .tab-pane .pagination { justify-content: flex-end; }
-main .products-wrapper .tab-content .tab-pane .pagination li { width: 32px; height: 32px; }
+main .products-wrapper .tab-content .tab-pane .pagination li { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; font-size: 14px; color: #B3B7C6; border-color: #B3B7C6; border-radius: 3px; }
 main .products-wrapper .tab-content .tab-pane .pagination li:not(:last-child) { margin-right: .5rem; }
-main .products-wrapper .tab-content .tab-pane .pagination li.active .page { color: #3D6DC1; border-color: #3D6DC1; }
-main .products-wrapper .tab-content .tab-pane .pagination li .page { display: flex; align-items: center; justify-content: center; width: inherit; height: inherit; font-size: 14px; color: #B3B7C6; border: 1px solid #B3B7C6; border-radius: 3px; }
+main .products-wrapper .tab-content .tab-pane .pagination li.active .page-item { color: #3D6DC1; border-color: #3D6DC1; }
