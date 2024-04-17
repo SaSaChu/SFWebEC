@@ -81,4 +81,11 @@ $(function() {
 
 	// 0412 拿掉篩選套件 list.js 
 	
+	// package-wrapper
+	// 0412 組合價切換顏色時圖片也要跟著變
+	// data-img 放圖片連結 select oncahnge 時 透過 js 變更 figure-img src 內容
+	$('.package-wrapper').find('.form-select').on('change', function(){
+		let img = $(this).find('option:selected').attr('data-img');
+		$(this).parents('.card').find('.card-img .figure-img').attr('src', img);
+	})
 })

@@ -1300,10 +1300,11 @@
 														<form action="">
 															<div class="row g-0">
 																<div class="col-12">
+																	<!-- 0412 組合價切換顏色時圖片也要跟著變 data-img 放圖片連結 select oncahnge 時 透過 js 變更 figure-img src 內容-->
 																	<select class="form-select border-0" aria-label="Default select example">
-																		<option selected value="1">藍格</option>
-																		<option value="2">紅格</option>
-																		<option value="3">黑格</option>
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑格</option>
 																	</select>
 																</div>
 															</div>
@@ -1343,10 +1344,11 @@
 														<form action="">
 															<div class="row g-0">
 																<div class="col-12">
+																	<!-- 0412 組合價切換顏色時圖片也要跟著變 -->
 																	<select class="form-select border-0" aria-label="Default select example">
-																		<option selected value="1">藍格</option>
-																		<option value="2">紅格</option>
-																		<option value="3">黑格</option>
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑格</option>
 																	</select>
 																</div>
 															</div>
@@ -1386,10 +1388,11 @@
 														<form action="">
 															<div class="row g-0">
 																<div class="col-12">
+																	<!-- 0412 組合價切換顏色時圖片也要跟著變 -->
 																	<select class="form-select border-0" aria-label="Default select example">
-																		<option selected value="1">藍格</option>
-																		<option value="2">紅格</option>
-																		<option value="3">黑格</option>
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑格</option>
 																	</select>
 																</div>
 															</div>
@@ -1429,10 +1432,11 @@
 														<form action="">
 															<div class="row g-0">
 																<div class="col-12">
+																	<!-- 0412 組合價切換顏色時圖片也要跟著變 -->
 																	<select class="form-select border-0" aria-label="Default select example">
-																		<option selected value="1">藍格</option>
-																		<option value="2">紅格</option>
-																		<option value="3">黑格</option>
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑格</option>
 																	</select>
 																</div>
 															</div>
@@ -1472,10 +1476,11 @@
 														<form action="">
 															<div class="row g-0">
 																<div class="col-12">
+																	<!-- 0412 組合價切換顏色時圖片也要跟著變 -->
 																	<select class="form-select border-0" aria-label="Default select example">
-																		<option selected value="1">藍格</option>
-																		<option value="2">紅格</option>
-																		<option value="3">黑格</option>
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑格</option>
 																	</select>
 																</div>
 															</div>
@@ -1505,199 +1510,196 @@
 
 								<!-- 無尺寸 -->
 								<div class="package-area d-none d-lg-block border rounded mt-3 p-3">
-									<!-- <div class="row g-0 mt-3"> -->
-										<div class="package_header mb-3">
-											<div class="row g-0 align-items-center">
-												<div class="col-9">
-													<p class="fs-4">無尺寸 任選5件 1000元 <span class="d-flex align-items-center ms-1 fs-6"> | 已選 <span class="ms-1">3 件</span>，還差 <span class="ms-1">2 件</span> 即可項優惠</span></p>
-												</div>
-												<div class="col-3 text-end">
-													<a class="no_size_color btn btn-lg w-75 fs-6">前往結賬</a>
-												</div>
+									<!-- 0412 刪除多餘 div -->
+									<div class="package_header mb-3">
+										<div class="row g-0 align-items-center">
+											<div class="col-9">
+												<p class="fs-4">無尺寸 任選5件 1000元 <span class="d-flex align-items-center ms-1 fs-6"> | 已選 <span class="ms-1">3 件</span>，還差 <span class="ms-1">2 件</span> 即可項優惠</span></p>
+											</div>
+											<div class="col-3 text-end">
+												<a class="no_size_color btn btn-lg w-75 fs-6">前往結賬</a>
 											</div>
 										</div>
-										<div class="package_body">
-											<div class="row justify-content-between">
-												<div class="col">
-													<div class="card border-0">
-														<div class="card-img ratio ratio-1x1">
-															<figure class="figure d-flex align-items-center justify-content-center m-0 p-2 text-center border">
-																<img src="https://fakeimg.pl/150x150/?text=Hello" class="figure-img m-0" alt="...">
-																<div class="trash-btn">
-																	<i class="fa-regular fa-trash-can"></i>
+									</div>
+									<div class="package_body">
+										<div class="row justify-content-between">
+											<div class="col">
+												<div class="card border-0">
+													<div class="card-img ratio ratio-1x1">
+														<figure class="figure d-flex align-items-center justify-content-center m-0 p-2 text-center border">
+															<img src="https://fakeimg.pl/150x150/?text=Hello" class="figure-img m-0" alt="...">
+															<div class="trash-btn">
+																<i class="fa-regular fa-trash-can"></i>
+															</div>
+														</figure>
+													</div>
+													
+													<div class="card-body px-0">
+														<div class="card-title">5522 - 簡短商品代稱</div>
+														<form action="">
+															<div class="row g-0 mt-2">
+																<div class="col me-1">
+																	<!-- 0412 組合價切換顏色時圖片也要跟著變 -->
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑格</option>
+																	</select>
 																</div>
-															</figure>
-														</div>
-														
-														<div class="card-body px-0">
-															<div class="card-title">5522 - 簡短商品代稱</div>
-																<form action="">
-																	<div class="row g-0 mt-2">
-																		<div class="col me-1">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">藍格</option>
-																				<option value="2">紅格</option>
-																				<option value="3">黑格</option>
-																			</select>
-																		</div>
-																		<div class="col ms-1">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">1 件</option>
-																				<option value="2">2 件</option>
-																				<option value="3">3 件</option>
-																			</select>
-																		</div>
-																	</div>
-																</form>
-															
-															
-														</div>
+																<div class="col ms-1">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1">1 件</option>
+																		<option value="2">2 件</option>
+																		<option value="3">3 件</option>
+																	</select>
+																</div>
+															</div>
+														</form>
 													</div>
 												</div>
-												<div class="col">
-													<div class="card border-0">
-														<div class="card-img ratio ratio-1x1">
-															<figure class="figure d-flex align-items-center justify-content-center m-0 p-2 text-center border">
-																<img src="https://fakeimg.pl/150x150/?text=Hello" class="figure-img m-0" alt="...">
-																<div class="trash-btn">
-																	<i class="fa-regular fa-trash-can"></i>
-																</div>
-															</figure>
-														</div>
-														<div class="card-body px-0">
-															<div class="card-title">5522 - 簡短商品代稱</div>
-																<form action="">
-																	<div class="row g-0 mt-2">
-																		<div class="col me-1">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">藍格</option>
-																				<option value="2">紅格</option>
-																				<option value="3">黑格</option>
-																			</select>
-																		</div>
-																		<div class="col ms-1">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">1 件</option>
-																				<option value="2">2 件</option>
-																				<option value="3">3 件</option>
-																			</select>
-																		</div>
-																	</div>
-																</form>
-															
-															
-														</div>
-													</div>
-												</div>
-												<div class="col">
-													<div class="card border-0">
-														<div class="card-img ratio ratio-1x1">
-															<figure class="figure d-flex align-items-center justify-content-center m-0 p-2 text-center border">
-																<img src="https://fakeimg.pl/150x150/?text=Hello" class="figure-img m-0" alt="...">
-																<div class="trash-btn">
-																	<i class="fa-regular fa-trash-can"></i>
-																</div>
-															</figure>
-														</div>
-														
-														<div class="card-body px-0">
-															<div class="card-title">5522 - 簡短商品代稱</div>
-																<form action="">
-																	<div class="row g-0 mt-2">
-																		<div class="col me-1">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">藍格</option>
-																				<option value="2">紅格</option>
-																				<option value="3">黑格</option>
-																			</select>
-																		</div>
-																		<div class="col ms-1">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">1 件</option>
-																				<option value="2">2 件</option>
-																				<option value="3">3 件</option>
-																			</select>
-																		</div>
-																	</div>
-																</form>
-															
-															
-														</div>
-													</div>
-												</div>
-												<div class="col">
-													<div class="card border-0">
-														<div class="card-img ratio ratio-1x1">
-															<figure class="figure d-flex align-items-center justify-content-center m-0 p-2 text-center border">
-																<img src="https://fakeimg.pl/150x150/?text=Hello" class="figure-img m-0" alt="...">
-																<div class="trash-btn">
-																	<i class="fa-regular fa-trash-can"></i>
-																</div>
-															</figure>
-														</div>
-														
-														<div class="card-body px-0">
-															<div class="card-title">5522 - 簡短商品代稱</div>
-																<form action="">
-																	<div class="row g-0 mt-2">
-																		<div class="col me-1">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">藍格</option>
-																				<option value="2">紅格</option>
-																				<option value="3">黑格</option>
-																			</select>
-																		</div>
-																		<div class="col ms-1">
-																			<select class="form-select border-0" aria-label="Default select example">
-																				<option selected value="1">1 件</option>
-																				<option value="2">2 件</option>
-																				<option value="3">3 件</option>
-																			</select>
-																		</div>
-																	</div>
-																</form>
-															
-															
-														</div>
-													</div>
-												</div>
-												<div class="col">
-													<div class="card border-0">
-														<div class="card-img ratio ratio-1x1">
-															<figure class="figure d-flex align-items-center justify-content-center m-0 p-2 text-center border">
-																<img src="https://fakeimg.pl/150x150/?text=Hello" class="figure-img m-0" alt="...">
-																<div class="trash-btn">
-																	<i class="fa-regular fa-trash-can"></i>
-																</div>
-															</figure>
-														</div>
-														
-														<div class="card-body px-0">
-															<div class="card-title">5522 - 簡短商品代稱</div>
-															<form action="">
-																<div class="row g-0 mt-2">
-																	<div class="col me-1">
-																		<select class="form-select border-0" aria-label="Default select example">
-																			<option selected value="1">藍格</option>
-																			<option value="2">紅格</option>
-																			<option value="3">黑格</option>
-																		</select>
-																	</div>
-																	<div class="col ms-1">
-																		<select class="form-select border-0" aria-label="Default select example">
-																			<option selected value="1">1 件</option>
-																			<option value="2">2 件</option>
-																			<option value="3">3 件</option>
-																		</select>
-																	</div>
-																</div>
-															</form>
-														</div>
-													</div>
-												</div>	
 											</div>
+											<div class="col">
+												<div class="card border-0">
+													<div class="card-img ratio ratio-1x1">
+														<figure class="figure d-flex align-items-center justify-content-center m-0 p-2 text-center border">
+															<img src="https://fakeimg.pl/150x150/?text=Hello" class="figure-img m-0" alt="...">
+															<div class="trash-btn">
+																<i class="fa-regular fa-trash-can"></i>
+															</div>
+														</figure>
+													</div>
+													<div class="card-body px-0">
+														<div class="card-title">5522 - 簡短商品代稱</div>
+														<form action="">
+															<div class="row g-0 mt-2">
+																<div class="col me-1">
+																	<!-- 0412 組合價切換顏色時圖片也要跟著變 -->
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑格</option>
+																	</select>
+																</div>
+																<div class="col ms-1">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1">1 件</option>
+																		<option value="2">2 件</option>
+																		<option value="3">3 件</option>
+																	</select>
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+											<div class="col">
+												<div class="card border-0">
+													<div class="card-img ratio ratio-1x1">
+														<figure class="figure d-flex align-items-center justify-content-center m-0 p-2 text-center border">
+															<img src="https://fakeimg.pl/150x150/?text=Hello" class="figure-img m-0" alt="...">
+															<div class="trash-btn">
+																<i class="fa-regular fa-trash-can"></i>
+															</div>
+														</figure>
+													</div>
+													
+													<div class="card-body px-0">
+														<div class="card-title">5522 - 簡短商品代稱</div>
+														<form action="">
+															<div class="row g-0 mt-2">
+																<div class="col me-1">
+																	<!-- 0412 組合價切換顏色時圖片也要跟著變 -->
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑格</option>
+																	</select>
+																</div>
+																<div class="col ms-1">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1">1 件</option>
+																		<option value="2">2 件</option>
+																		<option value="3">3 件</option>
+																	</select>
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+											<div class="col">
+												<div class="card border-0">
+													<div class="card-img ratio ratio-1x1">
+														<figure class="figure d-flex align-items-center justify-content-center m-0 p-2 text-center border">
+															<img src="https://fakeimg.pl/150x150/?text=Hello" class="figure-img m-0" alt="...">
+															<div class="trash-btn">
+																<i class="fa-regular fa-trash-can"></i>
+															</div>
+														</figure>
+													</div>
+													
+													<div class="card-body px-0">
+														<div class="card-title">5522 - 簡短商品代稱</div>
+														<form action="">
+															<div class="row g-0 mt-2">
+																<div class="col me-1">
+																	<!-- 0412 組合價切換顏色時圖片也要跟著變 -->
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑格</option>
+																	</select>
+																</div>
+																<div class="col ms-1">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1">1 件</option>
+																		<option value="2">2 件</option>
+																		<option value="3">3 件</option>
+																	</select>
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+											<div class="col">
+												<div class="card border-0">
+													<div class="card-img ratio ratio-1x1">
+														<figure class="figure d-flex align-items-center justify-content-center m-0 p-2 text-center border">
+															<img src="https://fakeimg.pl/150x150/?text=Hello" class="figure-img m-0" alt="...">
+															<div class="trash-btn">
+																<i class="fa-regular fa-trash-can"></i>
+															</div>
+														</figure>
+													</div>
+													
+													<div class="card-body px-0">
+														<div class="card-title">5522 - 簡短商品代稱</div>
+														<form action="">
+															<div class="row g-0 mt-2">
+																<div class="col me-1">
+																	<!-- 0412 組合價切換顏色時圖片也要跟著變 -->
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑格</option>
+																	</select>
+																</div>
+																<div class="col ms-1">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1">1 件</option>
+																		<option value="2">2 件</option>
+																		<option value="3">3 件</option>
+																	</select>
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>	
 										</div>
-									<!-- </div> -->
+									</div>
+									<!-- 0412 刪除多餘 div -->
 								</div>
 
 								<!-- 手機版 -->
