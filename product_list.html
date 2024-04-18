@@ -1262,11 +1262,11 @@
 										</div>
 									</div>
 								</div>
-								<!-- <div class="row g-0 mt-3">
-									<div class="select_filter">
-										<span>已選類別</span>
+								<div class="row g-0 mt-3">
+									<div class="selected_filter">
+										<span>已選類別<i class="btn-close" aria-label="Close"></i></span>
 									</div>
-								</div> -->
+								</div>
 							</div>
 							<!-- Package  -->
 							<div class="package-wrapper mt-lg-3">
@@ -1762,11 +1762,12 @@
 																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
 																</div>
 																<div class="action-wrapper col-6 pb-1 text-end">
-																	<!-- 0412 更換所有產品的 action-love、action-cart 的 icon -->
+																	<!-- 0412 更換所有產品的 action-love、action-cart 的 icon -->																	
 																	<!-- 0412 已加入最愛或購物車商品添加 active -->
 																	<span class="action-item action-love active" data-product-id="1234"><i class="icon-icon-favorite"></i></span>
-																	<span class="action-item action-cart d-none d-lg-inline active" data-product-id='1254' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="icon-icon-shopping"></i></span>
-																	<span class="action-item action-cart d-inline d-lg-none active" data-product-id='1254' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="icon-icon-shopping"></i></span>
+																	<!-- 0412 調整 data-sizes-sold-out 格式 {"colorId": ["該顏色售完尺寸1","該顏色售完尺寸2"], "colorId": ["該顏色售完尺寸"]}-->
+																	<span class="action-item action-cart d-none d-lg-inline active" data-product-id='1254' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='{"123": ["S","XL"], "456": ["XL"]}'><i class="icon-icon-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none active" data-product-id='1254' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='{"123": ["S","XL"], "456": ["XL"]}' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="icon-icon-shopping"></i></span>
 																</div>
 																<div class="colors-wrapper col-12 border-top">
 																	<div class="color-items d-flex">
@@ -1801,9 +1802,11 @@
 																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
 																</div>
 																<div class="action-wrapper col-6 pb-1 text-end">
+																	<!-- 0412 更換所有產品的 action-love、action-cart 的 icon -->
 																	<span class="action-item action-love" data-product-id="1234"><i class="icon-icon-favorite"></i></span>
-																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="icon-icon-shopping"></i></span>
-																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="icon-icon-shopping"></i></span>
+																	<!-- 0412 調整 data-sizes-sold-out 格式 {"colorId": ["該顏色售完尺寸1","該顏色售完尺寸2"], "colorId": ["該顏色售完尺寸"]}-->
+																	<span class="action-item action-cart d-none d-lg-inline active" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='{"123": ["S","XL"], "456": ["XL"]}'><i class="icon-icon-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none active" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='{"123": ["S","XL"], "456": ["XL"]}' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="icon-icon-shopping"></i></span>
 																</div>
 																<div class="colors-wrapper col-12 border-top">
 																	<div class="color-items d-flex">
@@ -1838,9 +1841,11 @@
 																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
 																</div>
 																<div class="action-wrapper col-6 pb-1 text-end">
+																	<!-- 0412 更換所有產品的 action-love、action-cart 的 icon -->
 																	<span class="action-item action-love" data-product-id="1234"><i class="icon-icon-favorite"></i></span>
-																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="icon-icon-shopping"></i></span>
-																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="icon-icon-shopping"></i></span>
+																	<!-- 0412 調整 data-sizes-sold-out 格式 {"colorId": ["該顏色售完尺寸1","該顏色售完尺寸2"], "colorId": ["該顏色售完尺寸"]}-->
+																	<span class="action-item action-cart d-none d-lg-inline active" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='{"123": ["S","XL"], "456": ["XL"]}'><i class="icon-icon-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none active" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='{"123": ["S","XL"], "456": ["XL"]}' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="icon-icon-shopping"></i></span>
 																</div>
 																<div class="colors-wrapper col-12 border-top">
 																	<div class="color-items d-flex">
@@ -1875,10 +1880,11 @@
 																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
 																</div>
 																<div class="action-wrapper col-6 pb-1 text-end">
-																	<!-- 0412 替換 icon -->
+																	<!-- 0412 更換所有產品的 action-love、action-cart 的 icon -->
 																	<span class="action-item action-love" data-product-id="1234"><i class="icon-icon-favorite"></i></span>
-																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="icon-icon-shopping"></i></span>
-																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="icon-icon-shopping"></i></span>
+																	<!-- 0412 調整 data-sizes-sold-out 格式 {"colorId": ["該顏色售完尺寸1","該顏色售完尺寸2"], "colorId": ["該顏色售完尺寸"]}-->
+																	<span class="action-item action-cart d-none d-lg-inline active" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='{"123": ["S","XL"], "456": ["XL"]}'><i class="icon-icon-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none active" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='{"123": ["S","XL"], "456": ["XL"]}' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="icon-icon-shopping"></i></span>
 																</div>
 																<div class="colors-wrapper col-12 border-top">
 																	<div class="color-items d-flex">
@@ -1913,9 +1919,11 @@
 																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
 																</div>
 																<div class="action-wrapper col-6 pb-1 text-end">
+																	<!-- 0412 更換所有產品的 action-love、action-cart 的 icon -->
 																	<span class="action-item action-love" data-product-id="1234"><i class="icon-icon-favorite"></i></span>
-																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="icon-icon-shopping"></i></span>
-																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="icon-icon-shopping"></i></span>
+																	<!-- 0412 調整 data-sizes-sold-out 格式 {"colorId": ["該顏色售完尺寸1","該顏色售完尺寸2"], "colorId": ["該顏色售完尺寸"]}-->
+																	<span class="action-item action-cart d-none d-lg-inline active" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='{"123": ["S","XL"], "456": ["XL"]}'><i class="icon-icon-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none active" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='{"123": ["S","XL"], "456": ["XL"]}' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="icon-icon-shopping"></i></span>
 																</div>
 																<div class="colors-wrapper col-12 border-top">
 																	<div class="color-items d-flex">
@@ -1950,9 +1958,11 @@
 																	<span class="card-price" data-origin="900" data-symbol="NT$ ">252</span>
 																</div>
 																<div class="action-wrapper col-6 pb-1 text-end">
+																	<!-- 0412 更換所有產品的 action-love、action-cart 的 icon -->
 																	<span class="action-item action-love" data-product-id="1234"><i class="icon-icon-favorite"></i></span>
-																	<span class="action-item action-cart d-none d-lg-inline" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]'><i class="icon-icon-shopping"></i></span>
-																	<span class="action-item action-cart d-inline d-lg-none" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='["S","XL"]' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="icon-icon-shopping"></i></span>
+																	<!-- 0412 調整 data-sizes-sold-out 格式 {"colorId": ["該顏色售完尺寸1","該顏色售完尺寸2"], "colorId": ["該顏色售完尺寸"]}-->
+																	<span class="action-item action-cart d-none d-lg-inline active" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='{"123": ["S","XL"], "456": ["XL"]}'><i class="icon-icon-shopping"></i></span>
+																	<span class="action-item action-cart d-inline d-lg-none active" data-product-id='1234' data-sizes='["S","M","X","XL"]' data-sizes-sold-out='{"123": ["S","XL"], "456": ["XL"]}' data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartBottom" aria-controls="offcanvasCartBottom"><i class="icon-icon-shopping"></i></span>
 																</div>
 																<div class="colors-wrapper col-12 border-top">
 																	<div class="color-items d-flex">

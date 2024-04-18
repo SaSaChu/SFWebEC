@@ -391,6 +391,25 @@ main {
 				}
 			}
 		}
+
+		.selected_filter {
+			span {
+				display: inline-flex;
+				align-items: center;
+				padding: .5rem 1rem;
+				margin-right: .5rem;
+				font-size: 16px;
+				color: #000;
+				background-color: $gray-200;
+  				border-radius: 5px;
+
+				.btn-close {
+					width: 5px;
+					height: 5px;
+					margin-left: 5px;
+				}
+			}
+		}
 	}
 
 	.package-wrapper {

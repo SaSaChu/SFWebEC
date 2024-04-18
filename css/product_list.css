@@ -3500,6 +3500,8 @@ main .action-wrapper .sort-area .nav-item button { position: relative; padding: 
 main .action-wrapper .sort-area .nav-item button:hover img:nth-of-type(1), main .action-wrapper .sort-area .nav-item button.active img:nth-of-type(1) { display: none; }
 main .action-wrapper .sort-area .nav-item button:hover img:nth-of-type(2), main .action-wrapper .sort-area .nav-item button.active img:nth-of-type(2) { display: inline-block; }
 main .action-wrapper .sort-area .nav-item button img:nth-of-type(2) { display: none; }
+main .action-wrapper .selected_filter span { display: inline-flex; align-items: center; padding: .5rem 1rem; margin-right: .5rem; font-size: 16px; color: #000; background-color: #e9ecef; border-radius: 5px; }
+main .action-wrapper .selected_filter span .btn-close { width: 5px; height: 5px; margin-left: 5px; }
 main .package-wrapper .package_header { position: relative; }
 main .package-wrapper .package_header p { display: flex; align-items: center; color: #3D6DC1; }
 main .package-wrapper .package_header p span { color: #6c757d; }

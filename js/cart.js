@@ -5,11 +5,12 @@ $(function () {
     $('.action-love').on('click', function() {
         // 如果沒有要記錄顏色的話，抓 id 丟後端
         let productId = $(this).attr('data-product-id');
-        console.log(productId);
         // Do Ajax
         // 0412 成功的話跳訊息並添加 active
         $(this).addClass('active');
+        console.log(productId);
     })
+
     // 網頁版 顏色
     $('.product-card').find('.color-item').on('mouseenter click', function() {
         $(this).addClass('active').siblings().removeClass('active');
@@ -32,20 +33,18 @@ $(function () {
             // 複製該產品的顏色選項
             let colors = $(this).parents('.card-content').find('.color-items').html();
 			let activeColor =$(this).parents('.card-content').find('.color-item.active').attr('data-color-id');
-            // 取得產品的尺寸及賣光的尺寸
+            console.log(activeColor)
+            // 0412 取得產品的尺寸及賣光的尺寸
             let sizes = $(this).data('sizes');
-            let soldOut = $(this).data('sizes-sold-out');
-             // 尺寸
+            let soldOut = $(this).attr('data-sizes-sold-out');
+            let soldOutItems = JSON.parse(soldOut);
+            console.log(soldOutItems[activeColor])
+            // 0412 尺寸 改為先列出所有尺寸，後續再根據何種顏色判斷該顏色是否已售完
             let sizeItems = ``;
             sizes.forEach(function(e, i) {
-                let sold_out='';
-
-                if(soldOut.includes(e)) {
-                    sold_out = 'sold_out';
-                }
-                
-                sizeItems += `<div class="size-item mt-2 me-2 ${sold_out}" data-size="${e}"><span>${e}</span></div>`
+                sizeItems += `<div class="size-item mt-2 me-2" data-size="${e}"><span>${e}</span></div>`
             })
+
             let cartItem =`
             <div class="product-sub-card">
                 <div class="card border-0">
@@ -83,18 +82,40 @@ $(function () {
 
             if(!target.length) {
                 $(this).after(cartItem);
+                
+                // 取得 activeColor 的顏色，該顏色已售完尺寸加上 sold_out
+                let porductCardBox = $(this).parents('.product-card');
+                if(soldOutItems.hasOwnProperty(activeColor)) {
+                    
+                    soldOutItems[activeColor].forEach(function(i){
+                        porductCardBox.find(`.sub-size-items .size-item[data-size="${i}"]`).addClass('sold_out'); 
+                    });
+                };
+
+                // 如果該尺寸已售完，選澤未售完尺寸的第一個作為預設
                 $(this).parent().find('.size-item:not(.sold_out)').first().addClass('active');
+
 				// 變更 input 值
 				$('input[name="product-id"]').val(productId);	
 				$('input[name="product-color"]').val(activeColor);
 				$('input[name="product-size"]').val($(this).parent().find('.size-item.active').attr('data-size'));
-
+                
 				// product-sub-card 顏色點擊時
                 $('.product-sub-card .color-item').on('click', function() {
+                    let parents = $(this).parents('.card');
+                    let colorId = $(this).attr('data-color-id') 
                     $(this).addClass('active').siblings().removeClass('active');
                     $(this).parents('.card-content').find('.color-items .color-item').eq($(this).index()).click();
                     $(this).parent().prev().find('span').text($(this).attr('data-color-name'));
-					$('input[name="product-color"]').val($(this).attr('data-color-id'));
+					$('input[name="product-color"]').val(colorId);
+                    
+                    // 0412 點擊顏色時，設定該顏色已售完尺寸
+                    parents.find('.sub-size-items .size-item').removeClass('sold_out');
+                    if(soldOutItems.hasOwnProperty(colorId)) {
+                        soldOutItems[colorId].forEach(function(i){
+                            parents.find(`.sub-size-items .size-item[data-size="${i}"]`).addClass('sold_out'); 
+                        });
+                    }; 
                 });
     
 				// product-sub-card 尺寸點擊時
@@ -124,8 +145,10 @@ $(function () {
 					let color = $('input[name="product-color"]').val(); 
 					let size = $('input[name="product-size"]').val();
 					console.log('產品 ID:'+productId, '顏色：'+color, '尺寸：'+ size, '數量：'+quantity);
-                    // 0412 成功後添加 active 
+                    // 0412 成功的話跳訊息並添加 active、更改購物車數量
                     $(this).parents('.action-wrapper').find('.action-cart').addClass('active')
+                    let count = parseInt($('.cart-items-count').attr('data-cart-items'));
+                    $('.cart-items-count').attr('data-cart-items', ++count);
                 })
                 
             } else {
@@ -143,8 +166,11 @@ $(function () {
         let special = content.find('.card-price').text();
         let colors = content.find('.color-items').html(); 
         let activeColor = content.find('.color-item.active').attr('data-color-id');
+
+        // 0412 取得產品的尺寸及賣光的尺寸
         let sizes = $(event.relatedTarget).data('sizes');
-        let soldOut = $(event.relatedTarget).data('sizes-sold-out'); 
+        let soldOut = $(event.relatedTarget).attr('data-sizes-sold-out');
+        let soldOutItems = JSON.parse(soldOut);
 
         // offcanvas 帶入資料
         // 圖片
@@ -160,18 +186,33 @@ $(function () {
 		$('input[name="product-color"]').val($(this).attr('data-color-id'));
         
         // 尺寸
+        // 0412 尺寸 改為先列出所有尺寸，後續再根據何種顏色判斷該顏色是否已售完
         let sizeItems = ``;
         sizes.forEach(function(e, i) {
-            let sold_out='';
-
-            if(soldOut.includes(e)) {
-                sold_out = 'sold_out';
-            }
-            
-            sizeItems += `<div class="size-item mt-2 me-2 ${sold_out}" data-size="${e}"><span>${e}</span></div>`
+            sizeItems += `<div class="size-item mt-2 me-2" data-size="${e}"><span>${e}</span></div>`
         })
+        // let sizeItems = ``;
+        // sizes.forEach(function(e, i) {
+        //     let sold_out='';
+
+        //     if(soldOut.includes(e)) {
+        //         sold_out = 'sold_out';
+        //     }
+            
+        //     sizeItems += `<div class="size-item mt-2 me-2 ${sold_out}" data-size="${e}"><span>${e}</span></div>`
+        // })
 		
         $('<div/>').addClass('size-items').append(sizeItems).appendTo($('.offcanvas_sizes'));
+
+        // 取得 selected 的顏色，該顏色已售完尺寸加上 sold_out
+        
+        if(soldOutItems.hasOwnProperty(activeColor)) {
+            console.log(activeColor);
+            soldOutItems[activeColor].forEach(function(i){
+                $('.cart-offcanvas').find(`.size-items .size-item[data-size="${i}"]`).addClass('sold_out'); 
+            });
+        };
+
         $(this).find('.size-item:not(.sold_out)').first().addClass('active');
 		
 		// 變更 input 值
@@ -193,6 +234,15 @@ $(function () {
 
             // input hidden product-color 變更值 
 			$('input[name="product-color"]').val($(this).attr('data-color-id'));
+
+            // 0412 點擊顏色時，設定該顏色已售完尺寸
+            let colorId = $(this).attr('data-color-id') 
+            $('.cart-offcanvas').find('.size-items .size-item').removeClass('sold_out');
+            if(soldOutItems.hasOwnProperty(colorId)) {
+                soldOutItems[colorId].forEach(function(i){
+                    $('.cart-offcanvas').find(`.size-items .size-item[data-size="${i}"]`).addClass('sold_out'); 
+                });
+            }; 
         })
 
         // offcanvas 開啟時點擊尺寸
@@ -223,10 +273,10 @@ $(function () {
         
         console.log('產品 ID:'+productId, '顏色：'+color, '尺寸：'+ size, '數量：'+quantity);
         // Do Ajax
-        // 0412 成功的話跳訊息並添加 active
+        // 0412 成功的話跳訊息並添加 active、更改購物車數量
         $(`.action-cart[data-product-id="${productId}"]`).addClass('active');
         let count = parseInt($('.cart-items-count').attr('data-cart-items'));
-        console.log(count, typeof(count));
         $('.cart-items-count').attr('data-cart-items', ++count);
+
     })
 });
