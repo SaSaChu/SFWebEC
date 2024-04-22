@@ -82,7 +82,7 @@ $(function() {
 		})
 	})	
 
-	// 點擊也許你也喜歡顏色
+	// 點擊也許你也喜歡 顏色時，變更圖片
 	$('.like-item .color-item').click(function() {
 		$(this).addClass('active').siblings().removeClass('active');
 		$(this).parents('.product-card').find(".card-img img").first().attr("src", $(this).attr('data-img'));
@@ -90,6 +90,7 @@ $(function() {
         $(this).parent().next().find('p').text($(this).attr('data-color-name'));  
 	})	
 
+	// 點擊全選
 	$('#check-all-cart').on('change', function() {
 		if ($(this).is(":checked")) 
 		{
