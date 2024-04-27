@@ -34,6 +34,11 @@ $(function () {
             let colors = $(this).parents('.card-content').find('.color-items').html();
 			let activeColor =$(this).parents('.card-content').find('.color-item.active').attr('data-color-id');
             console.log(activeColor)
+
+            // 0426 未選擇時顏色預設
+            let activeColorText =$(this).parents('.card-content').find('.color-item.active').attr('data-color-name');
+            console.log(activeColorText) 
+            
             // 0412 取得產品的尺寸及賣光的尺寸
             let sizes = $(this).data('sizes');
             let soldOut = $(this).attr('data-sizes-sold-out');
@@ -45,6 +50,7 @@ $(function () {
                 sizeItems += `<div class="size-item mt-2 me-2" data-size="${e}"><span>${e}</span></div>`
             })
 
+            // 0426 未選擇時顏色預設
             let cartItem =`
             <div class="product-sub-card">
                 <div class="card border-0">
@@ -52,7 +58,7 @@ $(function () {
                         <div class="sub-color-wrapper">
                             <div class="sub-color-name">
                                 <p class="text-start">顏色：</p>
-                                <span>灰色</span>
+                                <span>${activeColorText}</span>
                             </div>
                             <div class="sub-color-items d-flex">
                                 ${colors}
