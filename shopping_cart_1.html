@@ -8,24 +8,31 @@
 
 	<title>Cart Step 1</title>
 
-	<script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
-	<script language="javascript" type="text/javascript" src="js/swiper/swiper-bundle.min.js"></script>
+	<!-- 共用 js -->
+	<script language="javascript" type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
 	<script language="javascript" type="text/javascript" src="js/public.js"></script>
-	<script language="javascript" type="text/javascript" src="js/shopping_cart_1.js"></script>
 
-
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-	<link rel="stylesheet" type="text/css" href="css/swiper/swiper-bundle.min.css">
+	<!-- 共用 css -->
 	<link rel="stylesheet" type="text/css" href="css/icon.css">
 	<link rel="stylesheet" type="text/css" href="css/public.css">
-	<link rel="stylesheet" type="text/css" href="css/shopping_cart.css">
 
+	<!-- 共用外部引入檔案 -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
-	<script src="https://kit.fontawesome.com/25b2931f6f.js" crossorigin="anonymous"></script>
+	<!-- 共用外部 js 檔案 在頁面最下方 -->
+
+	<!-- 自訂 css -->
+	<!-- 產品詳細有使用輪播套件 swiper -->
+	<link rel="stylesheet" type="text/css" href="css/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="css/shopping_cart.css">
+	<!-- 自訂 js  -->
+	<!-- 產品詳細有使用輪播套件 swiper -->
+	<script language="javascript" type="text/javascript" src="js/swiper/swiper-bundle.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/shopping_cart.js"></script>
 
 </head>
 
@@ -914,8 +921,8 @@
 					</div>
 				</div>
 
+				<!-- Cart -->
 				<div class="shopping_cart_list mt-3 mt-lg-5">
-
 					<!-- Cart Tip -->
 					<div class="cart_list_tip mb-3">
 						<div class="row align-items-center">
@@ -933,39 +940,47 @@
 								<button id="del-all" class="btnSF btnOtherGray btn-xxl fs-6 fw-medium mb-2" type="button">全部刪除</button>
 							</div>
 						</div>
-					</div>					
+					</div>						
 					
-					<!-- Cart 清單 -->
+					<!-- Cart 清單 有分網頁版跟手機版 -->
 					<div class="cart_list_content">
 						<!-- 網頁版列表 -->
 						<div class="web_cart d-none d-lg-block">
-							<!-- cart content 第一列資訊 thread -->
+							<!-- cart list 第一列資訊 thread -->
 							<div class="content_header">
 								<div class="row g-0 align-items-center p-2">
+									<!-- 勾選欄位 -->
 									<div class="col flex-shrink-1 position-relative">
 										<label class="check_label">
 											<input type="checkbox" id="check-all-cart">
 											<span class="checkmark"></span>
 										</label>
 									</div>
+									<!-- 產品資訊欄位 -->
 									<div class="col-3 flex-grow-1">
 										產品資訊
 									</div>
+									<!-- 優惠欄位 -->
 									<div class="col-2">
 										優惠
 									</div>
+									<!-- 數量欄位 -->
 									<div class="col-2  text-center">
 										數量
 									</div>
+									<!-- 原價欄位 -->
 									<div class="col-1  text-center">
 										原價
 									</div>
+									<!-- 折扣價欄位 -->
 									<div class="col-1  text-center">
 										折扣價
 									</div>
+									<!-- 小計欄位 -->
 									<div class="col-1  text-center">
 										小計
 									</div>
+									<!-- 動作欄位 -->
 									<div class="col-1  text-center">
 										刪除
 									</div>
@@ -975,242 +990,334 @@
 							<div class="content_body">
 								<!-- foreach start -->
 								<div class="cart-list-item row g-0 align-items-center px-2 py-3">
-									<input type="hidden" name="pids[]" value="123">
-									<input type="hidden" name="pcolors[]">
-									<input type="hidden" name="psizes[]">
+									<!-- 勾選欄位 -->
 									<div class="ckehck_field col flex-shrink-1 position-relative">
 										<label class="check_label">
 											<input type="checkbox">
 											<span class="checkmark"></span>
 										</label>
 									</div>
+
+									<!-- 產品資訊欄位 -->
 									<div class="info_filed col-3 flex-grow-1">
-										<div class="row g-0">
-											<div class="info_filed_img col-4">
-												<div class="ratio ratio-1x1">
-													<img src="http://fakeimg.pl/100x100?text=img1" class="img-fluid" alt="">
+										<div class="card border-0">
+											<div class="row g-0">
+												<div class="col-md-4">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://sunflower-mall-dev-bucket.s3.ap-northeast-1.amazonaws.com/product/17114352275772.webp" class="img-fluid" alt="">
+													</picture>
+													
 												</div>
-											</div>
-											<div class="info_filed_content col-8 px-3">
-												<div class="row g-0 flex-column align-content-between justify-content-between h-100">
-													<div class="col">
-														<h5>彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
-													</div>
-													<div class="col">
-														<div class="d-flex flex-column justify-content-end h-100">
-															<p class="change_btn" style="font-size: 14px;">尺寸：<span data-bs-toggle="modal" data-bs-target="#changeModal" role="button">L</span></p>
-															<p class="change_btn" style="font-size: 14px;">顏色：<span data-bs-toggle="modal" data-bs-target="#changeModal" role="button">暢銷混色組</span></p>
-														</div>
+												<div class="col-md-8">
+													<div class="card-body">
+														<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+														<p class="card-text change_btn mb-0">尺寸：<span data-bs-toggle="modal" data-bs-target="#changeModal" role="button">L</span></p>
+														<p class="card-text change_btn mb-0">顏色：<span data-bs-toggle="modal" data-bs-target="#changeModal" role="button">暢銷混色組</span></p>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
+
+									<!-- 優惠欄位 -->
 									<div class="offer_field col-2">
-										<span class="offer_tag">合購組合</span>
-										<p class="offer_item">任選2件 1000</p>
+										<!-- 合購組合樣式
+											<span class="offer_tag">合購組合</span>
+											<p class="offer_item">任選2件 1000</p> 
+										-->
+
+										<!-- 優惠卷折扣樣式 
+											<span class="offer_tag coupon_tag">優惠卷折扣</span>
+											<p class="offer_item">折 100元</p>
+										 -->
 									</div>
+
+									<!-- 數量欄位 -->
 									<div class="count_field col-2 text-center">
 										<span class="count_btn decrease-count" aria-label="Decrease">-</span>
 										<input class="count_value" type="text" role="spinbutton" aria-valuenow="1" value="1" readonly>
 										<span class="count_btn increase-count" aria-label="Increase">+</span>
 									</div>
+
+									<!-- 原價欄位 -->
 									<div class="original_field price_symbol col-1  text-center">
 										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
 										<span data-symbol="NT$ "> 1899 </span>
 									</div>
+
+									<!-- 折扣價欄位 -->
 									<div class="discount_field price_symbol col-1  text-center">
 										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
 										<span data-symbol="NT$"> 840 </span>
 									</div>
+
+									<!-- 小計欄位 -->
 									<div class="subtotal_field price_symbol col-1  text-center">
 										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
 										<span data-symbol="NT$ "> 840 </span>
 									</div>
+
+									<!-- 動作欄位 -->
 									<div class="action_field col-1  text-center">
-										<button class="btnSF btnOtherGray-line btn-xxl fs-6 fw-medium mb-2" type="button">移除</button> 
-										<button class="btnSF btnOtherGray-line btn-xxl fs-6 fw-medium mb-2" type="button">加到最愛</button> 
+										<button class="btnSF btnOtherGray-line btn-xxl fs-7 fw-medium mb-2" type="button">移除</button> 
+										<button class="btnSF btnOtherGray-line btn-xxl fs-7 fw-medium mb-2" type="button">加到最愛</button> 
 									</div>
 								</div>
 								<!-- foreach end -->
-								<div class="row g-0 align-items-center px-2 py-3">
-									<input type="hidden" name="pids[]" value="456">
-									<input type="hidden" name="pcolors[]">
-									<input type="hidden" name="psizes[]">
+
+								<!-- 展示優惠欄位 合購組合樣式 -->
+								<div class="cart-list-item row g-0 align-items-center px-2 py-3">
+									<!-- 勾選欄位 -->
 									<div class="ckehck_field col flex-shrink-1 position-relative">
 										<label class="check_label">
 											<input type="checkbox">
 											<span class="checkmark"></span>
 										</label>
 									</div>
+
+									<!-- 產品資訊欄位 -->
 									<div class="info_filed col-3 flex-grow-1">
-										<div class="row g-0">
-											<div class="info_filed_img col-4">
-												<div class="ratio ratio-1x1">
-													<img src="http://fakeimg.pl/100x100?text=img1" class="img-fluid" alt="">
+										<div class="card border-0">
+											<div class="row g-0">
+												<div class="col-md-4">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://sunflower-mall-dev-bucket.s3.ap-northeast-1.amazonaws.com/product/17114352275772.webp" class="img-fluid" alt="">
+													</picture>
 												</div>
-											</div>
-											<div class="info_filed_content col-8 px-3">
-												<div class="row g-0 flex-column align-content-between justify-content-between h-100">
-													<div class="col">
-														<h5>彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
-													</div>
-													<div class="col">
-														<div class="d-flex flex-column justify-content-end h-100">
-															<p class="change_btn" style="font-size: 14px;">尺寸：<span data-bs-toggle="modal" data-bs-target="#changeModal" role="button">L</span></p>
-															<p class="change_btn" style="font-size: 14px;">顏色：<span data-bs-toggle="modal" data-bs-target="#changeModal" role="button">暢銷混色組</span></p>
-														</div>
+												<div class="col-md-8">
+													<div class="card-body">
+													<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+													<p class="card-text change_btn mb-0">尺寸：<span data-bs-toggle="modal" data-bs-target="#changeModal" role="button">L</span></p>
+													<p class="card-text change_btn mb-0">顏色：<span data-bs-toggle="modal" data-bs-target="#changeModal" role="button">暢銷混色組</span></p>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
+
+									<!-- 優惠欄位 -->
 									<div class="offer_field col-2">
 										<span class="offer_tag">合購組合</span>
 										<p class="offer_item">任選2件 1000</p>
 									</div>
-									<div class="count_field col-2 text-center">
-										<span class="count_btn decrease-count" aria-label="Decrease">-</span>
-										<input class="count_value" min="1" type="number" role="spinbutton" aria-valuenow="1" value="1" readonly>
-										<span class="count_btn increase-count" aria-label="Increase">+</span>
-									</div>
-									<div class="original_field price_symbol col-1  text-center">
-										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
-										<span data-symbol="NT$ "> 1899 </span>
-									</div>
-									<div class="discount_field price_symbol col-1  text-center">
-										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
-										<span data-symbol="NT$"> 840 </span>
-									</div>
-									<div class="subtotal_field price_symbol col-1  text-center">
-										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
-										<span data-symbol="NT$ "> 840 </span>
-									</div>
-									<div class="action_field col-1  text-center">
-										<button class="btnSF btnOtherGray-line btn-xxl fs-6 fw-medium mb-2" type="button">移除</button> 
-										<button class="btnSF btnOtherGray-line btn-xxl fs-6 fw-medium mb-2" type="button">加到最愛</button> 
-									</div>
-								</div>
-								<div class="row g-0 align-items-center px-2 py-3">
-									<input type="hidden" name="pids[]" value="456">
-									<input type="hidden" name="pcolors[]">
-									<input type="hidden" name="psizes[]">
-									<div class="ckehck_field col flex-shrink-1 position-relative">
-										<label class="check_label">
-											<input type="checkbox">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="info_filed col-3 flex-grow-1">
-										<div class="row g-0">
-											<div class="info_filed_img col-4">
-												<div class="ratio ratio-1x1">
-													<img src="http://fakeimg.pl/100x100?text=img1" class="img-fluid" alt="">
-												</div>
-											</div>
-											<div class="info_filed_content col-8 px-3">
-												<div class="row g-0 flex-column align-content-between justify-content-between h-100">
-													<div class="col">
-														<h5>彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
-													</div>
-													<div class="col">
-														<div class="d-flex flex-column justify-content-end h-100">
-															<p class="change_btn" style="font-size: 14px;">尺寸：<span data-bs-toggle="modal" data-bs-target="#changeModal" role="button">L</span></p>
-															<p class="change_btn" style="font-size: 14px;">顏色：<span data-bs-toggle="modal" data-bs-target="#changeModal" role="button">暢銷混色組</span></p>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="offer_field col-2">
-										<span class="offer_tag">合購組合</span>
-										<p class="offer_item">任選2件 1000</p>
-									</div>
+
+									<!-- 數量欄位 -->
 									<div class="count_field col-2 text-center">
 										<span class="count_btn decrease-count" aria-label="Decrease">-</span>
 										<input class="count_value" type="text" role="spinbutton" aria-valuenow="1" value="1" readonly>
 										<span class="count_btn increase-count" aria-label="Increase">+</span>
 									</div>
-									<div class="original_field price_symbol col-1  text-center">
+
+									<!-- 原價欄位 -->
+									<div class="original_field price_symbol col-1 text-center">
 										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
 										<span data-symbol="NT$ "> 1899 </span>
 									</div>
-									<div class="discount_field price_symbol col-1  text-center">
+
+									<!-- 折扣價欄位 -->
+									<div class="discount_field price_symbol col-1 text-center">
 										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
 										<span data-symbol="NT$"> 840 </span>
 									</div>
-									<div class="subtotal_field price_symbol col-1  text-center">
+
+									<!-- 小計欄位 -->
+									<div class="subtotal_field price_symbol col-1 text-center">
 										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
 										<span data-symbol="NT$ "> 840 </span>
 									</div>
+
+									<!-- 動作欄位 -->
 									<div class="action_field col-1  text-center">
-										<button class="btnSF btnOtherGray-line btn-xxl fs-6 fw-medium mb-2" type="button">移除</button> 
-										<button class="btnSF btnOtherGray-line btn-xxl fs-6 fw-medium mb-2" type="button">加到最愛</button> 
+										<button class="btnSF btnOtherGray-line btn-xxl fs-7 fw-medium mb-2" type="button">移除</button> 
+										<button class="btnSF btnOtherGray-line btn-xxl fs-7 fw-medium mb-2" type="button">加到最愛</button> 
 									</div>
 								</div>
+
+								<!-- 展示優惠欄位 優惠卷折扣  -->
 								<div class="row g-0 align-items-center px-2 py-3">
-									<input type="hidden" name="pids[]" value="456">
-									<input type="hidden" name="pcolors[]">
-									<input type="hidden" name="psizes[]">
+									<!-- 勾選欄位 -->
 									<div class="ckehck_field col flex-shrink-1 position-relative">
 										<label class="check_label">
 											<input type="checkbox">
 											<span class="checkmark"></span>
 										</label>
 									</div>
+
+									<!-- 產品資訊欄位 -->
 									<div class="info_filed col-3 flex-grow-1">
-										<div class="row g-0">
-											<div class="info_filed_img col-4">
-												<div class="ratio ratio-1x1">
-													<img src="http://fakeimg.pl/100x100?text=img1" class="img-fluid" alt="">
+										<div class="card border-0">
+											<div class="row g-0">
+												<div class="col-md-4">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://sunflower-mall-dev-bucket.s3.ap-northeast-1.amazonaws.com/product/17114352275772.webp" class="img-fluid" alt="">
+													</picture>
+													
 												</div>
-											</div>
-											<div class="info_filed_content col-8 px-3">
-												<div class="row g-0 flex-column align-content-between justify-content-between h-100">
-													<div class="col">
-														<h5>彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
-													</div>
-													<div class="col">
-														<div class="d-flex flex-column justify-content-end h-100">
-															<p class="change_btn" style="font-size: 14px;">尺寸：<span data-bs-toggle="modal" data-bs-target="#changeModal" role="button">L</span></p>
-															<p class="change_btn" style="font-size: 14px;">顏色：<span data-bs-toggle="modal" data-bs-target="#changeModal" role="button">暢銷混色組</span></p>
-														</div>
+												<div class="col-md-8">
+													<div class="card-body">
+														<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+														<p class="card-text change_btn mb-0">尺寸：<span data-bs-toggle="modal" data-bs-target="#changeModal" role="button">L</span></p>
+														<p class="card-text change_btn mb-0">顏色：<span data-bs-toggle="modal" data-bs-target="#changeModal" role="button">暢銷混色組</span></p>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
+
+									<!-- 優惠欄位 -->
 									<div class="offer_field col-2">
-										<span class="offer_tag">合購組合</span>
-										<p class="offer_item">任選2件 1000</p>
+										<span class="offer_tag coupon_tag">優惠卷折扣</span>
+										<p class="offer_item">折 100元</p>
 									</div>
+
+									<!-- 數量欄位 -->
 									<div class="count_field col-2 text-center">
-											<span class="count_btn decrease-count" aria-label="Decrease">-</span>
-											<input class="count_value" type="text" role="spinbutton" aria-valuenow="1" value="1" readonly>
-											<span class="count_btn increase-count" aria-label="Increase">+</span>
+										<span class="count_btn decrease-count" aria-label="Decrease">-</span>
+										<input class="count_value" type="text" role="spinbutton" aria-valuenow="1" value="1" readonly>
+										<span class="count_btn increase-count" aria-label="Increase">+</span>
 									</div>
+
+									<!-- 原價欄位 -->
 									<div class="original_field price_symbol col-1  text-center">
 										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
 										<span data-symbol="NT$ "> 1899 </span>
 									</div>
+
+									<!-- 折扣價欄位 -->
 									<div class="discount_field price_symbol col-1  text-center">
 										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
 										<span data-symbol="NT$"> 840 </span>
 									</div>
+
+									<!-- 小計欄位 -->
 									<div class="subtotal_field price_symbol col-1  text-center">
 										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
 										<span data-symbol="NT$ "> 840 </span>
 									</div>
+
+									<!-- 動作欄位 -->
 									<div class="action_field col-1  text-center">
-										<button class="btnSF btnOtherGray-line btn-xxl fs-6 fw-medium mb-2" type="button">移除</button> 
-										<button class="btnSF btnOtherGray-line btn-xxl fs-6 fw-medium mb-2" type="button">加到最愛</button> 
+										<button class="btnSF btnOtherGray-line btn-xxl fs-7 fw-medium mb-2" type="button">移除</button> 
+										<button class="btnSF btnOtherGray-line btn-xxl fs-7 fw-medium mb-2" type="button">加到最愛</button> 
+									</div>
+								</div>
+
+								<!-- 贈品 -->
+								<div class="row g-0 align-items-center px-2 py-3">
+									<!-- 贈品標籤 -->
+									<div class="exchange_field col-12 mb-2">
+										<span class="gifts_tag">贈品</span>
+										<span class="gifts_text">全館滿 1000 送贈品</span>
+									</div>
+									<!-- 勾選欄位 -->
+									<div class="ckehck_field col flex-shrink-1 position-relative">
+										<label class="check_label">
+											<span class="checkmark opacity-0"></span>
+										</label>
+									</div>
+
+									<!-- 產品資訊欄位 -->
+									<div class="info_filed col-3 flex-grow-1">
+										<div class="card border-0">
+											<div class="row g-0">
+												<div class="col-md-4">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://sunflower-mall-dev-bucket.s3.ap-northeast-1.amazonaws.com/product/17114352275772.webp" class="img-fluid" alt="">
+													</picture>
+												</div>
+												<div class="col-md-8">
+													<div class="card-body">
+														<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+														<p class="card-text change_btn mb-0">尺寸：<span data-bs-toggle="modal" data-bs-target="#changeModal" role="button">L</span></p>
+														<p class="card-text change_btn mb-0">顏色：<span data-bs-toggle="modal" data-bs-target="#changeModal" role="button">暢銷混色組</span></p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- 優惠欄位 -->
+									<div class="offer_field col-2"></div>
+
+									<!-- 數量欄位 -->
+									<div class="count_field col-2 text-center">
+										<span>1</span>
+									</div>
+
+									<!-- 原價欄位 -->
+									<div class="original_field price_symbol col-1  text-center">
+										
+									</div>
+
+									<!-- 折扣價欄位 -->
+									<div class="discount_field price_symbol col-1  text-center"></div>
+
+									<!-- 小計欄位 -->
+									<div class="subtotal_field price_symbol col-1  text-center"></div>
+
+									<!-- 動作欄位 -->
+									<div class="action_field col-1  text-center">
+										<button class="btnSF btnOtherGray-line btn-xxl fs-7 fw-medium mb-2" type="button">移除</button> 
+									</div>
+								</div>
+
+								<!-- 紅利點數兌換 -->
+								<div class="row g-0 align-items-center px-2 py-3">
+									<!-- 紅利點數兌換標籤 -->
+									<div class="exchange_field col-12 mb-2">
+										<span class="point_tag">紅利點數兌換</span>
+									</div>
+
+									<!-- 勾選欄位 -->
+									<div class="ckehck_field col flex-shrink-1 position-relative">
+										<label class="check_label">
+											<span class="checkmark opacity-0"></span>
+										</label>
+									</div>
+
+									<!-- 產品資訊欄位 -->
+									<div class="info_filed col-3 flex-grow-1">
+										<div class="card border-0">
+											<div class="row g-0 align-items-center">
+												<div class="col-md-4">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://sunflower-mall-dev-bucket.s3.ap-northeast-1.amazonaws.com/product/17114352275772.webp" class="img-fluid" alt="">
+													</picture>
+												</div>
+												<div class="col-md-8">
+													<div class="card-body">
+														<h5 class="mb-0">50黑 1/2休閒襪</h5>
+														<p class="d-flex align-items-center fs-8">點數：<span class="text-mainRed">4000點</span></p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- 優惠欄位 -->
+									<div class="offer_field col-2"></div>
+
+									<!-- 數量欄位 -->
+									<div class="count_field col-2 text-center">
+										<span>1</span>
+									</div>
+
+									<!-- 折扣價欄位 -->
+									<div class="original_field price_symbol col-1 text-center"></div>
+
+									<!-- 小計欄位 -->
+									<div class="discount_field price_symbol col-1 text-center"></div>
+									<div class="subtotal_field price_symbol col-1 text-center"></div>
+
+									<!-- 動作欄位 -->
+									<div class="action_field col-1  text-center">
+										<button class="btnSF btnOtherGray-line btn-xxl fs-7 fw-medium mb-2" type="button">移除</button> 
 									</div>
 								</div>
 							</div>
 						</div>
 
-						<!-- 手機版列表 -->
+						<!-- 手機版 -->
 						<div class="mobile_cart d-block d-lg-none">
 							<!-- cart content 第一列資訊 thread -->
 							<div class="content_header">
@@ -1257,12 +1364,9 @@
 											<h5>彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
 										</div>
 
+										<!-- 開啟 offvancas  -->
 										<div class="size_color_filed">
-											<select name="" id="">
-												<option value="1">暢銷混色組，L</option>
-												<option value="2">暢銷混色組，XL</option>
-												<option value="3">暢銷混色組，XXL</option>
-											</select>
+											<span type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasChangeBottom" aria-controls="#offcanvasChangeBottom">暢銷混色組，L <i class="icon-angle-down "></i></span>
 										</div>
 
 										<div class="count_field text-center">
@@ -1286,38 +1390,221 @@
 										<div class="action_field text-center">
 											<div class="row">
 												<div class="col-6">
-													<button class="btnSF btnOtherGray-line btn-xxl fs-7 fw-medium mb-2" type="button">加到最愛</button> 
+													<button class="btnSF btnOtherGray-line btn-xs mb-2" type="button">加到最愛</button> 
 												</div>
 												<div class="col-6">
-													<button class="btnSF btnOtherGray-line btn-xxl fs-7 fw-medium mb-2" type="button">移除</button> 
+													<button class="btnSF btnOtherGray-line btn-xs mb-2" type="button">移除</button> 
 												</div>
 											</div>
 										</div>
-									</div>
-									
-									
-									
-									
-									
+									</div>									
 								</div>
 								<!-- foreach end -->
+								<div class="row py-3">
+									<div class="col flex-shrink-1 pe-0">
+										<div class="ckehck_field position-relative">
+											<label class="check_label">
+												<input type="checkbox">
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="col-4 flex-grow-1 ps-0">
+										<div class="img_filed">
+											<div class="ratio ratio-1x1">
+												<img src="http://fakeimg.pl/100x100?text=img1" class="img-fluid ratio ratio-1x1" alt="">
+											</div>
+										</div>
+										<div class="offer_field">
+											<span class="offer_tag">合購組合</span>
+											<p class="offer_item">任選2件 1000</p>
+										</div>
+									</div>
+									<div class="col-6 p-0">
+										<div class="title_filed">
+											<h5>彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+										</div>
+
+										<!-- 開啟 offvancas  -->
+										<div class="size_color_filed">
+											<div class="d-flex justify-content-between align-centet">
+												<span type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasChangeBottom" aria-controls="#offcanvasChangeBottom">暢銷混色組，L</span>
+												<i class="icon-angle-down"></i>
+											</div>										
+										</div>
+
+										<div class="count_field text-center">
+											<span class="count_btn decrease-count" aria-label="Decrease">-</span>
+											<input class="count_value" min="1" type="text" role="spinbutton" aria-valuenow="1" value="1" readonly>
+											<span class="count_btn increase-count" aria-label="Increase">+</span>
+										</div>
+
+										<div class="original_field price_symbol">
+											原價：
+											<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
+											<span data-symbol="NT$ "> 1899 </span>
+										</div>
+
+										<div class="discount_field price_symbol">
+											特價：
+											<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
+											<span data-symbol="NT$"> 840 </span>
+										</div>
+
+										<div class="action_field text-center">
+											<div class="row">
+												<div class="col-6">
+													<button class="btnSF btnOtherGray-line btn-xs mb-2" type="button">加到最愛</button> 
+												</div>
+												<div class="col-6">
+													<button class="btnSF btnOtherGray-line btn-xs mb-2" type="button">移除</button> 
+												</div>
+											</div>
+										</div>
+									</div>									
+								</div>
+								<div class="row py-3">
+									<div class="col flex-shrink-1 pe-0">
+										<div class="ckehck_field position-relative">
+											<label class="check_label">
+												<input type="checkbox">
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="col-4 flex-grow-1 ps-0">
+										<div class="img_filed">
+											<div class="ratio ratio-1x1">
+												<img src="http://fakeimg.pl/100x100?text=img1" class="img-fluid ratio ratio-1x1" alt="">
+											</div>
+										</div>
+										<div class="offer_field">
+											<span class="offer_tag coupon_tag">優惠卷折扣</span>
+											<p class="offer_item">折 100元</p>
+										</div>
+									</div>
+									<div class="col-6 p-0">
+										<div class="title_filed">
+											<h5>彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+										</div>
+
+										<!-- 開啟 offvancas  -->
+										<div class="size_color_filed">
+											<div class="d-flex justify-content-between align-centet">
+												<span type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasChangeBottom" aria-controls="#offcanvasChangeBottom">暢銷混色組，L</span>
+												<i class="icon-angle-down"></i>
+											</div>										
+										</div>
+
+										<div class="count_field text-center">
+											<span class="count_btn decrease-count" aria-label="Decrease">-</span>
+											<input class="count_value" min="1" type="text" role="spinbutton" aria-valuenow="1" value="1" readonly>
+											<span class="count_btn increase-count" aria-label="Increase">+</span>
+										</div>
+
+										<div class="original_field price_symbol">
+											原價：
+											<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
+											<span data-symbol="NT$ "> 1899 </span>
+										</div>
+
+										<div class="discount_field price_symbol">
+											特價：
+											<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
+											<span data-symbol="NT$"> 840 </span>
+										</div>
+
+										<div class="action_field text-center">
+											<div class="row">
+												<div class="col-6">
+													<button class="btnSF btnOtherGray-line btn-xs mb-2" type="button">加到最愛</button> 
+												</div>
+												<div class="col-6">
+													<button class="btnSF btnOtherGray-line btn-xs mb-2" type="button">移除</button> 
+												</div>
+											</div>
+										</div>
+									</div>									
+								</div>
+								<div class="row py-3">
+									<div class="col flex-shrink-1 pe-0">
+										<div class="ckehck_field position-relative">
+											<label class="check_label">
+												<input type="checkbox">
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="col-4 flex-grow-1 ps-0">
+										<div class="img_filed">
+											<div class="ratio ratio-1x1">
+												<img src="http://fakeimg.pl/100x100?text=img1" class="img-fluid ratio ratio-1x1" alt="">
+											</div>
+										</div>
+										<div class="offer_field">
+											<span class="offer_tag coupon_tag">優惠卷折扣</span>
+											<p class="offer_item">折 100元</p>
+										</div>
+									</div>
+									<div class="col-6 p-0">
+										<div class="title_filed">
+											<h5>彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+										</div>
+
+										<!-- 開啟 offvancas  -->
+										<div class="size_color_filed">
+											<div class="d-flex justify-content-between align-centet">
+												<span type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasChangeBottom" aria-controls="#offcanvasChangeBottom">暢銷混色組，L <i class="icon-angle-down"></i></span>
+												
+											</div>										
+										</div>
+
+										<div class="count_field text-center">
+											<span class="count_btn decrease-count" aria-label="Decrease">-</span>
+											<input class="count_value" min="1" type="text" role="spinbutton" aria-valuenow="1" value="1" readonly>
+											<span class="count_btn increase-count" aria-label="Increase">+</span>
+										</div>
+
+										<div class="original_field price_symbol">
+											原價：
+											<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
+											<span data-symbol="NT$ "> 1899 </span>
+										</div>
+
+										<div class="discount_field price_symbol">
+											特價：
+											<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
+											<span data-symbol="NT$"> 840 </span>
+										</div>
+
+										<div class="action_field text-center">
+											<div class="row">
+												<div class="col-6">
+													<button class="btnSF btnOtherGray-line btn-xs mb-2" type="button">加到最愛</button> 
+												</div>
+												<div class="col-6">
+													<button class="btnSF btnOtherGray-line btn-xs mb-2" type="button">移除</button> 
+												</div>
+											</div>
+										</div>
+									</div>									
+								</div>
 							</div>
 						</div>
 					</div>
+				</div>
 
-					<!-- Cart 已享用之優惠  -->
-					<div class="cart_list_offer used_offer">
+				<!-- Cart 享用之優惠  -->
+				<div class="shopping_cart_offer">
+						<!-- Cart 已享用優惠 -->
+					<div class="used_offer">
 						<h5 class="offer_title">已享用之優惠</h5>
 						<!-- @foreach start -->
-						<div class="row mt-2">
-							<div class="col-8 col-lg-11">
-								<div class="row">
-									<div class="col-5 col-lg-2 flex-shrink-1">
-										<span class="offer_tag">合購組合</span>
-									</div>
-									<div class="col-7 col-lg-10 flex-grow-1">
-										<span class="offer_item">任選2件 1000</span> 
-									</div>
+						<div class="row align-items-center mt-2">
+							<div class="col-8 col-lg-10">
+								<div class="d-flex">
+									<span class="offer_tag">合購組合</span>
+									<span class="offer_item">任選2件 1000 任選2件 1000 任選2件 1000 任選2件 1000 任選2件 1000 任選2件 1000任選2件 1000 任選2件 1000 任選2件 1000</span> 
 								</div>
 							</div>
 							<div class="col text-end">
@@ -1328,15 +1615,11 @@
 							</div>
 						</div>
 						<!-- @foreach end -->
-						<div class="row mt-2">
-							<div class="col-8 col-lg-11">
-								<div class="row">
-									<div class="col-5 col-lg-2 flex-shrink-1">
-										<span class="offer_tag">優惠促銷</span>
-									</div>
-									<div class="col-7 col-lg-10 flex-grow-1">
-										<span class="offer_item">全館滿千免運</span> 
-									</div>
+						<div class="row mt-2 align-items-center">
+							<div class="col-8 col-lg-10">
+								<div class="d-flex">
+									<span class="offer_tag">優惠促銷</span>
+									<span class="offer_item">全館滿千免運</span> 
 								</div>
 							</div>
 							<div class="col text-end">
@@ -1346,508 +1629,1413 @@
 								</div>
 							</div>
 						</div>
-						
+						<div class="row mt-2 align-items-center ">
+							<div class="col-8 col-lg-10">
+								<div class="d-flex">
+									<span class="offer_tag coupon_tag">優惠卷折扣</span>
+									<span class="offer_item">折扣 100元折扣 100元折扣 100元折扣 100元折扣 100元折扣 100元折扣 100元折扣 100元折扣 100元</span> 
+								</div>
+							</div>
+							<div class="col text-end">
+								<div class="offer_action text-end">
+									<button class="btnSF btnOtherGray-line btn-xxl fs-7 fw-medium" type="button">移除折扣</button> 
+								</div>
+							</div>
+						</div>
 					</div>
 
 					<!-- Cart 未享用優惠 -->
-					<div class="cart_list_offer other_offer">
+					<div class="other_offer">
 						<h5 class="offer_title">尚有更多優惠等著你！目前未享用：</h5>
 						<!-- @foreach start -->
 						<div class="row mt-2">
-							<div class="col-8 col-lg-11">
-								<div class="row">
-									<div class="col-5 col-lg-2 flex-shrink-1">
-										<span class="offer_tag">優惠促銷</span>
-									</div>
-									<div class="col-7 col-lg-10 flex-grow-1">
-										<span class="offer_item">任選5件 1500元 再買 3 件，即享有優惠</span> 
-									</div>
+							<div class="col-12 col-lg-10">
+								<div class="d-flex">
+									<span class="offer_tag">優惠促銷</span>
+									<span class="offer_item">任選5件 1500元 <span>再買 3 件，即享有優惠</span></span> 
 								</div>
 							</div>
 						</div>
 						<!-- @foreach start -->
+					</div>
+				</div>
+				
+				<!-- 優惠卷 -->
+				<div class="shopping_cart_coupon">	
+					<h5 class="cart_title">優惠卷</h5>
+					
+					<div class="row">
+						<div class="col-10 col-lg-6">
+							<div class="coupon">
+								<div class="col-11">
+									<h6>我的優惠卷</h6>
+									<div class="row" >
+										<div class="col-8">
+											<select class="form-select" aria-label="請選擇">
+												<option selected="">請選擇</option>
+												<option value="1">One</option>
+												<option value="2">Two</option>
+												<option value="3">Three</option>
+											</select>
+										</div>
+										<div class="col-4">
+											<button type="button" class="btnSF btnBlud001 btn-l fs-6 fw-medium">兌換</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-10 col-lg-6">
+							<div class="discount-code">
+								<div class="col-11">
+									<h6>使用折扣碼</h6>
+									<div class="row" >
+										<div class="col-8">
+											<input class="form-control" type="text" aria-label="請輸入折扣碼" placeholder="請輸入折扣碼">
+										</div>
+										<div class="col-4">
+											<button type="button" class="btnSF btnBlud001 btn-l fs-6 fw-medium">兌換</button>
+										</div>
+									</div>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>	
+
+				<!-- 全站加購品清單 有分網頁版跟手機版 未加購時不出現-->
+				<div class="shopping_cart_add mt-3">	
+					<h5 class="cart_title">全站加購品</h5>
+					<div class="cart_list_content">
+						
+						<!-- 網頁版列表 -->
+						<div class="web_cart d-none d-lg-block">
+							<!-- cart content 第一列資訊 thread -->
+							<div class="content_header">
+								<div class="row g-0 align-items-center">
+									<!-- 產品資訊欄位 -->
+									<div class="col-5 flex-grow-1">
+										產品資訊
+									</div>
+
+									<!-- 數量欄位 -->
+									<div class="col-2  text-center">
+										數量
+									</div>
+
+									<!-- 單價欄位 -->
+									<div class="col-2  text-center">
+										單價
+									</div>
+
+									<!-- 小計欄位 -->
+									<div class="col-2  text-center">
+										小計
+									</div>
+
+									<!-- 動作欄位 -->
+									<div class="col-1  text-center">
+										刪除
+									</div>
+								</div>
+							</div>
+							<!-- cart content 購物車列表 tbody-->
+							<div class="content_body">
+								<!-- foreach start -->
+								<div class="row g-0 align-items-center px-2 py-3">
+									<!-- 產品資訊欄位 -->
+									<div class="info_filed col-5 flex-grow-1">
+										<div class="card border-0">
+											<div class="row g-0 align-items-center">
+												<div class="col-md-3">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://sunflower-mall-dev-bucket.s3.ap-northeast-1.amazonaws.com/product/17114352275772.webp" class="img-fluid" alt="">
+													</picture>
+													
+												</div>
+												<div class="col-md-9">
+													<div class="card-body">
+														<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+														<p class="card-text change_btn mb-0">尺寸：<span data-bs-toggle="modal" data-bs-target="#changeModal" role="button">L</span></p>
+														<p class="card-text change_btn mb-0">顏色：<span data-bs-toggle="modal" data-bs-target="#changeModal" role="button">暢銷混色組</span></p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- 數量欄位 -->	
+									<div class="count_field col-2 text-center">
+										<span>1</span>
+									</div>
+
+									<!-- 單價欄位 -->
+									<div class="original_field price_symbol col-2 text-center">
+										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
+										<span data-symbol="NT$ "> 1899 </span>
+									</div>
+
+									<!-- 小計欄位 -->
+									<div class="subtotal_field price_symbol col-2 text-center">
+										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
+										<span data-symbol="NT$ "> 840 </span>
+									</div>
+									
+									<!-- 動作欄位 -->	
+									<div class="action_field col-1  text-center">
+										<button class="btnSF btnOtherGray-line btn-xxl fs-7 fw-medium mb-2" type="button">移除</button> 
+									</div>
+
+								</div>
+								<!-- foreach end -->
+
+								<div class="row g-0 align-items-center px-2 py-3">
+									<!-- 產品資訊欄位 -->
+									<div class="info_filed col-5 flex-grow-1">
+										<div class="card border-0">
+											<div class="row g-0 align-items-center">
+												<div class="col-md-3">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://sunflower-mall-dev-bucket.s3.ap-northeast-1.amazonaws.com/product/17114352275772.webp" class="img-fluid" alt="">
+													</picture>
+													
+												</div>
+												<div class="col-md-9">
+													<div class="card-body">
+														<h5 class="card-title">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+														<p class="card-text change_btn mb-0">尺寸：<span data-bs-toggle="modal" data-bs-target="#changeModal" role="button">L</span></p>
+														<p class="card-text change_btn mb-0">顏色：<span data-bs-toggle="modal" data-bs-target="#changeModal" role="button">暢銷混色組</span></p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- 數量欄位 -->	
+									<div class="count_field col-2 text-center">
+										<span>1</span>
+									</div>
+
+									<!-- 單價欄位 -->
+									<div class="original_field price_symbol col-2 text-center">
+										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
+										<span data-symbol="NT$ "> 1899 </span>
+									</div>
+
+									<!-- 小計欄位 -->
+									<div class="subtotal_field price_symbol col-2 text-center">
+										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
+										<span data-symbol="NT$ "> 840 </span>
+									</div>
+									
+									<!-- 動作欄位 -->	
+									<div class="action_field col-1  text-center">
+										<button class="btnSF btnOtherGray-line btn-xxl fs-7 fw-medium mb-2" type="button">移除</button> 
+									</div>
+
+								</div>	
+							</div>
+						</div>
+
+						<!-- 手機版 -->
+						<div class="mobile_cart d-block d-lg-none">
+							<!-- cart content 購物車列表 tbody-->
+							<div class="content_body">
+								<!-- foreach start -->
+								<div class="row p-3">
+									<div class="col-5 flex-grow-1 ps-0">
+										<div class="img_filed">
+											<div class="ratio ratio-1x1">
+												<img src="http://fakeimg.pl/100x100?text=img1" class="img-fluid ratio ratio-1x1" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="col-7 p-0">
+										<div class="title_filed">
+											<h5>彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+										</div>
+										
+										<div class="size_color_filed">
+											<span type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasChangeBottom" aria-controls="#offcanvasChangeBottom">暢銷混色組，L <i class="icon-angle-down "></i></span>
+										</div>
+
+										<div class="count_field">
+											<p class="m-0">數量：<span>1</span></p>
+											
+										</div>
+
+										<div class="original_field price_symbol">
+											單價：
+											
+											<span data-symbol="NT$ "> 1899 </span>
+										</div>
+
+										<div class="discount_field price_symbol">
+											小計：
+
+											<span data-symbol="NT$"> 840 </span>
+										</div>
+
+										<div class="action_field text-center">
+											<div class="row">
+												<div class="col">
+													<button class="btnSF btnOtherGray-line btn-xs mb-2" type="button">移除</button> 
+												</div>
+											</div>
+										</div>
+									</div>									
+								</div>
+								<!-- foreach end -->
+								<div class="row py-3">
+									<div class="col flex-shrink-1 pe-0">
+										<div class="ckehck_field position-relative">
+											<label class="check_label">
+												<input type="checkbox">
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="col-4 flex-grow-1 ps-0">
+										<div class="img_filed">
+											<div class="ratio ratio-1x1">
+												<img src="http://fakeimg.pl/100x100?text=img1" class="img-fluid ratio ratio-1x1" alt="">
+											</div>
+										</div>
+										<div class="offer_field">
+											<span class="offer_tag">合購組合</span>
+											<p class="offer_item">任選2件 1000</p>
+										</div>
+									</div>
+									<div class="col-6 p-0">
+										<div class="title_filed">
+											<h5>彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+										</div>
+
+										<!-- 開啟 offvancas  -->
+										<div class="size_color_filed">
+											<div class="d-flex justify-content-between align-centet">
+												<span type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasChangeBottom" aria-controls="#offcanvasChangeBottom">暢銷混色組，L</span>
+												<i class="icon-angle-down"></i>
+											</div>										
+										</div>
+
+										<div class="count_field text-center">
+											<span class="count_btn decrease-count" aria-label="Decrease">-</span>
+											<input class="count_value" min="1" type="text" role="spinbutton" aria-valuenow="1" value="1" readonly>
+											<span class="count_btn increase-count" aria-label="Increase">+</span>
+										</div>
+
+										<div class="original_field price_symbol">
+											原價：
+											<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
+											<span data-symbol="NT$ "> 1899 </span>
+										</div>
+
+										<div class="discount_field price_symbol">
+											特價：
+											<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
+											<span data-symbol="NT$"> 840 </span>
+										</div>
+
+										<div class="action_field text-center">
+											<div class="row">
+												<div class="col-6">
+													<button class="btnSF btnOtherGray-line btn-xs mb-2" type="button">加到最愛</button> 
+												</div>
+												<div class="col-6">
+													<button class="btnSF btnOtherGray-line btn-xs mb-2" type="button">移除</button> 
+												</div>
+											</div>
+										</div>
+									</div>									
+								</div>
+								<div class="row py-3">
+									<div class="col flex-shrink-1 pe-0">
+										<div class="ckehck_field position-relative">
+											<label class="check_label">
+												<input type="checkbox">
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="col-4 flex-grow-1 ps-0">
+										<div class="img_filed">
+											<div class="ratio ratio-1x1">
+												<img src="http://fakeimg.pl/100x100?text=img1" class="img-fluid ratio ratio-1x1" alt="">
+											</div>
+										</div>
+										<div class="offer_field">
+											<span class="offer_tag coupon_tag">優惠卷折扣</span>
+											<p class="offer_item">折 100元</p>
+										</div>
+									</div>
+									<div class="col-6 p-0">
+										<div class="title_filed">
+											<h5>彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+										</div>
+
+										<!-- 開啟 offvancas  -->
+										<div class="size_color_filed">
+											<div class="d-flex justify-content-between align-centet">
+												<span type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasChangeBottom" aria-controls="#offcanvasChangeBottom">暢銷混色組，L</span>
+												<i class="icon-angle-down"></i>
+											</div>										
+										</div>
+
+										<div class="count_field text-center">
+											<span class="count_btn decrease-count" aria-label="Decrease">-</span>
+											<input class="count_value" min="1" type="text" role="spinbutton" aria-valuenow="1" value="1" readonly>
+											<span class="count_btn increase-count" aria-label="Increase">+</span>
+										</div>
+
+										<div class="original_field price_symbol">
+											原價：
+											<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
+											<span data-symbol="NT$ "> 1899 </span>
+										</div>
+
+										<div class="discount_field price_symbol">
+											特價：
+											<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
+											<span data-symbol="NT$"> 840 </span>
+										</div>
+
+										<div class="action_field text-center">
+											<div class="row">
+												<div class="col-6">
+													<button class="btnSF btnOtherGray-line btn-xs mb-2" type="button">加到最愛</button> 
+												</div>
+												<div class="col-6">
+													<button class="btnSF btnOtherGray-line btn-xs mb-2" type="button">移除</button> 
+												</div>
+											</div>
+										</div>
+									</div>									
+								</div>
+								<div class="row py-3">
+									<div class="col flex-shrink-1 pe-0">
+										<div class="ckehck_field position-relative">
+											<label class="check_label">
+												<input type="checkbox">
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="col-4 flex-grow-1 ps-0">
+										<div class="img_filed">
+											<div class="ratio ratio-1x1">
+												<img src="http://fakeimg.pl/100x100?text=img1" class="img-fluid ratio ratio-1x1" alt="">
+											</div>
+										</div>
+										<div class="offer_field">
+											<span class="offer_tag coupon_tag">優惠卷折扣</span>
+											<p class="offer_item">折 100元</p>
+										</div>
+									</div>
+									<div class="col-6 p-0">
+										<div class="title_filed">
+											<h5>彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+										</div>
+
+										<!-- 開啟 offvancas  -->
+										<div class="size_color_filed">
+											<div class="d-flex justify-content-between align-centet">
+												<span type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasChangeBottom" aria-controls="#offcanvasChangeBottom">暢銷混色組，L <i class="icon-angle-down"></i></span>
+												
+											</div>										
+										</div>
+
+										<div class="count_field text-center">
+											<span class="count_btn decrease-count" aria-label="Decrease">-</span>
+											<input class="count_value" min="1" type="text" role="spinbutton" aria-valuenow="1" value="1" readonly>
+											<span class="count_btn increase-count" aria-label="Increase">+</span>
+										</div>
+
+										<div class="original_field price_symbol">
+											原價：
+											<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
+											<span data-symbol="NT$ "> 1899 </span>
+										</div>
+
+										<div class="discount_field price_symbol">
+											特價：
+											<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
+											<span data-symbol="NT$"> 840 </span>
+										</div>
+
+										<div class="action_field text-center">
+											<div class="row">
+												<div class="col-6">
+													<button class="btnSF btnOtherGray-line btn-xs mb-2" type="button">加到最愛</button> 
+												</div>
+												<div class="col-6">
+													<button class="btnSF btnOtherGray-line btn-xs mb-2" type="button">移除</button> 
+												</div>
+											</div>
+										</div>
+									</div>									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 贈品 -->
+				<div class="shopping_cart_gifts mt-3">
+					<div class="accordion" id="accordionExample">
+						<div class="accordion-item">
+						  <h2 class="accordion-header" id="headingOne">
+							<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								您已符合贈品資格，請選擇贈品：
+							</button>
+						  </h2>
+						  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<div class="gifts-item my-3">
+									<h5 class="cart_title">全館滿 <span>1000</span> 送贈品：</h5>
+									<div class="swiper gifts-swiper px-4 py-3">
+										<div class="swiper-wrapper">
+											<!-- @foreach start -->
+											<div class="swiper-slide gifts-slide">
+												<div class="gifts-card card h-100 px-2 border-0">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+													</picture>
+													
+													<div class="card-body px-0 py-2">
+														<div class="card-title">5522 - 簡短商品代稱</div>
+														<div class="card-content">
+															<div class="row g-2">
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
+																	</select>
+																</div>
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1">L</option>
+																		<option value="2">XL</option>
+																		<option value="3">XXL</option>
+																	</select>
+																</div>
+															
+																<div class="col-12">
+																	<div class="market-price">
+																		<p>市價：<span data-symbol="NT$">100</span></p>
+																	</div>
+																</div>
+																<div class="col-12">
+																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- @foreach end -->
+											<div class="swiper-slide gifts-slide">
+												<div class="gifts-card card h-100 px-2 border-0">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+													</picture>
+													
+													<div class="card-body px-0 py-2">
+														<div class="card-title">5522 - 簡短商品代稱簡短商品代稱</div>
+														<div class="card-content">
+															<div class="row g-2">
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
+																	</select>
+																</div>
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1">L</option>
+																		<option value="2">XL</option>
+																		<option value="3">XXL</option>
+																	</select>
+																</div>
+															
+																<div class="col-12">
+																	<div class="market-price">
+																		<p>市價：<span data-symbol="NT$">100</span></p>
+																	</div>
+																</div>
+																<div class="col-12">
+																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide gifts-slide">
+												<div class="gifts-card card h-100 px-2 border-0">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+													</picture>
+													
+													<div class="card-body px-0 py-2">
+														<div class="card-title">5522 - 簡短商品代稱簡短商品代稱簡短商品代稱</div>
+														<div class="card-content">
+															<div class="row g-2">
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
+																	</select>
+																</div>
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1">L</option>
+																		<option value="2">XL</option>
+																		<option value="3">XXL</option>
+																	</select>
+																</div>
+															
+																<div class="col-12">
+																	<div class="market-price">
+																		<p>市價：<span data-symbol="NT$">100</span></p>
+																	</div>
+																</div>
+																<div class="col-12">
+																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide gifts-slide">
+												<div class="gifts-card card h-100 px-2 border-0">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+													</picture>
+													
+													<div class="card-body px-0 py-2">
+														<div class="card-title">5522 - 簡短商品代稱</div>
+														<div class="card-content">
+															<div class="row g-2">
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
+																	</select>
+																</div>
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1">L</option>
+																		<option value="2">XL</option>
+																		<option value="3">XXL</option>
+																	</select>
+																</div>
+															
+																<div class="col-12">
+																	<div class="market-price">
+																		<p>市價：<span data-symbol="NT$">100</span></p>
+																	</div>
+																</div>
+																<div class="col-12">
+																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide gifts-slide">
+												<div class="gifts-card card h-100 px-2 border-0">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+													</picture>
+													
+													<div class="card-body px-0 py-2">
+														<div class="card-title">5522 - 簡短商品代稱</div>
+														<div class="card-content">
+															<div class="row g-2">
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
+																	</select>
+																</div>
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1">L</option>
+																		<option value="2">XL</option>
+																		<option value="3">XXL</option>
+																	</select>
+																</div>
+															
+																<div class="col-12">
+																	<div class="market-price">
+																		<p>市價：<span data-symbol="NT$">100</span></p>
+																	</div>
+																</div>
+																<div class="col-12">
+																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide gifts-slide">
+												<div class="gifts-card card h-100 px-2 border-0">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+													</picture>
+													
+													<div class="card-body px-0 py-2">
+														<div class="card-title">5522 - 簡短商品代稱</div>
+														<div class="card-content">
+															<div class="row g-2">
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
+																	</select>
+																</div>
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1">L</option>
+																		<option value="2">XL</option>
+																		<option value="3">XXL</option>
+																	</select>
+																</div>
+															
+																<div class="col-12">
+																	<div class="market-price">
+																		<p>市價：<span data-symbol="NT$">100</span></p>
+																	</div>
+																</div>
+																<div class="col-12">
+																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide gifts-slide">
+												<div class="gifts-card card h-100 px-2 border-0">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+													</picture>
+													
+													<div class="card-body px-0 py-2">
+														<div class="card-title">5522 - 簡短商品代稱</div>
+														<div class="card-content">
+															<div class="row g-2">
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
+																	</select>
+																</div>
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1">L</option>
+																		<option value="2">XL</option>
+																		<option value="3">XXL</option>
+																	</select>
+																</div>
+															
+																<div class="col-12">
+																	<div class="market-price">
+																		<p>市價：<span data-symbol="NT$">100</span></p>
+																	</div>
+																</div>
+																<div class="col-12">
+																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>	
+										</div>
+										<!-- 輪播箭頭 -->
+										<div class="gifts-swiper-button d-flex d-lg-flex">
+											<div class="swiper-button-prev gifts-button-prev"></div>
+											<div class="swiper-button-next gifts-button-next"></div>	
+										</div>
+									</div>
+								</div>
+								<div class="gifts-item my-3">
+									<h5 class="cart_title">全館滿 <span>3000</span> 送贈品：</h5>
+									<div class="swiper gifts-swiper px-4 py-3">
+										<div class="swiper-wrapper">
+											<!-- @foreach start -->
+											<div class="swiper-slide gifts-slide">
+												<div class="gifts-card card h-100 px-2 border-0">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+													</picture>
+													
+													<div class="card-body px-0 py-2">
+														<div class="card-title">5522 - 簡短商品代稱</div>
+														<div class="card-content">
+															<div class="row g-2">
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
+																	</select>
+																</div>
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1">L</option>
+																		<option value="2">XL</option>
+																		<option value="3">XXL</option>
+																	</select>
+																</div>
+															
+																<div class="col-12">
+																	<div class="market-price">
+																		<p>市價：<span data-symbol="NT$">100</span></p>
+																	</div>
+																</div>
+																<div class="col-12">
+																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- @foreach end -->
+											<div class="swiper-slide gifts-slide">
+												<div class="gifts-card card h-100 px-2 border-0">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+													</picture>
+													
+													<div class="card-body px-0 py-2">
+														<div class="card-title">5522 - 簡短商品代稱簡短商品代稱</div>
+														<div class="card-content">
+															<div class="row g-2">
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
+																	</select>
+																</div>
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1">L</option>
+																		<option value="2">XL</option>
+																		<option value="3">XXL</option>
+																	</select>
+																</div>
+															
+																<div class="col-12">
+																	<div class="market-price">
+																		<p>市價：<span data-symbol="NT$">100</span></p>
+																	</div>
+																</div>
+																<div class="col-12">
+																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide gifts-slide">
+												<div class="gifts-card card h-100 px-2 border-0">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+													</picture>
+													
+													<div class="card-body px-0 py-2">
+														<div class="card-title">5522 - 簡短商品代稱簡短商品代稱簡短商品代稱</div>
+														<div class="card-content">
+															<div class="row g-2">
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
+																	</select>
+																</div>
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1">L</option>
+																		<option value="2">XL</option>
+																		<option value="3">XXL</option>
+																	</select>
+																</div>
+															
+																<div class="col-12">
+																	<div class="market-price">
+																		<p>市價：<span data-symbol="NT$">100</span></p>
+																	</div>
+																</div>
+																<div class="col-12">
+																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide gifts-slide">
+												<div class="gifts-card card h-100 px-2 border-0">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+													</picture>
+													
+													<div class="card-body px-0 py-2">
+														<div class="card-title">5522 - 簡短商品代稱</div>
+														<div class="card-content">
+															<div class="row g-2">
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
+																	</select>
+																</div>
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1">L</option>
+																		<option value="2">XL</option>
+																		<option value="3">XXL</option>
+																	</select>
+																</div>
+															
+																<div class="col-12">
+																	<div class="market-price">
+																		<p>市價：<span data-symbol="NT$">100</span></p>
+																	</div>
+																</div>
+																<div class="col-12">
+																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide gifts-slide">
+												<div class="gifts-card card h-100 px-2 border-0">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+													</picture>
+													
+													<div class="card-body px-0 py-2">
+														<div class="card-title">5522 - 簡短商品代稱</div>
+														<div class="card-content">
+															<div class="row g-2">
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
+																	</select>
+																</div>
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1">L</option>
+																		<option value="2">XL</option>
+																		<option value="3">XXL</option>
+																	</select>
+																</div>
+															
+																<div class="col-12">
+																	<div class="market-price">
+																		<p>市價：<span data-symbol="NT$">100</span></p>
+																	</div>
+																</div>
+																<div class="col-12">
+																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide gifts-slide">
+												<div class="gifts-card card h-100 px-2 border-0">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+													</picture>
+													
+													<div class="card-body px-0 py-2">
+														<div class="card-title">5522 - 簡短商品代稱</div>
+														<div class="card-content">
+															<div class="row g-2">
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
+																	</select>
+																</div>
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1">L</option>
+																		<option value="2">XL</option>
+																		<option value="3">XXL</option>
+																	</select>
+																</div>
+															
+																<div class="col-12">
+																	<div class="market-price">
+																		<p>市價：<span data-symbol="NT$">100</span></p>
+																	</div>
+																</div>
+																<div class="col-12">
+																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide gifts-slide">
+												<div class="gifts-card card h-100 px-2 border-0">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+													</picture>
+													
+													<div class="card-body px-0 py-2">
+														<div class="card-title">5522 - 簡短商品代稱</div>
+														<div class="card-content">
+															<div class="row g-2">
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
+																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
+																	</select>
+																</div>
+																<div class="col">
+																	<select class="form-select border-0" aria-label="Default select example">
+																		<option selected value="1">L</option>
+																		<option value="2">XL</option>
+																		<option value="3">XXL</option>
+																	</select>
+																</div>
+															
+																<div class="col-12">
+																	<div class="market-price">
+																		<p>市價：<span data-symbol="NT$">100</span></p>
+																	</div>
+																</div>
+																<div class="col-12">
+																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>	
+										</div>
+										<!-- 輪播箭頭 -->
+										<div class="gifts-swiper-button d-flex d-lg-flex">
+											<div class="swiper-button-prev gifts-button-prev"></div>
+											<div class="swiper-button-next gifts-button-next"></div>	
+										</div>
+									</div>
+								</div>
+							</div>
+						  </div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 購物車紅利點數兌換 -->
-				<div class="shopping_cart_point">
-					<div class="first row align-items-center justify-content-between">
-						<div class="col">
-							<h5 class="section_title">紅利點數兌換</h5>
-						</div>
-						<div class="col d-flex align-items-center justify-content-end">
-							<i class="icon icon-error"></i>使用說明
-						</div>
-					</div>
-
-					<div class="second row">
-						<div class="col-12 col-lg-3">
-							<p>目前會員等級：<span class="card-type">新創銀卡</span></p>
-						</div>
-						<div class="col-12 col-lg-3 mt-3 mt-lg-0">
-							<p class="d-flex justify-content-between">可用點數 <span class="unit-point" data-unit="點"> 6200</span></p>
-						</div>
-					</div>
-
-					<div class="third row">
-						<div class="col-12">
-							<div class="swiper point-swiper my-5">
-								<div class="swiper-wrapper">
-									<!-- 也許你也喜歡 @foreach start -->
-									<div class="swiper-slide point-item">
-										<div class="col px-4 text-center">
-											<div class="point-card card border-0 h-100">
-												<div class="card-img img-hover">
-													<picture class="">
-														<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-														<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
-													</picture>
-												</div>
-
-												<h5 class="card-title">
-													50黑<br>1/2休閒襪
-												</h5>
-	
-												<div class="card-content border-0">
-													<p>市價：<span class="market_price" data-symbol="NT$">100</span></p>
-												</div>
-												
-												<div class="card-action">
-													<button class="btnSF btnBlud001 btn-xxl fs-6 fw-medium mb-2"><span class="point-price">2000</span>點兌換</button>
-												</div>
-											</div>
-										</div>	
-									</div>
-									<!-- 也許你也喜歡 @foreach edn -->
-									<div class="swiper-slide point-item">
-										<div class="col px-4 text-center">
-											<div class="point-card card border-0 h-100">
-												<div class="card-img img-hover">
-													<picture class="">
-														<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-														<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
-													</picture>
-												</div>
-
-												<h5 class="card-title">
-													50黑<br>1/2休閒襪
-												</h5>
-	
-												<div class="card-content border-0">
-													<p>市價：<span class="market_price" data-symbol="NT$">100</span></p>
-												</div>
-												
-												<div class="card-action">
-													<button class="btnSF btnBlud001 btn-xxl fs-6 fw-medium mb-2"><span class="point-price">2000</span>點兌換</button>
-												</div>
-											</div>
-										</div>	
-									</div>
-									<div class="swiper-slide point-item">
-										<div class="col px-4 text-center">
-											<div class="point-card card border-0 h-100">
-												<div class="card-img img-hover">
-													<picture class="">
-														<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-														<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
-													</picture>
-												</div>
-
-												<h5 class="card-title">
-													50黑<br>1/2休閒襪
-												</h5>
-	
-												<div class="card-content border-0">
-													<p>市價：<span class="market_price" data-symbol="NT$">100</span></p>
-												</div>
-												
-												<div class="card-action">
-													<button class="btnSF btnBlud001 btn-xxl fs-6 fw-medium mb-2"><span class="point-price">2000</span>點兌換</button>
-												</div>
-											</div>
-										</div>	
-									</div>
-									<div class="swiper-slide point-item">
-										<div class="col px-4 text-center">
-											<div class="point-card card border-0 h-100">
-												<div class="card-img img-hover">
-													<picture class="">
-														<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-														<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
-													</picture>
-												</div>
-
-												<h5 class="card-title">
-													50黑<br>1/2休閒襪
-												</h5>
-	
-												<div class="card-content border-0">
-													<p>市價：<span class="market_price" data-symbol="NT$">100</span></p>
-												</div>
-												
-												<div class="card-action">
-													<button class="btnSF btnBlud001 btn-xxl fs-6 fw-medium mb-2"><span class="point-price">2000</span>點兌換</button>
-												</div>
-											</div>
-										</div>	
-									</div>
-									<div class="swiper-slide point-item">
-										<div class="col px-4 text-center">
-											<div class="point-card card border-0 h-100">
-												<div class="card-img img-hover">
-													<picture class="">
-														<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-														<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
-													</picture>
-												</div>
-
-												<h5 class="card-title">
-													50黑<br>1/2休閒襪
-												</h5>
-	
-												<div class="card-content border-0">
-													<p>市價：<span class="market_price" data-symbol="NT$">100</span></p>
-												</div>
-												
-												<div class="card-action">
-													<button class="btnSF btnBlud001 btn-xxl fs-6 fw-medium mb-2"><span class="point-price">2000</span>點兌換</button>
-												</div>
-											</div>
-										</div>	
-									</div>
-									<div class="swiper-slide point-item">
-										<div class="col px-4 text-center">
-											<div class="point-card card border-0 h-100">
-												<div class="card-img img-hover">
-													<picture class="">
-														<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-														<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
-													</picture>
-												</div>
-
-												<h5 class="card-title">
-													50黑<br>1/2休閒襪
-												</h5>
-	
-												<div class="card-content border-0">
-													<p>市價：<span class="market_price" data-symbol="NT$">100</span></p>
-												</div>
-												
-												<div class="card-action">
-													<button class="btnSF btnBlud001 btn-xxl fs-6 fw-medium mb-2"><span class="point-price">2000</span>點兌換</button>
-												</div>
-											</div>
-										</div>	
-									</div>
-									<div class="swiper-slide point-item">
-										<div class="col px-4 text-center">
-											<div class="point-card card border-0 h-100">
-												<div class="card-img img-hover">
-													<picture class="">
-														<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-														<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
-													</picture>
-												</div>
-
-												<h5 class="card-title">
-													50黑<br>1/2休閒襪
-												</h5>
-	
-												<div class="card-content border-0">
-													<p>市價：<span class="market_price" data-symbol="NT$">100</span></p>
-												</div>
-												
-												<div class="card-action">
-													<button class="btnSF btnBlud001 btn-xxl fs-6 fw-medium mb-2"><span class="point-price">2000</span>點兌換</button>
-												</div>
-											</div>
-										</div>	
-									</div>	
-								</div>
-								<div class="likeWeb-swiper-button d-flex d-lg-flex">
-									<div class="swiper-button-prev pointWeb-button-prev"></div>
-									<div class="swiper-button-next pointWeb-button-next"></div>	
-								</div>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-
-				<div class="shopping_cart_total">
-					<div class="first">
-						<div class="row justify-content-between">
-							<div class="col-12 col-lg-6">
-								<div class="count">共計 <span class=""> 6 </span> 項商品，數量 <span class=""> 6 </span> 個</div>
-							</div>
-							<div class="col-12 col-lg-6">
-								<div class="list_total"> 合計：<span data-symbol="NT$ ">1,106</span></div>
-							</div>
-						</div>
-					</div>
-					<div class="second">
-						<div class="coupon">
-							<div class="col-12 col-lg-4 ms-auto">
-								<div class="row align-items-center justify-content-end">
-									<div class="col-12 col-lg-4">
-										<h6>我的優惠卷</h6>
-									</div>
-									<div class="col-12 col-lg-8">
-										<select class="form-select" aria-label="請選擇">
-											<option selected="">請選擇</option>
-											<option value="1">One</option>
-											<option value="2">Two</option>
-											<option value="3">Three</option>
-										</select>
-									</div>
-								</div>
-							</div>
-
-						</div>
-						<div class="discount-code">
-							<div class="col-12 col-lg-4 ms-auto">
-								<div class="row align-items-center justify-content-end">
-									<div class="col-12 col-lg-4">
-										<h6>使用折扣碼</h6>
-									</div>
-									<div class="col-12 col-lg-8">
-										<input class="form-control" type="text" aria-label="default input example" placeholder="請輸入折扣碼">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="third">
-						<div class="shopping-fee">
-							<div class="col-12 col-lg-4 ms-auto">
-								<div class="row align-items-center justify-content-end">
-									<div class="col-9">
-										<h6>運費：</h6>
-									</div>
-									<div class="col-3 text-end">
-										<span data-symbol="$">0</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="used-point">
-							<div class="col-12 col-lg-4 ms-auto">
-								<div class="row align-items-center justify-content-end">
-									<div class="col-9">
-										<h6>點數使用：</h6>
-									</div>
-									<div class="col-3 text-end">
-										<span data-symbol="$">100</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="use-disount-code">
-							<div class="col-12 col-lg-4 ms-auto">
-								<div class="row align-items-center justify-content-end">
-									<div class="col-9">
-										<h6>折價劵活動名稱顯示區：</h6>
-									</div>
-									<div class="col-3 text-end">
-										<span data-symbol="$">80</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="fourth">
-						<div class="col col-lg-4 ms-auto">
-							<div class="row align-items-center">
-								<div class="col-12 col-lg-8">
-									<div class="finan-total">
-										<div class="row align-items-center justify-content-end">
-											<div class="col-9 col-lg-8">
-												<h6>訂單總金額 ：</h6>
-											</div>
-											<div class="col-3 col-lg-4 text-end">
-												<span data-symbol="$">80</span>
-											</div>
+				<div class="shopping_cart_point mt-3">
+					<div class="accordion" id="accordionExample">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingOne">
+								<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									紅利點數兌換商品：
+								</button>
+							</h2>
+						  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<div class="member-card-info">
+									<div class="row align-items-center">
+										<div class="col-12 col-lg-3">
+											<p>目前會員等級：<span class="card-type">新創銀卡</span></p>
+										</div>
+										<div class="col-12 col-lg-3 mt-3 mt-lg-0">
+											<p class="d-flex justify-content-between">可用點數 <span class="unit-point" data-unit="點"> 6200</span></p>
+										</div>
+										<div class="col d-flex align-items-center justify-content-end">
+											<i class="icon icon-error_outline"></i>使用說明
 										</div>
 									</div>
 								</div>
-								<div class="col-12 col-lg-4">
-									<div class="final-check">
-										<button class="btnSF btnBlud003 btn-xxl fs-6 fw-medium mb-2">結帳</button>
+									
+								<div class="point-item my-3">
+									<div class="swiper point-swiper px-4 py-3">
+										<div class="swiper-wrapper">
+											<!-- @foreach start -->
+											<div class="swiper-slide point-slide">
+												<div class="point-card card h-100 px-2 border-0">
+													<div class="card-img img-hover">
+														<picture class="">
+															<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+															<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+														</picture>
+													</div>
+	
+													<h5 class="card-title">
+														<p>445黑</p>
+														<span>超透氣1/2男女運動襪超透氣1/2男女運動襪超透氣1/2男女運動襪</span>
+													</h5>
+		
+													<div class="market-price">
+														<p>市價：<span data-symbol="NT$">100</span></p>
+													</div>
+													
+													<div class="card-action">
+														<button class="btnSF btnBlud001 btn-xxl fs-6 fw-medium mb-2"><span class="point-price">2000</span>點兌換</button>
+													</div>
+												</div>
+											</div>
+											<!-- @foreach end -->
+											<div class="swiper-slide point-slide">
+												<div class="point-card card h-100 px-2 border-0">
+													<div class="card-img img-hover">
+														<picture class="">
+															<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+															<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+														</picture>
+													</div>
+	
+													<h5 class="card-title">
+														<p>445黑</p>
+														<span>超透氣1/2男女運動襪</span>
+													</h5>
+		
+													<div class="market-price">
+														<p>市價：<span data-symbol="NT$">100</span></p>
+													</div>
+													
+													<div class="card-action">
+														<button class="btnSF btnBlud001 btn-xxl fs-6 fw-medium mb-2"><span class="point-price">2000</span>點兌換</button>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide point-slide">
+												<div class="point-card card h-100 px-2 border-0">
+													<div class="card-img img-hover">
+														<picture class="">
+															<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+															<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+														</picture>
+													</div>
+	
+													<h5 class="card-title">
+														<p>445黑</p>
+														<span>超透氣1/2男女運動襪</span>
+													</h5>
+		
+													<div class="market-price">
+														<p>市價：<span data-symbol="NT$">100</span></p>
+													</div>
+													
+													<div class="card-action">
+														<button class="btnSF btnBlud001 btn-xxl fs-6 fw-medium mb-2"><span class="point-price">2000</span>點兌換</button>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide point-slide">
+												<div class="point-card card h-100 px-2 border-0">
+													<div class="card-img img-hover">
+														<picture class="">
+															<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+															<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+														</picture>
+													</div>
+	
+													<h5 class="card-title">
+														<p>445黑</p>
+														<span>超透氣1/2男女運動襪</span>
+													</h5>
+		
+													<div class="market-price">
+														<p>市價：<span data-symbol="NT$">100</span></p>
+													</div>
+													
+													<div class="card-action">
+														<button class="btnSF btnBlud001 btn-xxl fs-6 fw-medium mb-2"><span class="point-price">2000</span>點兌換</button>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide point-slide">
+												<div class="point-card card h-100 px-2 border-0">
+													<div class="card-img img-hover">
+														<picture class="">
+															<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+															<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+														</picture>
+													</div>
+	
+													<h5 class="card-title">
+														<p>445黑</p>
+														<span>超透氣1/2男女運動襪</span>
+													</h5>
+		
+													<div class="card-content border-0">
+														<p>市價：<span class="market_price" data-symbol="NT$">100</span></p>
+													</div>
+													
+													<div class="card-action">
+														<button class="btnSF btnBlud001 btn-xxl fs-6 fw-medium mb-2"><span class="point-price">2000</span>點兌換</button>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide point-slide">
+												<div class="point-card card h-100 px-2 border-0">
+													<div class="card-img img-hover">
+														<picture class="">
+															<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
+															<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+														</picture>
+													</div>
+	
+													<h5 class="card-title">
+														<p>445黑</p>
+														<span>超透氣1/2男女運動襪</span>
+													</h5>
+		
+													<div class="market_price border-0">
+														<p>市價：<span class="market_price" data-symbol="NT$">100</span></p>
+													</div>
+													
+													<div class="card-action">
+														<button class="btnSF btnBlud001 btn-xxl fs-6 fw-medium mb-2"><span class="point-price">2000</span>點兌換</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- 輪播箭頭 -->
+										<div class="point-swiper-button d-flex d-lg-flex">
+											<div class="swiper-button-prev point-button-prev"></div>
+											<div class="swiper-button-next point-button-next"></div>	
+										</div>
 									</div>
-								</div>
+								</div>	
 							</div>
+						  </div>
 						</div>
-						<div class="col col-lg-4 ms-auto">
-							<div class="row">
-								<div class="earn-point">
-									<button class="btnSF btn-xxl fs-6 fw-medium mb-2">
-										此筆訂單可獲得<span> 848 </span>點
-									</button>	
+					</div>
+				</div>
+
+				<!-- 共計、結帳 -->
+				<div class="shopping_cart_total">
+					<div class="row align-items-center">
+						<div class="col-12 col-lg-6">
+							<div class="count">共計 <span class=""> 6 </span> 項商品，數量 <span class=""> 6 </span> 個</div>
+						</div>
+						<div class="col-12 col-lg-6">
+							<div class="row align-items-center">
+								<div class="col-12 col-lg-9">
+									<div class="list_total"> 商品總金額： <span data-symbol="NT$ ">1,106</span></div>
+								</div>
+								<div class="col-3">
+									<div class="final-check">
+										<button class="btnSF btn-xxl fs-6 fw-medium">結帳</button>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- 視狀況還要細部處理 -->
+				<!-- 繼續購物 -->
 				<div class="keep_shopping_btn mt-4">
 					<div class="col text-end">
 						<a href="#">繼續購物 <i class="icon icon-angle-right"></i></a>
 					</div>
 				</div>
 
+				<!-- 也許你也喜歡 -->
 				<div class="shopping_cart_like">
 					<div class="row align-items-center justify-content-between">
 						<div class="col">
-							<h5 class="section_title">也許你也喜歡</h5>
+							<h5 class="cart_title">也許你也喜歡</h5>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-12">
-							<div class="swiper like-swiper my-5">
+							<div class="swiper like-swiper mt-3">
 								<div class="swiper-wrapper">
-									<!-- 也許你也喜歡 @foreach start -->
+									<!-- @foreach start -->
 									<div class="swiper-slide like-item">
 										<div class="col px-4 text-center">
 											<div class="product-card card border-0 h-100">
 												<div class="card-img img-hover">
-													<picture class="">
-														<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-														<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="images/product/pic-product.webp" class="" alt="">
+														<img src="images/product/pic-product-hover.webp" class="" alt="">
 													</picture>
 												</div>
 
 												<div class="card-content border-0">
 													<div class="colors-wrapper col-12">
 														<div class="color-items d-flex">
-															<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
-															<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
-															<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
+															<p class="color-item mb-1 active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+															<p class="color-item mb-1" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+															<p class="color-item mb-1" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
 														</div>
 														<div class="color-name">
-															<p class="text-start">灰色</p>
+															<p class="text-start mb-1">灰色</p>
 														</div>
 													</div>
 												</div>
+
 												<h5 class="card-title">
 													<a href="#">彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲5</a>
 												</h5>
+												
 											</div>
 										</div>	
 									</div>
-									<!-- 也許你也喜歡 @foreach edn -->
+									<!--  @foreach end -->
+
 									<div class="swiper-slide like-item">
 										<div class="col px-4 text-center">
 											<div class="product-card card border-0 h-100">
 												<div class="card-img img-hover">
-													<picture class="">
-														<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-														<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="images/product/pic-product.webp" class="" alt="">
+														<img src="images/product/pic-product-hover.webp" class="" alt="">
 													</picture>
 												</div>
 
 												<div class="card-content border-0">
 													<div class="colors-wrapper col-12">
 														<div class="color-items d-flex">
-															<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
-															<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
-															<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
+															<p class="color-item mb-1 active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+															<p class="color-item mb-1" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+															<p class="color-item mb-1" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
 														</div>
 														<div class="color-name">
-															<p class="text-start">灰色</p>
+															<p class="text-start mb-1">灰色</p>
 														</div>
 													</div>
 												</div>
+
 												<h5 class="card-title">
-													<a href="#">彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲5</a>
+													<a href="#">彈性貼身平口褲</a>
 												</h5>
+
 											</div>
 										</div>	
 									</div>	
+
 									<div class="swiper-slide like-item">
 										<div class="col px-4 text-center">
 											<div class="product-card card border-0 h-100">
 												<div class="card-img img-hover">
-													<picture class="">
-														<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-														<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="images/product/pic-product.webp" class="" alt="">
+														<img src="images/product/pic-product-hover.webp" class="" alt="">
 													</picture>
 												</div>
 
 												<div class="card-content border-0">
 													<div class="colors-wrapper col-12">
 														<div class="color-items d-flex">
-															<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
-															<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
-															<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
+															<p class="color-item mb-1 active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+															<p class="color-item mb-1" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+															<p class="color-item mb-1" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
 														</div>
 														<div class="color-name">
-															<p class="text-start">灰色</p>
+															<p class="text-start mb-1">灰色</p>
 														</div>
 													</div>
 												</div>
+
 												<h5 class="card-title">
-													<a href="#">彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲5</a>
+													<a href="#">彈性貼身平口褲</a>
 												</h5>
+
 											</div>
 										</div>	
-									</div>	
+									</div>
+
 									<div class="swiper-slide like-item">
 										<div class="col px-4 text-center">
 											<div class="product-card card border-0 h-100">
 												<div class="card-img img-hover">
-													<picture class="">
-														<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-														<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="images/product/pic-product.webp" class="" alt="">
+														<img src="images/product/pic-product-hover.webp" class="" alt="">
 													</picture>
 												</div>
 
 												<div class="card-content border-0">
 													<div class="colors-wrapper col-12">
 														<div class="color-items d-flex">
-															<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
-															<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
-															<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
+															<p class="color-item mb-1 active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+															<p class="color-item mb-1" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+															<p class="color-item mb-1" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
 														</div>
 														<div class="color-name">
-															<p class="text-start">灰色</p>
+															<p class="text-start mb-1">灰色</p>
 														</div>
 													</div>
 												</div>
+
 												<h5 class="card-title">
 													<a href="#">彈性貼身平口褲.四角5</a>
 												</h5>
+
 											</div>
 										</div>	
-									</div>	
+									</div>
+
 									<div class="swiper-slide like-item">
 										<div class="col px-4 text-center">
 											<div class="product-card card border-0 h-100">
 												<div class="card-img img-hover">
-													<picture class="">
-														<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-														<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="images/product/pic-product.webp" class="" alt="">
+														<img src="images/product/pic-product-hover.webp" class="" alt="">
 													</picture>
 												</div>
 
 												<div class="card-content border-0">
 													<div class="colors-wrapper col-12">
 														<div class="color-items d-flex">
-															<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
-															<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
-															<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
+															<p class="color-item mb-1 active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
+															<p class="color-item mb-1" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
+															<p class="color-item mb-1" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
 														</div>
 														<div class="color-name">
-															<p class="text-start">灰色</p>
+															<p class="text-start mb-1">灰色</p>
 														</div>
 													</div>
 												</div>
+
 												<h5 class="card-title">
-													<a href="#">彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲彈性貼身平口褲.四角褲5</a>
+													<a href="#">彈性貼身平口褲</a>
 												</h5>
+
 											</div>
 										</div>	
 									</div>
+
 								</div>
 								<div class="likeWeb-swiper-button d-flex d-lg-flex">
 									<div class="swiper-button-prev likeWeb-button-prev"></div>
@@ -1856,8 +3044,138 @@
 							</div>
 						</div>
 					</div>
+				</div>
 			</div>
 		</div>
+
+		<!-- 更改尺寸、顏色 Modal 網頁用-->
+		<div class="modal fade" id="changeModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="changeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="changeModalLabel">請選擇商品規格</h5>
+						<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+					</div>
+					<div class="modal-body">
+						<div class="cart_info pb-3">
+							<div class="row">
+								<div class="col-2">
+									<div class="ratio ratio-1x1">
+										<img src="http://fakeimg.pl/100x100?text=img1" class="img-fluid" alt="">
+									</div>
+								</div>
+								<div class="col-10 px-3">
+									<span>U3C8711</span>
+									<h5>彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+								</div>	
+							</div>
+						</div>
+						<div class="cart_colors py-3">
+							<p>顏色</p>
+							<div class="cart-color-items">
+								<div class="cart-color-item active">
+									<img src="http://fakeimg.pl/40x40?text=img1" class="img-fluid rounded-circle" alt="">
+									<span class="ms-1">深藍色</span>
+								</div>
+								<div class="cart-color-item">
+									<img src="http://fakeimg.pl/40x40?text=img2" class="img-fluid rounded-circle" alt="">
+									<span class="ms-1">深藍色</span>
+								</div>
+								<div class="cart-color-item">
+									<img src="http://fakeimg.pl/40x40?text=img3" class="img-fluid rounded-circle" alt="">
+									<span class="ms-1">深藍色</span>
+								</div>
+								<div class="cart-color-item">
+									<img src="http://fakeimg.pl/40x40?text=img4" class="img-fluid rounded-circle" alt="">
+									<span class="ms-1">深藍色</span>
+								</div>
+								<div class="cart-color-item">
+									<img src="http://fakeimg.pl/40x40?text=img2" class="img-fluid rounded-circle" alt="">
+									<span class="ms-1">深藍色</span>
+								</div>
+								<div class="cart-color-item">
+									<img src="http://fakeimg.pl/40x40?text=img3" class="img-fluid rounded-circle" alt="">
+									<span class="ms-1">深藍色</span>
+								</div>
+								<div class="cart-color-item">
+									<img src="http://fakeimg.pl/40x40?text=img4" class="img-fluid rounded-circle" alt="">
+									<span class="ms-1">深藍色</span>
+								</div>
+								<div class="cart-color-item">
+									<img src="http://fakeimg.pl/40x40?text=img2" class="img-fluid rounded-circle" alt="">
+									<span class="ms-1">深藍色</span>
+								</div>
+								<div class="cart-color-item">
+									<img src="http://fakeimg.pl/40x40?text=img3" class="img-fluid rounded-circle" alt="">
+									<span class="ms-1">深藍色</span>
+								</div>
+								<div class="cart-color-item">
+									<img src="http://fakeimg.pl/40x40?text=img4" class="img-fluid rounded-circle" alt="">
+									<span class="ms-1">深藍色</span>
+								</div>
+							</div>
+						</div>
+						<div class="cart_size py-3">
+							<p>尺寸</p>
+							<div class="cart-size-items">
+								<div class="cart-size-item active">
+									<span class="">M</span>
+								</div>
+								<div class="cart-size-item">
+									<span class="">L</span>
+								</div>
+								<div class="cart-size-item">
+									<span class="">XL</span>
+								</div>
+								<div class="cart-size-item sold_out">
+									<span class="">XXL</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary">確定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 更改尺寸、顏色 Offcanvas 手機用-->
+		<div class="d-flex d-lg-none offcanvas offcanvas-bottom cart-offcanvas" tabindex="-1" id="offcanvasChangeBottom" aria-labelledby="offcanvasChangeBottomLabel" aria-hidden="true">
+			<div class="offcanvas-header">
+				<h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+				<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body px-0">
+				<div class="offcanvas_colors px-3 py-2">
+					<p class="fs-8 fw-medium">顏色</p>
+				</div>
+
+				<div class="offcanvas_sizes px-3 py-2">
+					<p class="fs-8 fw-medium">尺寸</p>
+				</div>
+
+				<div class="offcanvas_quantity px-3 py-2">
+					<div class="row g-0">
+						<div class="col-8">
+							<p class="fs-8 fw-medium">數量</p>
+						</div>
+						<div class="col-4 text-end">
+							<div class="number-input">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+								<input class="quantity" min="1" name="offcanvas-quantity" value="1" type="number">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="offcanvas_button px-3 pt-3">
+					<button type="button" class="mobile_action_add btn btn-lg fs-6">加入購物車</button>
+				</div>
+			</div>
+		</div>	
 	</main>
 
 	<footer>
@@ -1879,100 +3197,8 @@
 		</div>
 	</footer>
 
-	<!-- Modal -->
-	<div class="modal fade" id="changeModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="changeModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="changeModalLabel">請選擇商品規格</h5>
-					<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-				</div>
-				<div class="modal-body">
-					<div class="cart_info pb-3">
-						<div class="row">
-							<div class="col-2">
-								<div class="ratio ratio-1x1">
-									<img src="http://fakeimg.pl/100x100?text=img1" class="img-fluid" alt="">
-								</div>
-							</div>
-							<div class="col-10 px-3">
-								<span>U3C8711</span>
-								<h5>彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
-							</div>	
-						</div>
-					</div>
-					<div class="cart_colors py-3">
-						<p>顏色</p>
-						<div class="cart-color-items">
-							<div class="cart-color-item active">
-								<img src="http://fakeimg.pl/40x40?text=img1" class="img-fluid rounded-circle" alt="">
-								<span class="ms-1">深藍色</span>
-							</div>
-							<div class="cart-color-item">
-								<img src="http://fakeimg.pl/40x40?text=img2" class="img-fluid rounded-circle" alt="">
-								<span class="ms-1">深藍色</span>
-							</div>
-							<div class="cart-color-item">
-								<img src="http://fakeimg.pl/40x40?text=img3" class="img-fluid rounded-circle" alt="">
-								<span class="ms-1">深藍色</span>
-							</div>
-							<div class="cart-color-item">
-								<img src="http://fakeimg.pl/40x40?text=img4" class="img-fluid rounded-circle" alt="">
-								<span class="ms-1">深藍色</span>
-							</div>
-							<div class="cart-color-item">
-								<img src="http://fakeimg.pl/40x40?text=img2" class="img-fluid rounded-circle" alt="">
-								<span class="ms-1">深藍色</span>
-							</div>
-							<div class="cart-color-item">
-								<img src="http://fakeimg.pl/40x40?text=img3" class="img-fluid rounded-circle" alt="">
-								<span class="ms-1">深藍色</span>
-							</div>
-							<div class="cart-color-item">
-								<img src="http://fakeimg.pl/40x40?text=img4" class="img-fluid rounded-circle" alt="">
-								<span class="ms-1">深藍色</span>
-							</div>
-							<div class="cart-color-item">
-								<img src="http://fakeimg.pl/40x40?text=img2" class="img-fluid rounded-circle" alt="">
-								<span class="ms-1">深藍色</span>
-							</div>
-							<div class="cart-color-item">
-								<img src="http://fakeimg.pl/40x40?text=img3" class="img-fluid rounded-circle" alt="">
-								<span class="ms-1">深藍色</span>
-							</div>
-							<div class="cart-color-item">
-								<img src="http://fakeimg.pl/40x40?text=img4" class="img-fluid rounded-circle" alt="">
-								<span class="ms-1">深藍色</span>
-							</div>
-						</div>
-					</div>
-					<div class="cart_size py-3">
-						<p>尺寸</p>
-						<div class="cart-size-items">
-							<div class="cart-size-item active">
-								<span class="">M</span>
-							</div>
-							<div class="cart-size-item">
-								<span class="">L</span>
-							</div>
-							<div class="cart-size-item">
-								<span class="">XL</span>
-							</div>
-							<div class="cart-size-item sold_out">
-								<span class="">XXL</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="modal-footer justify-content-center">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-					<button type="button" class="btn btn-primary">確定</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- bootstrap js -->
+	<!-- 共用外部 js 檔案 -->
+	<script src="https://kit.fontawesome.com/25b2931f6f.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
 		crossorigin="anonymous"></script>

@@ -8,25 +8,27 @@
 
 	<title>Cart Step 3</title>
 
-	<script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
-	<script language="javascript" type="text/javascript" src="js/swiper/swiper-bundle.min.js"></script>
+	<!-- 共用 js -->
+	<script language="javascript" type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
 	<script language="javascript" type="text/javascript" src="js/public.js"></script>
-	<script language="javascript" type="text/javascript" src="js/shopping_cart_1.js"></script>
 
-
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-	<link rel="stylesheet" type="text/css" href="css/swiper/swiper-bundle.min.css">
+	<!-- 共用 css -->
 	<link rel="stylesheet" type="text/css" href="css/icon.css">
 	<link rel="stylesheet" type="text/css" href="css/public.css">
-	<link rel="stylesheet" type="text/css" href="css/shopping_cart.css">
 
-
+	<!-- 共用外部 css 檔案 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-	<script src="https://kit.fontawesome.com/25b2931f6f.js" crossorigin="anonymous"></script>
+	<!-- 共用外部 js 檔案 在頁面最下方 -->
+
+	<!-- 自訂 css -->
+	<link rel="stylesheet" type="text/css" href="css/shopping_cart.css">
+	<!-- 自訂 js  -->
+	<script language="javascript" type="text/javascript" src="js/shopping_cart.js"></script>
 
 </head>
 
@@ -296,7 +298,6 @@
 													<a class="dropdown-item" href="#">女館</a>
 												</li>
 											</ul>
-
 										</li>
 										<!-- 線上購物 樣式1. 圖右字左-->
 										<li class="nav-item dropdown position-static">
@@ -997,29 +998,30 @@
 								<!-- foreach start -->
 								<div class="cart-list-item row g-0 align-items-center px-2 py-3">
 									<div class="info_filed col-5">
-										<div class="row g-0 align-items-center">
-											<div class="info_filed_img col-3">
-												<div class="ratio ratio-1x1">
-													<img src="http://fakeimg.pl/100x100?text=img1" class="img-fluid" alt="">
+										<div class="card border-0">
+											<div class="row g-0 align-items-center">
+												<div class="col-md-3">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://sunflower-mall-dev-bucket.s3.ap-northeast-1.amazonaws.com/product/17114352275772.webp" class="img-fluid" alt="">
+													</picture>
 												</div>
-											</div>
-											<div class="info_filed_content col-9 px-3">
-												<div class="row g-0 flex-column align-content-between justify-content-between h-100">
-													<div class="col">
+												<div class="col-md-9">
+													<div class="card-body">
 														<span>U3C8711</span>
-														<h5>彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+														<h5 class="mb-0">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="original_field price_symbol col-2  text-center">
+									<div class="color_field col-2 text-center">
 										<p>顏色：<span class="color">暢銷混色組</span></p>
 									</div>
-									<div class="discount_field price_symbol col-2  text-center">
+									<div class="size_field col-2 text-center">
 										<p>尺寸：<span class="size">L</span></p>
 									</div>
 									<div class="count_field col-1 text-center">
+										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
 										<span class="quantity" aria-label="quantity">1</span>
 									</div>
 									<div class="subtotal_field price_symbol col-2  text-center">
@@ -1028,31 +1030,33 @@
 									</div>
 								</div>
 								<!-- foreach end -->
+								
 								<div class="cart-list-item row g-0 align-items-center px-2 py-3">
 									<div class="info_filed col-5">
-										<div class="row g-0 align-items-center">
-											<div class="info_filed_img col-3">
-												<div class="ratio ratio-1x1">
-													<img src="http://fakeimg.pl/100x100?text=img1" class="img-fluid" alt="">
+										<div class="card border-0">
+											<div class="row g-0 align-items-center">
+												<div class="col-md-3">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://sunflower-mall-dev-bucket.s3.ap-northeast-1.amazonaws.com/product/17114352275772.webp" class="img-fluid" alt="">
+													</picture>
 												</div>
-											</div>
-											<div class="info_filed_content col-9 px-3">
-												<div class="row g-0 flex-column align-content-between justify-content-between h-100">
-													<div class="col">
+												<div class="col-md-9">
+													<div class="card-body">
 														<span>U3C8711</span>
-														<h5>彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+														<h5 class="mb-0">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="original_field price_symbol col-2  text-center">
+									<div class="color_field col-2 text-center">
 										<p>顏色：<span class="color">暢銷混色組</span></p>
 									</div>
-									<div class="discount_field price_symbol col-2  text-center">
+									<div class="size_field col-2 text-center">
 										<p>尺寸：<span class="size">L</span></p>
 									</div>
 									<div class="count_field col-1 text-center">
+										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
 										<span class="quantity" aria-label="quantity">1</span>
 									</div>
 									<div class="subtotal_field price_symbol col-2  text-center">
@@ -1060,31 +1064,105 @@
 										<span data-symbol="NT$ "> 1,840 </span>
 									</div>
 								</div>
+
 								<div class="cart-list-item row g-0 align-items-center px-2 py-3">
 									<div class="info_filed col-5">
-										<div class="row g-0 align-items-center">
-											<div class="info_filed_img col-3">
-												<div class="ratio ratio-1x1">
-													<img src="http://fakeimg.pl/100x100?text=img1" class="img-fluid" alt="">
+										<div class="card border-0">
+											<div class="row g-0 align-items-center">
+												<div class="col-md-3">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://sunflower-mall-dev-bucket.s3.ap-northeast-1.amazonaws.com/product/17114352275772.webp" class="img-fluid" alt="">
+													</picture>
 												</div>
-											</div>
-											<div class="info_filed_content col-9 px-3">
-												<div class="row g-0 flex-column align-content-between justify-content-between h-100">
-													<div class="col">
+												<div class="col-md-9">
+													<div class="card-body">
 														<span>U3C8711</span>
-														<h5>彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+														<h5 class="mb-0">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="original_field price_symbol col-2  text-center">
+									<div class="color_field col-2 text-center">
 										<p>顏色：<span class="color">暢銷混色組</span></p>
 									</div>
-									<div class="discount_field price_symbol col-2  text-center">
+									<div class="size_field col-2 text-center">
 										<p>尺寸：<span class="size">L</span></p>
 									</div>
 									<div class="count_field col-1 text-center">
+										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
+										<span class="quantity" aria-label="quantity">1</span>
+									</div>
+									<div class="subtotal_field price_symbol col-2  text-center">
+										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
+										<span data-symbol="NT$ ">1840</span>
+									</div>
+								</div>
+
+								<!-- 贈品 -->
+								<div class="cart-list-item row g-0 align-items-center px-2 py-3">
+									<div class="info_filed col-5">
+										<div class="card border-0">
+											<div class="row g-0 align-items-center">
+												<div class="col-md-3">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://sunflower-mall-dev-bucket.s3.ap-northeast-1.amazonaws.com/product/17114352275772.webp" class="img-fluid" alt="">
+													</picture>
+												</div>
+												<div class="col-md-9">
+													<div class="card-body">
+														<p class="offer_tag gifts_tag">贈品</p>
+														<span>U3C8711</span>
+														<h5 class="mb-0">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="color_field col-2 text-center">
+										<p>顏色：<span class="color">暢銷混色組</span></p>
+									</div>
+									<div class="size_field col-2 text-center">
+										<p>尺寸：<span class="size">L</span></p>
+									</div>
+									<div class="count_field col-1 text-center">
+										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
+										<span class="quantity" aria-label="quantity"></span>
+									</div>
+									<div class="subtotal_field price_symbol col-2  text-center">
+										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
+										<span data-symbol="NT$ "></span>
+									</div>
+								</div>
+
+								<!-- 加購 -->
+								<div class="cart-list-item row g-0 align-items-center px-2 py-3">
+									<div class="info_filed col-5">
+										<div class="card border-0">
+											<div class="row g-0 align-items-center">
+												<div class="col-md-3">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://sunflower-mall-dev-bucket.s3.ap-northeast-1.amazonaws.com/product/17114352275772.webp" class="img-fluid" alt="">
+													</picture>
+												</div>
+												<div class="col-md-9">
+													<div class="card-body">
+														<p class="offer_tag add_tag">加購</p>
+														<span>U3C8711</span>
+														<h5 class="mb-0">彈性貼身平口褲.四角褲.男內褲-南洋海岸</h5>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="color_field col-2 text-center">
+										<p>顏色：<span class="color">暢銷混色組</span></p>
+									</div>
+									<div class="size_field col-2 text-center">
+										<p>尺寸：<span class="size">L</span></p>
+									</div>
+									<div class="count_field col-1 text-center">
+										<!-- span 如果是空的會自動放 '-' ，span 裡有空白都不算空-->
 										<span class="quantity" aria-label="quantity">1</span>
 									</div>
 									<div class="subtotal_field price_symbol col-2  text-center">
@@ -1141,19 +1219,147 @@
 						</div>
 					</div>
 
-					<div class="order-final mt-3">
-						<div class="row justify-content-lg-end">
-							<div class="col-6">
-								<div class="row justify-content-lg-end">
-									<div class="col-12 col-lg-4">
+					<div class="payment_field mt-3">
+						<div class="col-12 col-lg-6 ms-auto">
+							<div class="row justify-content-lg-end">
+								<div class="col-12 col-lg-4">
+									<div class="payment_method">
 										<p>付款方式：<span>信用卡</span></p>
 									</div>
-									<div class="col-12 col-lg-4">
-										<p>本次訂單金額：<span data-symbol="NT$"> 1,800 </span></p>
+								</div>
+								
+								<div class="col-12 col-lg-5">
+									<div class="payment_total">
+										<p class="price_symbol">本次訂單金額：<span data-symbol="NT$"> 1,800 </span></p>
 									</div>
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 修改配送地址 -->
+		<div class="modal fade" id="changeModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="changeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header align-items-center">
+						<h5 class="modal-title" id="changeModalLabel">請填寫收件人</h5>
+						<div class="col-6 col-lg-9 text-end">
+							<button type="button" class="btnSF btnBlud002 btn-xxl fs-6 fw-medium mb-2" data-bs-target="#recipientModal" data-bs-toggle="modal" data-bs-dismiss="modal">選擇常用收件人</button>
+						</div>
+					</div>
+					<div class="modal-body">
+						<!-- 姓名 -->
+						<div class="row align-items-center mt-3 ps-lg-4 ">
+							<label for="name" class="col-3 col-lg-2 col-form-label">姓名</label>
+							<div class="col-9 col-lg-6">
+								<input class="form-control" type="text" name="recipient_name" aria-label="recipient name">
+							</div>
+							<div class="col-9 col-lg-4 ms-auto mt-2 mt-lg-0">
+								<span class="tip">請填寫正確中文姓名</span>
+							</div>
+						</div>
+
+						<!-- 手機 -->
+						<div class="row align-items-center mt-3 ps-lg-4">
+							<label for="phone" class="col-3 col-lg-2 col-form-label">手機</label>
+							<div class="col-9 col-lg-6">
+								<input class="form-control" type="text" name="recipient_phone"  placeholder="ex:0912345678" aria-label="recipient phone">
+							</div>
+							<div class="col-9 col-lg-4 ms-auto mt-2 mt-lg-0">
+								<span class="tip">宅配人員將以此區資料聯繫</span>
+							</div>
+						</div>
+
+						<!-- 收件地址 -->			
+						<div class="row mt-3 ps-lg-4">
+							<label for="name" class="col-3 col-lg-2 col-form-label">收件地址</label>
+							<div class="col col-lg-3">
+								<select class="form-select form-mainBlue" name="recipient_city" aria-label="Recipient city">
+									<option selected="">新北市</option>
+									<option value="1">One</option>
+									<option value="2">Two</option>
+									<option value="3">Three</option>
+								</select>
+							</div>
+							<div class="col col-lg-3">
+								<select class="form-select form-mainBlue" name="recipient_area" aria-label="Recipient area">
+									<option selected="">板橋區</option>
+									<option value="1">One</option>
+									<option value="2">Two</option>
+									<option value="3">Three</option>
+								</select>
+							</div>
+							<div class="col-10 col-lg-4 d-none d-lg-block">
+								<div class="col">
+									<button class="btnSF btnOtherGray btn-xxl fs-6 fw-medium add-recipient"> <i class=""></i>加入常用收件人 </button>
+								</div>
+								<div class="col">
+									<span class="tip">需專人簽收，勿填郵政信箱</span>
+								</div>
+							</div>
+						</div>
+						<div class="row ps-lg-4 mt-3 mt-lg-0 mt-lg-n3">
+							<label class="col-3 col-lg-2 col-form-label"></label>
+							<div class="col-9 col-lg-6 ">
+								<input class="form-control" type="text" name="recipient_address" aria-label="Recipient address" placeholder="建國街xxxxxxxx">
+							</div>
+						</div>
+						<div class="row ps-lg-4 mt-3 mt-lg-0 mt-lg-n3 d-block d-lg-none">
+							<div class="col">
+								<button class="btnSF btnOtherGray btn-xxl fs-6 fw-medium add-recipient"> <i class=""></i>加入常用收件人 </button>
+							</div>
+							<div class="col">
+								<span class="tip">需專人簽收，勿填郵政信箱</span>
+							</div>
+						</div>
+
+						
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary change-recipient">確定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 常用收件人 -->
+		<div class="modal fade" id="recipientModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="recipientModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="recipientModalLabel">請選擇收件人</h5>
+						<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+					</div>
+					<div class="modal-body">
+						<div class="row g-0 align-items-center p-lg-2">
+							<div class="col col-lg-3">
+								收件人
+							</div>
+							<div class="col col-lg-3">
+								聯絡電話
+							</div>
+							<div class="col col-lg-4 text-center">
+								收件地址
+							</div>
+							<div class="col col-lg-2"></div>
+						</div>
+
+						<!-- @foreach 常用收件人 -->
+						<div class="row g-0 align-items-center p-lg-2">
+							<div class="col col-lg-3 select-name">張小明</div>
+							<div class="col col-lg-3 select-phone">0912345678</div>
+							<div class="col col-lg-4 select-address">新北市板橋區建國街***** 220 </div>
+							<div class="col col-lg-2">
+								<button class="btnSF btnBlud003-line btn-xxl fs-6 fw-medium mb-2 select-recipient" data-bs-target="#changeModal" data-bs-toggle="modal" data-bs-dismiss="modal">選取</button>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-primary" data-bs-target="#changeModal" data-bs-toggle="modal" data-bs-dismiss="modal">返回</button>
 					</div>
 				</div>
 			</div>
@@ -1178,124 +1384,10 @@
 			</div>
 		</div>
 	</footer>
-	<!-- 修改配送地址 -->
-	<div class="modal fade" id="changeModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="changeModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header align-items-center">
-					<h5 class="modal-title" id="changeModalLabel">請填寫收件人</h5>
-					<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-					<div class="col-6 col-lg-9 text-end">
-						<button type="button" class="btnSF btnBlud002 btn-xxl fs-6 fw-medium mb-2" data-bs-target="#recipientModal" data-bs-toggle="modal" data-bs-dismiss="modal">選擇常用收件人</button>
-					</div>
-				</div>
-				<div class="modal-body">
-					<!-- 姓名 -->
-					<div class="row align-items-center mt-3 ps-lg-4 ">
-						<label for="name" class="col-3 col-lg-2 col-form-label">姓名</label>
-						<div class="col-9 col-lg-6">
-							<input class="form-control" type="text" name="recipient_name" aria-label="recipient name">
-						</div>
-						<div class="col-9 col-lg-4 ms-auto mt-2 mt-lg-0">
-							<span class="tip">請填寫正確中文姓名</span>
-						</div>
-					</div>
+	
 
-					<!-- 手機 -->
-					<div class="row align-items-center mt-3 ps-lg-4">
-						<label for="phone" class="col-3 col-lg-2 col-form-label">手機</label>
-						<div class="col-9 col-lg-6">
-							<input class="form-control" type="text" name="recipient_phone"  placeholder="ex:0912345678" aria-label="recipient phone">
-						</div>
-						<div class="col-9 col-lg-4 ms-auto mt-2 mt-lg-0">
-							<span class="tip">宅配人員將以此區資料聯繫</span>
-						</div>
-					</div>
-
-					<!-- 收件地址 -->			
-					<div class="row mt-3 ps-lg-4">
-						<label for="name" class="col-3 col-lg-2 col-form-label">收件地址</label>
-						<div class="col-9 col-lg-3">
-							<select class="form-select form-mainBlue" name="recipient_city" aria-label="Recipient city">
-								<option selected="">新北市</option>
-								<option value="1">One</option>
-								<option value="2">Two</option>
-								<option value="3">Three</option>
-							</select>
-						</div>
-						<div class="col-9 col-lg-3 ms-auto mt-3 mt-lg-0">
-							<select class="form-select form-mainBlue" name="recipient_area" aria-label="Recipient area">
-								<option selected="">板橋區</option>
-								<option value="1">One</option>
-								<option value="2">Two</option>
-								<option value="3">Three</option>
-							</select>
-						</div>
-						<div class="col-10 col-lg-4 d-none d-lg-block">
-							<div class="col">
-								<button class="btnSF btnOtherGray btn-xxl fs-6 fw-medium add-recipient"> <i class=""></i>加入常用收件人 </button>
-							</div>
-							<div class="col">
-								<span class="tip">需專人簽收，勿填郵政信箱</span>
-							</div>
-						</div>
-					</div>
-					<div class="row ps-lg-4 mt-3 mt-lg-0 mt-lg-n3">
-						<label class="col-3 col-lg-2 col-form-label"></label>
-						<div class="col-9 col-lg-6 ">
-							<input class="form-control" type="text" name="recipient_address" aria-label="Recipient address" placeholder="建國街xxxxxxxx">
-						</div>
-					</div>
-					
-				</div>
-				<div class="modal-footer justify-content-center">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-					<button type="button" class="btn btn-primary change-recipient">確定</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- 常用收件人 -->
-	<div class="modal fade" id="recipientModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="recipientModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="recipientModalLabel">請選擇收件人</h5>
-					<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-				</div>
-				<div class="modal-body">
-					<div class="row g-0 align-items-center p-lg-2">
-						<div class="col col-lg-3">
-							收件人
-						</div>
-						<div class="col col-lg-3">
-							聯絡電話
-						</div>
-						<div class="col col-lg-4 text-center">
-							收件地址
-						</div>
-						<div class="col col-lg-2"></div>
-					</div>
-
-					<!-- @foreach 常用收件人 -->
-					<div class="row g-0 align-items-center p-lg-2">
-						<div class="col col-lg-3 select-name">張小明</div>
-						<div class="col col-lg-3 select-phone">0912345678</div>
-						<div class="col col-lg-4 select-address">新北市板橋區建國街***** 220 </div>
-						<div class="col col-lg-2">
-							<button class="btnSF btnBlud003-line btn-xxl fs-6 fw-medium mb-2 select-recipient" data-bs-target="#changeModal" data-bs-toggle="modal" data-bs-dismiss="modal">選取</button>
-						</div>
-					</div>
-				</div>
-				<div class="modal-footer justify-content-center">
-					<button type="button" class="btn btn-primary" data-bs-target="#changeModal" data-bs-toggle="modal" data-bs-dismiss="modal">返回</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- bootstrap js -->
+	<!-- 共用外部 js 檔案 -->
+	<script src="https://kit.fontawesome.com/25b2931f6f.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
 		crossorigin="anonymous"></script>

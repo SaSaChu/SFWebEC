@@ -1,15 +1,41 @@
 $(function() {
 
-	// step 1
+	// step 1 start
+	// 輪播因爲 step1-3 的 js 都寫一起需要判斷該頁是否有輪播以防產生 bug ，可分開
+	// 好像可以等 render 後再執行 new Swiper();
+	if($('.gifts-swiper').length) {
+		var swiperPoint = new Swiper(".gifts-swiper", {
+			slidesPerView: 1,
+			slidesPerGroup: 1,
+			spaceBetween: 18,
+			loop: true,
+			navigation: {
+				nextEl: '.gifts-button-next',
+				prevEl: '.gifts-button-prev',
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 2,
+					slidesPerGroup: 2,
+				},
+	
+				1024: {
+					slidesPerView: 4,
+					slidesPerGroup: 4,
+				},
+			},
+		});
+	}
+
 	if($('.point-swiper').length) {
 		var swiperPoint = new Swiper(".point-swiper", {
 			slidesPerView: 1,
 			slidesPerGroup: 1,
-			// spaceBetween: 18,
+			spaceBetween: 18,
 			loop: true,
 			navigation: {
-				nextEl: '.pointWeb-button-next',
-				prevEl: '.pointWeb-button-prev',
+				nextEl: '.point-button-next',
+				prevEl: '.point-button-prev',
 			},
 			breakpoints: {
 				768: {
@@ -48,6 +74,7 @@ $(function() {
 		});
 	}
 
+	// 控制數量 可刪除
 	$('.count_btn').on('click', function (){
 		let countInput = $(this).parent().find('.count_value') 
 		let countValue = parseInt(countInput.val());
@@ -62,6 +89,7 @@ $(function() {
 		}
 	})
 
+	// 變更尺寸顏色 modal 
 	$('#changeModal').on('show.bs.modal', function(event) {
 		let cartListItem = $(event.relatedTarget).parents('.cart-list-item');
 		let thisId = cartListItem.find('input[name="pids[]"]').val();
@@ -109,6 +137,9 @@ $(function() {
 		}	
 	})
 
+	// step 1 end
+
+	//step 2 start
 	function deliveryType(type) {
 		console.log(type);
 		let allType = $('.delivery-type');
@@ -129,7 +160,6 @@ $(function() {
 		activeType.show();
 	}
 
-	//step 2 
 	let delivery = $('input[name="delivery_type"]'); 
 	if(delivery.length) {
 		delivery.on('change', function() {
@@ -197,9 +227,10 @@ $(function() {
 		$('input[name="company_number"]').val(companyNumber);
 		$('input[name="company_name"]').val(companyName);
 	});
+	// step2 end
 
-	// step3 
 
+	// step3 stert
 	$('.change-recipient').on('click', function() {
 		// ajax 後 資料帶回頁面，要補上 city 跟 area
 		let recipientName = $('input[name="recipient_name"]').val();
@@ -213,6 +244,7 @@ $(function() {
 			$(this).prev().click();
 		}
 	})
+	// step3 end
 })
 
 

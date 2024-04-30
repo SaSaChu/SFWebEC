@@ -8,26 +8,27 @@
 
 	<title>Cart Step 2</title>
 
-	<script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
-	<script language="javascript" type="text/javascript" src="js/swiper/swiper-bundle.min.js"></script>
+	<!-- 共用 js -->
+	<script language="javascript" type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
 	<script language="javascript" type="text/javascript" src="js/public.js"></script>
-	<script language="javascript" type="text/javascript" src="js/shopping_cart_1.js"></script>
 
-
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-	<link rel="stylesheet" type="text/css" href="css/swiper/swiper-bundle.min.css">
+	<!-- 共用 css -->
 	<link rel="stylesheet" type="text/css" href="css/icon.css">
 	<link rel="stylesheet" type="text/css" href="css/public.css">
-	<link rel="stylesheet" type="text/css" href="css/shopping_cart.css">
 
-
+	<!-- 共用外部 css 檔案 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-	<script src="https://kit.fontawesome.com/25b2931f6f.js" crossorigin="anonymous"></script>
+	<!-- 共用外部 js 檔案 在頁面最下方 -->
 
+	<!-- 自訂 css -->
+	<link rel="stylesheet" type="text/css" href="css/shopping_cart.css">
+	<!-- 自訂 js  -->
+	<script language="javascript" type="text/javascript" src="js/shopping_cart.js"></script>
 </head>
 
 <body>
@@ -1367,6 +1368,80 @@
 							
 						</div>
 
+						<div class="shopping_cart_total step_second_section">
+							<div class="first">
+								<div class="row align-items-center">
+									<div class="col-12 col-lg-6">
+										<div class="count">共計 <span class=""> 6 </span> 項商品，數量 <span class=""> 6 </span> 個</div>
+									</div>
+									<div class="col-12 col-lg-6">
+										<div class="list_total"> 合計：<span data-symbol="NT$ ">1,106</span></div>
+									</div>
+								</div>
+							</div>
+							<div class="second">
+								<div class="shopping-fee">
+									<div class="col-12 col-lg-6 ms-auto py-1">
+										<div class="row align-items-center justify-content-end">
+											<div class="col-8">
+												<h6>運費：</h6>
+											</div>
+											<div class="col-4 text-end">
+												<span data-symbol="NT$">0</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="used-point">
+									<div class="col-12 col-lg-6 ms-auto py-1">
+										<div class="row align-items-center justify-content-end">
+											<div class="col-8">
+												<h6>點數使用：</h6>
+											</div>
+											<div class="col-4 text-end">
+												<span>100</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="use-disount-code">
+									<div class="col-12 col-lg-6 ms-auto py-1">
+										<div class="row align-items-center justify-content-between">
+											<div class="col-8">
+												<h6>折價劵活動名稱顯示區：</h6>
+											</div>
+											<div class="col-4 text-end">
+												<span data-symbol="- NT$">11180</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="third">
+								<div class="final-total pb-3">
+									<div class="col-12 col-lg-6 ms-auto">
+										<div class="row align-items-center justify-content-between">
+											<div class="col-8">
+												<h6>訂單總金額：</h6>
+											</div>
+											<div class="col-4 text-end">
+												<span data-symbol="NT$">1319</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col col-lg-4 ms-auto">
+									<div class="row">
+										<div class="earn-point">
+											<button class="btnSF btn-xxl fs-6 fw-medium mb-2">
+												此筆訂單可獲得<span> 848 </span>點
+											</button>	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
 						<!-- 訂單動作 -->
 						<div class="shopping_cart_action mt-5">
 							<div class="col-10 mx-auto">
@@ -1383,6 +1458,126 @@
 						</div>
 					</div>
 				</form>
+			</div>
+		</div>
+		<!-- 選擇常用門市 -->
+		<div class="modal fade" id="storeModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="storeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="changeModalLabel">常用門市</h5>
+					</div>
+					<div class="modal-body">
+						<div class="row g-0 align-items-center p-lg-2">
+							<div class="col col-lg-3">
+								店號
+							</div>
+							<div class="col col-lg-3">
+								門市名稱
+							</div>
+							<div class="col col-lg-4 text-center">
+								地址
+							</div>
+							<div class="col col-lg-2"></div>
+						</div>
+
+						<!-- @foreach 常用門市 -->
+						<div class="row g-0 align-items-center p-lg-2">
+							<div class="col col-lg-3 select-store-number">958901</div>
+							<div class="col col-lg-3 select-store-name">寶中</div>
+							<div class="col col-lg-4 select-store-address">新北市新店區寶慶街66號</div>
+							<div class="col col-lg-2">
+								<button class="btnSF btnBlud003-line btn-xxl fs-6 fw-medium mb-2 select-store" data-bs-dismiss="modal">選取</button>
+							</div>
+						</div>	
+						<!-- @foreach 常用門市 -->
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+						<!-- <button type="button" class="btn btn-primary">確定</button> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 常用收件人 -->
+		<div class="modal fade" id="recipientModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="recipientModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="changeModalLabel">請選擇收件人</h5>
+						<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+					</div>
+					<div class="modal-body">
+						<div class="row g-0 align-items-center p-lg-2">
+							<div class="col col-lg-3">
+								收件人
+							</div>
+							<div class="col col-lg-3">
+								聯絡電話
+							</div>
+							<div class="col col-lg-4 text-center">
+								收件地址
+							</div>
+							<div class="col col-lg-2"></div>
+						</div>
+
+						<!-- @foreach 常用收件人 -->
+						<div class="row g-0 align-items-center p-lg-2">
+							<div class="col col-lg-3 select-name">張小明</div>
+							<div class="col col-lg-3 select-phone">0912345678</div>
+							<div class="col col-lg-4 select-address">新北市板橋區建國街***** 220 </div>
+							<div class="col col-lg-2">
+								<button class="btnSF btnBlud003-line btn-xxl fs-6 fw-medium mb-2 select-recipient" data-bs-dismiss="modal">選取</button>
+							</div>
+						</div>
+						<!-- @foreach 常用收件人 -->
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+						<!-- <button type="button" class="btn btn-primary">確定</button> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 常用公司 -->
+		<div class="modal fade" id="companyModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="companyModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="changeModalLabel">請選擇常用公司</h5>
+						<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+					</div>
+					<div class="modal-body">
+						<div class="row g-0 align-items-center p-lg-2">
+							
+							<div class="col col-lg-3">
+								統編
+							</div>
+							<div class="col col-lg-4">
+								公司名稱
+							</div>
+							<div class="col col-lg-3"></div>
+							<div class="col col-lg-2"></div>
+						</div>
+
+						<!-- @foreach 常用公司 -->
+						<div class="row g-0 align-items-center p-lg-2">
+							<div class="col col-lg-3 select-company-number">0912345678</div>
+							<div class="col col-lg-4 select-company-name">三花</div>
+							<div class="col col-lg-3"></div>
+							<div class="col col-lg-2">
+								<button class="btnSF btnBlud003-line btn-xxl fs-6 fw-medium mb-2 select-company" data-bs-dismiss="modal">選取</button>
+							</div>
+						</div>		
+						<!-- @foreach 常用公司 -->
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+						<!-- <button type="button" class="btn btn-primary">確定</button> -->
+					</div>
+				</div>
 			</div>
 		</div>
 	</main>
@@ -1406,128 +1601,8 @@
 		</div>
 	</footer>
 	
-	<!-- 選擇常用門市 -->
-	<div class="modal fade" id="storeModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="storeModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="changeModalLabel">常用門市</h5>
-				</div>
-				<div class="modal-body">
-					<div class="row g-0 align-items-center p-lg-2">
-						<div class="col col-lg-3">
-							店號
-						</div>
-						<div class="col col-lg-3">
-							門市名稱
-						</div>
-						<div class="col col-lg-4 text-center">
-							地址
-						</div>
-						<div class="col col-lg-2"></div>
-					</div>
-
-					<!-- @foreach 常用門市 -->
-					<div class="row g-0 align-items-center p-lg-2">
-						<div class="col col-lg-3 select-store-number">958901</div>
-						<div class="col col-lg-3 select-store-name">寶中</div>
-						<div class="col col-lg-4 select-store-address">新北市新店區寶慶街66號</div>
-						<div class="col col-lg-2">
-							<button class="btnSF btnBlud003-line btn-xxl fs-6 fw-medium mb-2 select-store" data-bs-dismiss="modal">選取</button>
-						</div>
-					</div>	
-					<!-- @foreach 常用門市 -->
-				</div>
-				<div class="modal-footer justify-content-center">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-					<!-- <button type="button" class="btn btn-primary">確定</button> -->
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- 常用收件人 -->
-	<div class="modal fade" id="recipientModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="recipientModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="changeModalLabel">請選擇收件人</h5>
-					<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-				</div>
-				<div class="modal-body">
-					<div class="row g-0 align-items-center p-lg-2">
-						<div class="col col-lg-3">
-							收件人
-						</div>
-						<div class="col col-lg-3">
-							聯絡電話
-						</div>
-						<div class="col col-lg-4 text-center">
-							收件地址
-						</div>
-						<div class="col col-lg-2"></div>
-					</div>
-
-					<!-- @foreach 常用收件人 -->
-					<div class="row g-0 align-items-center p-lg-2">
-						<div class="col col-lg-3 select-name">張小明</div>
-						<div class="col col-lg-3 select-phone">0912345678</div>
-						<div class="col col-lg-4 select-address">新北市板橋區建國街***** 220 </div>
-						<div class="col col-lg-2">
-							<button class="btnSF btnBlud003-line btn-xxl fs-6 fw-medium mb-2 select-recipient" data-bs-dismiss="modal">選取</button>
-						</div>
-					</div>
-					<!-- @foreach 常用收件人 -->
-				</div>
-				<div class="modal-footer justify-content-center">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-					<!-- <button type="button" class="btn btn-primary">確定</button> -->
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- 常用公司 -->
-	<div class="modal fade" id="companyModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="companyModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="changeModalLabel">請選擇常用公司</h5>
-					<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-				</div>
-				<div class="modal-body">
-					<div class="row g-0 align-items-center p-lg-2">
-						
-						<div class="col col-lg-3">
-							統編
-						</div>
-						<div class="col col-lg-4">
-							公司名稱
-						</div>
-						<div class="col col-lg-3"></div>
-						<div class="col col-lg-2"></div>
-					</div>
-
-					<!-- @foreach 常用公司 -->
-					<div class="row g-0 align-items-center p-lg-2">
-						<div class="col col-lg-3 select-company-number">0912345678</div>
-						<div class="col col-lg-4 select-company-name">三花</div>
-						<div class="col col-lg-3"></div>
-						<div class="col col-lg-2">
-							<button class="btnSF btnBlud003-line btn-xxl fs-6 fw-medium mb-2 select-company" data-bs-dismiss="modal">選取</button>
-						</div>
-					</div>		
-					<!-- @foreach 常用公司 -->
-				</div>
-				<div class="modal-footer justify-content-center">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-					<!-- <button type="button" class="btn btn-primary">確定</button> -->
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- bootstrap js -->
+	<!-- 共用外部 js 檔案 -->
+	<script src="https://kit.fontawesome.com/25b2931f6f.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
 		crossorigin="anonymous"></script>
