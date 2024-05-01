@@ -7,30 +7,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>Detail</title>
-	<!-- 0412 替換 jq 版本 -->
+
+	<!-- 0430 共用 js -->
 	<script language="javascript" type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
 	<script language="javascript" type="text/javascript" src="js/public.js"></script>
 	
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<!-- 0430 共用 css -->
 	<link rel="stylesheet" type="text/css" href="css/icon.css">
-	<link rel="stylesheet" type="text/css" href="css/public.css">
 
+	<!-- 0430 共用外部引入檔案 -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	
-	<script src="https://kit.fontawesome.com/25b2931f6f.js" crossorigin="anonymous"></script>
+	<!-- 0430 共用外部 js 檔案 在頁面最下方 -->
 
-	<!-- 0412 自訂 css -->
+	<!-- 自訂 css -->
 	<!-- 產品詳細有使用輪播套件 swiper -->
 	<link rel="stylesheet" type="text/css" href="css/swiper/swiper-bundle.min.css">
+	<!-- 0430 public.css 直接引入 product_detail.css -->
 	<link rel="stylesheet" type="text/css" href="css/product_detail.css">
+
 
 	<!-- 0412 自訂 js  -->
 	<!-- 產品詳細有使用輪播套件 swiper -->
 	<script language="javascript" type="text/javascript" src="js/swiper/swiper-bundle.min.js"></script>
-	<!-- 產品詳細放大鏡套件 blow -->
+	<!-- 產品詳細放大鏡套件 blowup -->
 	<script language="javascript" type="text/javascript" src="js/blowup/blow.min.js"></script>
 	<script language="javascript" type="text/javascript" src="js/product_detail.js"></script>	
 </head>
@@ -95,8 +99,439 @@
 											</h2>
 											<button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 										</div>
+										<!-- 0430 手機版 選單內容不需要 ajax ，可以直接全部放上 -->
+										<!-- 0430 手機版 選單內容改為跟網頁版一樣三層-->
 										<div class="offcanvas-body">
 											<ul class="navbar-nav justify-content-end flex-grow-1">
+												<li class="nav-item">
+													<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="firstDropdown">
+														<span class="d-flex align-items-center"><i class="icon-icon-lang me-2 text-blue002 fs-5"></i> 繁體中文 </span>
+														<i class="fa-solid fa-angle-down"></i>
+													</a>
+													<ul class="dropdown-menu level_one border-0 ps-2" aria-labelledby="offcanvasNavbarDropdown">
+														<li><a class="dropdown-item px-0" href="#">語言1</a></li>
+														<li><a class="dropdown-item px-0" href="#">語言2</a></li>
+														<li><a class="dropdown-item px-0" href="#">語言3</a></li>
+													</ul>
+												</li>
+												<!-- 0430 調整位置補上範例 -->
+												<li class="nav-item">
+													<a class="nav-link" href="#" id="offcanvasNavbarDropdown4" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="fourthDropdown">
+														線上購物 <i class="fa-solid fa-angle-down"></i>
+													</a>
+													<ul class="dropdown-menu level_one border-0 ps-2" aria-labelledby="offcanvasNavbarDropdown4">
+														<li class="dropdown">
+															<a class="nav-link" href="#" id="offcanvasNavbarSubDropdown4" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst">
+																優惠區 <i class="fa-solid fa-angle-down"></i>
+															</a>
+															<ul class="dropdown-menu level_two border-0 ps-2" aria-labelledby="offcanvasNavbarSubDropdown1">
+																<li class="">
+																	<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarThirdDropdown4" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst2">
+																		優惠 1 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<ul class="dropdown-menu level_three border-0 ps-2" aria-labelledby="offcanvasNavbarThirdDropdown4">
+																		<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<li class="dropdown">
+																	<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarThirdDropdown4" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst2">
+																		優惠 2 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<ul class="dropdown-menu level_three border-0 ps-2" aria-labelledby="offcanvasNavbarThirdDropdown4">
+																		<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<li>
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/" alt="...">
+																				</picture>
+																				
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
+																			</div>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</li>
+														<li class="dropdown">
+															<a class="nav-link" href="#" id="offcanvasNavbarSubDropdown4" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst">
+																內褲 <i class="fa-solid fa-angle-down"></i>
+															</a>
+															<ul class="dropdown-menu level_two border-0 ps-2" aria-labelledby="offcanvasNavbarSubDropdown1">
+																<li class="">
+																	<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarThirdDropdown4" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst2">
+																		內褲 1 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<ul class="dropdown-menu level_three border-0 ps-2" aria-labelledby="offcanvasNavbarThirdDropdown4">
+																		<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<li class="dropdown">
+																	<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarThirdDropdown4" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst2">
+																		內褲 2 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<ul class="dropdown-menu level_three border-0 ps-2" aria-labelledby="offcanvasNavbarThirdDropdown4">
+																		<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<li>
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/" alt="...">
+																				</picture>
+																				
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
+																			</div>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</li>
+														<li class="dropdown">
+															<a class="nav-link" href="#" id="offcanvasNavbarSubDropdown4" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst">
+																襪子 <i class="fa-solid fa-angle-down"></i>
+															</a>
+															<ul class="dropdown-menu level_two border-0 ps-2" aria-labelledby="offcanvasNavbarSubDropdown1">
+																<li class="">
+																	<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarThirdDropdown4" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst2">
+																		襪子 1 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<ul class="dropdown-menu level_three border-0 ps-2" aria-labelledby="offcanvasNavbarThirdDropdown4">
+																		<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<li class="dropdown">
+																	<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarThirdDropdown4" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst2">
+																		襪子 2 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<ul class="dropdown-menu level_three border-0 ps-2" aria-labelledby="offcanvasNavbarThirdDropdown4">
+																		<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<li>
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/" alt="...">
+																				</picture>
+																				
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
+																			</div>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</li>
+													</ul>	
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" href="#" id="offcanvasNavbarDropdown4" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="fourthDropdown">
+														男館 <i class="fa-solid fa-angle-down"></i>
+													</a>
+													<ul class="dropdown-menu level_one border-0 ps-2" aria-labelledby="offcanvasNavbarDropdown4">
+														<li class="dropdown">
+															<a class="nav-link" href="#" id="offcanvasNavbarSubDropdown4" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst">
+																優惠區 <i class="fa-solid fa-angle-down"></i>
+															</a>
+															<ul class="dropdown-menu level_two border-0 ps-2" aria-labelledby="offcanvasNavbarSubDropdown1">
+																<li class="">
+																	<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarThirdDropdown4" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst2">
+																		優惠 1 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<ul class="dropdown-menu level_three border-0 ps-2" aria-labelledby="offcanvasNavbarThirdDropdown4">
+																		<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<li class="dropdown">
+																	<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarThirdDropdown4" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst2">
+																		優惠 2 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<ul class="dropdown-menu level_three border-0 ps-2" aria-labelledby="offcanvasNavbarThirdDropdown4">
+																		<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<li>
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/" alt="...">
+																				</picture>
+																				
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
+																			</div>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</li>
+														<li class="dropdown">
+															<a class="nav-link" href="#" id="offcanvasNavbarSubDropdown4" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst">
+																內褲 <i class="fa-solid fa-angle-down"></i>
+															</a>
+															<ul class="dropdown-menu level_two border-0 ps-2" aria-labelledby="offcanvasNavbarSubDropdown1">
+																<li class="">
+																	<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarThirdDropdown4" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst2">
+																		內褲 1 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<ul class="dropdown-menu level_three border-0 ps-2" aria-labelledby="offcanvasNavbarThirdDropdown4">
+																		<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<li class="dropdown">
+																	<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarThirdDropdown4" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst2">
+																		內褲 2 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<ul class="dropdown-menu level_three border-0 ps-2" aria-labelledby="offcanvasNavbarThirdDropdown4">
+																		<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<li>
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/" alt="...">
+																				</picture>
+																				
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
+																			</div>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</li>
+														<li class="dropdown">
+															<a class="nav-link" href="#" id="offcanvasNavbarSubDropdown4" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst">
+																襪子 <i class="fa-solid fa-angle-down"></i>
+															</a>
+															<ul class="dropdown-menu level_two border-0 ps-2" aria-labelledby="offcanvasNavbarSubDropdown1">
+																<li class="">
+																	<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarThirdDropdown4" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst2">
+																		襪子 1 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<ul class="dropdown-menu level_three border-0 ps-2" aria-labelledby="offcanvasNavbarThirdDropdown4">
+																		<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<li class="dropdown">
+																	<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarThirdDropdown4" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst2">
+																		襪子 2 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<ul class="dropdown-menu level_three border-0 ps-2" aria-labelledby="offcanvasNavbarThirdDropdown4">
+																		<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<li>
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/" alt="...">
+																				</picture>
+																				
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
+																			</div>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</li>
+													</ul>	
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" href="#" id="offcanvasNavbarDropdown4" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="fourthDropdown">
+														女館 <i class="fa-solid fa-angle-down"></i>
+													</a>
+													<ul class="dropdown-menu level_one border-0 ps-2" aria-labelledby="offcanvasNavbarDropdown4">
+														<li class="dropdown">
+															<a class="nav-link" href="#" id="offcanvasNavbarSubDropdown4" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst">
+																優惠區 <i class="fa-solid fa-angle-down"></i>
+															</a>
+															<ul class="dropdown-menu level_two border-0 ps-2" aria-labelledby="offcanvasNavbarSubDropdown1">
+																<li class="">
+																	<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarThirdDropdown4" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst2">
+																		優惠 1 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<ul class="dropdown-menu level_three border-0 ps-2" aria-labelledby="offcanvasNavbarThirdDropdown4">
+																		<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<li class="dropdown">
+																	<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarThirdDropdown4" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst2">
+																		優惠 2 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<ul class="dropdown-menu level_three border-0 ps-2" aria-labelledby="offcanvasNavbarThirdDropdown4">
+																		<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<li>
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/" alt="...">
+																				</picture>
+																				
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
+																			</div>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</li>
+														<li class="dropdown">
+															<a class="nav-link" href="#" id="offcanvasNavbarSubDropdown4" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst">
+																內褲 <i class="fa-solid fa-angle-down"></i>
+															</a>
+															<ul class="dropdown-menu level_two border-0 ps-2" aria-labelledby="offcanvasNavbarSubDropdown1">
+																<li class="">
+																	<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarThirdDropdown4" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst2">
+																		內褲 1 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<ul class="dropdown-menu level_three border-0 ps-2" aria-labelledby="offcanvasNavbarThirdDropdown4">
+																		<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<li class="dropdown">
+																	<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarThirdDropdown4" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst2">
+																		內褲 2 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<ul class="dropdown-menu level_three border-0 ps-2" aria-labelledby="offcanvasNavbarThirdDropdown4">
+																		<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<li>
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/" alt="...">
+																				</picture>
+																				
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
+																			</div>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</li>
+														<li class="dropdown">
+															<a class="nav-link" href="#" id="offcanvasNavbarSubDropdown4" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst">
+																襪子 <i class="fa-solid fa-angle-down"></i>
+															</a>
+															<ul class="dropdown-menu level_two border-0 ps-2" aria-labelledby="offcanvasNavbarSubDropdown1">
+																<li class="">
+																	<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarThirdDropdown4" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst2">
+																		襪子 1 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<ul class="dropdown-menu level_three border-0 ps-2" aria-labelledby="offcanvasNavbarThirdDropdown4">
+																		<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<li class="dropdown">
+																	<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarThirdDropdown4" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="subDropdownFirst2">
+																		襪子 2 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<ul class="dropdown-menu level_three border-0 ps-2" aria-labelledby="offcanvasNavbarThirdDropdown4">
+																		<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
+																		<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<li>
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/" alt="...">
+																				</picture>
+																				
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
+																			</div>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</li>
+													</ul>	
+												</li>
 												<li class="nav-item">
 													<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="firstDropdown">
 														三花品牌誌 <i class="fa-solid fa-angle-down"></i>
@@ -126,25 +561,6 @@
 														<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
 														<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
 													</ul>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown4" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="fourthDropdown">
-														線上購物 <i class="fa-solid fa-angle-down"></i>
-													</a>
-													<ul class="dropdown-menu level_one border-0 ps-2" aria-labelledby="offcanvasNavbarDropdown4">
-														<li class="dropdown">
-															<a class="nav-link" href="#" id="offcanvasNavbarSubDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-autoClose="false" aria-label="subDropdownFirst">
-																優惠區1 <i class="fa-solid fa-angle-down"></i>
-															</a>
-															<ul class="dropdown-menu level_two border-0 ps-2" aria-labelledby="offcanvasNavbarSubDropdown1">
-																<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
-																<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
-																<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
-															</ul>
-														</li>
-														<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
-														<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
-													</ul>	
 												</li>
 											</ul>
 										</div>
@@ -363,71 +779,64 @@
 																</ul>
 															</div>
 															<!-- 第三層項目 -->
+															<!-- 0430 mega menu 第三層排版調整 -->
 															<div class="col-4 level-styled third-level">
-																<div class="row">
-																	<div class="col-6">
-																		<ul class="list-styled mb-5 px-2 mb-md-0">
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">男內褲 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
-																			</li>
-																		</ul>
-																	</div>
-																	<div class="col-6">
-																		<ul class="list-styled mb-0 fs-base">
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
-																			</li>
-																		</ul>	
-																	</div>
-																</div>
+																<ul class="list-styled mb-5 px-2 mb-md-0">
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">男內褲 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																	</li>
+																</ul>	
 															</div>
 															
 															<div class="col-3">
@@ -519,71 +928,64 @@
 																</ul>
 															</div>
 															<!-- 第三層項目 -->
+															<!-- 0430 mega menu 第三層排版調整 -->
 															<div class="col-4 level-styled third-level">
-																<div class="row">
-																	<div class="col-6">
-																		<ul class="list-styled mb-5 px-2 mb-md-0">
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">男內褲 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
-																			</li>
-																		</ul>
-																	</div>
-																	<div class="col-6">
-																		<ul class="list-styled mb-0 fs-base">
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
-																			</li>
-																		</ul>	
-																	</div>
-																</div>
+																<ul class="list-styled mb-5 px-2 mb-md-0">
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">男內褲 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																	</li>
+																</ul>	
 															</div>
 														</div>
 													</div>
@@ -654,71 +1056,64 @@
 																</ul>
 															</div>
 															<!-- 第三層項目 -->
+															<!-- 0430 mega menu 第三層排版調整 -->	
 															<div class="col-4 level-styled third-level">
-																<div class="row">
-																	<div class="col-6">
-																		<ul class="list-styled mb-5 px-2 mb-md-0">
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">男內褲 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
-																			</li>
-																		</ul>
-																	</div>
-																	<div class="col-6">
-																		<ul class="list-styled mb-0 fs-base">
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
-																			</li>
-																		</ul>	
-																	</div>
-																</div>
+																<ul class="list-styled mb-5 px-2 mb-md-0">
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">男內褲 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																	</li>
+																	<li class="list-styled-item">
+																		<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																	</li>
+																</ul>	
 															</div>
 															<div class="col-3 d-none d-lg-block">
 																<!-- Card -->
@@ -929,79 +1324,137 @@
 		<div class="product_detail mb-5">
 			<div class="container position-relative">
 				<div class="col-12 col-xl-12 mx-auto py-4">
-					<div class="row">
+					<div class="row position-relative">
 						<div class="detail_imgs col-12 col-xl-7">
 							<div class="sticky-lg-top">
 								<div class="row">
 									<div class="col-2 pe-3 d-none d-lg-block">
-										<div thumbsSlider="" class="swiper thumnanil-swiper">
+										<div thumbsSlider class="swiper thumnanil-swiper mySwiper">
 											<div class="swiper-wrapper">
 												<div class="swiper-slide">
-													<img src="https://fakeimg.pl/100x100/?text=img1" class="img-fluid ratio ratio-1x1" alt="fake 100x95">
+													<!-- 0430 產品圖片 1x1 ， bootstrap 的 ratio ratio-1x1 要包在圖片外，不然會怪怪的 -->
+													<picture class="d-inline-block ratio ratio-1x1 jqzoom">	
+														<img src="https://fakeimg.pl/100x100/?text=img1" class="img-fluid" alt="fake 100x95">
+													</picture>
 												</div>
 												<div class="swiper-slide">
-													<img src="https://fakeimg.pl/100x100/?text=img2" class="img-fluid ratio ratio-1x1" alt="fake 100x95">
+													<!-- 0430 產品圖片 1x1 ， bootstrap 的 ratio ratio-1x1 要包在圖片外，不然會怪怪的 -->
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/100x100/?text=img2" class="img-fluid" alt="fake 100x95">
+													</picture>
 												</div>
 												<div class="swiper-slide">
-													<img src="https://fakeimg.pl/100x100/?text=img3" class="img-fluid ratio ratio-1x1" alt="fake 100x95">
+													<!-- 0430 產品圖片 1x1 ， bootstrap 的 ratio ratio-1x1 要包在圖片外，不然會怪怪的 -->
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/100x100/?text=img3" class="img-fluid" alt="fake 100x95">
+													</picture>
 												</div>
 												<div class="swiper-slide">
-													<img src="https://fakeimg.pl/100x100/?text=img4" class="img-fluid ratio ratio-1x1" alt="fake 100x95">
+													<!-- 0430 產品圖片 1x1 ， bootstrap 的 ratio ratio-1x1 要包在圖片外，不然會怪怪的 -->
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/100x100/?text=img4" class="img-fluid" alt="fake 100x95">
+													</picture>
 												</div>
 												<div class="swiper-slide">
-													<img src="https://fakeimg.pl/100x100/?text=img5" class="img-fluid ratio ratio-1x1" alt="fake 100x95">
+													<!-- 0430 產品圖片 1x1 ， bootstrap 的 ratio ratio-1x1 要包在圖片外，不然會怪怪的 -->
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/100x100/?text=img5" class="img-fluid" alt="fake 100x95">
+													</picture>
 												</div>
 												<div class="swiper-slide">
-													<img src="https://fakeimg.pl/100x100/?text=img6" class="img-fluid ratio ratio-1x1" alt="fake 100x95">
+													<!-- 0430 產品圖片 1x1 ， bootstrap 的 ratio ratio-1x1 要包在圖片外，不然會怪怪的 -->
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/100x100/?text=img6" class="img-fluid" alt="fake 100x95">
+													</picture>
 												</div>
 												<div class="swiper-slide">
-													<img src="https://fakeimg.pl/100x100/?text=img7" class="img-fluid ratio ratio-1x1" alt="fake 100x95">
+													<!-- 0430 產品圖片 1x1 ， bootstrap 的 ratio ratio-1x1 要包在圖片外，不然會怪怪的 -->
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/100x100/?text=img7" class="img-fluid" alt="fake 100x95">
+													</picture>
 												</div>
 												<div class="swiper-slide">
-													<img src="https://fakeimg.pl/100x100/?text=img8" class="img-fluid ratio ratio-1x1" alt="fake 100x95">
+													<!-- 0430 產品圖片 1x1 ， bootstrap 的 ratio ratio-1x1 要包在圖片外，不然會怪怪的 -->
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/100x100/?text=img8" class="img-fluid" alt="fake 100x95">
+													</picture>
 												</div>
 												<div class="swiper-slide">
-													<img src="https://fakeimg.pl/100x100/?text=img9" class="img-fluid ratio ratio-1x1" alt="fake 100x95">
+													<!-- 0430 產品圖片 1x1 ， bootstrap 的 ratio ratio-1x1 要包在圖片外，不然會怪怪的 -->
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/100x100/?text=img9" class="img-fluid" alt="fake 100x95">
+													</picture>
 												</div>
 												<div class="swiper-slide">
-													<img src="https://fakeimg.pl/100x100/?text=img10" class="img-fluid ratio ratio-1x1" alt="fake 100x95">
+													<!-- 0430 產品圖片 1x1 ， bootstrap 的 ratio ratio-1x1 要包在圖片外，不然會怪怪的 -->
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img src="https://fakeimg.pl/100x100/?text=img10" class="img-fluid" alt="fake 100x95">
+													</picture>
 												</div>
 											</div>
 										</div>
 									</div>
+
 									<div class="col-12 col-lg-10">
 										<div class="swiper product-img-swiper">
 											<div class="swiper-wrapper">
 												<div class="swiper-slide">
-													<img class="blowup-img" src="https://swiperjs.com/demos/images/nature-1.jpg" alt="fake img"/>
+													<!-- 0430 產品圖片 1x1 ， bootstrap 的 ratio ratio-1x1 要包在圖片外，不然會怪怪的 -->
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img class="blowup-img" src="https://swiperjs.com/demos/images/nature-1.jpg" alt="fake img"/>
+													</picture>
+												</div>
+												
+												<div class="swiper-slide">
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img class="blowup-img" src="https://swiperjs.com/demos/images/nature-2.jpg" alt="fake img"/>
+													</picture>	
 												</div>
 												<div class="swiper-slide">
-													<img class="blowup-img" src="https://swiperjs.com/demos/images/nature-2.jpg" alt="fake img"/>
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img class="blowup-img" src="https://swiperjs.com/demos/images/nature-3.jpg" alt="fake img"/>
+													</picture>
 												</div>
 												<div class="swiper-slide">
-													<img class="blowup-img" src="https://swiperjs.com/demos/images/nature-3.jpg" alt="fake img"/>
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img class="blowup-img" src="https://swiperjs.com/demos/images/nature-4.jpg" alt="fake img"/>
+													</picture>
 												</div>
 												<div class="swiper-slide">
-													<img class="blowup-img" src="https://swiperjs.com/demos/images/nature-4.jpg" alt="fake img"/>
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img class="blowup-img" src="https://swiperjs.com/demos/images/nature-5.jpg" alt="fake img"/>
+													</picture>
 												</div>
 												<div class="swiper-slide">
-													<img class="blowup-img" src="https://swiperjs.com/demos/images/nature-5.jpg" alt="fake img"/>
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img class="blowup-img" src="https://swiperjs.com/demos/images/nature-6.jpg" alt="fake img"/>
+													</picture>
 												</div>
 												<div class="swiper-slide">
-													<img class="blowup-img" src="https://swiperjs.com/demos/images/nature-6.jpg" alt="fake img"/>
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img class="blowup-img" src="https://swiperjs.com/demos/images/nature-7.jpg" alt="fake img"/>
+													</picture>
 												</div>
 												<div class="swiper-slide">
-													<img class="blowup-img" src="https://swiperjs.com/demos/images/nature-7.jpg" alt="fake img"/>
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img class="blowup-img" src="https://swiperjs.com/demos/images/nature-8.jpg" alt="fake img"/>
+													</picture>
 												</div>
 												<div class="swiper-slide">
-													<img class="blowup-img" src="https://swiperjs.com/demos/images/nature-8.jpg" alt="fake img"/>
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img class="blowup-img" src="https://swiperjs.com/demos/images/nature-9.jpg" alt="fake img"/>
+													</picture>
 												</div>
 												<div class="swiper-slide">
-													<img class="blowup-img" src="https://swiperjs.com/demos/images/nature-9.jpg" alt="fake img"/>
+													<picture class="d-inline-block ratio ratio-1x1">
+														<img class="blowup-img" src="https://swiperjs.com/demos/images/nature-10.jpg" alt="fake img"/>
+													</picture>
 												</div>
-												<div class="swiper-slide">
-													<img class="blowup-img" src="https://swiperjs.com/demos/images/nature-10.jpg" alt="fake img"/>
-												</div>
+											</div>
+
+											<!-- 0430 手機版時顯示輪播 scroll bar -->
+											<div class="swiper-scrollbar swiper-scrollbar-horizontal d-block d-lg-none">
+												<div class="swiper-scrollbar-drag"></div>
 											</div>
 										</div>
 									</div>
@@ -1021,7 +1474,6 @@
 
 							<div class="detail_package content_package__copy--open my-5">
 								<p class="fs-4 mb-2"> 優惠組合 <span class="fs-6"> 任選  <span>3件 1000元</span> 平均單件<span> 333元 </span></span></p>
-								<!-- 0412 icon 替換 -->
 								<a href="#" class="btn bnt-lg fs-5 me-0 mb-2 me-xl-3">週年慶限時 500 免運 <i class="icon-angle-right"></i></a>
 								<a href="#" class="btn bnt-lg fs-5">3件1000元 優惠中 <i class="icon-angle-right"></i></a>	
 							</div>
@@ -1110,7 +1562,6 @@
 										<button class="btn btn-lg fs-6 bg-2 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDetailBottom" aria-controls="offcanvasDetailBottom">加入購物車</button>
 									</div>
 									<div class="col-xl-3 d-none d-lg-block">
-										<!-- 0412 icon 替換 -->
 										<button class="btn btn-lg fs-6 bg-3"><i class="icon-icon-favorite me-2"></i>追蹤</button>
 									</div>
 								</div>
@@ -1119,22 +1570,18 @@
 							<div class="detail_socials my-4">
 								<span>分享：</span>
 								<a href="#" class="socials-btn me-3">
-									<!-- 0412 icon 替換 -->
 									<i class="icon-icon-fb"></i>
 								</a>
 								<a href="#" class="socials-btn me-3">
-									<!-- 0412 icon 替換 -->
 									<i class="icon-icon-ig"></i>
 								</a>
 								<a href="#" class="socials-btn me-3">
-									<!-- 0412 icon 替換 -->
 									<i class="icon-icon-line"></i>
 								</a>	
 								<a href="#" class="socials-btn me-3">
 									<i class="fa-solid fa-link"></i>
 								</a>
 								<a href="#" class="socials-btn d-inline-block d-lg-none btn btn-lg fs-6 bg-3">
-									<!-- 0412 icon 替換 -->
 									<i class="icon-icon-favorite me-2"></i>追蹤
 								</a>
 							</div>
@@ -1202,7 +1649,7 @@
 									<div class="box">
 										<a href="#">
 											<img src="https://fakeimg.pl/160x160/?text=P1" class="img-fluid ratio ratio-1x1" alt="fake img">
-											<p>彈性貼身平口褲.四角褲.男內褲-南洋海岸</p>
+											<p>彈性貼身平口褲</p>
 										</a>
 									</div>
 									<div class="box">
@@ -1226,7 +1673,7 @@
 									<div class="box">
 										<a href="#">
 											<img src="https://fakeimg.pl/160x160/?text=P5" class="img-fluid ratio ratio-1x1" alt="fake img">
-											<p>彈性貼身平口褲.四角褲.男內褲-南洋海岸</p>
+											<p>彈性貼身平口褲.四角褲.男內褲-南洋海岸男內褲-南洋海岸男內褲-南洋海岸</p>
 										</a>
 									</div>
 									<div class="box">
@@ -1253,25 +1700,28 @@
 			</div>
 			
 			<div class="container position-relative">
-				<div class="row">
-					
+				<div class="row">				
 					<div class="col-12 mx-auto">
 						<div class="swiper like-swiper my-5">
 							<div class="swiper-wrapper">
+								<!-- 0430 各 like-item 如果有不一樣，以 @foreach start ~ end 內容為準 -->
+								<!-- @foreach start -->
 								<!-- 也許你也喜歡 @foreach start -->
 								<div class="swiper-slide like-item">
 									<div class="col px-4 text-center">
 										<div class="product-card card border-0 h-100">
 											<div class="card-img img-hover">
-												<picture class="">
-													<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-													<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+												<!-- 0430 產品圖片 1x1 ， bootstrap 的 ratio ratio-1x1 要包在圖片外，不然會怪怪的 -->
+												<picture class="d-inline-block ratio ratio-1x1">
+													<img src="images/product/pic-product.webp" class="" alt="">
+													<img src="images/product/pic-product-hover.webp" class="" alt="">
 												</picture>
 											</div>
 
 											<div class="card-content border-0">
 												<div class="colors-wrapper col-12">
 													<div class="color-items d-flex">
+														<!-- 0430 非預設顯示項目 class裡的 active 要拿掉 -->
 														<p class="color-item active" data-img="https://fakeimg.pl/1000x1000/?text=img2" data-img-hover="https://fakeimg.pl/1000x1000/?text=img2-1" data-color-id="123" data-color-name="灰色"><img src="https://fakeimg.pl/50x50/cccccc/" class="rounded-circle"><span>灰色</span></p>
 														<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img3" data-img-hover="https://fakeimg.pl/1000x1000/?text=img3-1" data-color-id="456" data-color-name="灰藍色"><img src="https://fakeimg.pl/50x50/253766/" class="rounded-circle"><span>灰藍色</span></p>
 														<p class="color-item" data-img="https://fakeimg.pl/1000x1000/?text=img4" data-img-hover="https://fakeimg.pl/1000x1000/?text=img4-1" data-color-id="789" data-color-name="灰紅色"><img src="https://fakeimg.pl/50x50/c41232/" class="rounded-circle"><span>灰紅色</span></p>
@@ -1287,14 +1737,14 @@
 										</div>
 									</div>	
 								</div>
-								<!-- 也許你也喜歡 @foreach edn -->
+								<!-- 也許你也喜歡 @foreach end -->
 								<div class="swiper-slide like-item">
 									<div class="col px-4 text-center">
 										<div class="product-card card border-0 h-100">
 											<div class="card-img img-hover">
-												<picture class="">
-													<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-													<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+												<picture class="d-inline-block ratio ratio-1x1">
+													<img src="images/product/pic-product.webp" class="" alt="">
+													<img src="images/product/pic-product-hover.webp" class="" alt="">
 												</picture>
 											</div>
 
@@ -1320,9 +1770,9 @@
 									<div class="col px-4 text-center">
 										<div class="product-card card border-0 h-100">
 											<div class="card-img img-hover">
-												<picture class="">
-													<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-													<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+												<picture class="d-inline-block ratio ratio-1x1">
+													<img src="images/product/pic-product.webp" class="" alt="">
+													<img src="images/product/pic-product-hover.webp" class="" alt="">
 												</picture>
 											</div>
 
@@ -1348,9 +1798,9 @@
 									<div class="col px-4 text-center">
 										<div class="product-card card border-0 h-100">
 											<div class="card-img img-hover">
-												<picture class="">
-													<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-													<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+												<picture class="d-inline-block ratio ratio-1x1">
+													<img src="images/product/pic-product.webp" class="" alt="">
+													<img src="images/product/pic-product-hover.webp" class="" alt="">
 												</picture>
 											</div>
 
@@ -1376,9 +1826,9 @@
 									<div class="col px-4 text-center">
 										<div class="product-card card border-0 h-100">
 											<div class="card-img img-hover">
-												<picture class="">
-													<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-													<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
+												<picture class="d-inline-block ratio ratio-1x1">
+													<img src="images/product/pic-product.webp" class="" alt="">
+													<img src="images/product/pic-product-hover.webp" class="" alt="">
 												</picture>
 											</div>
 
@@ -1425,15 +1875,17 @@
 					<div class="col-12 mx-auto">
 						<div class="swiper recent-swiper my-5">
 							<div class="swiper-wrapper">
+								<!-- 0430 各 like-item 如果有不一樣，以 @foreach start ~ end 內容為準 -->
 								<!-- 近期瀏覽商品 @foreach start -->
 								<div class="swiper-slide recent-item">
 									<div class="col px-4 text-center">
 										<div class="product-card card border-0 h-100">
 											<div class="card-img img-hover">
-												<picture class="">
-													<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-													<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
-												</picture>
+												<!-- 0430 產品圖片 1x1 ， bootstrap 的 ratio ratio-1x1 要包在圖片外，不然會怪怪的 -->
+												<picture class="d-inline-block ratio ratio-1x1">
+													<img src="images/product/pic-product.webp" class="" alt="">
+													<img src="images/product/pic-product-hover.webp" class="" alt="">
+												</picture>	
 											</div>
 
 											<div class="card-content border-0">
@@ -1459,10 +1911,10 @@
 									<div class="col px-4 text-center">
 										<div class="product-card card border-0 h-100">
 											<div class="card-img img-hover">
-												<picture class="">
-													<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-													<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
-												</picture>
+												<picture class="d-inline-block ratio ratio-1x1">
+													<img src="images/product/pic-product.webp" class="" alt="">
+													<img src="images/product/pic-product-hover.webp" class="" alt="">
+												</picture>	
 											</div>
 
 											<div class="card-content border-0">
@@ -1487,10 +1939,10 @@
 									<div class="col px-4 text-center">
 										<div class="product-card card border-0 h-100">
 											<div class="card-img img-hover">
-												<picture class="">
-													<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-													<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
-												</picture>
+												<picture class="d-inline-block ratio ratio-1x1">
+													<img src="images/product/pic-product.webp" class="" alt="">
+													<img src="images/product/pic-product-hover.webp" class="" alt="">
+												</picture>	
 											</div>
 
 											<div class="card-content border-0">
@@ -1515,10 +1967,10 @@
 									<div class="col px-4 text-center">
 										<div class="product-card card border-0 h-100">
 											<div class="card-img img-hover">
-												<picture class="">
-													<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-													<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
-												</picture>
+												<picture class="d-inline-block ratio ratio-1x1">
+													<img src="images/product/pic-product.webp" class="" alt="">
+													<img src="images/product/pic-product-hover.webp" class="" alt="">
+												</picture>	
 											</div>
 
 											<div class="card-content border-0">
@@ -1543,10 +1995,10 @@
 									<div class="col px-4 text-center">
 										<div class="product-card card border-0 h-100">
 											<div class="card-img img-hover">
-												<picture class="">
-													<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-													<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
-												</picture>
+												<picture class="d-inline-block ratio ratio-1x1">
+													<img src="images/product/pic-product.webp" class="" alt="">
+													<img src="images/product/pic-product-hover.webp" class="" alt="">
+												</picture>	
 											</div>
 
 											<div class="card-content border-0">
@@ -1571,10 +2023,10 @@
 									<div class="col px-4 text-center">
 										<div class="product-card card border-0 h-100">
 											<div class="card-img img-hover">
-												<picture class="">
-													<img src="images/product/pic-product.webp" class="ratio ratio-1x1" alt="">
-													<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
-												</picture>
+												<picture class="d-inline-block ratio ratio-1x1">
+													<img src="images/product/pic-product.webp" class="" alt="">
+													<img src="images/product/pic-product-hover.webp" class="" alt="">
+												</picture>	
 											</div>
 
 											<div class="card-content border-0">
@@ -1595,7 +2047,6 @@
 										</div>
 									</div>	
 								</div>	
-								
 							</div>
 							<div class="recentWeb-swiper-button d-flex d-lg-flex">
 								<div class="swiper-button-prev recentWeb-button-prev"></div>
@@ -1805,7 +2256,6 @@
 									<div class="fm-footer_socials">
 										<h3 class="footer_widget_title">加入三花社群</h3>
 										<ul class="ul_li_socials">
-											<!-- 0412 icon 替換 -->
 											<li><a href="#!"><i class="icon-icon-fb"></i></a></li>	
 											<li><a href="#!"><i class="icon-icon-ig"></i></a></li>	
 											<li><a href="#!"><i class="icon-icon-line"></i></a></li>	
@@ -1821,9 +2271,7 @@
 										<form action="#">
 											<div class="input-group mb-3">
 												<input type="text" class="form-control ps-5" placeholder="請輸入您的E-mail" aria-label="請輸入您的E-mail" aria-describedby="button-addon2">
-												<!-- 0412 icon 替換 -->
 												<i class="icon-icon-mail placeholder-icon"></i>
-												<!-- 0412 icon 替換 -->
 												<button class="btn" type="button" id="button-addon2"><i class="icon-angle-right"></i></button>
 											</div>
 										</form>
@@ -1860,6 +2308,7 @@
 		</div>
 	</footer>
 
+	<!-- 0430 建議不要放在 main 裡面，如果該頁面有的 main 裡有其他區塊設定 z-index 可能會打架-->
 	<!-- Modal -->
 	<!-- 尺寸表 -->
 	<div class="modal fade" id="sizeChartModal" tabindex="-1" aria-labelledby="sizeChartModalLabel" aria-hidden="true">
@@ -1878,8 +2327,8 @@
 		</div>
 		</div>
 	</div>
+
 	<!-- 手機版 購物車 modal -->
-	<!-- 開啟 modal -->
 	<div class="offcanvas offcanvas-bottom detail-offcanvas" tabindex="-1" id="offcanvasDetailBottom" aria-labelledby="offcanvasDetailBottomLabel" aria-hidden="true">
 		<div class="offcanvas-header">
 			<div class="row g-0 justify-content-between align-items-stretch">
@@ -1955,7 +2404,8 @@
 		<input type="hidden" name="product-quantity">
 	</form>
 	
-	<!-- bootstrap js -->
+	<!-- 0430 共用外部 js 檔案 -->
+	<script src="https://kit.fontawesome.com/25b2931f6f.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
 		crossorigin="anonymous"></script>
