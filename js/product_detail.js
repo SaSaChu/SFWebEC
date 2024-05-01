@@ -12,6 +12,9 @@ $(function() {
 
 	var productImgSwiper = new Swiper(".product-img-swiper", {
 		spaceBetween: 10,
+		scrollbar: {
+			el: ".swiper-scrollbar",
+		},
 		navigation: {
 			// nextEl: ".swiper-button-next",
 			// prevEl: ".swiper-button-prev",
@@ -81,7 +84,7 @@ $(function() {
         $(this).parent().next().find('p').text($(this).attr('data-color-name'));  
 	})
 
-	// 產品圖放大
+	// 產品圖放大 要調整成右方有區塊顯示放大圖
 	$('.blowup-img').map(function() {
 		$(this).blowup({
 			scale: 2,
