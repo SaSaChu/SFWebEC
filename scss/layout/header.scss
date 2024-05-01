@@ -9,7 +9,7 @@ header {
 	@include media-breakpoint-down(lg) {
 		position: sticky;
 		top: 0;
-		z-index: 1051;
+		z-index: 1040;
 	}
  
 	.marquee-wrapper {
@@ -173,6 +173,11 @@ header {
 								i {
 									color: #bcbcbc;
 									transition: all .3s ease-in-out;
+
+									&.icon-icon-lang {
+										color: $blue-700;
+										transition: none;
+									}
 								}
 							}
 
@@ -484,8 +489,11 @@ header {
 									}
 
 									.list-styled {
+										display: flex;
+										flex-wrap: wrap;
 
 										.list-styled-item {
+											flex-basis: 50%;
 											&:first-child {
 												padding-top: 0;
 											}
