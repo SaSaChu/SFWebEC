@@ -4,6 +4,7 @@
 @import "components/input";
 @import "components/link";
 @import "components/btn";
+@import "public";
 @import "layout/header";
 @import "layout/footer";
 @import "components/cart";
@@ -478,10 +479,18 @@ main {
 				display: flex;
 				align-items: center;
 				color: $blue-004;
+
+				@include media-breakpoint-down(lg) {
+					font-size: 20px !important;
+				}
 			}
 
 			span {
 				color: $gray-600;
+
+				@include media-breakpoint-down(lg) {
+					font-size: 18px !important;
+				}
 
 				> span {
 					&:first-of-type {
@@ -506,6 +515,10 @@ main {
 				writing-mode: vertical-rl;
 				text-orientation: upright;
 				letter-spacing: 1.1px;
+
+				@include media-breakpoint-down(lg) {
+					font-size: 16px !important;
+				}
 			}	
 		}
 
@@ -560,6 +573,10 @@ main {
 			padding: 1.5rem 0;
 	
 			.tab-pane {
+				.product-item {
+					height: 100%;
+				}
+
 				.pagination {
 					justify-content: flex-end;
 

@@ -4,6 +4,7 @@
 @import "components/input";
 @import "components/link";
 @import "components/btn";
+@import "public";
 @import "layout/header";
 @import "layout/footer";
 @import "components/cart";
@@ -640,6 +641,8 @@ main {
 
 							.card-title {
 								margin-top: 1rem;
+								height: auto;
+								
 								a {
 									font-size: 20px;
 								}

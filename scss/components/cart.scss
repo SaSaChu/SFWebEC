@@ -1,7 +1,6 @@
 @import "Ginkgo";
 @import "bootstrap/bootstrap";
 @import "components/color";
-@import "components/color";
 @import "components/input";
 @import "components/link";
 @import "components/btn";
@@ -32,6 +31,7 @@
 
 	.card-title {
 		text-align: left;
+		height: 100%;
 
 		a {
 			font-size: 1rem;
@@ -90,13 +90,14 @@
 
 	.colors-wrapper {
 		.color-items {
-			padding-top: .5rem;
+			padding-top: 1rem;
 	
 			.color-item {
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				padding: 1px;
+				margin-bottom: 0;
 				width: 22px;
 				height: 22px;
 				border-radius: 50%;
@@ -292,7 +293,7 @@
 				}
 
 				.offcanvas_price {
-					margin-bottom: 3rem;
+					// margin-bottom: 3rem;
 				}
 			}
 			
@@ -323,6 +324,12 @@
 		}
 
 		.offcanvas_package {
+			display: none;
+
+			&.show {
+				display: block;
+			}
+
 			span {
 				display: flex;
 				justify-content: space-between;
