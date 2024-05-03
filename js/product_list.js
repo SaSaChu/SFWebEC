@@ -33,6 +33,22 @@ $(function() {
 			$('.mobile-sub-menu').append(item);	
 		})
 	})
+
+	// 0502 篩選樣式功能
+	$('.filter-cancel').on('click', function(e) {
+		$(this).parents('.filter-list-item').removeClass('active')
+		e.stopPropagation();
+	})
+
+	$('.filter-list-item a').on('click', function(){
+		$(this).parent().addClass('active');
+	})
+
+	$('.filter-item-title').on('click', function() {
+		$(this).find('.icon').toggleClass('active')
+		$(this).next().toggleClass('show');
+	})
+	
 	
     // side package 出現時機
     let offsetTop;
