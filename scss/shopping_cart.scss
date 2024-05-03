@@ -162,6 +162,10 @@ main {
 		font-weight: 500;
 		color: $main-blue;
 
+		@include media-breakpoint-down(lg) {
+			font-size: 18px;
+		}
+
 		&:before {
 			content: "";
 			display: inline-block;
@@ -170,6 +174,25 @@ main {
 			height: 30px;
 			background-color: $main-red;
 		}	
+	}
+
+	.price_symbol {
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&:before {
+				content: attr(data-symbol);	
+			}
+
+			&:empty {
+				&:before {
+					content: '-';	
+					color: $gray-600;
+				}
+			}
+		}
 	}
 	// 共用 end
 
@@ -190,33 +213,14 @@ main {
 			}
 		}
 
-		.price_symbol {
-			span {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-
-				&:before {
-					content: attr(data-symbol);	
-				}
-
-				&:empty {
-					&:before {
-						content: '-';	
-						color: $gray-600;
-					}
-				}
-			}
-		}
-
 		.cart_list_content {
 			
-			.web_cart {
-				.content_header {
+			.web_list_cart {
+				.web_list_content_header {
 					background-color: $gray-100;
 				}
 	
-				.content_body {
+				.web_list_content_body {
 					> .row {
 						border-bottom: solid 1px $gray-200;
 					}
@@ -352,7 +356,7 @@ main {
 					.subtotal_field {
 						font-size: 16px;
 						font-weight: 500;
-						color: $main-red;
+						color: $main-blue;
 					}
 	
 					.action_field {
@@ -368,242 +372,172 @@ main {
 				}
 			}
 
-			.mobile_cart {
-				.content_header {
+			.mobile_list_cart {
+				.mobile_list_content_header {
 					padding-bottom: .5rem;
 					border-bottom: 1px solid $gray-100;
 				}
 
-				.offer_field {
-					align-self: flex-start;
-
-					.offer_tag {
-						display: inline-block;
-						margin-top: .5rem;
-						padding: .3rem 1.5rem;
-						width: 100%;
-						font-size: 13px;
-						font-weight: 500;
-						color: $black;
-						background-color: #daf6ff;
-						text-align: center;
-						
-						&.coupon {
-							background-color: #00a2d9;
+				.mobile_list_content_body {
+					.exchange_field {
+						.gifts_tag {
+							padding: 2px 5px;
+							font-weight: 500;
+							border: 1px solid #ff9c00;
+							color: #ff9c00;
+							border-radius: 3px;
 						}
 
+						.gifts_text {
+							font-size: 18px;
+							font-weight: 500;
+							color: $main-blue;
+						}	
+
+						.point_tag {
+							padding: 2px 5px;
+							font-weight: 500;
+							border: 1px solid $main-red;
+							color: $main-red;
+							border-radius: 3px;	
+						}
 					}
 
-					.offer_item {
-						margin-top: 0.5rem;
+					.offer_field {
+						align-self: flex-start;
+	
+						.offer_tag {
+							display: inline-block;
+							margin-top: .5rem;
+							padding: .3rem 1.5rem;
+							width: 100%;
+							font-size: 13px;
+							font-weight: 500;
+							color: $black;
+							background-color: #daf6ff;
+							text-align: center;
+							
+							&.coupon_tag {
+								background-color: #9bf1c6;
+							}
+						}
+	
+						.offer_item {
+							margin-top: 0.5rem;
+							font-size: 14px;
+							font-weight: 500;
+							color: $main-red;
+						}
+					}
+	
+					.title_filed {
+	
+						h5 {
+							font-size: 16px;
+							color: $main-blue;
+						}
+					}
+	
+					.size_color_filed {
+						padding: .5rem;
 						font-size: 14px;
-						font-weight: 500;
-						color: $main-red;
-					}
-				}
-
-				.title_filed {
-
-					h5 {
-						font-size: 16px;
-						color: $main-blue;
-					}
-				}
-
-				.size_color_filed {
-					padding: .5rem;
-					font-size: 14px;
-					background-color: $gray-100;
-
-					span {
-						display: flex;	
-						justify-content: space-between;
-						color: #00a2d9;
-
-						i {
-							color: $gray-600;
+						background-color: $gray-100;
+	
+						span {
+							display: flex;	
+							justify-content: space-between;
+							color: #00a2d9;
+	
+							i {
+								color: $gray-600;
+							}
 						}
 					}
-				}
-
-				.count_field {
-					display: flex;
-					align-items: center;
-					margin: .5rem 0;
-
-					> * {
-						flex: 1;
-						border-radius: 5px;
-					}
-
-					.count_btn {
+	
+					.count_field {
 						display: flex;
 						align-items: center;
-						justify-content: center;
-						width: 30px;
-						height: 30px;
-						max-width: 30px;
-						background-color: #f5f5f5;
-					}
-
-					.count_value {
-						-webkit-appearance: none;
-						margin: 0 .5rem;
-						width: 50px;
-						max-width: 50px;
-						height: 30px;
-						font-size: 14px;
-						font-weight: 400;
-						border: 0;
-						border-radius: 0;
-						outline: none;
-						box-shadow: none;
-						text-align: center;
-						background-color: #f5f5f5;
-						cursor: text;
-					}
-				}
-
-				.original_field {
-					font-size: 13px;
-					font-weight: 500;
-					color: $gray-600;
-
-					span {
-						font-size: 16px;
-					}
-				}
-
-				.discount_field {
-					font-size: 13px;
-					font-weight: 500;
-					color: $blue-800;
-
-					span {
-						font-size: 16px;
-					}
-				}
-
-				.subtotal_field {
-					font-size: 16px;
-					font-weight: 500;
-					color: $main-red;
-				}
-
-				.action_field {
-					button {
-						margin-top: .5rem;
-						padding-right: .5rem;
-						padding-left: .5rem;
-						width: 100%;
-						font-size: 1rem;
-
-						@include media-breakpoint-down(lg) {
-							padding-left: .4rem;
-							padding-right: .4rem;
-							font-size: 13px;
+						margin: .5rem 0;
+	
+						> * {
+							flex: 1;
+							border-radius: 5px;
 						}
-
+	
+						.count_btn {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							width: 30px;
+							height: 30px;
+							max-width: 30px;
+							background-color: #f5f5f5;
+						}
+	
+						.count_value {
+							-webkit-appearance: none;
+							margin: 0 .5rem;
+							width: 50px;
+							max-width: 50px;
+							height: 30px;
+							font-size: 14px;
+							font-weight: 400;
+							border: 0;
+							border-radius: 0;
+							outline: none;
+							box-shadow: none;
+							text-align: center;
+							background-color: #f5f5f5;
+							cursor: text;
+						}
 					}
-				}
-			}
-		}
-
-		.cart_list_offer {
-			padding: 1rem 0;
-			
-			&.used_offer {
-				border-bottom: 1px solid $gray-200;
-			}
-
-			&.other_offer {
-				padding-bottom: 0;
-
-				.offer_tag {
-					background-color: $gray-100;
-				}
-
-				.offer_item {
-					@include media-breakpoint-down(lg) {
-						flex-direction: column;
-						align-items: flex-start;
+	
+					.original_field {
+						display: flex;
+						align-items: center;
+						font-size: 13px;
+						font-weight: 500;
+						color: $gray-600;
+	
+						span {
+							font-size: 16px;
+							color: $main-blue;
+						}
 					}
-
-					span {
-						@include media-breakpoint-down(lg) {
-							margin-left: 0;
+	
+					.discount_field {
+						display: flex;
+						align-items: center;
+						font-size: 13px;
+						font-weight: 500;
+						color: $gray-600;
+	
+						span {
+							display: flex;
+							align-items: center;
+							font-size: 16px;
+							color: $main-blue;
+						}
+					}
+	
+					.action_field {
+						button {
+							margin-top: .5rem;
+							padding-right: .5rem;
+							padding-left: .5rem;
+							width: 100%;
+							font-size: 1rem;
+	
+							@include media-breakpoint-down(lg) {
+								padding-left: .4rem;
+								padding-right: .4rem;
+								font-size: 13px;
+							}
+	
 						}
 					}
 				}
-			}
 
-			.offer_title {
-				position: relative;
-				display: flex;
-				align-items: center;
-				font-size: 20px;
-				font-weight: 500;
-				color: $main-blue;
-
-				&:before {
-					content: "";
-					display: inline-block;
-					margin-right: .5rem;
-					width: 10px;
-					height: 30px;
-					background-color: $main-red;
-				}	
-			}
-
-			.offer_tag {
-				align-self: flex-start;
-				display: inline-block;
-				margin-right: 1rem;
-				padding: .3rem 1rem;
-				width: 100px;
-				font-size: 13px;
-				font-weight: 500;
-				color: $black;
-				background-color: #daf6ff;
-				text-align: center;
-
-				@include media-breakpoint-down(lg) {
-					margin-right: .5rem;
-					padding: .3rem .5rem;
-					width: 90px;
-				}
-
-				&.coupon_tag {
-					background-color: #9bfac6;
-				}
-			}
-
-			.offer_item {
-				flex: 1;
-				display: flex;
-				align-items: center;
-				font-size: 16px;
-				font-weight: 500;
-				color: $gray-800;
-
-				span {
-					margin-left: 1rem;	
-					font-weight: normal;
-					color: $main-red;
-				}
-			}
-
-			.offer_price {
-				font-size: 16px;
-				font-weight: 500;
-
-				span {
-					color: $main-red;
-
-					&:empty {
-						color: $main-blue;
-					}
-				}
 			}
 		}
 	}
@@ -629,6 +563,17 @@ main {
 		.used_offer {
 			padding-bottom: 1rem;
 			border-bottom: 1px solid $gray-200;
+
+			.offer_action {
+
+				.btnSF {
+					&.fs-7 {
+						@include media-breakpoint-down(lg) {
+							font-size: 13px !important;
+						}
+					}
+				}
+			}
 		}
 
 		.other_offer {
@@ -731,10 +676,47 @@ main {
 
 		.coupon {
 			margin-left: 18px;
+
+			@include media-breakpoint-down(lg) {
+				margin: .5rem 0 0 0;
+			}
+
+			.col-4 {
+				@include media-breakpoint-down(lg) {
+					// text-align: right;
+				}
+
+				.btnSF {
+					&.fs-6 {
+						@include media-breakpoint-down(lg) {
+							font-size: 16px !important;
+						}	
+					}
+					
+				}
+			}
 		}
 
 		.discount-code {
 			margin-left: 18px;
+			@include media-breakpoint-down(lg) {
+				margin: .5rem 0 0 0;
+			}
+
+			.col-4 {
+				@include media-breakpoint-down(lg) {
+					// text-align: right;
+				}
+
+				.btnSF {
+					&.fs-6 {
+						@include media-breakpoint-down(lg) {
+							font-size: 16px !important;
+						}	
+					}
+					
+				}
+			}
 		}
 	}
 
@@ -746,10 +728,6 @@ main {
 		&:has(.content_body:empty) {
 			display: none;
 		}
-
-		// &:empty {
-		// 	padding: 0;
-		// }
 
 		.price_symbol {
 			span {
@@ -765,9 +743,8 @@ main {
 			}
 		}
 
-		.cart_list_content {
-			
-			.web_cart {
+		.cart_add_content {
+			.web_add_cart {
 				.content_header {
 					background-color: $gray-100;
 
@@ -851,10 +828,6 @@ main {
 							@include media-breakpoint-down(lg) {
 								width: 90px;
 							}
-
-							&.coupon_tag {
-								background-color: #9bf1c6;
-							}
 						}
 	
 						.offer_item {
@@ -914,7 +887,7 @@ main {
 						color: $blue-800;
 					}
 	
-					subtotal_field {
+					.subtotal_field {
 						font-size: 16px;
 						font-weight: 500;
 						color: $main-blue;
@@ -933,7 +906,7 @@ main {
 				}
 			}
 
-			.mobile_cart {
+			.mobile_add_cart {
 				.content_header {
 					padding-bottom: .5rem;
 					border-bottom: 1px solid $gray-100;
@@ -996,63 +969,36 @@ main {
 					align-items: center;
 					margin: .5rem 0;
 
-					> * {
-						flex: 1;
-						border-radius: 5px;
-					}
-
-					.count_btn {
+					p {
 						display: flex;
 						align-items: center;
-						justify-content: center;
-						width: 30px;
-						height: 30px;
-						max-width: 30px;
-						background-color: #f5f5f5;
-					}
-
-					.count_value {
-						-webkit-appearance: none;
-						margin: 0 .5rem;
-						width: 50px;
-						max-width: 50px;
-						height: 30px;
-						font-size: 14px;
-						font-weight: 400;
-						border: 0;
-						border-radius: 0;
-						outline: none;
-						box-shadow: none;
-						text-align: center;
-						background-color: #f5f5f5;
-						cursor: text;
 					}
 				}
 
 				.original_field {
+					display: flex;
+					align-items: center;
 					font-size: 13px;
 					font-weight: 500;
 					color: $gray-600;
 
 					span {
 						font-size: 16px;
+						color: $main-blue;
 					}
 				}
 
 				.discount_field {
+					display: flex;
+					align-items: center;
 					font-size: 13px;
 					font-weight: 500;
-					color: $blue-800;
+					color: $gray-600;
 
 					span {
 						font-size: 16px;
+						color: $main-blue;
 					}
-				}
-
-				subtotal_field {
-					font-size: 16px;
-					font-weight: 500;
-					color: $main-blue;
 				}
 
 				.action_field {
@@ -1073,104 +1019,6 @@ main {
 				}
 			}
 		}
-
-		.cart_list_offer {
-			padding: 1rem 0;
-			
-			&.used_offer {
-				border-bottom: 1px solid $gray-200;
-			}
-
-			&.other_offer {
-				padding-bottom: 0;
-
-				.offer_tag {
-					background-color: $gray-100;
-				}
-
-				.offer_item {
-					@include media-breakpoint-down(lg) {
-						flex-direction: column;
-						align-items: flex-start;
-					}
-
-					span {
-						@include media-breakpoint-down(lg) {
-							margin-left: 0;
-						}
-					}
-				}
-			}
-
-			.offer_title {
-				position: relative;
-				display: flex;
-				align-items: center;
-				font-size: 20px;
-				font-weight: 500;
-				color: $main-blue;
-
-				&:before {
-					content: "";
-					display: inline-block;
-					margin-right: .5rem;
-					width: 10px;
-					height: 30px;
-					background-color: $main-red;
-				}	
-			}
-
-			.offer_tag {
-				align-self: flex-start;
-				display: inline-block;
-				margin-right: 1rem;
-				padding: .3rem 1rem;
-				width: 100px;
-				font-size: 13px;
-				font-weight: 500;
-				color: $black;
-				background-color: #daf6ff;
-				text-align: center;
-
-				@include media-breakpoint-down(lg) {
-					margin-right: .5rem;
-					padding: .3rem .5rem;
-					width: 90px;
-				}
-
-				&.coupon_tag {
-					background-color: #9bfac6;
-				}
-			}
-
-			.offer_item {
-				flex: 1;
-				display: flex;
-				align-items: center;
-				font-size: 16px;
-				font-weight: 500;
-				color: $gray-800;
-
-				span {
-					margin-left: 1rem;	
-					font-weight: normal;
-					color: $main-red;
-				}
-			}
-
-			.offer_price {
-				font-size: 16px;
-				font-weight: 500;
-
-				span {
-					color: $main-red;
-
-					&:empty {
-						color: $main-blue;
-					}
-				}
-			}
-		}
 	}
 
 	.shopping_cart_gifts {
@@ -1184,6 +1032,10 @@ main {
 						font-weight: 500;
 						color: $white;
 						background-color: #ff9c00;
+
+						@include media-breakpoint-down(lg) {
+							font-size: 18px;
+						}
 
 						&:after {
 							color: $white;
@@ -1317,6 +1169,10 @@ main {
 						font-weight: 500;
 						color: $white;
 						background-color: $main-red;
+
+						@include media-breakpoint-down(lg) {
+							font-size: 18px;
+						}
 
 						&:after {
 							color: $white;
@@ -1702,6 +1558,8 @@ main {
 		}
 	}
 
+
+
 	// step1 - 2共用
 	.shopping_cart_total {
 		margin-top: 1rem;
@@ -1778,9 +1636,11 @@ main {
 			@include media-breakpoint-down(lg) {
 				margin-top: 1rem;
 			}
+
 			button {
 				display: flex;
 				align-items: center;
+				justify-content: center;
 				width: 100%;
 				color: white;
 				background-color: #ff9c00;
@@ -2557,6 +2417,21 @@ footer {
 
 	.modal-footer {
 		border: 0;
+	}
+}
+
+#offcanvasChangeBottom {
+
+	.offcanvas-header {
+		gap: 10px;
+
+		.cart-info {
+			h5 {
+				font-size: 18px;
+				font-weight: 500;
+				color: $main-blue;
+			}
+		}
 	}
 }
 
