@@ -4,6 +4,7 @@
 @import "components/input";
 @import "components/link";
 @import "components/btn";
+@import "public";
 @import "layout/header";
 @import "layout/footer";
 @import "components/cart";
@@ -249,7 +250,7 @@ main {
 						}
 					}
 
-					.info_filed {
+					.info_field {
 						> .row {
 							@include media-breakpoint-down(xl) {
 								align-items: center;
@@ -258,6 +259,28 @@ main {
 	
 						h5 {
 							font-size: 16px;
+						}
+
+						.img_field {
+							position: relative;
+					
+							&:hover {
+								img {
+									&:nth-of-type(2) {
+										opacity: 1;
+									}	
+								}
+							}
+				
+							img {
+								border: 1px solid #ebeae6;
+								&:nth-of-type(2) {
+									position: absolute;
+									top: 0;
+									left: 0;
+									opacity: 0;
+								}
+							}
 						}
 	
 						.change_btn {
@@ -379,6 +402,10 @@ main {
 				}
 
 				.mobile_list_content_body {
+					.mobile-cart-list-item {
+						border: 1px solid $gray-100;
+					}
+
 					.exchange_field {
 						.gifts_tag {
 							padding: 2px 5px;
@@ -400,6 +427,28 @@ main {
 							border: 1px solid $main-red;
 							color: $main-red;
 							border-radius: 3px;	
+						}
+					}
+
+					.img_field {
+						position: relative;
+				
+						&:hover {
+							img {
+								&:nth-of-type(2) {
+									opacity: 1;
+								}	
+							}
+						}
+			
+						img {
+							border: 1px solid #ebeae6;
+							&:nth-of-type(2) {
+								position: absolute;
+								top: 0;
+								left: 0;
+								opacity: 0;
+							}
 						}
 					}
 
@@ -430,7 +479,7 @@ main {
 						}
 					}
 	
-					.title_filed {
+					.title_field {
 	
 						h5 {
 							font-size: 16px;
@@ -438,7 +487,7 @@ main {
 						}
 					}
 	
-					.size_color_filed {
+					.size_color_field {
 						padding: .5rem;
 						font-size: 14px;
 						background-color: $gray-100;
@@ -787,11 +836,15 @@ main {
 						}
 					}
 
-					.info_filed {
+					.info_field {
 						> .row {
 							@include media-breakpoint-down(xl) {
 								align-items: center;
 							}
+						}
+
+						.img-field {
+
 						}
 	
 						h5 {
@@ -940,7 +993,7 @@ main {
 					}
 				}
 
-				.title_filed {
+				.title_field {
 
 					h5 {
 						font-size: 16px;
@@ -948,7 +1001,7 @@ main {
 					}
 				}
 
-				.size_color_filed {
+				.size_color_field {
 					padding: .5rem;
 					font-size: 14px;
 					background-color: $gray-100;
@@ -1558,6 +1611,20 @@ main {
 		}
 	}
 
+	.cart-offcanvas {
+		.offcanvas-body {
+			.offcanvas_button {
+				button {
+					&.mobile_action_cancel {
+						background-color: transparent;
+						border: 1px solid $other-001;
+						color: $other-001;
+					}
+				}
+			}
+		}
+		
+	}
 
 
 	// step1 - 2共用
@@ -2022,7 +2089,7 @@ main {
 						border-bottom: solid 1px $gray-200;
 					}
 	
-					.info_filed {
+					.info_field {
 						> .row {
 							@include media-breakpoint-down(xl) {
 								align-items: center;
@@ -2154,7 +2221,7 @@ main {
 					}
 				}
 
-				.title_filed {
+				.title_field {
 					h5 {
 						font-size: 16px;
 						color: $main-blue;

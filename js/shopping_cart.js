@@ -1,5 +1,42 @@
 $(function() {
 
+	// web 點擊全選
+	$('#check-all-cart').on('change', function() {
+		$('.web_list_content_body').find('input[type=checkbox]').click();
+
+		if ($(this).is(":checked"))  {
+			console.log('click');
+		} else {
+			console.log('not click');
+		}	
+	})
+
+	// mobile 點擊全選
+	$('#mobile-check-all-cart').on('change', function() {
+		$('.mobile_list_content_body').find('input[type=checkbox]').click();
+
+		if ($(this).is(":checked"))  {
+			console.log('click')
+		} else {
+			console.log('not click');
+		}	
+	})
+
+	// web & mobile 清單列表控制數量 可刪除
+	$('.count_btn').on('click', function (){
+		let countInput = $(this).parent().find('.count_value') 
+		let countValue = parseInt(countInput.val());
+		
+		if($(this).hasClass('increase-count')) {
+			countInput.val(++countValue);
+			
+		} else {
+			if(countValue - 1) {
+				countInput.val(--countValue);
+			}
+		}
+	})
+
 	// step 1 start
 	// 輪播因爲 step1-3 的 js 都寫一起需要判斷該頁是否有輪播以防產生 bug ，可分開
 	// 好像可以等 render 後再執行 new Swiper();
@@ -74,40 +111,27 @@ $(function() {
 		});
 	}
 
-	// 控制數量 可刪除
-	$('.count_btn').on('click', function (){
-		let countInput = $(this).parent().find('.count_value') 
-		let countValue = parseInt(countInput.val());
-		
-		if($(this).hasClass('increase-count')) {
-			countInput.val(++countValue);
-			
-		} else {
-			if(countValue - 1) {
-				countInput.val(--countValue);
-			}
-		}
-	})
-
 	// 變更尺寸顏色 modal 
 	$('#changeModal').on('show.bs.modal', function(event) {
 		let cartListItem = $(event.relatedTarget).parents('.cart-list-item');
-		let thisId = cartListItem.find('input[name="pids[]"]').val();
-		let thisColor = cartListItem.find('input[name="pcolors[]"]').val(); 
-		let thisSize = cartListItem.find('input[name="psizes[]"]').val();  
 		
-		// 切換尺寸顏色 modal 
+		// 點擊顏色
 		$('.cart-color-item').on('click', function() {
 			$(this).addClass('active').siblings().removeClass('active');
-
-			thisColor.val()
+            $(this).parents('.cart-modal').find(".cart_info img").first().attr("src", $(this).find('img').attr('data-img'));
 		});
 
+		// 點擊尺寸
 		$('.cart-size-item').on('click', function() {
 			if(!$(this).hasClass('sold_out')) {
 				$(this).addClass('active').siblings().removeClass('active');	
 			}
 		})
+
+		// 確認後更改列表頁圖片
+		$('.change-modal-btn').on('click', function() {
+			cartListItem.find('.img_field img').first().attr("src", $(this).find('img').attr('data-img'));
+		});
 	})	
 
 	// 點擊也許你也喜歡 顏色時，變更圖片
@@ -118,24 +142,45 @@ $(function() {
         $(this).parent().next().find('p').text($(this).attr('data-color-name'));  
 	})	
 
-	// 點擊全選
-	$('#check-all-cart').on('change', function() {
-		if ($(this).is(":checked")) 
-		{
-			console.log(1)
-		} else {
-			console.log(2);
-		}	
+	// 贈品變更顏色圖片要跟著換
+	$('.shopping_cart_gifts').find('.form-select').on('change', function(){
+		let img = $(this).find('option:selected').attr('data-img');
+
+		if(img) {
+			$(this).parents('.card').find('.card-img .figure-img').attr('src', img);
+		}
 	})
 
-	$('#mobile-check-all-cart').on('change', function() {
-		if ($(this).is(":checked")) 
-		{
-			console.log(1)
-		} else {
-			console.log(2);
-		}	
-	})
+	// 手機版 cart offcanvas 開啟時
+    $('#offcanvasChangeBottom').on('show.bs.offcanvas', function(event) {
+        
+        let content = $(event.relatedTarget).parents('.row') ;
+        
+        // offcanvas 開啟時點擊顏色
+        $('.cart-offcanvas').find('.color-item').on('click', function() {
+            // 連動列表的顏色及圖片
+            // offcanvas 點擊顏色時也要切換圖片
+			content.find('.img_field img').first().attr("src", $(this).attr('data-img'));
+			content.find('.img_field img').last().attr("src", $(this).attr('data-img-hover'));
+            $(this).parents('.cart-offcanvas').find(".offcanvas_picture img").first().attr("src", $(this).attr('data-img'));
+            $(this).parents('.cart-offcanvas').find(".offcanvas_picture img").last().attr("src", $(this).attr('data-img-hover'));
+
+            // 選擇的顏色加上 active 並刪除之前的選擇
+            $(this).addClass('active').siblings().removeClass('active'); 
+        })
+
+        // offcanvas 開啟時點擊尺寸
+        $('.cart-offcanvas').find('.size-item').on('click', function() {            
+            if(!$(this).hasClass('sold_out')) {
+                $(this).addClass('active').siblings().removeClass('active'); 
+            }
+        })
+    })
+
+    // 手機版 cart offcanvas 關閉時
+    $('#offcanvasCartBottom').on('hidden.bs.offcanvas', function(event) {
+        
+    })
 
 	// step 1 end
 
