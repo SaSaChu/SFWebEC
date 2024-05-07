@@ -78,6 +78,7 @@
 .sideMenu {
 	// position: relative;
 	transition: all .1s ease-in-out;
+	height: 100%;
 
 	@include media-breakpoint-down(lg) {
 		position: sticky;

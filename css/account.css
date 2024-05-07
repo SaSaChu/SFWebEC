@@ -3508,7 +3508,7 @@ footer .footer-four-li > p:last-child a:after { display: none; }
 .account-pointsBoxs { display: flex; align-items: center; width: 100%; background-color: #044281; padding: .5rem 1rem; border-radius: 0.25rem; margin-bottom: 1rem; color: #fff; font-size: 1.25rem; }
 @media (max-width: 767.98px) { .account-pointsBoxs { display: none; } }
 
-.sideMenu { transition: all .1s ease-in-out; }
+.sideMenu { transition: all .1s ease-in-out; height: 100%; }
 @media (max-width: 991.98px) { .sideMenu { position: sticky; top: 112px; padding: 0; z-index: 1051; } }
 .sideMenu.hide { opacity: 0; width: 0; padding: 0; transition: width .1s ease-in-out; }
 .sideMenu .sticky-top { top: 20px; }
