@@ -97,7 +97,10 @@ $(function() {
 	// package-wrapper
 	// data-img 放圖片連結 select oncahnge 時 透過 js 變更 figure-img src 內容
 	$('.package-wrapper').find('.form-select').on('change', function(){
+		
 		let img = $(this).find('option:selected').attr('data-img');
-		$(this).parents('.card').find('.card-img .figure-img').attr('src', img);
+		if (img) {
+			$(this).parents('.card').find('.card-img .figure-img').attr('src', img);
+		}
 	})
 })
