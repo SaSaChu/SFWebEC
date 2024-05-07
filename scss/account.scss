@@ -7,6 +7,7 @@
 @import "public";
 @import "layout/header";
 @import "layout/footer";
+@import "components/cart";
 
 
 // 0321 .title-boxs, title-bread 從 header.scss 搬過來的(header.scss 裡的還保留)
@@ -487,7 +488,6 @@
 	}
 }
 
-
 .account-tableBoxs {
 	display: flex;
 	width: 100%;
@@ -723,7 +723,13 @@
 	}
 }
 
-
+#product-lists {
+	.products-wrapper {
+		.product-item {
+			height: 100%;
+		}
+	}
+}
 
 
 
