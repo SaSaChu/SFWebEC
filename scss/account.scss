@@ -4,6 +4,7 @@
 @import "components/input";
 @import "components/link";
 @import "components/btn";
+@import "public";
 @import "layout/header";
 @import "layout/footer";
 
@@ -373,7 +374,7 @@
 				color: $gray-600;
 
 				@include media-breakpoint-down(lg) {
-					font-size: 18px;
+					font-size: 16px;
 				}
 			}
 			
