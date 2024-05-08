@@ -732,6 +732,53 @@
 	}
 }
 
+.store_info {
+	// .modal-body {
+	span {
+		&.modal_info {
+			position: relative;
+			padding-right: 1rem;
+			display: inline-block;
+			width: 90px;
+			height: 25px;
+			color: $blue-800;
+			font-weight: 600;
+			text-align: justify;
+			text-align-last: justify;
+			
+
+			&:after {
+				content: '：';
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+		}
+
+		&.store_tag {
+			display: inline-block;
+			width: 70px;
+			height: 35px;
+			text-align: center;
+		}
+
+		&.day_tag {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 60px;
+			height: 35px;
+			color: $white;
+
+			& + span {
+				padding-left: .5rem;
+				color: $gray-800;
+			}
+		}
+	}
+	// }
+}
+
 
 
 
