@@ -7,22 +7,27 @@
 
 	<title>110_購物說明-常見問題</title>
 
+	<!-- 共用 js -->
 	<script language="javascript" type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
 	<script language="javascript" type="text/javascript" src="js/public.js"></script>
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<!-- 共用 css -->
 	<link rel="stylesheet" type="text/css" href="css/icon.css">
-	<link rel="stylesheet" type="text/css" href="css/public.css">
-	
+
+	<!-- 共用外部引入檔案 -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
-	<script src="https://kit.fontawesome.com/25b2931f6f.js" crossorigin="anonymous"></script>
+	<!-- 共用外部 js 檔案 在頁面最下方 -->
 
 	<!-- 自訂 css -->
 	<link rel="stylesheet" type="text/css" href="css/customer.css">
+
+	<!-- 自訂 js  -->
+	<script src="js/customer.js"></script>
 
 </head>
 
@@ -58,15 +63,15 @@
 				<nav class="navbar navbar-expand-lg">
 					<div class="container-fluid p-0">
 						<div class="col-11 mx-auto">
-							<!-- Mobile Menu -->
+							<!-- Mobile Navbar -->
 							<div class="mobile_menu d-flex d-lg-none justify-content-between align-items-center">
 								<div class="col"> 
-									<!-- Mobile Toggler Bar -->
+									<!-- 漢堡按鈕 -->
 									<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarMobileMenu" aria-controls="offcanvasNavbarMobileMenu" aria-label="mobile-menu-btn">
 										<i class="icon icon-icon-menu"></i>
 									</button>
 
-									<!-- Mobile Search  Search Input 在底部 </header> 前面-->
+									<!-- Mobile Search 按鈕，Search Input 在底部 </header> 前面-->
 									<button class="navbar-toggler mobile_serach" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMobileSearch"
 										aria-controls="collapseMobileSearch" aria-expanded="false" aria-label="mobile search">
 										<i class="icon icon-icon-search"></i>
@@ -80,69 +85,653 @@
 											</h2>
 											<button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 										</div>
-										<div class="offcanvas-body">
+										<div class="offcanvas-body">			
 											<ul class="navbar-nav justify-content-end flex-grow-1">
+												<!-- 語言 一層範例-->
+												<!-- @foreach start -->
 												<li class="nav-item">
-													<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="firstDropdown">
-														三花品牌誌 <i class="fa-solid fa-angle-down"></i>
+													<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarDropdown">
+														<span class="d-flex align-items-center"><i class="icon-icon-lang me-2 text-blue002 fs-5"></i> 繁體中文 </span>
+														<i class="fa-solid fa-angle-down"></i>
 													</a>
-													<ul class="dropdown-menu level_one border-0 ps-2" aria-labelledby="offcanvasNavbarDropdown">
-														<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
-														<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
-														<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+
+													<!-- 第一層選單 -->
+													<ul class="dropdown-menu level_one border-0" aria-labelledby="offcanvasNavbarDropdown">
+														<!-- 第一層選單項目 吐網址-->
+														<li><a class="dropdown-item" href="#">語言1</a></li>
+														<!-- 第一層選單項目 吐網址-->
+														<li><a class="dropdown-item" href="#">語言2</a></li>
+														<!-- 第一層選單項目 吐網址 -->
+														<li><a class="dropdown-item" href="#">語言3</a></li>
 													</ul>
 												</li>
+												<!-- @foreach end -->
+
+												<!-- 線上購物 三層範例 -->		
 												<li class="nav-item">
-													<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="secondDropdown">
-														最新消息 <i class="fa-solid fa-angle-down"></i>
-													</a>
-													<ul class="dropdown-menu level_one border-0 ps-2" aria-labelledby="offcanvasNavbarDropdown2">
-														<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
-														<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
-														<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
-													</ul>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="thirdDropdown">
-														店舖資訊 <i class="fa-solid fa-angle-down"></i>
-													</a>
-													<ul class="dropdown-menu level_one border-0 ps-2" aria-labelledby="offcanvasNavbarDropdown3">
-														<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
-														<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
-														<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
-													</ul>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown4" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="fourthDropdown">
+													<a class="nav-link" href="#" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarDropdown">
 														線上購物 <i class="fa-solid fa-angle-down"></i>
 													</a>
-													<ul class="dropdown-menu level_one border-0 ps-2" aria-labelledby="offcanvasNavbarDropdown4">
+
+													<!-- 第一層選單 -->	
+													<ul class="dropdown-menu level_one border-0" aria-labelledby="offcanvasNavbarDropdown">
+														<!-- 第一層選單項目 -->
 														<li class="dropdown">
-															<a class="nav-link" href="#" id="offcanvasNavbarSubDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-autoClose="false" aria-label="subDropdownFirst">
-																優惠區1 <i class="fa-solid fa-angle-down"></i>
+															<a class="nav-link" href="#" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarsecondDropdown">
+																優惠區 <i class="fa-solid fa-angle-down"></i>
 															</a>
-															<ul class="dropdown-menu level_two border-0 ps-2" aria-labelledby="offcanvasNavbarSubDropdown1">
-																<li><a class="dropdown-item px-0" href="#">菜單1</a></li>
-																<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
-																<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+
+															<!-- 第二層選單 -->	
+															<ul class="dropdown-menu level_two border-0 px-2" aria-labelledby="offcanvasNavbarsecondDropdown">
+																<!-- 第二層選單項目 -->	
+																<li class="dropdown">	
+																	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarThirdDropdown">
+																		優惠 1 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<!-- 第三層選單 -->	
+																	<ul class="dropdown-menu level_three border-0 px-2" aria-labelledby="offcanvasNavbarThirdDropdown">
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單1</a></li>
+																		<!-- 第三層選單項目 吐網址-->		
+																		<li><a class="dropdown-item" href="#">菜單2</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<!-- 第二層選單項目 -->	
+																<li class="dropdown">
+																	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarThirdDropdown">
+																		優惠 2 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<!-- 第三層選單 -->	
+																	<ul class="dropdown-menu level_three border-0 px-2" aria-labelledby="offcanvasNavbarThirdDropdown">
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單1</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單2</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																
+																<!-- 分類圖片 -->
+																<li>
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/?text=img1" alt="...">
+																				</picture>
+																				
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/?text=img1" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																	</div>
+																</li>
 															</ul>
 														</li>
-														<li><a class="dropdown-item px-0" href="#">菜單2</a></li>
-														<li><a class="dropdown-item px-0" href="#">菜單3</a></li>
+														<!-- 第一層選單項目 -->
+														<li class="dropdown">
+															<a class="nav-link" href="#" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarsecondDropdown">
+																內褲 <i class="fa-solid fa-angle-down"></i>
+															</a>
+
+															<!-- 第二層選單 -->	
+															<ul class="dropdown-menu level_two border-0 px-2" aria-labelledby="offcanvasNavbarsecondDropdown">
+																<!-- 第二層選單項目 -->	
+																<li class="dropdown">	
+																	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarThirdDropdown">
+																		內褲 1 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<!-- 第三層選單 -->	
+																	<ul class="dropdown-menu level_three border-0 px-2" aria-labelledby="offcanvasNavbarThirdDropdown">
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單1</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單2</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<!-- 第二層選單項目 -->	
+																<li class="dropdown">
+																	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarThirdDropdown">
+																		內褲 2 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<!-- 第三層選單 -->	
+																	<ul class="dropdown-menu level_three border-0 px-2" aria-labelledby="offcanvasNavbarThirdDropdown">
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單1</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單2</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																
+																<!-- 分類圖片 -->
+																<li>
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/?text=img2" alt="...">
+																				</picture>
+																				
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/?text=img2" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</li>
+														<!-- 第一層選單項目 -->
+														<li class="dropdown">
+															<a class="nav-link" href="#" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarsecondDropdown">
+																襪子 <i class="fa-solid fa-angle-down"></i>
+															</a>
+
+															<!-- 第二層選單 -->	
+															<ul class="dropdown-menu level_two border-0 px-2" aria-labelledby="offcanvasNavbarsecondDropdown">
+																<!-- 第二層選單項目 -->	
+																<li class="dropdown">	
+																	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarThirdDropdown">
+																		襪子 1 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<!-- 第三層選單 -->	
+																	<ul class="dropdown-menu level_three border-0 px-2" aria-labelledby="offcanvasNavbarThirdDropdown">
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單1</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單2</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<!-- 第二層選單項目 -->	
+																<li class="dropdown">
+																	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarThirdDropdown">
+																		襪子 2 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<!-- 第三層選單 -->	
+																	<ul class="dropdown-menu level_three border-0 px-2" aria-labelledby="offcanvasNavbarThirdDropdown">
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單1</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單2</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																
+																<!-- 分類圖片 -->
+																<li>
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/?text=img3" alt="...">
+																				</picture>
+																				
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/?text=img3" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</li>
 													</ul>	
+												</li>
+												<!-- 男館 三層範例 -->
+												<li class="nav-item">
+													<a class="nav-link" href="#" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarDropdown">
+														男館 <i class="fa-solid fa-angle-down"></i>
+													</a>
+
+													<!-- 第一層選單 -->	
+													<ul class="dropdown-menu level_one border-0" aria-labelledby="offcanvasNavbarDropdown">
+														<!-- 第一層選單項目 -->
+														<li class="dropdown">
+															<a class="nav-link" href="#" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarsecondDropdown">
+																優惠區 <i class="fa-solid fa-angle-down"></i>
+															</a>
+
+															<!-- 第二層選單 -->	
+															<ul class="dropdown-menu level_two border-0 px-2" aria-labelledby="offcanvasNavbarsecondDropdown">
+																<!-- 第二層選單項目 -->	
+																<li class="dropdown">	
+																	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarThirdDropdown">
+																		優惠 1 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<!-- 第三層選單 -->	
+																	<ul class="dropdown-menu level_three border-0 px-2" aria-labelledby="offcanvasNavbarThirdDropdown">
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單1</a></li>
+																		<!-- 第三層選單項目 吐網址-->		
+																		<li><a class="dropdown-item" href="#">菜單2</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<!-- 第二層選單項目 -->	
+																<li class="dropdown">
+																	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarThirdDropdown">
+																		優惠 2 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<!-- 第三層選單 -->	
+																	<ul class="dropdown-menu level_three border-0 px-2" aria-labelledby="offcanvasNavbarThirdDropdown">
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單1</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單2</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																
+																<!-- 分類圖片 -->
+																<li>
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/?text=img1" alt="...">
+																				</picture>
+																				
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/?text=img1" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</li>
+														<!-- 第一層選單項目 -->
+														<li class="dropdown">
+															<a class="nav-link" href="#" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarsecondDropdown">
+																內褲 <i class="fa-solid fa-angle-down"></i>
+															</a>
+
+															<!-- 第二層選單 -->	
+															<ul class="dropdown-menu level_two border-0 px-2" aria-labelledby="offcanvasNavbarsecondDropdown">
+																<!-- 第二層選單項目 -->	
+																<li class="dropdown">	
+																	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarThirdDropdown">
+																		內褲 1 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<!-- 第三層選單 -->	
+																	<ul class="dropdown-menu level_three border-0 px-2" aria-labelledby="offcanvasNavbarThirdDropdown">
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單1</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單2</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<!-- 第二層選單項目 -->	
+																<li class="dropdown">
+																	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarThirdDropdown">
+																		內褲 2 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<!-- 第三層選單 -->	
+																	<ul class="dropdown-menu level_three border-0 px-2" aria-labelledby="offcanvasNavbarThirdDropdown">
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單1</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單2</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																
+																<!-- 分類圖片 -->
+																<li>
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/?text=img2" alt="...">
+																				</picture>
+																				
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/?text=img2" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</li>
+														<!-- 第一層選單項目 -->
+														<li class="dropdown">
+															<a class="nav-link" href="#" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarsecondDropdown">
+																襪子 <i class="fa-solid fa-angle-down"></i>
+															</a>
+
+															<!-- 第二層選單 -->	
+															<ul class="dropdown-menu level_two border-0 px-2" aria-labelledby="offcanvasNavbarsecondDropdown">
+																<!-- 第二層選單項目 -->	
+																<li class="dropdown">	
+																	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarThirdDropdown">
+																		襪子 1 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<!-- 第三層選單 -->	
+																	<ul class="dropdown-menu level_three border-0 px-2" aria-labelledby="offcanvasNavbarThirdDropdown">
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單1</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單2</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<!-- 第二層選單項目 -->	
+																<li class="dropdown">
+																	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarThirdDropdown">
+																		襪子 2 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<!-- 第三層選單 -->	
+																	<ul class="dropdown-menu level_three border-0 px-2" aria-labelledby="offcanvasNavbarThirdDropdown">
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單1</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單2</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																
+																<!-- 分類圖片 -->
+																<li>
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/?text=img3" alt="...">
+																				</picture>
+																				
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/?text=img3" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</li>
+													</ul>	
+												</li>	
+												<!-- 女館 三層範例 -->
+												<li class="nav-item">
+													<a class="nav-link" href="#" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarDropdown">
+														女館 <i class="fa-solid fa-angle-down"></i>
+													</a>
+
+													<!-- 第一層選單 -->	
+													<ul class="dropdown-menu level_one border-0" aria-labelledby="offcanvasNavbarDropdown">
+														<!-- 第一層選單項目 -->
+														<li class="dropdown">
+															<a class="nav-link" href="#" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarsecondDropdown">
+																優惠區 <i class="fa-solid fa-angle-down"></i>
+															</a>
+
+															<!-- 第二層選單 -->	
+															<ul class="dropdown-menu level_two border-0 px-2" aria-labelledby="offcanvasNavbarsecondDropdown">
+																<!-- 第二層選單項目 -->	
+																<li class="dropdown">	
+																	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarThirdDropdown">
+																		優惠 1 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<!-- 第三層選單 -->	
+																	<ul class="dropdown-menu level_three border-0 px-2" aria-labelledby="offcanvasNavbarThirdDropdown">
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單1</a></li>
+																		<!-- 第三層選單項目 吐網址-->		
+																		<li><a class="dropdown-item" href="#">菜單2</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<!-- 第二層選單項目 -->	
+																<li class="dropdown">
+																	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarThirdDropdown">
+																		優惠 2 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<!-- 第三層選單 -->	
+																	<ul class="dropdown-menu level_three border-0 px-2" aria-labelledby="offcanvasNavbarThirdDropdown">
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單1</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單2</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																
+																<!-- 分類圖片 -->
+																<li>
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/?text=img1" alt="...">
+																				</picture>
+																				
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/?text=img1" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</li>
+														<!-- 第一層選單項目 -->
+														<li class="dropdown">
+															<a class="nav-link" href="#" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarsecondDropdown">
+																內褲 <i class="fa-solid fa-angle-down"></i>
+															</a>
+
+															<!-- 第二層選單 -->	
+															<ul class="dropdown-menu level_two border-0 px-2" aria-labelledby="offcanvasNavbarsecondDropdown">
+																<!-- 第二層選單項目 -->	
+																<li class="dropdown">	
+																	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarThirdDropdown">
+																		內褲 1 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<!-- 第三層選單 -->	
+																	<ul class="dropdown-menu level_three border-0 px-2" aria-labelledby="offcanvasNavbarThirdDropdown">
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單1</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單2</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<!-- 第二層選單項目 -->	
+																<li class="dropdown">
+																	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarThirdDropdown">
+																		內褲 2 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<!-- 第三層選單 -->	
+																	<ul class="dropdown-menu level_three border-0 px-2" aria-labelledby="offcanvasNavbarThirdDropdown">
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單1</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單2</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																
+																<!-- 分類圖片 -->
+																<li>
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/?text=img2" alt="...">
+																				</picture>
+																				
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/?text=img2" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</li>
+														<!-- 第一層選單項目 -->
+														<li class="dropdown">
+															<a class="nav-link" href="#" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarsecondDropdown">
+																襪子 <i class="fa-solid fa-angle-down"></i>
+															</a>
+
+															<!-- 第二層選單 -->	
+															<ul class="dropdown-menu level_two border-0 px-2" aria-labelledby="offcanvasNavbarsecondDropdown">
+																<!-- 第二層選單項目 -->	
+																<li class="dropdown">	
+																	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarThirdDropdown">
+																		襪子 1 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<!-- 第三層選單 -->	
+																	<ul class="dropdown-menu level_three border-0 px-2" aria-labelledby="offcanvasNavbarThirdDropdown">
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單1</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單2</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																<!-- 第二層選單項目 -->	
+																<li class="dropdown">
+																	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarThirdDropdown">
+																		襪子 2 <i class="fa-solid fa-angle-down"></i>
+																	</a>
+																	<!-- 第三層選單 -->	
+																	<ul class="dropdown-menu level_three border-0 px-2" aria-labelledby="offcanvasNavbarThirdDropdown">
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單1</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單2</a></li>
+																		<!-- 第三層選單項目 吐網址-->	
+																		<li><a class="dropdown-item" href="#">菜單3</a></li>
+																	</ul>
+																</li>
+																
+																<!-- 分類圖片 -->
+																<li>
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/?text=img3" alt="...">
+																				</picture>
+																				
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline-block ratio ratio-1x1">
+																					<img class="card-img img-fluid" src="https://fakeimg.pl/400x400/?text=img3" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</li>
+													</ul>	
+												</li>
+												<!-- 三花品牌誌 -->
+												<li class="nav-item">
+													<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarDropdown">
+														三花品牌誌 <i class="fa-solid fa-angle-down"></i>
+													</a>
+													<ul class="dropdown-menu level_one border-0" aria-labelledby="offcanvasNavbarDropdown">
+														<li><a class="dropdown-item" href="#">菜單1</a></li>
+														<li><a class="dropdown-item" href="#">菜單2</a></li>
+														<li><a class="dropdown-item" href="#">菜單3</a></li>
+													</ul>
+												</li>
+												<!-- 最新消息 -->
+												<li class="nav-item">
+													<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarDropdown">
+														最新消息 <i class="fa-solid fa-angle-down"></i>
+													</a>
+													<ul class="dropdown-menu level_one border-0" aria-labelledby="offcanvasNavbarDropdown">
+														<li><a class="dropdown-item" href="#">菜單1</a></li>
+														<li><a class="dropdown-item" href="#">菜單2</a></li>
+														<li><a class="dropdown-item" href="#">菜單3</a></li>
+													</ul>
+												</li>
+												<!-- 店鋪資訊 -->
+												<li class="nav-item">
+													<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="offcanvasNavbarDropdown">
+														店舖資訊 <i class="fa-solid fa-angle-down"></i>
+													</a>
+													<ul class="dropdown-menu level_one border-0" aria-labelledby="offcanvasNavbarDropdown">
+														<li><a class="dropdown-item" href="#">菜單1</a></li>
+														<li><a class="dropdown-item" href="#">菜單2</a></li>
+														<li><a class="dropdown-item" href="#">菜單3</a></li>
+													</ul>
 												</li>
 											</ul>
 										</div>
 									</div>
 								</div>
 
-								<!-- Mobile Nav Brand -->
+								<!-- Mobile 品牌 logo -->
 								<div class="col">
 									<a class="navbar-brand" href="#">
 										<img src="images/header/header-logo-moble.svg" class="img-fluid" alt="sunflower mobile logo">
 									</a>
 								</div>
 
+								<!-- Mobile Nav Action Btns -->
 								<div class="col text-end">
 									<!-- Mobile User -->
 									<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarMobileUser" aria-controls="offcanvasNavbarMobileUser" aria-label="mobile-user-btn">
@@ -271,16 +860,15 @@
 								</div>
 							</div>
 
-							<!-- Web Menu  -->
+							<!-- Web Navbar  -->
 							<div class="collapse navbar-collapse web_menu" id="navbarCollapse">
-								<!-- Web Nav Menu-->
+								<!-- Web Menu-->
 								<div class="col">
 									<ul class="navbar-nav navbar-menu">
 										<!-- 選單 -->
 										<li class="nav-item dropdown">
 											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false"><i class="icon icon-icon-menu me-3"></i><span>選單</span></a>
 
-											<!-- Menu -->
 											<ul class="dropdown-menu">
 												<li>
 													<a class="dropdown-item" href="#">線上購物</a>
@@ -294,442 +882,1997 @@
 											</ul>
 
 										</li>
+
 										<!-- 線上購物 樣式1. 圖右字左-->
 										<li class="nav-item dropdown position-static">
-											<!-- Toggle -->
+											<!-- 線上購物 Toggle -->
 											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false"><span>線上購物</span></a>
 
-											<!-- Menu -->
+											<!-- 線上購物 Menu -->
 											<div class="dropdown-menu w-100 py-4">
-												<!-- content -->
 												<div class="container-fluid">
 													<div class="col-11 mx-auto">
 														<div class="row m-0">
-															<!-- 第一層項目 Hover 時 透過 ajax (publis.js) 去撈第二層資料 -->
-															<div class="col px-3 level-styled first-level">
-																<!-- Links -->
-																<ul class="list-styled mb-5 mb-md-0">
-																	<li class="list-styled-item active">
-																		<a class="list-styled-link" href="#">內褲</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">襪子</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">內衣/T恤</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">大尺碼專區</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">毛巾</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">雨傘</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">保暖衣</a>
-																	</li>
-																</ul>
+															<!-- 第一層項目(分類) Hover 時 show 第二層 -->
+															<div class="col px-3 border-end">
+																<div class="level-styled first-level">
+																	<ul class="list-styled mb-5 mb-md-0">
+																		<!-- @foreach start -->
+																		<!-- 非預設項目 list-styled-item active 要拿掉 -->
+																		<li class="list-styled-item active">
+																			<a class="list-styled-link" href="#">內褲</a>
+																		</li>
+																		<!-- @foreach start -->
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">襪子</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">內衣/T恤</a>
+																		</li>
+																	</ul>
+																</div>
 															</div>
-															<!-- 第二層項目 Hover 時 透過 ajax (publis.js) 去撈第三層資料 -->
-															<div class="col px-3 level-styled second-level">
-																<!-- Links -->
-																<ul class="list-styled mb-5 mb-md-0">
-																	<li class="list-styled-item">
-																		<a class="list-styled-link active" href="#">襪子</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">冬季商品</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">毛巾/雨傘</a>
-																	</li>
-																</ul>
-															</div>
-															<!-- 第三層項目 -->
-															<div class="col-4 level-styled third-level">
-																<div class="row">
-																	<div class="col-6">
-																		<ul class="list-styled mb-5 px-2 mb-md-0">
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">男內褲 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
-																			</li>
-																		</ul>
-																	</div>
-																	<div class="col-6">
-																		<ul class="list-styled mb-0 fs-base">
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
-																			</li>
-																		</ul>	
-																	</div>
+
+															<!-- 第二層項目(子分類) Hover 時 show 第三層 -->
+															<div class="col px-3 border-end">
+																<!-- 注意有兩層 foreach -->
+																<!-- @foreach start -->
+																<!-- 非預設項子分類 level-styled second-level 的 show 要拿掉 -->
+																<div class="level-styled second-level show">
+																	<ul class="list-styled mb-5 mb-md-0">
+																		<!-- @foreach start -->
+																		<!-- 非預設項目 list-styled-item 的 active 要拿掉、data-category-id 帶入子分類 id-->
+																		<li class="list-styled-item active" data-category-id="1">
+																			<a class="list-styled-link" href="#">襪子1</a>
+																		</li>
+																		<!-- @foreach end -->
+																		<li class="list-styled-item" data-category-id="2">
+																			<a class="list-styled-link" href="#">冬季商品1</a>
+																		</li>
+																		<li class="list-styled-item" data-category-id="3">
+																			<a class="list-styled-link" href="#">毛巾/雨傘1</a>
+																		</li>
+																	</ul>	
+																</div>
+																<!-- @foreach end -->
+
+																<div class="level-styled second-level">
+																	<ul class="list-styled mb-5 mb-md-0">
+																		<li class="list-styled-item active" data-category-id="4">
+																			<a class="list-styled-link" href="#">襪子2</a>
+																		</li>
+																		<li class="list-styled-item" data-category-id="5">
+																			<a class="list-styled-link" href="#">冬季商品2</a>
+																		</li>
+																		<li class="list-styled-item" data-category-id="6">
+																			<a class="list-styled-link" href="#">毛巾/雨傘2</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled second-level">
+																	<ul class="list-styled mb-5 mb-md-0">
+																		<li class="list-styled-item active" data-category-id="7">
+																			<a class="list-styled-link" href="#">襪子3</a>
+																		</li>
+																		<li class="list-styled-item" data-category-id="8">
+																			<a class="list-styled-link" href="#">冬季商品3</a>
+																		</li>
+																		<li class="list-styled-item" data-category-id="9">
+																			<a class="list-styled-link" href="#">毛巾/雨傘3</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>	
+
+															<!-- 第三層產品項目 -->
+															<!-- 預設顯示第一個子分類的所有產品 -->
+															<div class="col-4">
+																<!-- 注意有兩層 foreach -->
+																<!-- @foreach start -->	
+																<!-- 非預設項子分類的所有產品 level-styled third-level 的 show 要拿掉、data-category-id 帶入子分類 id-->
+																<div class="level-styled third-level show" data-category-id="1">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<!-- @foreach start -->
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">1男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																		<!-- @foreach end -->
+																	</ul>
+																</div>
+																<!-- @foreach end -->
+
+																<div class="level-styled third-level" data-category-id="2">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">2男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="3">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">3男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="4">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">4男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="5">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">5男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="6">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">6男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="7">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">7男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="8">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">8男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="9">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">9男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
 																</div>
 															</div>
 															
-															<div class="col-3">
-																<!-- Card -->
-																<div class="card">
-																	<!-- Image -->
-																	<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
+															<!-- 分類圖片 -->
+															<div class="col-6">
+																<!-- @foreach start-->
+																<!-- 非預設項目 show 要拿掉 -->
+																<div class="first-level-img show">
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline ratio ratio-1x1">
+																					<img class="card-img img-fluid " src="https://fakeimg.pl/400x400/?text=img1" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline ratio ratio-1x1">
+																					<img class="card-img img-fluid " src="https://fakeimg.pl/400x400/?text=img1" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																	</div>
 																</div>
-															</div>
-															<div class="col-3">
-																<!-- Card -->
-																<div class="card">
-																	<!-- Image -->
-																	<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
+																<!-- @foreach start -->
+
+																<div class="first-level-img">
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline ratio ratio-1x1">
+																					<img class="card-img img-fluid " src="https://fakeimg.pl/400x400/?text=img2" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline ratio ratio-1x1">
+																					<img class="card-img img-fluid " src="https://fakeimg.pl/400x400/?text=img2" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+
+																<div class="first-level-img">
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline ratio ratio-1x1">
+																					<img class="card-img img-fluid " src="https://fakeimg.pl/400x400/?text=img3" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline ratio ratio-1x1">
+																					<img class="card-img img-fluid " src="https://fakeimg.pl/400x400/?text=img3" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</div>
 													</div>
-													
 												</div>
 											</div>
 										</li>
+
 										<!-- 男館 樣式2. 圖左字右-->
 										<li class="nav-item dropdown position-static">
-
-											<!-- Toggle -->
+											<!-- 男館 Toggle -->
 											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false"><span>男館</a>
 
-											<!-- Menu -->
+											<!-- 男館 Menu -->
 											<div class="dropdown-menu w-100 py-4">
-												<!-- content -->
 												<div class="container-fluid">
 													<div class="col-11 mx-auto">
 														<div class="row m-0">
-															<div class="col-3 d-none d-lg-block">
-																<!-- Card -->
-																<div class="card">
-																	<!-- Image -->
-																	<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
+															<!-- 分類圖片 -->
+															<div class="col-6">
+																<!-- @foreach start-->
+																<!-- 非預設項目 show 要拿掉 -->
+																<div class="first-level-img show">
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline ratio ratio-1x1">
+																					<img class="card-img img-fluid " src="https://fakeimg.pl/400x400/?text=img1" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline ratio ratio-1x1">
+																					<img class="card-img img-fluid " src="https://fakeimg.pl/400x400/?text=img1" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<!-- @foreach start -->
+
+																<div class="first-level-img">
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline ratio ratio-1x1">
+																					<img class="card-img img-fluid " src="https://fakeimg.pl/400x400/?text=img2" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline ratio ratio-1x1">
+																					<img class="card-img img-fluid " src="https://fakeimg.pl/400x400/?text=img2" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+
+																<div class="first-level-img">
+																	<div class="row">
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline ratio ratio-1x1">
+																					<img class="card-img img-fluid " src="https://fakeimg.pl/400x400/?text=img3" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																		<div class="col-6">
+																			<div class="card">
+																				<picture class="d-inline ratio ratio-1x1">
+																					<img class="card-img img-fluid " src="https://fakeimg.pl/400x400/?text=img3" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 															</div>
-															<div class="col-3 d-none d-lg-block">
-																<!-- Card -->
-																<div class="card">
-																	<!-- Image -->
-																	<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
+
+															<!-- 第一層項目(分類) Hover 時 show 第二層 -->
+															<div class="col px-3 border-end">
+																<div class="level-styled first-level">
+																	<ul class="list-styled mb-5 mb-md-0">
+																		<!-- @foreach start -->
+																		<!-- 非預設項目 list-styled-item active 要拿掉 -->
+																		<li class="list-styled-item active">
+																			<a class="list-styled-link" href="#">內褲</a>
+																		</li>
+																		<!-- @foreach start -->
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">襪子</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">內衣/T恤</a>
+																		</li>
+																	</ul>
 																</div>
 															</div>
-															<!-- 第一層項目 Hover 時 透過 ajax (publis.js) 去撈第二層資料 -->
-															<div class="col px-3 level-styled first-level">
-																<!-- Links -->
-																<ul class="list-styled mb-5 mb-md-0">
-																	<li class="list-styled-item active">
-																		<a class="list-styled-link" href="#">內褲</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">襪子</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">內衣/T恤</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">大尺碼專區</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">毛巾</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">雨傘</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">保暖衣</a>
-																	</li>
-																</ul>
-															</div>
-															<!-- 第二層項目 Hover 時 透過 ajax (publis.js) 去撈第三層資料 -->
-															<div class="col px-3 level-styled second-level">
-																<!-- Links -->
-																<ul class="list-styled mb-5 mb-md-0">
-																	<li class="list-styled-item">
-																		<a class="list-styled-link active" href="#">襪子</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">冬季商品</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">毛巾/雨傘</a>
-																	</li>
-																</ul>
-															</div>
-															<!-- 第三層項目 -->
-															<div class="col-4 level-styled third-level">
-																<div class="row">
-																	<div class="col-6">
-																		<ul class="list-styled mb-5 px-2 mb-md-0">
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">男內褲 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
-																			</li>
-																		</ul>
-																	</div>
-																	<div class="col-6">
-																		<ul class="list-styled mb-0 fs-base">
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
-																			</li>
-																		</ul>	
-																	</div>
+															
+															<!-- 第二層項目(子分類) Hover 時 show 第三層 -->
+															<div class="col px-3 border-end">
+																<!-- 注意有兩層 foreach -->
+																<!-- @foreach start -->
+																<!-- 非預設項子分類 level-styled second-level 的 show 要拿掉 -->
+																<div class="level-styled second-level show">
+																	<ul class="list-styled mb-5 mb-md-0">
+																		<!-- @foreach start -->
+																		<!-- 非預設項目 list-styled-item 的 active 要拿掉、data-category-id 帶入子分類 id-->
+																		<li class="list-styled-item active" data-category-id="1">
+																			<a class="list-styled-link" href="#">襪子1</a>
+																		</li>
+																		<!-- @foreach end -->
+																		<li class="list-styled-item" data-category-id="2">
+																			<a class="list-styled-link" href="#">冬季商品1</a>
+																		</li>
+																		<li class="list-styled-item" data-category-id="3">
+																			<a class="list-styled-link" href="#">毛巾/雨傘1</a>
+																		</li>
+																	</ul>	
+																</div>
+																<!-- @foreach end -->
+
+																<div class="level-styled second-level">
+																	<ul class="list-styled mb-5 mb-md-0">
+																		<li class="list-styled-item active" data-category-id="4">
+																			<a class="list-styled-link" href="#">襪子2</a>
+																		</li>
+																		<li class="list-styled-item" data-category-id="5">
+																			<a class="list-styled-link" href="#">冬季商品2</a>
+																		</li>
+																		<li class="list-styled-item" data-category-id="6">
+																			<a class="list-styled-link" href="#">毛巾/雨傘2</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled second-level">
+																	<ul class="list-styled mb-5 mb-md-0">
+																		<li class="list-styled-item active" data-category-id="7">
+																			<a class="list-styled-link" href="#">襪子3</a>
+																		</li>
+																		<li class="list-styled-item" data-category-id="8">
+																			<a class="list-styled-link" href="#">冬季商品3</a>
+																		</li>
+																		<li class="list-styled-item" data-category-id="9">
+																			<a class="list-styled-link" href="#">毛巾/雨傘3</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>	
+
+															<!-- 第三層產品項目 -->
+															<!-- 預設顯示第一個子分類的所有產品 -->
+															<div class="col-4">
+																<!-- 注意有兩層 foreach -->
+																<!-- @foreach start -->	
+																<!-- 非預設項子分類的所有產品 level-styled third-level 的 show 要拿掉、data-category-id 帶入子分類 id-->
+																<div class="level-styled third-level show" data-category-id="1">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<!-- @foreach start -->
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">1男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																		<!-- @foreach end -->
+																	</ul>
+																</div>
+																<!-- @foreach end -->
+
+																<div class="level-styled third-level" data-category-id="2">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">2男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="3">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">3男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="4">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">4男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="5">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">5男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="6">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">6男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="7">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">7男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="8">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">8男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="9">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">9男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
 																</div>
 															</div>
 														</div>
-													</div>
-													
+													</div>	
 												</div>
-											</div>
-											
+											</div>			
 										</li>
-										<!-- 女館 樣式2. 圖左右各一字中間-->
-										<li class="nav-item dropdown position-static">
 
-											<!-- Toggle -->
+										<!-- 女館 樣式3. 圖左右各一字中間-->
+										<li class="nav-item dropdown position-static">
+											<!-- 女館 Toggle -->
 											<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false"><span>女館</span></a>
 
-											<!-- Menu -->
+											<!-- 女館 Menu -->
 											<div class="dropdown-menu w-100 py-4">
-												<!-- content -->
 												<div class="container-fluid">
 													<div class="col-11 mx-auto">
 														<div class="row m-0">
-															<div class="col-3 d-none d-lg-block">
-																<!-- Card -->
-																<div class="card">
-																	<!-- Image -->
-																	<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
-																</div>
-															</div>
-															<!-- 第一層項目 Hover 時 透過 ajax (publis.js) 去撈第二層資料 -->
-															<div class="col px-3 level-styled first-level">
-																<!-- Links -->
-																<ul class="list-styled mb-5 mb-md-0">
-																	<li class="list-styled-item active">
-																		<a class="list-styled-link" href="#">內褲</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">襪子</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">內衣/T恤</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">大尺碼專區</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">毛巾</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">雨傘</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">保暖衣</a>
-																	</li>
-																</ul>
-															</div>
-															<!-- 第二層項目 Hover 時 透過 ajax (publis.js) 去撈第三層資料 -->
-															<div class="col px-3 level-styled second-level">
-																<!-- Links -->
-																<ul class="list-styled mb-5 mb-md-0">
-																	<li class="list-styled-item">
-																		<a class="list-styled-link active" href="#">襪子</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">冬季商品</a>
-																	</li>
-																	<li class="list-styled-item">
-																		<a class="list-styled-link" href="#">毛巾/雨傘</a>
-																	</li>
-																</ul>
-															</div>
-															<!-- 第三層項目 -->
-															<div class="col-4 level-styled third-level">
-																<div class="row">
-																	<div class="col-6">
-																		<ul class="list-styled mb-5 px-2 mb-md-0">
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">男內褲 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
-																			</li>
-																		</ul>
+															<div class="col-3">
+																<!-- @foreach start-->
+																<!-- 非預設項目 show 要拿掉 -->
+																<div class="first-level-img show">
+																	<div class="row">
+																		<div class="col-12">
+																			<div class="card">
+																				<picture class="d-inline ratio ratio-1x1">
+																					<img class="card-img img-fluid " src="https://fakeimg.pl/400x400/?text=img1" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																		
 																	</div>
-																	<div class="col-6">
-																		<ul class="list-styled mb-0 fs-base">
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
-																			</li>
-																			<li class="list-styled-item">
-																				<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
-																			</li>
-																		</ul>	
+																</div>
+																<!-- @foreach start -->
+
+																<div class="first-level-img">
+																	<div class="row">
+																		<div class="col-12">
+																			<div class="card">
+																				<picture class="d-inline ratio ratio-1x1">
+																					<img class="card-img img-fluid " src="https://fakeimg.pl/400x400/?text=img2" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+
+																<div class="first-level-img">
+																	<div class="row">
+																		<div class="col-12">
+																			<div class="card">
+																				<picture class="d-inline ratio ratio-1x1">
+																					<img class="card-img img-fluid " src="https://fakeimg.pl/400x400/?text=img3" alt="...">
+																				</picture>
+																			</div>
+																		</div>
 																	</div>
 																</div>
 															</div>
+															<!-- 第一層項目(分類) Hover 時 show 第二層 -->
+															<div class="col px-3 border-end">
+																<div class="level-styled first-level">
+																	<ul class="list-styled mb-5 mb-md-0">
+																		<!-- @foreach start -->
+																		<!-- 非預設項目 list-styled-item active 要拿掉 -->
+																		<li class="list-styled-item active">
+																			<a class="list-styled-link" href="#">內褲</a>
+																		</li>
+																		<!-- @foreach start -->
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">襪子</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">內衣/T恤</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+															
+															<!-- 第二層項目(子分類) Hover 時 show 第三層 -->
+															<div class="col px-3 border-end">
+																<!-- 注意有兩層 foreach -->
+																<!-- @foreach start -->
+																<!-- 非預設項子分類 level-styled second-level 的 show 要拿掉 -->
+																<div class="level-styled second-level show">
+																	<ul class="list-styled mb-5 mb-md-0">
+																		<!-- @foreach start -->
+																		<!-- 非預設項目 list-styled-item 的 active 要拿掉、data-category-id 帶入子分類 id-->
+																		<li class="list-styled-item active" data-category-id="1">
+																			<a class="list-styled-link" href="#">襪子1</a>
+																		</li>
+																		<!-- @foreach end -->
+																		<li class="list-styled-item" data-category-id="2">
+																			<a class="list-styled-link" href="#">冬季商品1</a>
+																		</li>
+																		<li class="list-styled-item" data-category-id="3">
+																			<a class="list-styled-link" href="#">毛巾/雨傘1</a>
+																		</li>
+																	</ul>	
+																</div>
+																<!-- @foreach end -->
+
+																<div class="level-styled second-level">
+																	<ul class="list-styled mb-5 mb-md-0">
+																		<li class="list-styled-item active" data-category-id="4">
+																			<a class="list-styled-link" href="#">襪子2</a>
+																		</li>
+																		<li class="list-styled-item" data-category-id="5">
+																			<a class="list-styled-link" href="#">冬季商品2</a>
+																		</li>
+																		<li class="list-styled-item" data-category-id="6">
+																			<a class="list-styled-link" href="#">毛巾/雨傘2</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled second-level">
+																	<ul class="list-styled mb-5 mb-md-0">
+																		<li class="list-styled-item active" data-category-id="7">
+																			<a class="list-styled-link" href="#">襪子3</a>
+																		</li>
+																		<li class="list-styled-item" data-category-id="8">
+																			<a class="list-styled-link" href="#">冬季商品3</a>
+																		</li>
+																		<li class="list-styled-item" data-category-id="9">
+																			<a class="list-styled-link" href="#">毛巾/雨傘3</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>	
+
+															<!-- 第三層產品項目 -->
+															<!-- 預設顯示第一個子分類的所有產品 -->
+															<div class="col-4">
+																<!-- 注意有兩層 foreach -->
+																<!-- @foreach start -->	
+																<!-- 非預設項子分類的所有產品 level-styled third-level 的 show 要拿掉、data-category-id 帶入子分類 id-->
+																<div class="level-styled third-level show" data-category-id="1">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<!-- @foreach start -->
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">1男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																		<!-- @foreach end -->
+																	</ul>
+																</div>
+																<!-- @foreach end -->
+
+																<div class="level-styled third-level" data-category-id="2">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">2男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="3">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">3男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="4">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">4男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="5">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">5男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="6">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">6男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="7">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">7男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="8">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">8男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="level-styled third-level" data-category-id="9">
+																	<ul class="list-styled mb-5 px-2 mb-md-0">
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">9男內褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">全棉內衣、三角褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">彩色T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">無痕肌短襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">休閒襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">童襪 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">全綿長內衣褲 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">長袖T恤 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">蓄熱保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">極暖柔保暖衣 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">輕量雨傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">超撥水傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">抗強風機能傘 ▶ 5件1000</a>
+																		</li>
+																		<li class="list-styled-item">
+																			<a class="list-styled-link" href="#">▶▶ 兩組1200</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
 															<div class="col-3 d-none d-lg-block">
-																<!-- Card -->
-																<div class="card">
-																	<!-- Image -->
-																	<img class="card-img img-fluid ratio ratio-1x1" src="https://fakeimg.pl/400x400/" alt="...">
+																<!-- @foreach start-->
+																<!-- 非預設項目 show 要拿掉 -->
+																
+																<div class="first-level-img show">
+																	<div class="row">
+																		<div class="col-12">
+																			<div class="card">
+																				<picture class="d-inline ratio ratio-1x1">
+																					<img class="card-img img-fluid " src="https://fakeimg.pl/400x400/?text=img1" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																		
+																	</div>
+																</div>
+																<!-- @foreach start -->
+
+																<div class="first-level-img">
+																	<div class="row">
+																		<div class="col-12">
+																			<div class="card">
+																				<picture class="d-inline ratio ratio-1x1">
+																					<img class="card-img img-fluid " src="https://fakeimg.pl/400x400/?text=img2" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+
+																<div class="first-level-img">
+																	<div class="row">
+																		<div class="col-12">
+																			<div class="card">
+																				<picture class="d-inline ratio ratio-1x1">
+																					<img class="card-img img-fluid " src="https://fakeimg.pl/400x400/?text=img3" alt="...">
+																				</picture>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</div>
 													</div>
-													
 												</div>
 											</div>	
 										</li>
 									</ul>
 								</div>
-								<!-- Web Nav Brand -->
+								<!-- Web 品牌 logo -->
 								<div class="col">
 									<a class="navbar-brand" href="#">
 										<img src="images/header/header-logo-web.svg" alt="fake img">
 									</a>
 								</div>
-								<!-- Web Nav Actions -->
+								<!-- Web Nav Action Btns -->
 								<div class="col">
 									<ul class="navbar-nav navbar-action">
-										<!-- Web Search -->
+										<!-- Web Search 按鈕及 input  -->
 										<li class="nav-item action-search">
 											<form action="" class="search-bar">
 												<input type="search" name="search" pattern=".*\S.*" placeholder="請輸入文字" required>
@@ -895,8 +3038,6 @@
 	</header>
 	
 	<main class="">
-		<!-- banner -->
-		<!-- 0321 從 header 搬到 main account.scss 增加 title-boxs 語法-->
 		<section class="title-boxs title-bg2 d-flex align-items-center justify-content-center">
 			<div class="row mx-auto">
 				<div class="col-12">
@@ -918,15 +3059,15 @@
 		<div class="container-xxl mt-lg-5 position-relative px-0">
 			<div class="row mx-auto">
 				<!-- Left Side -->
-				<!-- Left Side Menu - Web -->
-				<div class="sideMenu col-12 col-md-2">
+				<div class="sideMenu col-12 col-md-2 p-0">
 					<aside class="aside_widget">
+						<!-- 網頁版 Left Side Menu -->
 						<div class="web_menu_widget d-none d-lg-block">
 							<div class="accordion" id="accordionSideMenu">
 								<!-- item01 -->
 								<div class="accordion-item border-0">
 									<h3 class="accordion-header" id="heading1">
-										<button class="accordion-button side_widget_title pt-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+										<button class="accordion-button side_widget_title pt-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
 											<picture class="me-2">
 												<img class="img-fluid mb-1" src="images/svg-pic/doll-Gray.svg" alt="">
 												<img class="img-fluid mb-1" src="images/svg-pic/doll-Gradient.svg" alt="">
@@ -934,11 +3075,11 @@
 											顧客服務
 										</button>
 									</h3>
-									<div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionSideMenu">
+									<div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionSideMenu">
 										<div class="accordion-body">
 											<ul class="ul_li_links">
 												<li class=""><a href="#!">聯絡三花</a></li>
-												<li class=""><a href="#!">防詐騙聲明</a></li>
+												<li class="active"><a href="#!">防詐騙聲明</a></li>
 												<li class=""><a href="#!">隱私權條款</a></li>
 												<li class=""><a href="#!">COOKIE 政策</a></li>
 												<li class=""><a href="#!">使用條款</a></li>
@@ -951,7 +3092,7 @@
 								<!-- item02 -->
 								<div class="accordion-item border-0">
 									<h3 class="accordion-header" id="heading1">
-										<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+										<button class="accordion-button side_widget_title" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
 											<picture class="me-2">
 												<img class="img-fluid mb-1"  src="images/svg-pic/doll-Gray.svg" alt="">
 												<img class="img-fluid mb-1"  src="images/svg-pic/doll-Gradient.svg" alt="">
@@ -959,10 +3100,10 @@
 											購物說明
 										</button>
 									</h3>
-									<div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2" data-bs-parent="#accordionSideMenu">
+									<div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionSideMenu">
 										<div class="accordion-body">
 											<ul class="ul_li_links">
-												<li class="active"><a href="#!">常見問題</a></li>
+												<li class=""><a href="#!">常見問題</a></li>
 												<li class=""><a href="#!">新手上路</a></li>
 												<li class=""><a href="#!">帳戶問題</a></li>
 												<li class=""><a href="#!">付款方式</a></li>
@@ -979,32 +3120,39 @@
 							</div>
 						</div>
 
-						<!-- Left Side Menu - Mobile -->
+						<!-- 手機版 Left Side Menu -->
 						<div class="mobile_menu_widget d-block d-lg-none">
 							<div class="col-11 mx-auto py-2">
 								<div class="row">
-									<div class="col-6">
-										<select class="form-select border-0" aria-label="Default select example">
-											<option selected="" value="1">顧客服務</option>
-											<option value="2">購物說明</option>
-										</select>
+									<div class="col-6 border-0 border-end">
+										<div class="dropdown">
+											<button class="form-select border-0" type="button" id="dropdownMobileMainMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+												顧客服務
+											</button>
+											<ul class="dropdown-menu mobile-main-menu" aria-labelledby="dropdownMobileMainMenuButton">
+												<li class="dropdown-item">顧客服務</li>
+												<li class="dropdown-item">購物說明</li>
+											</ul>
+										</div>
 									</div>
 									<div class="col-6">
-										<select class="form-select border-0" aria-label="Default select example">
-											<option selected="" value="1">防詐騙聲明</option>
-											<option value="2">聯絡三花</option>
-											<option value="2">隱私權條款</option>
-											<option value="3">COOKIE 政策</option>
-											<option value="3">使用條款</option>
-											<option value="3">免責聲明</option>
-											<option value="3">會員條款</option>
-										</select>
+										<button class="form-select border-0" type="button" id="dropdownMobileSubMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+											我的帳戶
+										</button>
+										<ul class="dropdown-menu mobile-sub-menu" aria-labelledby="dropdownMobileSubMenuButton">
+											<li><a class="dropdown-item" href="#">防詐騙聲明</a></li>
+											<li><a class="dropdown-item" href="#">聯絡三花</a></li>
+											<li><a class="dropdown-item" href="#">COOKIE 政策</a></li>
+											<li><a class="dropdown-item" href="#">使用條款</a></li>
+											<li><a class="dropdown-item" href="#">免責聲明</a></li>
+											<li><a class="dropdown-item" href="#">會員條款</a></li>
+										</ul>
 									</div>
 								</div>
 							</div>
 						</div>
 					</aside>
-				</div>
+				</div>	
 
 				<!-- Right Side -->
 				<div class="col-md-10 col-12">
@@ -1075,7 +3223,8 @@
 		</div>
 	</footer>
 	
-	<!-- bootstrap js -->
+	<!-- 共用外部 js 檔案 -->
+	<script src="https://kit.fontawesome.com/25b2931f6f.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
 		crossorigin="anonymous"></script>

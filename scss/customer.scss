@@ -4,6 +4,7 @@
 @import "components/input";
 @import "components/link";
 @import "components/btn";
+@import "public";
 @import "layout/header";
 @import "layout/footer";
 
@@ -37,7 +38,7 @@ main {
 			background-size: cover;
 
 			@include media-breakpoint-down(xl) {
-				background-image: url(../images/title-bg-pic/bg-ShoppingGuide-mobile.webp);
+				background-image: url(../images/title-bg-pic/bg-CustomerService-mobile.webp);
 			}
 	}
 
@@ -75,20 +76,18 @@ main {
 
 .sideMenu {
 	transition: all .1s ease-in-out;
-
-	@include media-breakpoint-down(lg) {
-		position: sticky;
-		top: 105px;
-		padding: 0;
-		z-index: 1051;
-	}
+	// margin: 0 -12px;
 
 	aside.aside_widget {
 		position: relative;
 
+		@include media-breakpoint-up(lg) {
+			position: sticky;	
+			top: 24px;
+		}
+
 		.title_widget {
 			border-radius: 6px 6px 0 0;
-			// background-color: #004b8d;
 			@include media-breakpoint-down(lg) {
 				border-radius: 0;
 			}
@@ -98,7 +97,7 @@ main {
 				padding: 1rem 0;
 				font-size: 20px;
 				font-weight: 600;
-				color: #fff;
+				color: $white;
 				text-align: center;
 
 				@include media-breakpoint-down(lg) {
@@ -112,7 +111,6 @@ main {
 		.web_menu_widget {
 			.accordion {
 				.accordion-item {
-					// border-bottom: 1px dashed #d8d8d8 !important;
 	
 					&:first-of-type {
 						border-radius: 0;
@@ -178,18 +176,11 @@ main {
 	
 					.accordion-body {
 						padding: 0 20px 0.5rem 24px;
-						// padding: .5rem 20px;
-						// background-color: rgba(238, 238, 238, 0.5);
 	
 						.ul_li_links {
 							padding-left: calc(.5rem + 10px);
 							margin-bottom: 0;
 							list-style: none;
-
-							// li::marker {
-							// 	color: red;
-							// 	font-size: 1.5em;
-							// }
 	
 							li {
 
@@ -235,7 +226,7 @@ main {
 
 .customer-text {
 	// display: inline-block;
-	color: #4b4b4b;
+	color: $gray-800;
 	font-size: 1.125rem;
 	font-weight: 300;
 
