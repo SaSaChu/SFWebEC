@@ -4,6 +4,7 @@
 @import "components/input";
 @import "components/link";
 @import "components/btn";
+@import "public";
 @import "layout/header";
 @import "layout/footer";
 
@@ -304,6 +305,10 @@ main {
 
 	.dropdown {
 		&.mobile-nav {
+			button {
+				text-align: left;
+			}
+
 			.dropdown-menu {
 				// width: 100%;
 	
@@ -692,39 +697,41 @@ main {
 }
 
 
-.nav-item {
-	padding-right: .5rem;
-
-	@include media-breakpoint-down(md) {
-		width: calc(100% / 4) !important;
-		height: 68px;
-	}
-
-	.nav-link {
-
+.info_points {
+	.nav-item {
+		padding-right: .5rem;
+	
 		@include media-breakpoint-down(md) {
-			font-size: .9rem !important;
+			width: calc(100% / 4) !important;
+			height: 68px;
 		}
-		
-		&.ac-nav-link {
-			padding: 10px 11px;
-			color: #4B4B4B;
-			font-size: 1rem;
-			background-color: $gray-300;
-			border: 1px solid $gray-400;
-			margin: 0 auto;
-
+	
+		.nav-link {
+	
 			@include media-breakpoint-down(md) {
-				// width: 65% !important;
-				height: 68px;
-				// margin-left: 0;
+				font-size: .9rem !important;
 			}
-
-			&.active {
-				color: $white;
-				background-color: $blue-700;
-				border: 1px solid $blue-700;
-			} 
+			
+			&.ac-nav-link {
+				padding: 10px 11px;
+				color: #4B4B4B;
+				font-size: 1rem;
+				background-color: $gray-300;
+				border: 1px solid $gray-400;
+				margin: 0 auto;
+	
+				@include media-breakpoint-down(md) {
+					// width: 65% !important;
+					height: 68px;
+					// margin-left: 0;
+				}
+	
+				&.active {
+					color: $white;
+					background-color: $blue-700;
+					border: 1px solid $blue-700;
+				} 
+			}
 		}
 	}
 }
