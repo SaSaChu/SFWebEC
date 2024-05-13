@@ -8,6 +8,8 @@ $(function() {
 			freeMode: true,
 			watchSlidesProgress: true,
 		});
+		
+
 	}
 
 	var productImgSwiper = new Swiper(".product-img-swiper", {
@@ -15,9 +17,9 @@ $(function() {
 		scrollbar: {
 			el: ".swiper-scrollbar",
 		},
-		navigation: {
-			// nextEl: ".swiper-button-next",
-			// prevEl: ".swiper-button-prev",
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
 		},
 		thumbs: {
 			swiper: thumnanilSwiper,

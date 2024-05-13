@@ -3507,6 +3507,10 @@ main .product_detail .swiper { width: 100%; height: 100%; }
 @media (max-width: 991.98px) { main .product_detail .swiper { padding: 1rem 0; } }
 main .product_detail .swiper.thumnanil-swiper .swiper-slide:not(.swiper-slide-thumb-active) { opacity: .4; }
 main .product_detail .swiper.product-img-swiper .swiper-scrollbar { top: 98%; }
+main .product_detail .swiper.product-img-swiper .swiper-pagination { display: flex; flex-direction: column; justify-content: center; }
+main .product_detail .swiper.product-img-swiper .swiper-pagination.swiper-pagination-horizontal { top: 0; right: 0; width: 4%; height: 100%; left: unset; }
+main .product_detail .swiper.product-img-swiper .swiper-pagination .swiper-pagination-bullet { width: 10px; height: 10px; margin: .5rem 0; border: 1px solid #fff; background-color: transparent; opacity: 1; }
+main .product_detail .swiper.product-img-swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active { background-color: #fff; }
 main .product_detail .detail_title h3, main .product_detail .detail_title .h3 { display: flex; align-items: center; }
 main .product_detail .detail_title h3 .detail_no, main .product_detail .detail_title .h3 .detail_no { color: rgba(17, 28, 71, 0.8); }
 main .product_detail .detail_price p { display: flex; align-items: center; }

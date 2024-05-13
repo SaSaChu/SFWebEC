@@ -76,6 +76,33 @@ main {
 				.swiper-scrollbar {
 					top: 98%;
 				}
+
+				.swiper-pagination {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+
+					&.swiper-pagination-horizontal {	
+						top: 0;
+						right: 0;
+						width: 4%;
+						height: 100%;
+						left: unset;						
+					}
+
+					.swiper-pagination-bullet {
+						width: 10px;
+						height: 10px;
+						margin: .5rem 0;
+						border: 1px solid $white;
+						background-color: transparent;
+						opacity: 1;
+	
+						&.swiper-pagination-bullet-active {
+							background-color: $white;
+						}
+					}
+				}
 			}
 		}
 
