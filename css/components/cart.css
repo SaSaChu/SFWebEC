@@ -3245,7 +3245,7 @@ a { cursor: pointer; text-decoration: none !important; }
 .cart-offcanvas .offcanvas-body .offcanvas_colors p, .detail-offcanvas .offcanvas-body .offcanvas_colors p { margin-bottom: .5rem; }
 .cart-offcanvas .offcanvas-body .offcanvas_colors .color-item, .detail-offcanvas .offcanvas-body .offcanvas_colors .color-item { position: relative; display: inline-block; padding: .5rem; font-size: 14px; background-color: #eaeaea; border-radius: 5px; cursor: pointer; }
 .cart-offcanvas .offcanvas-body .offcanvas_colors .color-item.active, .detail-offcanvas .offcanvas-body .offcanvas_colors .color-item.active { border: 1px solid #00A2D9; border-radius: 5px; }
-.cart-offcanvas .offcanvas-body .offcanvas_colors .color-item img, .detail-offcanvas .offcanvas-body .offcanvas_colors .color-item img { width: 20px; height: 20px; margin-right: .5rem; }
+.cart-offcanvas .offcanvas-body .offcanvas_colors .color-item img, .detail-offcanvas .offcanvas-body .offcanvas_colors .color-item img { width: 20px; height: 20px; aspect-ratio: 1; margin-right: .5rem; }
 .cart-offcanvas .offcanvas-body .offcanvas_sizes .size-item, .detail-offcanvas .offcanvas-body .offcanvas_sizes .size-item { position: relative; display: inline-block; cursor: pointer; }
 .cart-offcanvas .offcanvas-body .offcanvas_sizes .size-item.active span, .detail-offcanvas .offcanvas-body .offcanvas_sizes .size-item.active span { color: #fff; background-color: #00A2D9; }
 .cart-offcanvas .offcanvas-body .offcanvas_sizes .size-item.sold_out span, .detail-offcanvas .offcanvas-body .offcanvas_sizes .size-item.sold_out span { color: #c4c4c4; background-color: #eaeaea; text-decoration: line-through; }
