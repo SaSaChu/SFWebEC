@@ -111,6 +111,30 @@ $(function() {
 		});
 	}
 
+	if($('.add-swiper').length) {
+		var swiperPoint = new Swiper(".add-swiper", {
+			slidesPerView: 1,
+			slidesPerGroup: 1,
+			spaceBetween: 18,
+			loop: true,
+			navigation: {
+				nextEl: '.add-button-next',
+				prevEl: '.add-button-prev',
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 2,
+					slidesPerGroup: 2,
+				},
+	
+				1024: {
+					slidesPerView: 4,
+					slidesPerGroup: 4,
+				},
+			},
+		});
+	}
+
 	// 變更尺寸顏色 modal 
 	$('#changeModal').on('show.bs.modal', function(event) {
 		let cartListItem = $(event.relatedTarget).parents('.cart-list-item');

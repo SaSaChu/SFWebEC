@@ -3891,13 +3891,13 @@
 					</div>
 				</div>	
 
-				<!-- 全站加購品清單 有分網頁版跟手機版 未加購時不出現-->
-				<div class="shopping_cart_add mt-3">	
+				<!-- 全站加購商品清單 有分網頁版跟手機版 未加購時不出現-->
+				<div class="shopping_cart_add_list mt-3">	
 					<h5 class="cart_title">全站加購品</h5>
-					<div class="cart_add_content">
+					<div class="cart_add_list_content">
 						
 						<!-- 網頁版列表 -->
-						<div class="web_add_cart d-none d-lg-block">
+						<div class="web_add_cart_list d-none d-lg-block">
 							<!-- cart content 第一列資訊 thread -->
 							<div class="content_header">
 								<div class="row g-0 align-items-center">
@@ -4026,7 +4026,7 @@
 						</div>
 
 						<!-- 手機版 -->
-						<div class="mobile_add_cart d-block d-lg-none">
+						<div class="mobile_add_cart_list d-block d-lg-none">
 							<!-- cart content 購物車列表 tbody-->
 							<div class="content_body">
 								<!-- foreach start -->
@@ -4175,6 +4175,8 @@
 						  </h2>
 						  <div id="collapseCartGifts" class="accordion-collapse collapse show" aria-labelledby="headingCartGifts" data-bs-parent="#accordionCartGifts">
 							<div class="accordion-body">
+								<!-- 1000 點 -->
+
 								<div class="gifts-item my-3">
 									<h5 class="cart_title">全館滿 <span>1000</span> 送贈品：</h5>
 									<div class="swiper gifts-swiper px-4 py-3">
@@ -4188,37 +4190,39 @@
 													
 													<div class="card-body px-0 py-2">
 														<div class="card-title">5522 - 簡短商品代稱</div>
-														<div class="card-content">
+														<div class="card-box mb-3">
 															<div class="row g-2">
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-colors col">
+																	<select class="form-select border-0" aria-label="select colors">
 																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
 																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
 																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
 																	</select>
 																</div>
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-sizes col">
+																	<select class="form-select border-0" aria-label="select sizes">
 																		<option selected value="1">L</option>
 																		<option value="2">XL</option>
 																		<option value="3">XXL</option>
 																	</select>
 																</div>
-															
-																<div class="col-12">
-																	<div class="market-price">
-																		<p>市價：<span data-symbol="NT$">100</span></p>
-																	</div>
-																</div>
-																<div class="col-12">
-																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
-																</div>
 															</div>
+														</div>
+														
+														<div class="market-price">
+															<p>市價：<span data-symbol="NT$">100</span></p>
+														</div>
+
+														<div class="card-action">
+															<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
+															<!-- 已加購樣式 button 的 class 加上 active， button 內容改為 已選擇-->
+															<!-- <button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100 active">已選擇</button> -->
 														</div>
 													</div>
 												</div>
 											</div>
 											<!-- @foreach end -->
+											<!-- 已選擇樣式 -->
 											<div class="swiper-slide gifts-slide">
 												<div class="gifts-card card h-100 px-2 border-0">
 													<picture class="d-inline-block ratio ratio-1x1">
@@ -4227,32 +4231,31 @@
 													
 													<div class="card-body px-0 py-2">
 														<div class="card-title">5522 - 簡短商品代稱簡短商品代稱</div>
-														<div class="card-content">
+														<div class="card-box mb-3">
 															<div class="row g-2">
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-colors col">
+																	<select class="form-select border-0" aria-label="select colors">
 																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
 																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
 																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
 																	</select>
 																</div>
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-sizes col">
+																	<select class="form-select border-0" aria-label="select sizes">
 																		<option selected value="1">L</option>
 																		<option value="2">XL</option>
 																		<option value="3">XXL</option>
 																	</select>
 																</div>
-															
-																<div class="col-12">
-																	<div class="market-price">
-																		<p>市價：<span data-symbol="NT$">100</span></p>
-																	</div>
-																</div>
-																<div class="col-12">
-																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
-																</div>
 															</div>
+														</div>
+														
+														<div class="market-price">
+															<p>市價：<span data-symbol="NT$">100</span></p>
+														</div>
+
+														<div class="card-action">
+															<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100 active">已選擇</button>
 														</div>
 													</div>
 												</div>
@@ -4265,32 +4268,31 @@
 													
 													<div class="card-body px-0 py-2">
 														<div class="card-title">5522 - 簡短商品代稱簡短商品代稱簡短商品代稱</div>
-														<div class="card-content">
+														<div class="card-box mb-3">
 															<div class="row g-2">
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-colors col">
+																	<select class="form-select border-0" aria-label="select colors">
 																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
 																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
 																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
 																	</select>
 																</div>
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-sizes col">
+																	<select class="form-select border-0" aria-label="select sizes">
 																		<option selected value="1">L</option>
 																		<option value="2">XL</option>
 																		<option value="3">XXL</option>
 																	</select>
 																</div>
-															
-																<div class="col-12">
-																	<div class="market-price">
-																		<p>市價：<span data-symbol="NT$">100</span></p>
-																	</div>
-																</div>
-																<div class="col-12">
-																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
-																</div>
 															</div>
+														</div>
+														
+														<div class="market-price">
+															<p>市價：<span data-symbol="NT$">100</span></p>
+														</div>
+
+														<div class="card-action">
+															<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
 														</div>
 													</div>
 												</div>
@@ -4303,32 +4305,31 @@
 													
 													<div class="card-body px-0 py-2">
 														<div class="card-title">5522 - 簡短商品代稱</div>
-														<div class="card-content">
+														<div class="card-box mb-3">
 															<div class="row g-2">
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-colors col">
+																	<select class="form-select border-0" aria-label="select colors">
 																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
 																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
 																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
 																	</select>
 																</div>
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-sizes col">
+																	<select class="form-select border-0" aria-label="select sizes">
 																		<option selected value="1">L</option>
 																		<option value="2">XL</option>
 																		<option value="3">XXL</option>
 																	</select>
 																</div>
-															
-																<div class="col-12">
-																	<div class="market-price">
-																		<p>市價：<span data-symbol="NT$">100</span></p>
-																	</div>
-																</div>
-																<div class="col-12">
-																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
-																</div>
 															</div>
+														</div>
+														
+														<div class="market-price">
+															<p>市價：<span data-symbol="NT$">100</span></p>
+														</div>
+
+														<div class="card-action">
+															<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
 														</div>
 													</div>
 												</div>
@@ -4341,32 +4342,31 @@
 													
 													<div class="card-body px-0 py-2">
 														<div class="card-title">5522 - 簡短商品代稱</div>
-														<div class="card-content">
+														<div class="card-box mb-3">
 															<div class="row g-2">
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-colors col">
+																	<select class="form-select border-0" aria-label="select colors">
 																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
 																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
 																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
 																	</select>
 																</div>
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-sizes col">
+																	<select class="form-select border-0" aria-label="select sizes">
 																		<option selected value="1">L</option>
 																		<option value="2">XL</option>
 																		<option value="3">XXL</option>
 																	</select>
 																</div>
-															
-																<div class="col-12">
-																	<div class="market-price">
-																		<p>市價：<span data-symbol="NT$">100</span></p>
-																	</div>
-																</div>
-																<div class="col-12">
-																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
-																</div>
 															</div>
+														</div>
+														
+														<div class="market-price">
+															<p>市價：<span data-symbol="NT$">100</span></p>
+														</div>
+
+														<div class="card-action">
+															<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
 														</div>
 													</div>
 												</div>
@@ -4379,32 +4379,31 @@
 													
 													<div class="card-body px-0 py-2">
 														<div class="card-title">5522 - 簡短商品代稱</div>
-														<div class="card-content">
+														<div class="card-box mb-3">
 															<div class="row g-2">
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-colors col">
+																	<select class="form-select border-0" aria-label="select colors">
 																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
 																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
 																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
 																	</select>
 																</div>
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-sizes col">
+																	<select class="form-select border-0" aria-label="select sizes">
 																		<option selected value="1">L</option>
 																		<option value="2">XL</option>
 																		<option value="3">XXL</option>
 																	</select>
 																</div>
-															
-																<div class="col-12">
-																	<div class="market-price">
-																		<p>市價：<span data-symbol="NT$">100</span></p>
-																	</div>
-																</div>
-																<div class="col-12">
-																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
-																</div>
 															</div>
+														</div>
+														
+														<div class="market-price">
+															<p>市價：<span data-symbol="NT$">100</span></p>
+														</div>
+
+														<div class="card-action">
+															<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
 														</div>
 													</div>
 												</div>
@@ -4417,44 +4416,45 @@
 													
 													<div class="card-body px-0 py-2">
 														<div class="card-title">5522 - 簡短商品代稱</div>
-														<div class="card-content">
+														<div class="card-box mb-3">
 															<div class="row g-2">
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-colors col">
+																	<select class="form-select border-0" aria-label="select colors">
 																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
 																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
 																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
 																	</select>
 																</div>
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-sizes col">
+																	<select class="form-select border-0" aria-label="select sizes">
 																		<option selected value="1">L</option>
 																		<option value="2">XL</option>
 																		<option value="3">XXL</option>
 																	</select>
 																</div>
-															
-																<div class="col-12">
-																	<div class="market-price">
-																		<p>市價：<span data-symbol="NT$">100</span></p>
-																	</div>
-																</div>
-																<div class="col-12">
-																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
-																</div>
 															</div>
+														</div>
+														
+														<div class="market-price">
+															<p>市價：<span data-symbol="NT$">100</span></p>
+														</div>
+
+														<div class="card-action">
+															<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
 														</div>
 													</div>
 												</div>
 											</div>	
 										</div>
 										<!-- 輪播箭頭 -->
-										<div class="gifts-swiper-button d-flex d-lg-flex">
+										<div class="gifts-swiper-button d-flex">
 											<div class="swiper-button-prev gifts-button-prev"></div>
 											<div class="swiper-button-next gifts-button-next"></div>	
 										</div>
 									</div>
 								</div>
+
+								<!-- 3000 點 -->
 								<div class="gifts-item my-3">
 									<h5 class="cart_title">全館滿 <span>3000</span> 送贈品：</h5>
 									<div class="swiper gifts-swiper px-4 py-3">
@@ -4468,32 +4468,31 @@
 													
 													<div class="card-body px-0 py-2">
 														<div class="card-title">5522 - 簡短商品代稱</div>
-														<div class="card-content">
+														<div class="card-box mb-3">
 															<div class="row g-2">
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-colors col">
+																	<select class="form-select border-0" aria-label="select colors">
 																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
 																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
 																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
 																	</select>
 																</div>
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-sizes col">
+																	<select class="form-select border-0" aria-label="select sizes">
 																		<option selected value="1">L</option>
 																		<option value="2">XL</option>
 																		<option value="3">XXL</option>
 																	</select>
 																</div>
-															
-																<div class="col-12">
-																	<div class="market-price">
-																		<p>市價：<span data-symbol="NT$">100</span></p>
-																	</div>
-																</div>
-																<div class="col-12">
-																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
-																</div>
 															</div>
+														</div>
+														
+														<div class="market-price">
+															<p>市價：<span data-symbol="NT$">100</span></p>
+														</div>
+
+														<div class="card-action">
+															<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
 														</div>
 													</div>
 												</div>
@@ -4507,32 +4506,31 @@
 													
 													<div class="card-body px-0 py-2">
 														<div class="card-title">5522 - 簡短商品代稱簡短商品代稱</div>
-														<div class="card-content">
+														<div class="card-box mb-3">
 															<div class="row g-2">
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-colors col">
+																	<select class="form-select border-0" aria-label="select colors">
 																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
 																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
 																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
 																	</select>
 																</div>
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-sizes col">
+																	<select class="form-select border-0" aria-label="select sizes">
 																		<option selected value="1">L</option>
 																		<option value="2">XL</option>
 																		<option value="3">XXL</option>
 																	</select>
 																</div>
-															
-																<div class="col-12">
-																	<div class="market-price">
-																		<p>市價：<span data-symbol="NT$">100</span></p>
-																	</div>
-																</div>
-																<div class="col-12">
-																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
-																</div>
 															</div>
+														</div>
+														
+														<div class="market-price">
+															<p>市價：<span data-symbol="NT$">100</span></p>
+														</div>
+
+														<div class="card-action">
+															<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100 active">已選擇</button>
 														</div>
 													</div>
 												</div>
@@ -4545,32 +4543,31 @@
 													
 													<div class="card-body px-0 py-2">
 														<div class="card-title">5522 - 簡短商品代稱簡短商品代稱簡短商品代稱</div>
-														<div class="card-content">
+														<div class="card-box mb-3">
 															<div class="row g-2">
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-colors col">
+																	<select class="form-select border-0" aria-label="select colors">
 																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
 																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
 																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
 																	</select>
 																</div>
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-sizes col">
+																	<select class="form-select border-0" aria-label="select sizes">
 																		<option selected value="1">L</option>
 																		<option value="2">XL</option>
 																		<option value="3">XXL</option>
 																	</select>
 																</div>
-															
-																<div class="col-12">
-																	<div class="market-price">
-																		<p>市價：<span data-symbol="NT$">100</span></p>
-																	</div>
-																</div>
-																<div class="col-12">
-																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
-																</div>
 															</div>
+														</div>
+														
+														<div class="market-price">
+															<p>市價：<span data-symbol="NT$">100</span></p>
+														</div>
+
+														<div class="card-action">
+															<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
 														</div>
 													</div>
 												</div>
@@ -4583,32 +4580,31 @@
 													
 													<div class="card-body px-0 py-2">
 														<div class="card-title">5522 - 簡短商品代稱</div>
-														<div class="card-content">
+														<div class="card-box mb-3">
 															<div class="row g-2">
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-colors col">
+																	<select class="form-select border-0" aria-label="select colors">
 																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
 																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
 																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
 																	</select>
 																</div>
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-sizes col">
+																	<select class="form-select border-0" aria-label="select sizes">
 																		<option selected value="1">L</option>
 																		<option value="2">XL</option>
 																		<option value="3">XXL</option>
 																	</select>
 																</div>
-															
-																<div class="col-12">
-																	<div class="market-price">
-																		<p>市價：<span data-symbol="NT$">100</span></p>
-																	</div>
-																</div>
-																<div class="col-12">
-																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
-																</div>
 															</div>
+														</div>
+														
+														<div class="market-price">
+															<p>市價：<span data-symbol="NT$">100</span></p>
+														</div>
+
+														<div class="card-action">
+															<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
 														</div>
 													</div>
 												</div>
@@ -4621,32 +4617,31 @@
 													
 													<div class="card-body px-0 py-2">
 														<div class="card-title">5522 - 簡短商品代稱</div>
-														<div class="card-content">
+														<div class="card-box mb-3">
 															<div class="row g-2">
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-colors col">
+																	<select class="form-select border-0" aria-label="select colors">
 																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
 																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
 																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
 																	</select>
 																</div>
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-sizes col">
+																	<select class="form-select border-0" aria-label="select sizes">
 																		<option selected value="1">L</option>
 																		<option value="2">XL</option>
 																		<option value="3">XXL</option>
 																	</select>
 																</div>
-															
-																<div class="col-12">
-																	<div class="market-price">
-																		<p>市價：<span data-symbol="NT$">100</span></p>
-																	</div>
-																</div>
-																<div class="col-12">
-																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
-																</div>
 															</div>
+														</div>
+														
+														<div class="market-price">
+															<p>市價：<span data-symbol="NT$">100</span></p>
+														</div>
+
+														<div class="card-action">
+															<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
 														</div>
 													</div>
 												</div>
@@ -4659,32 +4654,31 @@
 													
 													<div class="card-body px-0 py-2">
 														<div class="card-title">5522 - 簡短商品代稱</div>
-														<div class="card-content">
+														<div class="card-box mb-3">
 															<div class="row g-2">
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-colors col">
+																	<select class="form-select border-0" aria-label="select colors">
 																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
 																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
 																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
 																	</select>
 																</div>
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-sizes col">
+																	<select class="form-select border-0" aria-label="select sizes">
 																		<option selected value="1">L</option>
 																		<option value="2">XL</option>
 																		<option value="3">XXL</option>
 																	</select>
 																</div>
-															
-																<div class="col-12">
-																	<div class="market-price">
-																		<p>市價：<span data-symbol="NT$">100</span></p>
-																	</div>
-																</div>
-																<div class="col-12">
-																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
-																</div>
 															</div>
+														</div>
+														
+														<div class="market-price">
+															<p>市價：<span data-symbol="NT$">100</span></p>
+														</div>
+
+														<div class="card-action">
+															<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
 														</div>
 													</div>
 												</div>
@@ -4697,32 +4691,31 @@
 													
 													<div class="card-body px-0 py-2">
 														<div class="card-title">5522 - 簡短商品代稱</div>
-														<div class="card-content">
+														<div class="card-box mb-3">
 															<div class="row g-2">
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-colors col">
+																	<select class="form-select border-0" aria-label="select colors">
 																		<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
 																		<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅紅格</option>
 																		<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑黑黑格</option>
 																	</select>
 																</div>
-																<div class="col">
-																	<select class="form-select border-0" aria-label="Default select example">
+																<div class="card-sizes col">
+																	<select class="form-select border-0" aria-label="select sizes">
 																		<option selected value="1">L</option>
 																		<option value="2">XL</option>
 																		<option value="3">XXL</option>
 																	</select>
 																</div>
-															
-																<div class="col-12">
-																	<div class="market-price">
-																		<p>市價：<span data-symbol="NT$">100</span></p>
-																	</div>
-																</div>
-																<div class="col-12">
-																	<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
-																</div>
 															</div>
+														</div>
+														
+														<div class="market-price">
+															<p>市價：<span data-symbol="NT$">100</span></p>
+														</div>
+
+														<div class="card-action">
+															<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100">選擇贈品</button>
 														</div>
 													</div>
 												</div>
@@ -4778,7 +4771,6 @@
 															<img src="images/product/pic-product-hover.webp" class="ratio ratio-1x1" alt="">
 														</picture>
 													</div>
-	
 													<h5 class="card-title">
 														<p>445黑</p>
 														<span>超透氣1/2男女運動襪超透氣1/2男女運動襪超透氣1/2男女運動襪</span>
@@ -4919,6 +4911,314 @@
 								</div>	
 							</div>
 						  </div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 全站加購商品 -->
+				<div class="shopping_cart_add mt-3">
+					<div class="add-item my-3">
+						<h5 class="cart_title">全站加購品</h5>
+						<div class="swiper add-swiper px-4 py-3">
+							<div class="swiper-wrapper">
+								<!-- @foreach start -->
+								<div class="swiper-slide add-slide">
+									<div class="add-card card h-100 px-2 border-0">
+										<picture class="d-inline-block ratio ratio-1x1">
+											<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+										</picture>
+										
+										<div class="card-body px-0 py-2">
+											<div class="card-title">5522 - 簡短商品代稱</div>
+											<div class="cart-colors mb-2">
+												<select class="form-select border-0" aria-label="select colors">
+													<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+													<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅格</option>
+													<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑格</option>
+												</select>
+											</div>
+											
+											<div class="card-box mb-3">
+												<div class="row g-2">
+													<div class="cart-sizes col-6">
+														<select class="form-select border-0" aria-label="select sizes">
+															<option selected value="1">L</option>
+															<option value="2">XL</option>
+															<option value="3">XXL</option>
+														</select>
+													</div>
+													<div class="cart-quantity col-6">
+														<select class="form-select border-0" aria-label="select quantity">
+															<option selected value="1">1</option>
+															<option value="2" >2</option>
+															<option value="3" >3</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="card-action">
+												<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100"><span data-symbol="NT$ ">1,000</span> 加購</button>
+												<!-- 已加購樣式 button 的 class 加上 active，拿掉 button 裡的 span ，內容改為已加購-->
+												<!-- <button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100 active">已加購</button> -->
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- @foreach end -->
+								<!-- 已加購樣式-->
+								<div class="swiper-slide add-slide">
+									<div class="add-card card h-100 px-2 border-0">
+										<picture class="d-inline-block ratio ratio-1x1">
+											<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+										</picture>
+										
+										<div class="card-body px-0 py-2">
+											<div class="card-title">5522 - 簡短商品代稱簡短商品代稱</div>
+											<div class="cart-colors mb-2">
+												<select class="form-select border-0" aria-label="select colors">
+													<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+													<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅格</option>
+													<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑格</option>
+												</select>
+											</div>
+											
+											<div class="card-box mb-3">
+												<div class="row g-2">
+													<div class="cart-sizes col">
+														<select class="form-select border-0" aria-label="select sizes">
+															<option selected value="1">L</option>
+															<option value="2">XL</option>
+															<option value="3">XXL</option>
+														</select>
+													</div>
+													<div class="cart-quantity col">
+														<select class="form-select border-0" aria-label="select quantity">
+															<option selected value="1">1</option>
+															<option value="2" >2</option>
+															<option value="3" >3</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="card-action">
+												<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100 active">已加購</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide add-slide">
+									<div class="add-card card h-100 px-2 border-0">
+										<picture class="d-inline-block ratio ratio-1x1">
+											<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+										</picture>
+										
+										<div class="card-body px-0 py-2">
+											<div class="card-title">5522 - 簡短商品代稱簡短商品代稱簡短商品代稱</div>
+											<div class="cart-colors mb-2">
+												<select class="form-select border-0" aria-label="select colors">
+													<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+													<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅格</option>
+													<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑格</option>
+												</select>
+											</div>
+											
+											<div class="card-box mb-3">
+												<div class="row g-2">
+													<div class="cart-sizes col">
+														<select class="form-select border-0" aria-label="select sizes">
+															<option selected value="1">L</option>
+															<option value="2">XL</option>
+															<option value="3">XXL</option>
+														</select>
+													</div>
+													<div class="cart-quantity col">
+														<select class="form-select border-0" aria-label="select quantity">
+															<option selected value="1">1</option>
+															<option value="2" >2</option>
+															<option value="3" >3</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="card-action">
+												<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100"><span data-symbol="NT$ ">1,000</span> 加購</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide add-slide">
+									<div class="add-card card h-100 px-2 border-0">
+										<picture class="d-inline-block ratio ratio-1x1">
+											<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+										</picture>
+										
+										<div class="card-body px-0 py-2">
+											<div class="card-title">5522 - 簡短商品代稱</div>
+											<div class="cart-colors mb-2">
+												<select class="form-select border-0" aria-label="select colors">
+													<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+													<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅格</option>
+													<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑格</option>
+												</select>
+											</div>
+											
+											<div class="card-box mb-3">
+												<div class="row g-2">
+													<div class="cart-sizes col">
+														<select class="form-select border-0" aria-label="select sizes">
+															<option selected value="1">L</option>
+															<option value="2">XL</option>
+															<option value="3">XXL</option>
+														</select>
+													</div>
+													<div class="cart-quantity col">
+														<select class="form-select border-0" aria-label="select quantity">
+															<option selected value="1">1</option>
+															<option value="2" >2</option>
+															<option value="3" >3</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="card-action">
+												<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100"><span data-symbol="NT$ ">1,000</span> 加購</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide add-slide">
+									<div class="add-card card h-100 px-2 border-0">
+										<picture class="d-inline-block ratio ratio-1x1">
+											<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+										</picture>
+										
+										<div class="card-body px-0 py-2">
+											<div class="card-title">5522 - 簡短商品代稱</div>
+											<div class="cart-colors mb-2">
+												<select class="form-select border-0" aria-label="select colors">
+													<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+													<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅格</option>
+													<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑格</option>
+												</select>
+											</div>
+											
+											<div class="card-box mb-3">
+												<div class="row g-2">
+													<div class="cart-sizes col">
+														<select class="form-select border-0" aria-label="select sizes">
+															<option selected value="1">L</option>
+															<option value="2">XL</option>
+															<option value="3">XXL</option>
+														</select>
+													</div>
+													<div class="cart-quantity col">
+														<select class="form-select border-0" aria-label="select quantity">
+															<option selected value="1">1</option>
+															<option value="2" >2</option>
+															<option value="3" >3</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="card-action">
+												<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100"><span data-symbol="NT$ ">1,000</span> 加購</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide add-slide">
+									<div class="add-card card h-100 px-2 border-0">
+										<picture class="d-inline-block ratio ratio-1x1">
+											<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+										</picture>
+										
+										<div class="card-body px-0 py-2">
+											<div class="card-title">5522 - 簡短商品代稱</div>
+											<div class="cart-colors mb-2">
+												<select class="form-select border-0" aria-label="select colors">
+													<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+													<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅格</option>
+													<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑格</option>
+												</select>
+											</div>
+											
+											<div class="card-box mb-3">
+												<div class="row g-2">
+													<div class="cart-sizes col">
+														<select class="form-select border-0" aria-label="select sizes">
+															<option selected value="1">L</option>
+															<option value="2">XL</option>
+															<option value="3">XXL</option>
+														</select>
+													</div>
+													<div class="cart-quantity col">
+														<select class="form-select border-0" aria-label="select quantity">
+															<option selected value="1">1</option>
+															<option value="2" >2</option>
+															<option value="3" >3</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="card-action">
+												<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100"><span data-symbol="NT$ ">1,000</span> 加購</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide add-slide">
+									<div class="add-card card h-100 px-2 border-0">
+										<picture class="d-inline-block ratio ratio-1x1">
+											<img src="https://fakeimg.pl/150x150/?text=Hello" class="img-fluid img-thumbnail" alt="...">
+										</picture>
+										
+										<div class="card-body px-0 py-2">
+											<div class="card-title">5522 - 簡短商品代稱</div>
+											<div class="cart-colors mb-2">
+												<select class="form-select border-0" aria-label="select colors">
+													<option selected value="1" data-img="https://fakeimg.pl/150x150/?text=blue">藍格</option>
+													<option value="2" data-img="https://fakeimg.pl/150x150/?text=red">紅格</option>
+													<option value="3" data-img="https://fakeimg.pl/150x150/?text=black">黑格</option>
+												</select>
+											</div>
+											
+											<div class="card-box mb-3">
+												<div class="row g-2">
+													<div class="cart-sizes col">
+														<select class="form-select border-0" aria-label="select sizes">
+															<option selected value="1">L</option>
+															<option value="2">XL</option>
+															<option value="3">XXL</option>
+														</select>
+													</div>
+													<div class="cart-quantity col">
+														<select class="form-select border-0" aria-label="select quantity">
+															<option selected value="1">1</option>
+															<option value="2" >2</option>
+															<option value="3" >3</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="card-action">
+												<button class="btn btnSF btnBlud001 btn-l fs-6 fw-medium w-100"><span data-symbol="NT$ ">1,000</span> 加購</button>
+											</div>
+										</div>
+									</div>
+								</div>	
+							</div>
+							<!-- 輪播箭頭 -->
+							<div class="add-swiper-button d-flex d-lg-flex">
+								<div class="swiper-button-prev add-button-prev"></div>
+								<div class="swiper-button-next add-button-next"></div>	
+							</div>
 						</div>
 					</div>
 				</div>

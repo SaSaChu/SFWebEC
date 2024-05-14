@@ -769,7 +769,7 @@ main {
 		}
 	}
 
-	.shopping_cart_add {
+	.shopping_cart_add_list {
 		padding: 1rem 1rem 0 1rem;
 		background-color: $white;
 		border-radius: 5px;
@@ -792,8 +792,8 @@ main {
 			}
 		}
 
-		.cart_add_content {
-			.web_add_cart {
+		.cart_add_list_content {
+			.web_add_cart_list {
 				.content_header {
 					background-color: $gray-100;
 
@@ -959,7 +959,7 @@ main {
 				}
 			}
 
-			.mobile_add_cart {
+			.mobile_add_cart_list {
 				.content_header {
 					padding-bottom: .5rem;
 					border-bottom: 1px solid $gray-100;
@@ -1152,6 +1152,14 @@ main {
 													&:before {
 														content: attr(data-symbol);
 													}
+												}
+											}
+										}
+
+										.card-action {
+											button {
+												&.active {
+													background-color: $blue-800;
 												}
 											}
 										}
@@ -1609,6 +1617,105 @@ main {
 				}
 			}
 		}
+	}
+
+	.shopping_cart_add {
+		padding: 1rem 1rem 0 1rem;
+		background-color: $white;
+		border-radius: 5px;	
+
+		.add-swiper {
+			.add-slide {
+				height: auto;
+
+				.add-card {
+					height: 100%;
+
+					.card-body {
+						display: flex;
+						flex-direction: column;
+						height: 100%;
+
+						.card-title {
+							height: 100%;
+						}	
+
+						.form-select {
+							font-size: 15px;
+							background-color: $gray-100;
+							padding: 0.375rem 1.5rem 0.375rem 0.75rem;
+						}
+
+						.card-action {
+							button {
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								gap: .5rem;
+	
+								&.active {
+									background-color: $blue-800;
+								}
+	
+								span {
+									display: inline-flex;
+									align-items: center;
+									&:before {
+										margin-right: .5rem;
+										content: attr(data-symbol);
+									}		
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.add-button-prev {
+				left: 0;
+				width: inherit;
+	
+				&:before {
+					content: "";
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 4px 8px 4px 0;
+					border-color: transparent #959595 transparent transparent;
+				}
+				
+				&:after {
+					content: "";
+					height: 100%;
+					width: 2px;
+					background-color: #959595;
+					margin-left: .5rem;
+				}
+			}
+	
+			.add-button-next {
+				right: 0;
+				width: inherit;
+				transform: rotate(180deg);
+	
+				&:before {
+					content: "";
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 4px 8px 4px 0;
+					border-color: transparent #959595 transparent transparent;
+				}
+	
+				&:after {
+					content: "";
+					height: 100%;
+					width: 2px;
+					background-color: #959595;
+					margin-left: .5rem;
+				}
+			}
+		}		
 	}
 
 	.cart-offcanvas {
