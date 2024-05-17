@@ -3690,6 +3690,7 @@ main .shopping_cart_point .accordion .accordion-item .accordion-body .point-item
 main .shopping_cart_point .accordion .accordion-item .accordion-body .point-item .point-swiper .point-slide .point-card .market-price p span:before { content: attr(data-symbol); }
 main .shopping_cart_point .accordion .accordion-item .accordion-body .point-item .point-swiper .point-slide .point-card .card-action { margin-top: .5rem; }
 main .shopping_cart_point .accordion .accordion-item .accordion-body .point-item .point-swiper .point-slide .point-card .card-action button { display: flex; align-items: center; justify-content: center; width: 100%; }
+main .shopping_cart_point .accordion .accordion-item .accordion-body .point-item .point-swiper .point-slide .point-card .card-action button.active { background-color: #032c56; }
 main .shopping_cart_point .accordion .accordion-item .accordion-body .point-item .point-swiper .point-button-prev { left: 0; width: inherit; }
 main .shopping_cart_point .accordion .accordion-item .accordion-body .point-item .point-swiper .point-button-prev:before { content: ""; width: 0; height: 0; border-style: solid; border-width: 4px 8px 4px 0; border-color: transparent #959595 transparent transparent; }
 main .shopping_cart_point .accordion .accordion-item .accordion-body .point-item .point-swiper .point-button-prev:after { content: ""; height: 100%; width: 2px; background-color: #959595; margin-left: .5rem; }
@@ -3805,43 +3806,58 @@ main .step_third_section .section_title h5 img, main .step_third_section .sectio
 main .step_third_section .section_title button { width: 100%; }
 main .step_third_section .check-message { padding: 1rem 0; border-top: 1px solid #032c56; border-bottom: 1px solid #032c56; }
 main .step_third_section .check-message p { font-size: 18px; color: #343a40; }
-main .step_third_section .check-message p span { color: #B10E0E; }
+main .step_third_section .check-message p span { color: #B10E0E; vertical-align: baseline; }
 main .step_third_section .order-info .col { padding-top: 1rem; }
 main .step_third_section .order-info .col p:last-child { padding-bottom: 1rem; border-bottom: 1px solid #e9ecef; }
+main .step_third_section .order-info .col p span { vertical-align: baseline; }
 main .step_third_section .shopping_cart_check_list .web_cart .content_header { background-color: #f8f9fa; }
 main .step_third_section .shopping_cart_check_list .web_cart .content_body > .row { border-bottom: solid 1px #e9ecef; }
 @media (max-width: 1199.98px) { main .step_third_section .shopping_cart_check_list .web_cart .content_body .info_field > .row { align-items: center; } }
 main .step_third_section .shopping_cart_check_list .web_cart .content_body .info_field h5, main .step_third_section .shopping_cart_check_list .web_cart .content_body .info_field .h5 { font-size: 16px; }
-main .step_third_section .shopping_cart_check_list .web_cart .content_body .info_field .offer_tag { display: flex; align-items: center; justify-content: center; margin-bottom: .5rem; width: 60px; height: 30px; font-size: 13px; font-weight: 500; }
+main .step_third_section .shopping_cart_check_list .web_cart .content_body .info_field .offer_tag { display: flex; align-items: center; justify-content: center; margin-bottom: .5rem; width: 100px; height: 30px; font-size: 13px; font-weight: 500; color: #000; background-color: #daf6ff; }
+main .step_third_section .shopping_cart_check_list .web_cart .content_body .info_field .offer_tag.coupon_tag { background-color: #9bf1c6; }
 main .step_third_section .shopping_cart_check_list .web_cart .content_body .info_field .offer_tag.gifts_tag { background-color: #ffdba2; color: #000; }
-main .step_third_section .shopping_cart_check_list .web_cart .content_body .info_field .offer_tag.add_tag { background-color: #B10E0E; color: #fff; }
+main .step_third_section .shopping_cart_check_list .web_cart .content_body .info_field .offer_tag.point_tag { background-color: #B10E0E; color: #fff; }
+main .step_third_section .shopping_cart_check_list .web_cart .content_body .info_field .offer_tag.add_tag { background-color: #432874; color: #fff; }
 main .step_third_section .shopping_cart_check_list .web_cart .content_body .count_field { display: flex; align-items: center; justify-content: center; }
 main .step_third_section .shopping_cart_check_list .web_cart .content_body .count_field .quantity:empty:before { content: '-'; }
+main .step_third_section .shopping_cart_check_list .web_cart .content_body .count_field .quantity span { vertical-align: baseline; }
 main .step_third_section .shopping_cart_check_list .web_cart .content_body .color_field { font-size: 16px; font-weight: 500; color: #111c47; }
 main .step_third_section .shopping_cart_check_list .web_cart .content_body .color_field p { display: flex; align-items: center; justify-content: center; margin-bottom: 0; font-weight: normal; }
 main .step_third_section .shopping_cart_check_list .web_cart .content_body .size_field { font-size: 16px; font-weight: 500; color: #111c47; }
-main .step_third_section .shopping_cart_check_list .web_cart .content_body .size_field p { display: flex; align-items: center; justify-content: center; margin-bottom: 0; font-weight: normal; }
+main .step_third_section .shopping_cart_check_list .web_cart .content_body .size_field p { display: flex; align-items: baseline; justify-content: center; margin-bottom: 0; font-weight: normal; }
+main .step_third_section .shopping_cart_check_list .web_cart .content_body .size_field p span { vertical-align: baseline; }
 main .step_third_section .shopping_cart_check_list .web_cart .content_body .subtotal_field { display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 500; color: #B10E0E; }
 main .step_third_section .shopping_cart_check_list .web_cart .content_body .subtotal_field.price_symbol span:before { content: attr(data-symbol); }
 main .step_third_section .shopping_cart_check_list .web_cart .content_body .subtotal_field.price_symbol span:empty:before { content: '-'; color: #6c757d; }
+main .step_third_section .shopping_cart_check_list .web_cart .content_body .subtotal_field.price_symbol span.point { align-items: baseline; }
+main .step_third_section .shopping_cart_check_list .web_cart .content_body .subtotal_field.price_symbol span.point:before { content: none; }
+main .step_third_section .shopping_cart_check_list .web_cart .content_body .subtotal_field.price_symbol span.point:after { content: attr(data-symbol); }
 main .step_third_section .shopping_cart_check_list .mobile_cart .content_header { padding-bottom: .5rem; border-bottom: 1px solid #f8f9fa; }
-main .step_third_section .shopping_cart_check_list .mobile_cart .offer_field { align-self: flex-start; }
-main .step_third_section .shopping_cart_check_list .mobile_cart .offer_field .offer_tag { display: inline-block; margin-top: .5rem; padding: .3rem 1rem; width: 100%; font-size: 13px; font-weight: 500; color: #000; background-color: #daf6ff; text-align: center; }
-main .step_third_section .shopping_cart_check_list .mobile_cart .offer_field .offer_item { margin-top: 0.5rem; font-size: 14px; font-weight: 500; color: #B10E0E; }
+main .step_third_section .shopping_cart_check_list .mobile_cart .img_field .offer_tag { display: inline-block; margin-top: .5rem; padding: .3rem 1rem; width: 100%; font-size: 13px; font-weight: 500; color: #000; background-color: #daf6ff; text-align: center; }
+main .step_third_section .shopping_cart_check_list .mobile_cart .img_field .offer_tag.coupon_tag { background-color: #9bf1c6; }
+main .step_third_section .shopping_cart_check_list .mobile_cart .img_field .offer_tag.gifts_tag { background-color: #ffdba2; }
+main .step_third_section .shopping_cart_check_list .mobile_cart .img_field .offer_tag.point_tag { background-color: #B10E0E; color: #fff; }
+main .step_third_section .shopping_cart_check_list .mobile_cart .img_field .offer_tag.add_tag { background-color: #432874; color: #fff; }
 main .step_third_section .shopping_cart_check_list .mobile_cart .title_field h5, main .step_third_section .shopping_cart_check_list .mobile_cart .title_field .h5 { font-size: 16px; color: #111c47; }
+main .step_third_section .shopping_cart_check_list .mobile_cart .color_field span { vertical-align: baseline; }
 main .step_third_section .shopping_cart_check_list .mobile_cart .count_field { display: flex; align-items: center; margin: .5rem 0; }
 main .step_third_section .shopping_cart_check_list .mobile_cart .count_field > * { flex: 1; border-radius: 5px; }
-main .step_third_section .shopping_cart_check_list .mobile_cart .count_field .count_btn { display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; max-width: 30px; background-color: #f5f5f5; }
-main .step_third_section .shopping_cart_check_list .mobile_cart .count_field .count_value { -webkit-appearance: none; margin: 0 .5rem; width: 50px; max-width: 50px; height: 30px; font-size: 16px; font-weight: 400; border: 0; border-radius: 0; outline: none; box-shadow: none; text-align: center; background-color: #f5f5f5; cursor: text; }
-main .step_third_section .shopping_cart_check_list .mobile_cart .original_field { font-size: 16px; font-weight: 500; color: #6c757d; }
-main .step_third_section .shopping_cart_check_list .mobile_cart .discount_field { font-size: 16px; font-weight: 500; color: #032c56; }
-main .step_third_section .shopping_cart_check_list .mobile_cart .subtotal_field { font-size: 16px; font-weight: 500; color: #B10E0E; }
-main .step_third_section .shopping_cart_check_list .mobile_cart .subtotal_field.price_symbol span:before { content: attr(data-symbol); }
-main .step_third_section .shopping_cart_check_list .mobile_cart .subtotal_field.price_symbol span:empty:before { content: '-'; color: #6c757d; }
+main .step_third_section .shopping_cart_check_list .mobile_cart .count_field .quantity { vertical-align: baseline; }
+main .step_third_section .shopping_cart_check_list .mobile_cart .count_field .quantity:empty:before { content: '-'; }
+main .step_third_section .shopping_cart_check_list .mobile_cart .count_field .size { vertical-align: baseline; }
+main .step_third_section .shopping_cart_check_list .mobile_cart .subtotal_field { font-size: 16px; font-weight: 500; color: #111c47; }
+main .step_third_section .shopping_cart_check_list .mobile_cart .subtotal_field .price_symbol { display: flex; }
+main .step_third_section .shopping_cart_check_list .mobile_cart .subtotal_field .price_symbol span { color: #B10E0E; }
+main .step_third_section .shopping_cart_check_list .mobile_cart .subtotal_field .price_symbol span:before { content: attr(data-symbol); }
+main .step_third_section .shopping_cart_check_list .mobile_cart .subtotal_field .price_symbol span:empty:before { content: '-'; color: #6c757d; }
+main .step_third_section .shopping_cart_check_list .mobile_cart .subtotal_field .price_symbol span.point { align-items: baseline; }
+main .step_third_section .shopping_cart_check_list .mobile_cart .subtotal_field .price_symbol span.point:before { content: none; }
+main .step_third_section .shopping_cart_check_list .mobile_cart .subtotal_field .price_symbol span.point:after { content: attr(data-symbol); }
 main .step_third_section .shopping_cart_check_list .mobile_cart .action_field button { margin-top: .5rem; padding-right: .5rem; padding-left: .5rem; width: 100%; }
-main .step_third_section .payment_field .col-12:has(.payment_total) { position: relative; }
-main .step_third_section .payment_field .col-12:has(.payment_total):before { content: ''; position: absolute; top: 0; left: -.5px; width: 1px; height: 100%; background-color: #6c757d; }
-@media (max-width: 991.98px) { main .step_third_section .payment_field .col-12:has(.payment_total):before { content: none; } }
+main .step_third_section .payment_field .col-12.col-lg-5:has(.payment_total) { position: relative; }
+main .step_third_section .payment_field .col-12.col-lg-5:has(.payment_total):before { content: ''; position: absolute; top: 0; left: -.5px; width: 1px; height: 100%; background-color: #6c757d; }
+@media (max-width: 991.98px) { main .step_third_section .payment_field .col-12.col-lg-5:has(.payment_total):before { content: none; } }
 main .step_third_section .payment_field .payment_total span { font-weight: 600; color: #B10E0E; }
 main .step_third_section .payment_field p { display: flex; align-items: center; justify-content: center; margin: 0; font-weight: 600; }
 @media (max-width: 991.98px) { main .step_third_section .payment_field p { justify-content: flex-start; } }

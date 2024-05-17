@@ -9,6 +9,10 @@
 @import "layout/footer";
 @import "components/cart";
 
+// * {
+// 	vertical-align: baseline;
+// }
+
 main {
 	background-color: #f5f5f5;
 
@@ -1361,6 +1365,10 @@ main {
 											align-items: center;
 											justify-content: center;
 											width: 100%;
+
+											&.active {
+												background-color: $blue-800;
+											}
 										}
 									}
 								}	
@@ -2166,6 +2174,7 @@ main {
 
 				span {
 					color: $main-red;
+					vertical-align: baseline;
 				}
 			}
 		}
@@ -2180,6 +2189,10 @@ main {
 						padding-bottom: 1rem;
 						border-bottom: 1px solid $gray-200;
 					}
+
+					span {
+						vertical-align: baseline;
+					}
 				}
 			}
 		}
@@ -2187,6 +2200,7 @@ main {
 		.shopping_cart_check_list {
 			
 			.web_cart {
+				
 				.content_header {
 					background-color: $gray-100;
 				}
@@ -2197,6 +2211,7 @@ main {
 					}
 	
 					.info_field {
+
 						> .row {
 							@include media-breakpoint-down(xl) {
 								align-items: center;
@@ -2212,18 +2227,29 @@ main {
 							align-items: center;
 							justify-content: center;
 							margin-bottom: .5rem;
-							width: 60px;
+							width: 100px;
 							height: 30px;
 							font-size: 13px;
 							font-weight: 500;
+							color: $black;
+							background-color: #daf6ff;
+
+							&.coupon_tag {
+								background-color: #9bf1c6;
+							}
 
 							&.gifts_tag {
 								background-color: #ffdba2;
 								color: #000;
 							}
 
-							&.add_tag {
+							&.point_tag {
 								background-color: $main-red;
+								color: $white;
+							}
+
+							&.add_tag {
+								background-color: $purple-700;	
 								color: $white;
 							}
 						}
@@ -2239,6 +2265,10 @@ main {
 								&:before {
 									content: '-';	
 								}
+							}
+
+							span {
+								vertical-align: baseline;
 							}
 						}
 						
@@ -2265,10 +2295,14 @@ main {
 
 						p {
 							display: flex;
-							align-items: center;
+							align-items: baseline;
 							justify-content: center;
 							margin-bottom: 0;
 							font-weight: normal;
+
+							span {
+								vertical-align: baseline;
+							}
 						}
 					}
 	
@@ -2282,6 +2316,17 @@ main {
 
 						&.price_symbol {
 							span {
+								// &:before {
+								// 	content: attr(data-symbol);	
+								// }
+				
+								// &:empty {
+								// 	&:before {
+								// 		content: '-';	
+								// 		color: $gray-600;
+								// 	}
+								// }k
+
 								&:before {
 									content: attr(data-symbol);	
 								}
@@ -2292,8 +2337,20 @@ main {
 										color: $gray-600;
 									}
 								}
+	
+								&.point {
+									align-items: baseline;
+									&:before {
+										content: none;
+									}
+	
+									&:after {
+										content: attr(data-symbol);	
+									}
+								}
 							}
 						}
+						
 					}
 				}
 			}
@@ -2304,9 +2361,8 @@ main {
 					border-bottom: 1px solid $gray-100;
 				}
 
-				.offer_field {
-					align-self: flex-start;
 
+				.img_field {
 					.offer_tag {
 						display: inline-block;
 						margin-top: .5rem;
@@ -2318,20 +2374,38 @@ main {
 						background-color: #daf6ff;
 						text-align: center;
 
-					}
 
-					.offer_item {
-						margin-top: 0.5rem;
-						font-size: 14px;
-						font-weight: 500;
-						color: $main-red;
+						&.coupon_tag {
+							background-color: #9bf1c6;
+						}
+
+						&.gifts_tag {
+							background-color: #ffdba2;
+							// color: #000;
+						}
+
+						&.point_tag {
+							background-color: $main-red;
+							color: $white;
+						}
+
+						&.add_tag {
+							background-color: $purple-700;	
+							color: $white;
+						}
 					}
-				}
+				}	
 
 				.title_field {
 					h5 {
 						font-size: 16px;
 						color: $main-blue;
+					}
+				}
+
+				.color_field {
+					span {
+						vertical-align: baseline;
 					}
 				}
 
@@ -2345,53 +2419,33 @@ main {
 						border-radius: 5px;
 					}
 
-					.count_btn {
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						width: 30px;
-						height: 30px;
-						max-width: 30px;
-						background-color: #f5f5f5;
+					.quantity {
+						vertical-align: baseline;
+
+						&:empty {
+							&:before {
+								content: '-';
+							}
+						}
 					}
 
-					.count_value {
-						-webkit-appearance: none;
-						margin: 0 .5rem;
-						width: 50px;
-						max-width: 50px;
-						height: 30px;
-						font-size: 16px;
-						font-weight: 400;
-						border: 0;
-						border-radius: 0;
-						outline: none;
-						box-shadow: none;
-						text-align: center;
-						background-color: #f5f5f5;
-						cursor: text;
+					.size {
+						vertical-align: baseline;
 					}
-				}
-
-				.original_field {
-					font-size: 16px;
-					font-weight: 500;
-					color: $gray-600;
-				}
-
-				.discount_field {
-					font-size: 16px;
-					font-weight: 500;
-					color: $blue-800;
 				}
 
 				.subtotal_field {
 					font-size: 16px;
 					font-weight: 500;
-					color: $main-red;
+					color: $main-blue;
+					
+					.price_symbol {
+						display: flex;
 
-					&.price_symbol {
+						
 						span {
+							color: $main-red;
+
 							&:before {
 								content: attr(data-symbol);	
 							}
@@ -2402,6 +2456,17 @@ main {
 									color: $gray-600;
 								}
 							}
+
+							&.point {
+								align-items: baseline;
+								&:before {
+									content: none;
+								}
+
+								&:after {
+									content: attr(data-symbol);	
+								}
+							}	
 						}
 					}
 				}
@@ -2419,10 +2484,11 @@ main {
 
 		.payment_field {
 
-			.col-12:has(.payment_total) {
+			.col-12.col-lg-5:has(.payment_total) {
 				position: relative;
 
 				&:before {
+
 					content: '';
 					position: absolute;
 					top: 0;
