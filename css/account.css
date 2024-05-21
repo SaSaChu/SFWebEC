@@ -3306,7 +3306,6 @@ header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .lev
 header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled .list-styled .list-styled-item { position: relative; margin-bottom: 1rem; padding-left: .5rem; }
 header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled .list-styled .list-styled-item.active:before { content: ''; position: absolute; left: 0; bottom: 0; height: 90%; border-left: 3px solid #111c47; }
 header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .level-styled .list-styled .list-styled-item .list-styled-link { font-size: 1rem; color: #232323; }
-header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .first-level-img { display: none; }
 header .nav-wrapper .navbar .web_menu .navbar-menu .dropdown .dropdown-menu .first-level-img.show { display: block; }
 header .nav-wrapper .navbar .web_menu .navbar-brand { margin: 0; padding: 0; }
 header .nav-wrapper .navbar .web_menu .navbar-action { align-items: flex-end; justify-content: flex-end; }

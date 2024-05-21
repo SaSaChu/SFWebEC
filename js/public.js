@@ -23,14 +23,6 @@ $(function () {
         parent.find($('.second-level')).eq(index).addClass('show').siblings().removeClass('show');
         parent.find($('.second-level')).eq(index).find('li:first').addClass('active').siblings().removeClass('active');
         parent.find($(`.third-level[data-category-id="${categoryId}"`)).addClass('show').siblings().removeClass('show');;
-
-        console.log(parent.find($('.first-level-img.show')).length);
-        if(parent.find($('.first-level-img.show')).length > 1) {
-            parent.find($('.first-level-img')).removeClass('show');
-            parent.find($('.first-level-img')).filter(`:eq(${index}), :eq(${index + length})`).addClass('show');            
-        } else {
-            parent.find($('.first-level-img')).eq(index).addClass('show').siblings().removeClass('show');
-        }
     });
 
     // 第二層 hover 時 
