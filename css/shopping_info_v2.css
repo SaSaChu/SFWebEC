@@ -3189,7 +3189,7 @@ a { cursor: pointer; text-decoration: none !important; }
 
 html { font-size: 16px; }
 
-body { position: relative; display: inline-block; width: 100%; margin: 0; padding: 0; color: #232323; line-height: normal !important; font-family: Roboto, "Noto Sans TC", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; font-weight: normal; text-size-adjust: none; -webkit-text-size-adjust: none; }
+body { position: relative; display: inline-block; width: 100%; margin: 0; padding: 0; color: #232323; line-height: normal !important; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: normal; text-size-adjust: none; -webkit-text-size-adjust: none; }
 
 a { text-decoration: none !important; }
 a:after, a:before { vertical-align: middle !important; }
