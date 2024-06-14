@@ -3317,15 +3317,15 @@ header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.action-search for
 header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.action-search form input { position: absolute; top: 0; left: 0; width: 100%; height: 40px; line-height: 30px; outline: 0; border: 0; display: none; font-size: 1em; border-radius: 20px; padding: 0 20px; }
 header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.action-search form .icon { display: flex; justify-content: center; align-items: center; box-sizing: border-box; width: 40px; height: 40px; position: absolute; top: 0; right: 0; border-radius: 50%; color: #fff; text-align: center; font-size: 1.25rem; cursor: pointer; }
 header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.action-user .nav-link .icon { font-size: 1.5rem; }
-header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.action-cart .dropdown-menu { left: unset; right: 0; width: 300px; max-width: 20rem; transform: translateX(25%); }
-header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.action-cart .dropdown-menu .cart-item { padding: 1rem; }
-header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.action-cart .dropdown-menu .cart-item:not(:last-child) { border-bottom: 1px solid #f8f9fa; }
-header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.action-cart .dropdown-menu .cart-item .card .card-body .card-title { font-size: 14px; color: #6c757d; white-space: normal; }
-header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.action-cart .dropdown-menu .cart-item .card .card-body .card-text.color-size { font-size: 14px; font-weight: 600; color: #111c47; }
-header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.action-cart .dropdown-menu .cart-item .card .card-body .card-text.quantity-price { font-size: 15px; color: #343a40; }
-header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.action-cart .dropdown-menu .cart-item .card .card-body .card-text.quantity-price span:last-child { display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; background-color: #B3B7C6; border-radius: 50%; }
-header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.action-cart .dropdown-menu .cart-item .card .card-body .card-text.quantity-price span:last-child i { color: #fff; }
-header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.action-cart .dropdown-menu .cart-checkout-btn { width: 100%; font-size: 18px; font-weight: 500; color: #fff; background-color: #0083D2; }
+header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.navbar-action-cart .dropdown-menu { left: unset; right: 0; width: 300px; max-width: 20rem; transform: translateX(25%); }
+header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.navbar-action-cart .dropdown-menu .cart-item { padding: 1rem; }
+header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.navbar-action-cart .dropdown-menu .cart-item:not(:last-child) { border-bottom: 1px solid #f8f9fa; }
+header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.navbar-action-cart .dropdown-menu .cart-item .card .card-body .card-title { font-size: 14px; color: #6c757d; white-space: normal; }
+header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.navbar-action-cart .dropdown-menu .cart-item .card .card-body .card-text.color-size { font-size: 14px; font-weight: 600; color: #111c47; }
+header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.navbar-action-cart .dropdown-menu .cart-item .card .card-body .card-text.quantity-price { font-size: 15px; color: #343a40; }
+header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.navbar-action-cart .dropdown-menu .cart-item .card .card-body .card-text.quantity-price span:last-child { display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; background-color: #B3B7C6; border-radius: 50%; }
+header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.navbar-action-cart .dropdown-menu .cart-item .card .card-body .card-text.quantity-price span:last-child i { color: #fff; }
+header .nav-wrapper .navbar .web_menu .navbar-action .nav-item.navbar-action-cart .dropdown-menu .cart-checkout-btn { width: 100%; font-size: 18px; font-weight: 500; color: #fff; background-color: #0083D2; }
 header .nav-wrapper .navbar .web_menu .navbar-action .nav-item .nav-link { width: 40px; height: 40px; padding: .625rem; border-radius: 50%; }
 header .nav-wrapper .navbar .web_menu .navbar-action .nav-item .nav-link.show { background-color: #FF9C00; border-radius: 50%; }
 header .nav-wrapper .navbar .web_menu .navbar-action .nav-item .nav-link .icon { display: flex; justify-content: center; align-items: center; box-sizing: border-box; width: 40px; height: 40px; position: absolute; top: 0; right: 0; border-radius: 50%; color: #fff; text-align: center; font-size: 1.25rem; cursor: pointer; }
