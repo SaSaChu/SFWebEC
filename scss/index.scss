@@ -366,7 +366,7 @@ button {
     position: absolute;
     inset: 0;
 
-    background-image: url("../images/banner-img.png");
+    background-image: url("../images/banner-img.webp");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -672,7 +672,7 @@ button {
     }
 
     &__image {
-      background-image: url("../images/m-banner-img.png");
+      background-image: url("../images/m-banner-img.webp");
 
       /* 手機版圖片也以上方為定位基準 */
       background-position: center top;
@@ -1049,429 +1049,163 @@ button {
 
 /* Store Locations */
 .sfb-store-locations {
-  position: relative;
+  display: grid;
+  grid-template-rows: 0fr;
   width: 100%;
   background-color: $white;
+  overflow: hidden;
+  transition: grid-template-rows 0.55s ease;
 
-  &__collapse {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.65s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  &__content {
-    min-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transform: translate3d(0, -12px, 0);
-    transition: opacity 0.35s ease, transform 0.45s ease;
+  &.is-open {
+    grid-template-rows: 1fr;
   }
 
   &__inner {
-    width: min(100% - 80px, 1240px);
-    margin: 0 auto;
-    padding: 48px 0 65px;
-  }
-
-  &.is-open {
-    .sfb-store-locations__collapse {
-      grid-template-rows: 1fr;
-    }
-
-    .sfb-store-locations__content {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
-      transition-delay: 0.12s;
-    }
-  }
-}
-
-/* Store Table */
-.sfb-store-locations__table-wrap {
-  width: 100%;
-  overflow: hidden;
-  border-top: 1px solid #d8d8d8;
-  border-bottom: 1px solid #d8d8d8;
-}
-
-.sfb-store-locations__table {
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-  table-layout: fixed;
-  color: $text-gray;
-
-  thead {
-    th {
-      padding: 15px 24px;
-      color: #555;
-      background-color: $white;
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 1.5;
-      text-align: left;
-    }
-
-    th:nth-child(1) {
-      width: 21%;
-    }
-
-    th:nth-child(2) {
-      width: 37%;
-    }
-
-    th:nth-child(3) {
-      width: 20%;
-    }
-
-    th:nth-child(4) {
-      width: 22%;
-    }
-  }
-
-  tbody {
-    tr {
-      background-color: $white;
-
-      &:nth-child(odd) {
-        background-color: #f8f8f8;
-      }
-    }
-
-    td {
-      padding: 18px 24px;
-      border: 0;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 1.6;
-      vertical-align: middle;
-
-      a {
-        transition: opacity 0.25s ease;
-
-        &:hover {
-          opacity: 0.65;
-        }
-      }
-
-      &[data-label="營業時間"] {
-        span {
-          display: block;
-        }
-      }
-    }
-  }
-}
-
-/* Map */
-.sfb-store-locations__map {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.sfb-store-locations__map-icon {
-  display: inline-flex;
-  flex: 0 0 auto;
-  align-items: center;
-  justify-content: center;
-  width: 16px;
-  height: 20px;
-
-  img {
-    display: block;
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-}
-
-/* Collapse Button */
-.sfb-store-locations__footer {
-  display: flex;
-  justify-content: center;
-  padding-top: 48px;
-}
-
-.sfb-store-locations__close {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 166px;
-  height: 44px;
-  padding: 0 25px;
-  border: 1px solid $color-blue-primary;
-  border-radius: 999px;
-  color: $color-blue-primary;
-  background-color: $white;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1;
-  cursor: pointer;
-  transition: color 0.3s ease, background-color 0.3s ease;
-  appearance: none;
-
-  &:hover {
-    color: $white;
-    background-color: $color-blue-primary;
+    min-height: 0;
+    overflow: hidden;
   }
 
-  &:focus-visible {
-    outline: 3px solid rgba($color-blue-primary, 0.25);
-    outline-offset: 5px;
-  }
-}
-
-/* Tablet */
-@media (max-width: 1199px) and (min-width: 768px) {
-  .sfb-store-showcase {
-    height: min(580px, 100vh);
-    min-height: 500px;
-
-    &__content-inner {
-      width: calc(100% - 64px);
-      transform: translateY(-20px);
-    }
-
-    &__information {
-      margin-top: 50px;
-    }
-
-    &__more-button {
-      margin-top: 45px;
-    }
+  &__grid {
+    display: flex;
+    width: calc(100% - 56px);
+    margin: 40px auto 0;
+    padding: 0;
+    border-top: 1px solid #d8d8d8;
   }
 
-  .sfb-store-locations {
-    &__inner {
-      width: calc(100% - 64px);
-      padding: 42px 0 58px;
-    }
+  &__area {
+    flex: 0 0 33.333333%;
+    width: 33.333333%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
   }
 
-  .sfb-store-locations__table {
-    thead {
-      th {
-        padding: 14px 16px;
-        font-size: 13px;
-      }
-    }
-
-    tbody {
-      td {
-        padding: 16px;
-        font-size: 13px;
-      }
-    }
+  &__area-title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 68px;
+    margin: 0;
+    padding: 0 34px;
+    color: #555;
+    font-family: "Roboto", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    border-bottom: 1px solid #d8d8d8;
+    box-sizing: border-box;
   }
-}
 
-/* Mobile */
-@media (max-width: 767px) {
-  .sfb-store-showcase {
+  &__list {
     display: flex;
     flex-direction: column;
-    height: auto;
-    min-height: 0;
-
-    &__content {
-      order: 1;
-      min-height: 0;
-      height: auto;
-      padding: 54px 30px 48px;
-    }
-
-    &__content-inner {
-      width: 100%;
-      margin: 0;
-      transform: none;
-    }
-
-    &__title {
-      font-size: 29px;
-    }
-
-    &__lead {
-      margin-top: 13px;
-      font-size: 15px;
-      line-height: 1.65;
-    }
-
-    &__information {
-      margin-top: 48px;
-    }
-
-    &__store-name {
-      margin-bottom: 5px;
-      font-size: 21px;
-    }
-
-    &__address,
-    &__time {
-      font-size: 14px;
-    }
-
-    &__more-button {
-      min-width: 148px;
-      height: 40px;
-      margin-top: 38px;
-      padding: 0 20px;
-      font-size: 13px;
-    }
-
-    &__slider {
-      order: 2;
-      width: 100%;
-      height: auto;
-      aspect-ratio: 1 / 0.78;
-      touch-action: pan-y;
-    }
-
-    &__pagination {
-      right: 18px;
-      bottom: 16px;
-    }
-
-    &__dot {
-      width: 8px;
-      height: 8px;
-
-      &.is-active {
-        width: 23px;
-      }
-    }
-  }
-
-  /* Store Locations */
-  .sfb-store-locations {
-    &__inner {
-      width: 100%;
-      padding: 30px 24px 52px;
-    }
-  }
-
-  .sfb-store-locations__table-wrap {
-    overflow: visible;
-    border-top: 0;
-    border-bottom: 0;
-  }
-
-  .sfb-store-locations__table {
-    display: block;
     width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
-    thead {
-      display: none;
+  &__store {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+    height: 120px;
+    margin: 0;
+    padding: 0 34px;
+    color: $color-blue-primary;
+    font-family: "Roboto", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: opacity 0.25s ease;
+
+    &:nth-child(odd) {
+      background-color: #fafafa;
     }
 
-    tbody {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
+    &:nth-child(even) {
+      background-color: $white;
     }
 
-    tr {
+    &:hover {
+      opacity: 0.65;
+    }
+
+    span {
       display: block;
-      padding: 20px 18px;
-      border: 1px solid #e4e4e4;
-      border-radius: 6px;
-      background-color: #f8f8f8 !important;
-    }
-
-    td {
-      position: relative;
-      display: grid;
-      grid-template-columns: 74px minmax(0, 1fr);
-      gap: 10px;
-      width: 100%;
-      padding: 7px 0 !important;
-      font-size: 14px !important;
-      line-height: 1.55;
-      text-align: left;
-
-      &::before {
-        content: attr(data-label);
-        color: $color-blue-primary;
-        font-weight: 700;
-      }
-
-      &[data-label="店名"] {
-        padding-top: 0 !important;
-        font-size: 16px !important;
-        font-weight: 700;
-
-        &::before {
-          font-size: 14px;
-        }
-      }
-
-      &[data-label="營業時間"] {
-        padding-bottom: 0 !important;
-      }
-
-      a {
-        min-width: 0;
-      }
+      min-width: 0;
     }
   }
 
-  .sfb-store-locations__map {
-    align-items: flex-start;
-    gap: 5px;
+  &__map-icon {
+    flex: 0 0 18px;
+    display: block;
+    width: 18px;
+    height: 24px;
+    object-fit: contain;
   }
 
-  .sfb-store-locations__footer {
-    padding-top: 32px;
-  }
-
-  .sfb-store-locations__close {
-    min-width: 148px;
-    height: 40px;
-    padding: 0 20px;
-    font-size: 13px;
+  &__close {
+    display: block;
+    min-width: 220px;
+    height: 56px;
+    margin: 60px auto;
+    padding: 0 32px;
+    color: $color-blue-primary;
+    font-family: "Roboto", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    background: transparent;
+    border: 1px solid $color-blue-primary;
+    border-radius: 999px;
+    cursor: pointer;
   }
 }
 
-/* Small Mobile */
-@media (max-width: 374px) {
-  .sfb-store-showcase {
-    &__content {
-      padding-right: 24px;
-      padding-left: 24px;
-    }
-
-    &__title {
-      font-size: 27px;
-    }
-  }
-
+/* Store Locations Mobile */
+@media (max-width: 767px) {
   .sfb-store-locations {
-    &__inner {
-      padding-right: 18px;
-      padding-left: 18px;
-    }
-  }
-
-  .sfb-store-locations__table {
-    tr {
-      padding: 18px 15px;
+    &__grid {
+      display: block;
+      width: calc(100% - 36px);
+      margin-top: 28px;
     }
 
-    td {
-      grid-template-columns: 66px minmax(0, 1fr);
-      gap: 8px;
-      font-size: 13px !important;
+    &__area {
+      width: 100%;
     }
-  }
-}
 
-/* Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
-  .sfb-store-showcase__slide,
-  .sfb-store-showcase__dot,
-  .sfb-store-locations__collapse,
-  .sfb-store-locations__content {
-    transition: none;
+    &__area-title {
+      height: 58px;
+      padding: 0 16px;
+      font-size: 18px;
+    }
+
+    &__store {
+      gap: 10px;
+      height: auto;
+      min-height: 72px;
+      padding: 16px;
+      font-size: 16px;
+    }
+
+    &__map-icon {
+      flex-basis: 16px;
+      width: 16px;
+      height: 21px;
+    }
+
+    &__close {
+      min-width: 190px;
+      height: 48px;
+      margin: 40px auto;
+      font-size: 16px;
+    }
   }
 }
 
